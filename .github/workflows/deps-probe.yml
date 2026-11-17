@@ -1,0 +1,33 @@
+# Manual helper: checks where each third-party build dependency can be fetched from without a login, and
+# reports its layout and license. Read-only; nothing is published.
+name: deps-probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - .github/workflows/deps-probe.yml
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: bash
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - name: FidelityFX SDK 1.1.4 layout and build options
+        run: |
+          gh release download v1.1.4 -R GPUOpen-LibrariesAndSDKs/FidelityFX-SDK -p '*.zip' -O ffx1.zip
+          unzip -q ffx1.zip -d ffx1
+          root=ffx1/sdk
+          echo "== BuildFidelityFXSDK.bat"; cat "$root/BuildFidelityFXSDK.bat" || true
+          echo "== options"; grep -n -E 'option\(|FFX_API_BACKEND|CACHE' "$root/CMakeLists.txt" | head -60 || true
+          echo "== output dirs"; grep -rn -E 'OUTPUT_DIRECTORY|bin/ffx_sdk|_x64|CMAKE_GENERATOR_PLATFORM' "$root/CMakeLists.txt" | head -30 || true
+          echo "== opticalflow"; grep -n -E 'add_library|OUTPUT_NAME|set_target' "$root/src/components/opticalflow/CMakeLists.txt" || true
+          echo "== dx12 backend"; grep -n -E 'add_library|OUTPUT_NAME' "$root/src/backends/dx12/CMakeLists.txt" || true

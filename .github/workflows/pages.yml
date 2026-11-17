@@ -1,0 +1,63 @@
+name: website
+
+# Publishes website/ to GitHub Pages (https://dosukasol.github.io/Glide/).
+# One-time setup in the repository: Settings > Pages > Build and deployment > Source: GitHub Actions.
+
+on:
+  push:
+    branches: [main]
+    paths: ["website/**", ".github/workflows/pages.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check that every local link and asset exists
+        run: |
+          python3 - <<'EOF'
+          import re, sys, pathlib
+          root = pathlib.Path("website")
+          bad = []
+          for page in root.glob("*.html"):
+              text = page.read_text(encoding="utf-8")
+              for ref in re.findall(r'(?:src|href|srcset|data-src)="([^"#]+)"', text):
+                  for part in ref.split(","):
+                      url = part.strip().split(" ")[0]
+                      if not url or re.match(r"^(https?:|mailto:|data:)", url):
+                          continue
+                      if not (root / url).exists():
+                          bad.append(f"{page.name}: {url}")
+          html = (root / "index.html").read_text(encoding="utf-8")
+          for shot in re.findall(r'data-shot="([^"]+)"', html):
+              if not (root / f"assets/shots/{shot}.webp").exists():
+                  bad.append(f"tab screenshot: {shot}")
+          if bad:
+              print("Missing files:\n  " + "\n  ".join(bad)); sys.exit(1)
+          print("all local references resolve")
+          EOF
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+      - id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,719 @@
+# Builds Glide.exe on Windows and packages the Glide release zip.
+#
+# Glide ships as a small overlay on Veyra's official runtime package: the installer in the zip downloads
+# Veyra's NVIDIA or AMD package from Veyra's own GitHub release (checked against SHA-256 values pinned here),
+# then adds Glide on top. Glide never rehosts NVIDIA / AMD / Intel runtime files. To run inside that
+# package, Glide.exe is built against exactly the same Qt (6.8.3) and FFmpeg (9.0.1) ABI as Veyra.
+#
+# Every dependency below is fetched from its official public source at a pinned version; none needs a login.
+# The NVIDIA Optical Flow SDK does (developer login). When the repository secret NVOF_SDK_HEADERS holds the
+# SDK's two interface headers (base64 of a zip, from the owner's own SDK download, never committed or uploaded),
+# the build compiles NVIDIA optical flow in as Veyra does; without it, NVIDIA optical flow reports unavailable
+# and AMD FidelityFX optical flow is used (src/ngx/NvOfSessionUnavailable.cpp).
+name: build-windows
+
+on:
+  push:
+    branches: [main]
+    tags: ['v*']
+    paths-ignore: ['**/*.md', 'docs/**', 'assets/**', 'website/**', '.github/workflows/checks.yml', '.github/workflows/screenshots.yml',
+                   '.github/workflows/pages.yml', '.github/workflows/deps-probe.yml', '.github/workflows/upstream-inspect.yml']
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: 'Publish this build as a release with this tag (vX.Y.Z, e.g. v2.1.5). Leave empty for a test build.'
+        required: false
+        default: ''
+      full_release:
+        description: 'Publish as a full (latest) release (the owner''s standing choice, November 2026). Untick only for a one-off pre-release.'
+        type: boolean
+        required: false
+        default: true
+
+permissions:
+  contents: read
+
+# One build at a time per branch and trigger: a second push waits and then reuses the FFmpeg cache.
+# Release dispatches get their own group, so a release never cancels (or is cancelled by) the push
+# build of the same commit; GitHub cancels an older *pending* run when a newer one queues in the same
+# group, and a cancelled push run makes the README build badge read "failing".
+concurrency:
+  group: build-windows-${{ github.ref }}-${{ github.event_name }}
+  cancel-in-progress: false
+
+env:
+  UPSTREAM_REPO: Likely7/Veyra-NRVideo
+  UPSTREAM_TAG: v2.1.9
+  VCPKG_COMMIT: 30ef65cad98f08e7197c9a1656fbd871bcb72f2d   # builtin-baseline in vcpkg.json: FFmpeg 9.0.1
+  DLSS_TAG: v310.7.0
+  NVCODEC_TAG: n13.0.19.0
+  CUDART_ZIP: https://developer.download.nvidia.com/compute/cuda/redist/cuda_cudart/windows-x86_64/cuda_cudart-windows-x86_64-12.9.79-archive.zip
+  XESS_TAG: v3.0.2
+  FFX1_TAG: v1.1.4
+  FFX2_TAG: v2.3.0
+  AMF_COMMIT: 57ee0cfb0e1a08d9041f77435653794c1b012be0   # AMD AMF SDK v1.5.3 (MIT headers only; runtime = AMD driver)
+  # Streaming sources (PS5 Remote Play, Moonlight, Xbox), as Veyra builds them: pinned sources,
+  # verified by scripts/remoteplay/verify-chiaki-stage.py and scripts/moonlight/verify-moonlight-stage.py.
+  CHIAKI_COMMIT: 0e16950165f06e5c3291537c2eeba6e852be7120
+  MOONLIGHT_COMMIT: f900dd4767759c7b9d0e93bcea666b55c69ea62f
+
+jobs:
+  build:
+    runs-on: windows-2022
+    timeout-minutes: 240
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GH_TOKEN: ${{ github.token }}
+      DEPS: D:\deps
+      BUILD: D:\b
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      # A release tag (v2.1.5) builds exactly that version; every other build is 2.1.5-pushfps.<run>.
+      - name: Version
+        env:
+          RELEASE_TAG: ${{ inputs.release_tag }}
+        run: |
+          $tag = $env:RELEASE_TAG
+          if ($tag -and $tag -notmatch '^v\d+\.\d+\.\d+$') { throw "release_tag must look like v2.1.5" }
+          if ($tag) { $v = $tag.TrimStart('v') }
+          elseif ($env:GITHUB_REF -like 'refs/tags/v*') { $v = $env:GITHUB_REF_NAME.TrimStart('v') }
+          else { $v = "2.1.5-pushfps.$env:GITHUB_RUN_NUMBER" }
+          "PUSHFPS_VERSION=$v" | Out-File -Append $env:GITHUB_ENV
+          New-Item -ItemType Directory -Force $env:DEPS | Out-Null
+          Write-Host "Glide $v"
+
+      - uses: ilammy/msvc-dev-cmd@v1
+        with:
+          arch: x64
+
+      - name: Qt 6.8.3 (MSVC 2022 x64)
+        uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.3'
+          host: windows
+          target: desktop
+          arch: win64_msvc2022_64
+          dir: D:\
+          cache: true
+
+      - name: NVIDIA DLSS SDK ${{ env.DLSS_TAG }} (headers + static NGX library)
+        working-directory: D:\deps
+        shell: bash
+        run: |
+          GIT_LFS_SKIP_SMUDGE=1 git clone -q --depth 1 --branch "$DLSS_TAG" --filter=blob:none --sparse https://github.com/NVIDIA/DLSS.git dlss
+          git -C dlss sparse-checkout set include lib/Windows_x86_64/x64
+          test -f dlss/include/nvsdk_ngx.h && test -f dlss/lib/Windows_x86_64/x64/nvsdk_ngx_s.lib
+
+      - name: NVENC headers, CUDA driver header, XeSS, FidelityFX
+        working-directory: D:\deps
+        shell: bash
+        run: |
+          set -e
+          git clone -q --depth 1 --branch "$NVCODEC_TAG" https://github.com/FFmpeg/nv-codec-headers.git nv-codec-headers
+          curl -sSfL "$CUDART_ZIP" -o cudart.zip && unzip -q cudart.zip -d cudart && mv cudart/*/ cudart-root
+          test -f cudart-root/include/cuda.h
+          gh release download "$XESS_TAG" -R intel/xess -p '*.zip' -O xess.zip && unzip -q xess.zip -d xess
+          find xess -name xefg_swapchain_d3d12.h | head -1
+          GIT_LFS_SKIP_SMUDGE=1 git clone -q --depth 1 --branch "$FFX2_TAG" --filter=blob:none --sparse https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK.git ffx2
+          git -C ffx2 sparse-checkout set Kits/FidelityFX/api/include Kits/FidelityFX/framegeneration/include Kits/FidelityFX/upscalers/include
+          gh release download "$FFX1_TAG" -R GPUOpen-LibrariesAndSDKs/FidelityFX-SDK -p '*.zip' -O ffx1.zip && unzip -q ffx1.zip -d ffx1
+          # AMD AMF SDK public headers (MIT), for AMD FRC frame generation (Veyra 2.1.9). Only the headers:
+          # the AMF runtime (amfrt64.dll) comes with the user's AMD driver and is never shipped.
+          git init -q amf && git -C amf remote add origin https://github.com/GPUOpen-LibrariesAndSDKs/AMF.git
+          git -C amf fetch -q --depth 1 --filter=blob:none origin "$AMF_COMMIT"
+          git -C amf sparse-checkout set amf/public/include && git -C amf checkout -q FETCH_HEAD
+          test -f amf/amf/public/include/components/FRC.h
+
+      # FidelityFX 1.1.4 ships source only. Build the optical flow + DX12 backend static libraries with the
+      # static C runtime (/MT), as Glide links it; they land in sdk/bin/ffx_sdk where CMakeLists.txt looks.
+      - name: Build FidelityFX 1.1.4 optical flow (static)
+        working-directory: D:\deps\ffx1\sdk
+        run: |
+          cmake -S . -B build -A x64 -DFFX_API_BACKEND=DX12_X64 -DFFX_ALL=OFF -DFFX_OF=ON -DFFX_AUTO_COMPILE_SHADERS=1 `
+            -DCMAKE_POLICY_DEFAULT_CMP0091=NEW -DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build build --config Release --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-ChildItem bin\ffx_sdk -Filter *.lib | Format-Table Name, Length
+
+      - name: Locate SDK roots
+        shell: bash
+        run: |
+          xess=$(dirname "$(dirname "$(dirname "$(find /d/deps/xess -name xefg_swapchain_d3d12.h | head -1)")")")
+          ffx1lib=$(find /d/deps/ffx1/sdk/bin -iname 'ffx_opticalflow_x64.lib' | head -1)
+          ffx1=""; [ -n "$ffx1lib" ] && ffx1=$(dirname "$(dirname "$(dirname "$ffx1lib")")")
+          {
+            echo "XESS_ROOT=$(cygpath -m "$xess")"
+            echo "FFX1_ROOT=$( [ -n "$ffx1" ] && cygpath -m "$ffx1" )"
+          } >> "$GITHUB_ENV"
+          echo "XeSS root: $xess"; echo "FidelityFX 1.x root: ${ffx1:-not found}"
+          if [ -z "$ffx1" ]; then echo "::error::FidelityFX 1.1.4 optical flow libraries not found; Glide needs them for optical flow"; exit 1; fi
+
+      # Restore and save are separate steps: actions/cache only saves when the whole job succeeds,
+      # and FFmpeg takes ~25 minutes to build, so it is saved as soon as it is built. vcpkg reuses a
+      # cached package only when its ABI hash (compiler included) matches, so every run saves its
+      # binary cache under a new key and restores the newest one.
+      - name: Restore vcpkg binaries
+        id: vcpkg-cache
+        uses: actions/cache/restore@v4
+        with:
+          path: D:\deps\vcpkg-binary
+          key: vcpkg-bin-${{ env.VCPKG_COMMIT }}-v2-${{ github.run_id }}
+          restore-keys: vcpkg-bin-${{ env.VCPKG_COMMIT }}-v2-
+
+      - name: FFmpeg 9.0.1 (vcpkg at the pinned baseline)
+        working-directory: D:\deps
+        run: |
+          git init -q vcpkg; git -C vcpkg remote add origin https://github.com/microsoft/vcpkg.git
+          git -C vcpkg fetch -q --depth 1 origin $env:VCPKG_COMMIT; git -C vcpkg checkout -q FETCH_HEAD
+          & vcpkg\bootstrap-vcpkg.bat -disableMetrics
+          New-Item -ItemType Directory -Force vcpkg-binary | Out-Null
+          $env:VCPKG_DEFAULT_BINARY_CACHE = "$env:DEPS\vcpkg-binary"
+          & vcpkg\vcpkg.exe install "ffmpeg[core,avcodec,avformat,avfilter,swresample,swscale]:x64-windows" --clean-after-build
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-ChildItem vcpkg\installed\x64-windows\bin\av*.dll, vcpkg\installed\x64-windows\bin\sw*.dll | Format-Table Name, Length
+
+      - name: Streaming dependencies (static, for PS5 Remote Play, Moonlight and Xbox)
+        working-directory: D:\deps
+        run: |
+          $env:VCPKG_DEFAULT_BINARY_CACHE = "$env:DEPS\vcpkg-binary"
+          # The same static tree Veyra uses (scripts/xbox/dependency-lock.json): one OpenSSL for Chiaki,
+          # Moonlight and libdatachannel; libjuice with Veyra's reviewed overlay.
+          & vcpkg\vcpkg.exe install --classic --triplet x64-windows-static "--x-install-root=$env:DEPS\stream-installed" `
+            "--overlay-ports=$env:GITHUB_WORKSPACE\scripts\xbox\vcpkg-overlay" `
+            openssl opus json-c libevent miniupnpc protobuf "sdl3" "libdatachannel[srtp,ws]" nlohmann-json pkgconf zlib --clean-after-build
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-ChildItem "$env:DEPS\stream-installed\x64-windows-static\lib" -Filter *.lib | Format-Table Name, Length
+
+      - name: Save vcpkg binaries
+        if: always() && steps.vcpkg-cache.outcome == 'success'
+        uses: actions/cache/save@v4
+        with:
+          path: D:\deps\vcpkg-binary
+          key: vcpkg-bin-${{ env.VCPKG_COMMIT }}-v2-${{ github.run_id }}
+
+      - name: Streaming sources (Chiaki-ng with Veyra's patches, moonlight-common-c)
+        working-directory: D:\deps
+        run: |
+          git config --global core.autocrlf false
+          git config --global advice.detachedHead false
+          # Chiaki-ng: a clean pinned checkout, and a worktree with Veyra's two reviewed patches.
+          git clone -q https://github.com/streetpea/chiaki-ng.git chiaki-clean
+          git -C chiaki-clean checkout -q $env:CHIAKI_COMMIT
+          git -C chiaki-clean submodule update -q --init --recursive
+          git -C chiaki-clean worktree add -q --detach "$env:DEPS\chiaki-stage" $env:CHIAKI_COMMIT
+          git -C chiaki-stage submodule update -q --init --recursive
+          foreach ($p in '0001-chiaki-msvc-vla-compat.patch', '0002-chiaki-video-metadata.patch') {
+            git -C chiaki-stage apply "$env:GITHUB_WORKSPACE\scripts\remoteplay\patches\$p"
+            if ($LASTEXITCODE -ne 0) { Write-Host "::error::$p does not apply"; exit 1 }
+          }
+          python "$env:GITHUB_WORKSPACE\scripts\remoteplay\verify-chiaki-stage.py" --stage "$env:DEPS\chiaki-stage" --clean "$env:DEPS\chiaki-clean"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          # moonlight-common-c with its pinned ENet and nanors.
+          git clone -q https://github.com/moonlight-stream/moonlight-common-c.git moonlight-common-c
+          git -C moonlight-common-c checkout -q $env:MOONLIGHT_COMMIT
+          git -C moonlight-common-c submodule update -q --init --recursive
+          python "$env:GITHUB_WORKSPACE\scripts\moonlight\verify-moonlight-stage.py" --source "$env:DEPS\moonlight-common-c" --lock "$env:GITHUB_WORKSPACE\scripts\moonlight\dependency-lock.json"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          # Chiaki's protocol buffers are generated by nanopb's Python generator, which also runs protoc
+          # (from the static tree) to build its own descriptor module.
+          python -m pip install -q protobuf
+          "$env:DEPS\stream-installed\x64-windows-static\tools\protobuf" | Out-File -Append -Encoding utf8 $env:GITHUB_PATH
+
+      # Optional: NVIDIA Optical Flow SDK 5.0.7 interface headers (nvOpticalFlowCommon.h, nvOpticalFlowD3D12.h)
+      # from the secret NVOF_SDK_HEADERS. They stay on the runner; nothing here uploads or packages them.
+      - name: NVIDIA Optical Flow headers (optional)
+        env:
+          NVOF_SDK_HEADERS: ${{ secrets.NVOF_SDK_HEADERS }}
+        run: |
+          if (-not $env:NVOF_SDK_HEADERS) {
+            Write-Host "No NVOF_SDK_HEADERS secret: NVIDIA optical flow stays unavailable, AMD FidelityFX optical flow is used"
+            exit 0
+          }
+          $root = "$env:RUNNER_TEMP\nvof-sdk"
+          $dir = "$root\NvOFInterface"
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          $zip = "$env:RUNNER_TEMP\nvof-headers.zip"
+          [IO.File]::WriteAllBytes($zip, [Convert]::FromBase64String(($env:NVOF_SDK_HEADERS -replace '\s', '')))
+          Expand-Archive $zip -DestinationPath $dir -Force
+          Remove-Item $zip
+          # Accept the headers at the zip's top level or inside one folder.
+          foreach ($h in 'nvOpticalFlowCommon.h', 'nvOpticalFlowD3D12.h') {
+            if (-not (Test-Path "$dir\$h")) {
+              $found = Get-ChildItem $dir -Recurse -Filter $h | Select-Object -First 1
+              if (-not $found) { Write-Host "::error::NVOF_SDK_HEADERS has no $h"; exit 1 }
+              Copy-Item $found.FullName "$dir\$h"
+            }
+          }
+          Write-Host "NVIDIA Optical Flow headers present: NVIDIA optical flow is built in"
+          "NVOF_SDK_ROOT=$root" | Out-File -Append -Encoding utf8 $env:GITHUB_ENV
+
+      - name: Configure
+        run: |
+          $ffmpeg = "$env:DEPS\vcpkg\installed\x64-windows"
+          $stream = "$env:DEPS\stream-installed\x64-windows-static"
+          $env:PKG_CONFIG_PATH = "$stream\lib\pkgconfig"
+          cmake -S . -B $env:BUILD -G Ninja -DCMAKE_BUILD_TYPE=Release `
+            "-DCMAKE_PREFIX_PATH=$env:QT_ROOT_DIR;$ffmpeg;$stream" `
+            -DVEYRA_BUILD_QML_UI=ON -DVEYRA_ENABLE_EXPERIMENTAL_DLSSNR=ON -DVEYRA_ENABLE_D3D12_DEBUG=OFF `
+            -DVEYRA_ENABLE_REMOTEPLAY=ON -DVEYRA_ENABLE_MOONLIGHT=ON -DVEYRA_ENABLE_XBOX=ON `
+            "-DVEYRA_RP_CHIAKI_SOURCE_DIR=$env:DEPS\chiaki-stage" "-DVEYRA_RP_CHIAKI_VERIFY_DIR=$env:DEPS\chiaki-clean" `
+            "-DVEYRA_MOONLIGHT_SOURCE_DIR=$env:DEPS\moonlight-common-c" `
+            "-DPROTOC=$stream\tools\protobuf\protoc.exe" "-DPKG_CONFIG_EXECUTABLE=$stream\tools\pkgconf\pkgconf.exe" `
+            -DOPENSSL_USE_STATIC_LIBS=ON -DOPENSSL_MSVC_STATIC_RT=ON `
+            "-DVEYRA_DISPLAY_VERSION=$env:PUSHFPS_VERSION" `
+            "-DVEYRA_FFMPEG_ROOT=$ffmpeg" `
+            "-DVEYRA_DLSS_SDK_ROOT=$env:DEPS\dlss" `
+            "-DVEYRA_NVENC_HEADERS_ROOT=$env:DEPS\nv-codec-headers" `
+            "-DVEYRA_CUDA_DRIVER_INCLUDE_DIR=$env:DEPS\cudart-root\include" `
+            "-DVEYRA_XESS_ROOT=$env:XESS_ROOT" `
+            "-DVEYRA_FIDELITYFX_ROOT=$env:FFX1_ROOT" `
+            "-DVEYRA_FIDELITYFX2_ROOT=$env:DEPS\ffx2\Kits\FidelityFX" `
+            "-DVEYRA_AMF_SDK_ROOT=$env:DEPS\amf\amf\public" `
+            "-DVEYRA_NVOF_SDK_ROOT=$env:NVOF_SDK_ROOT"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build Glide.exe
+        run: |
+          cmake --build $env:BUILD --target veyra_qml_ui --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-Item "$env:BUILD\Glide.exe" | Format-List Name, Length, VersionInfo
+
+      - name: Unit tests that need no GPU
+        run: |
+          cmake --build $env:BUILD --target veyra_update_checker_tests veyra_ui_i18n_tests --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $env:PATH = "$env:QT_ROOT_DIR\bin;$env:PATH"
+          $failed = 0
+          foreach ($t in 'veyra_update_checker_tests', 'veyra_ui_i18n_tests') {
+            $exe = Get-ChildItem $env:BUILD -Recurse -Filter "$t.exe" | Select-Object -First 1
+            if (-not $exe) { Write-Host "::error::$t.exe not built"; $failed++; continue }
+            & $exe.FullName -o "$t.txt,txt" 2>&1 | Out-Host
+            $code = $LASTEXITCODE
+            if (Test-Path "$t.txt") { Get-Content "$t.txt" | Out-Host }
+            Write-Host "$t exit $code"
+            if ($code -ne 0) { $failed++ }
+          }
+          foreach ($t in 'veyra_sound_profile_tests', 'veyra_push_audio_mix_tests', 'veyra_push_benchmark_tests', 'veyra_push_hud_tests', 'veyra_push_adaptive_fg_tests', 'veyra_push_auto_capture_format_tests', 'veyra_push_pacing_repair_tests', 'veyra_push_archive_paths_tests', 'veyra_vrr_profile_tests') {
+            cmake --build $env:BUILD --target $t --parallel
+            if ($LASTEXITCODE -ne 0) { Write-Host "::error::$t did not build"; $failed++; continue }
+            $exe = Get-ChildItem $env:BUILD -Recurse -Filter "$t.exe" | Select-Object -First 1
+            & $exe.FullName 2>&1 | Out-Host
+            Write-Host "$t exit $LASTEXITCODE"
+            if ($LASTEXITCODE -ne 0) { $failed++ }
+          }
+          if ($failed) { exit 1 }
+
+      - name: NVIDIA Image Scaling on D3D12 (WARP when there is no GPU)
+        run: |
+          cmake --build $env:BUILD --target veyra_nis_gpu_tests --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $exe = Get-ChildItem $env:BUILD -Recurse -Filter 'veyra_nis_gpu_tests.exe' | Select-Object -First 1
+          if (-not $exe) { Write-Host "::error::veyra_nis_gpu_tests.exe not built"; exit 1 }
+          $stage = Join-Path $env:RUNNER_TEMP 'nis-gpu'
+          New-Item -ItemType Directory -Force $stage | Out-Null
+          Copy-Item $exe.FullName $stage
+          Copy-Item -Recurse -Force "$env:BUILD\shaders" (Join-Path $stage 'shaders')
+          Get-ChildItem (Join-Path $stage 'shaders') -Filter 'Nis*.dxil' | Format-Table Name, Length
+          $env:PATH = "$env:DEPS\vcpkg\installed\x64-windows\bin;$env:QT_ROOT_DIR\bin;$env:PATH"
+          $env:VEYRA_NIS_GPU_DEBUG = '1'
+          & (Join-Path $stage 'veyra_nis_gpu_tests.exe') 2>&1 | Out-Host
+          $code = $LASTEXITCODE
+          Write-Host "veyra_nis_gpu_tests exit $code"
+          if ($code -ne 0) { exit 1 }
+
+      - name: Glide comparison clips and HUD sampling on D3D12 (WARP when there is no GPU)
+        run: |
+          cmake --build $env:BUILD --target veyra_push_gpu_tests --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $exe = Get-ChildItem $env:BUILD -Recurse -Filter 'veyra_push_gpu_tests.exe' | Select-Object -First 1
+          if (-not $exe) { Write-Host "::error::veyra_push_gpu_tests.exe not built"; exit 1 }
+          $env:PATH = "$env:DEPS\vcpkg\installed\x64-windows\bin;$env:QT_ROOT_DIR\bin;$env:PATH"
+          $env:VEYRA_PUSH_GPU_DEBUG = '1'
+          & $exe.FullName 2>&1 | Out-Host
+          $code = $LASTEXITCODE
+          Write-Host "veyra_push_gpu_tests exit $code"
+          if ($code -ne 0) { exit 1 }
+
+      # Going live: two outputs at once (RTMP + RTMPS through Schannel) to a local MediaMTX, read back,
+      # server restart, a closed port, key redaction. Proves the FFmpeg build has rtmp/rtmps.
+      - name: Going-live tests (local RTMP/RTMPS server)
+        shell: bash
+        run: |
+          set -e
+          build=$(cygpath -u "$BUILD")
+          cmake --build "$build" --target veyra_live_stream_tests --parallel
+          exe=$(find "$build" -name veyra_live_stream_tests.exe | head -1)
+          test -n "$exe"
+          export PATH="$(cygpath -u "$DEPS")/vcpkg/installed/x64-windows/bin:$PATH"
+          bash tests/data/stream/run-live-stream-tests.sh "$exe" windows_amd64.zip mediamtx.exe
+
+      # Finished recordings are rewritten as standard MP4 (Vegas Pro and other editors refuse fragmented files).
+      - name: Recording MP4 finishing test
+        run: |
+          cmake --build $env:BUILD --target veyra_mp4_finalize_tests --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $exe = Get-ChildItem $env:BUILD -Recurse -Filter 'veyra_mp4_finalize_tests.exe' | Select-Object -First 1
+          if (-not $exe) { Write-Host "::error::veyra_mp4_finalize_tests.exe not built"; exit 1 }
+          $env:PATH = "$env:DEPS\vcpkg\installed\x64-windows\bin;$env:PATH"
+          & $exe.FullName 2>&1 | Out-Host
+          $code = $LASTEXITCODE
+          Write-Host "veyra_mp4_finalize_tests exit $code"
+          if ($code -ne 0) { exit 1 }
+
+      - name: QML component tests (Glide quick setup)
+        run: |
+          cmake --build $env:BUILD --target veyra_qml_quick_tests veyra_qml_easing_tests --parallel
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $stage = Join-Path $env:RUNNER_TEMP 'qml-tests-stage'
+          New-Item -ItemType Directory -Force $stage | Out-Null
+          foreach ($t in 'veyra_qml_quick_tests', 'veyra_qml_easing_tests') {
+            $exe = Get-ChildItem $env:BUILD -Recurse -Filter "$t.exe" | Select-Object -First 1
+            if (-not $exe) { Write-Host "::error::$t.exe not built"; exit 1 }
+            Copy-Item $exe.FullName $stage
+          }
+          Copy-Item -Recurse -Force qml (Join-Path $stage 'qml')
+          Copy-Item -Recurse -Force tests\qml\quick (Join-Path $stage 'qml-tests')
+          $env:PATH = "$env:QT_ROOT_DIR\bin;$env:PATH"
+          $env:QML_IMPORT_PATH = "$env:QT_ROOT_DIR\qml"
+          $env:QT_PLUGIN_PATH = "$env:QT_ROOT_DIR\plugins"
+          $env:QT_QUICK_BACKEND = 'software'
+          $env:QML_DISABLE_DISK_CACHE = '1'
+          Push-Location $stage
+          $failed = 0
+          foreach ($t in 'tst_push_quick_setup', 'tst_push_picture_sound', 'tst_push_nis', 'tst_push_optimize', 'tst_push_presets', 'tst_push_appearance', 'tst_push_hud', 'tst_push_plug_and_play', 'tst_push_intro', 'tst_push_stream', 'tst_push_ps5_pairing', 'tst_push_compare', 'tst_push_studio', 'tst_push_watch') {
+            & .\veyra_qml_quick_tests.exe -platform offscreen -input "qml-tests\$t.qml" -o "$t.txt,txt" 2>&1 | Out-Host
+            $code = $LASTEXITCODE
+            Get-Content "$t.txt" -ErrorAction SilentlyContinue | Out-Host
+            if ((Get-Content "$t.txt" -Raw -ErrorAction SilentlyContinue) -notmatch 'Totals: [1-9]\d* passed, 0 failed') { $code = 1 }
+            Write-Host "$t exit $code"
+            if ($code -ne 0) { $failed++ }
+          }
+          Pop-Location
+          if ($failed) { exit 1 }
+
+      - name: QML component tests (whole Veyra suite)
+        run: |
+          $stage = Join-Path $env:RUNNER_TEMP 'qml-tests-stage'
+          $env:PATH = "$env:QT_ROOT_DIR\bin;$env:PATH"
+          $env:QML_IMPORT_PATH = "$env:QT_ROOT_DIR\qml"
+          $env:QT_PLUGIN_PATH = "$env:QT_ROOT_DIR\plugins"
+          $env:QT_QUICK_BACKEND = 'software'
+          $env:QML_DISABLE_DISK_CACHE = '1'
+          Push-Location $stage
+          $env:VEYRA_QML_DIR = Join-Path $stage 'qml'
+          & .\veyra_qml_easing_tests.exe -platform offscreen 2>&1 | Out-Host
+          Write-Host "veyra_qml_easing_tests exit $LASTEXITCODE"
+          $failed = 0
+          foreach ($f in Get-ChildItem qml-tests -Filter 'tst_*.qml') {
+            $res = "result-$($f.BaseName).txt"
+            & .\veyra_qml_quick_tests.exe -platform offscreen -input "qml-tests\$($f.Name)" -o "$res,txt" 2>&1 | Out-Null
+            $code = $LASTEXITCODE
+            $out = Get-Content $res -ErrorAction SilentlyContinue
+            $totals = ($out | Select-String '^Totals:' | Select-Object -Last 1).Line
+            Write-Host ("{0,-34} exit {1}  {2}" -f $f.Name, $code, $totals)
+            if ($code -ne 0) { $failed++; $out | Select-String -Context 0,3 'FAIL!' | Select-Object -First 15 | Out-Host }
+          }
+          Pop-Location
+          Write-Host "files with failures: $failed"
+          if ($failed) { exit 1 }
+
+      - name: Imports must match the upstream runtime package
+        run: |
+          python -m pip install --quiet pefile
+          @'
+          import pefile, sys
+          pe = pefile.PE(sys.argv[1], fast_load=True)
+          pe.parse_data_directories(directories=[pefile.DIRECTORY_ENTRY["IMAGE_DIRECTORY_ENTRY_IMPORT"]])
+          names = sorted(e.dll.decode().lower() for e in pe.DIRECTORY_ENTRY_IMPORT)
+          print("\n".join(names))
+          ffmpeg = ("avcodec-", "avformat-", "avutil-", "avfilter-", "avdevice-", "swresample-", "swscale-", "dav1d")
+          app = [n for n in names if n.startswith(("qt6",) + ffmpeg)]
+          expected = {"qt6core.dll","qt6gui.dll","qt6network.dll","qt6qml.dll","qt6quick.dll","qt6widgets.dll",
+                      "avcodec-63.dll","avformat-63.dll","avutil-61.dll","swresample-7.dll","swscale-10.dll"}
+          extra = sorted(set(app) - expected)
+          if extra: sys.exit(f"Glide.exe imports libraries the Veyra package does not ship: {extra}")
+          print("OK: every Qt / FFmpeg import is shipped by the Veyra runtime package")
+          '@ | Out-File -Encoding utf8 imports.py
+          python imports.py "$env:BUILD\Glide.exe"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Pin the upstream package hashes
+        run: |
+          gh release download $env:UPSTREAM_TAG -R $env:UPSTREAM_REPO -p SHA256SUMS.txt -O upstream-sha256.txt
+          Get-Content upstream-sha256.txt
+
+      - name: Package the Glide release zip
+        run: |
+          # The licences of the SDK code built into Glide.exe travel with it (licenses\sdk in the zip).
+          $sdk = 'licenses\sdk'
+          New-Item -ItemType Directory -Force $sdk | Out-Null
+          Copy-Item "$env:DEPS\dlss\LICENSE.txt" "$sdk\NVIDIA_RTX_SDKs_LICENSE_DLSS_310.7.0.txt"
+          $ffx = Get-ChildItem "$env:DEPS\ffx1" -Recurse -File -Filter 'LICENSE*' | Select-Object -First 1
+          if ($ffx) { Copy-Item $ffx.FullName "$sdk\AMD_FidelityFX_SDK_1.1.4_LICENSE.txt" }
+          $xess = Get-ChildItem "$env:DEPS\xess" -Recurse -File | Where-Object Name -match '^(LICENSE|license)' | Select-Object -First 1
+          if ($xess) { Copy-Item $xess.FullName "$sdk\Intel_XeSS_SDK_3.0.2_LICENSE$($xess.Extension)" }
+          Get-ChildItem $sdk | Format-Table Name, Length
+          if (-not (Test-Path "$sdk\NVIDIA_RTX_SDKs_LICENSE_DLSS_310.7.0.txt")) { throw 'DLSS SDK licence missing' }
+          ./packaging/make-release.ps1 -BuildDir $env:BUILD -Version $env:PUSHFPS_VERSION `
+            -UpstreamRepo $env:UPSTREAM_REPO -UpstreamTag $env:UPSTREAM_TAG -UpstreamSums upstream-sha256.txt -OutDir dist
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-ChildItem dist | Format-Table Name, Length
+
+      - name: Install test (download Veyra runtime, add Glide, start it)
+        timeout-minutes: 30
+        run: |
+          $zip = (Get-ChildItem dist/Glide-*.zip)[0].FullName
+          Expand-Archive $zip -DestinationPath D:\pf-zip
+          & D:\pf-zip\Install-Glide.ps1 -Gpu NVIDIA -InstallDir D:\pf-install -NoShortcuts -NoLaunch -ExperimentalExtras No
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path D:\pf-install\Glide.exe)) { throw "Glide.exe missing after install" }
+          # Licensing check: every installed file that says it is from NVIDIA is an NVIDIA-signed original.
+          $bad = Get-ChildItem D:\pf-install -Recurse -File -Include *.dll, *.exe | Where-Object { $_.VersionInfo.CompanyName -match 'NVIDIA' } |
+            Where-Object { $sig = Get-AuthenticodeSignature $_.FullName; -not ($sig.Status -eq 'Valid' -and $sig.SignerCertificate.Subject -match 'NVIDIA') }
+          if ($bad) { $bad | ForEach-Object { Write-Host "::error::not an NVIDIA-signed original: $($_.FullName)" }; throw 'modified NVIDIA files were installed' }
+          Get-Content D:\pf-install\Glide-VERSION.txt | Out-Host
+          # AMD package: installs, and carries no NVIDIA AI-enhancement runtime (licensed for NVIDIA graphics only).
+          & D:\pf-zip\Install-Glide.ps1 -Gpu AMD -InstallDir D:\pf-install-amd -NoShortcuts -NoLaunch -ExperimentalExtras No
+          if ($LASTEXITCODE -ne 0) { throw "AMD install exit $LASTEXITCODE" }
+          if (-not (Test-Path D:\pf-install-amd\Glide.exe)) { throw 'Glide.exe missing after the AMD install' }
+          foreach ($d in 'runtime\amd-nr-rdna3', 'runtime\amd-nr') { if (Test-Path "D:\pf-install-amd\$d") { throw "AMD install still has $d" } }
+          $nv = Get-ChildItem D:\pf-install-amd -Recurse -File -Include *.dll, *.exe | Where-Object { $_.VersionInfo.CompanyName -match 'NVIDIA' } |
+            Where-Object { $sig = Get-AuthenticodeSignature $_.FullName; -not ($sig.Status -eq 'Valid' -and $sig.SignerCertificate.Subject -match 'NVIDIA') }
+          if ($nv) { throw 'AMD install has modified NVIDIA files' }
+          Get-Content D:\pf-install-amd\Glide-VERSION.txt | Out-Host
+          # Nothing is lost: with -ExperimentalExtras Yes the AMD extras are installed (cached download, no new fetch).
+          & D:\pf-zip\Install-Glide.ps1 -Gpu AMD -InstallDir D:\pf-install-amd -NoShortcuts -NoLaunch -ExperimentalExtras Yes
+          if ($LASTEXITCODE -ne 0) { throw "AMD install with extras exit $LASTEXITCODE" }
+          if (-not (Test-Path D:\pf-install-amd\runtime\amd-nr)) { throw 'opt-in extras were not installed' }
+          Remove-Item D:\pf-install-amd -Recurse -Force
+          & D:\pf-zip\Install-Glide.ps1 -Gpu NVIDIA -InstallDir D:\pf-install-nvx -NoShortcuts -NoLaunch -ExperimentalExtras Yes
+          if ($LASTEXITCODE -ne 0) { throw "NVIDIA install with extras exit $LASTEXITCODE" }
+          if (-not (Test-Path D:\pf-install-nvx\runtime\experimental\nr-ampere\nvngx_dlssnr.dll)) { throw 'opt-in RTX 30 extra was not installed' }
+          Remove-Item D:\pf-install-nvx -Recurse -Force
+          Write-Host 'Default installs carry only licensed files; the experimental extras install on request.' 
+          # Start it and make sure Windows resolves every DLL and the program reaches its QML session.
+          $p = Start-Process D:\pf-install\Glide.exe -PassThru
+          Start-Sleep -Seconds 25
+          $alive = -not $p.HasExited
+          if (-not $alive) { Write-Host "exit code: $($p.ExitCode)" }
+          Get-ChildItem D:\pf-install\logs -ErrorAction SilentlyContinue | ForEach-Object { "=== $($_.Name)"; Get-Content $_.FullName -Tail 60 }
+          if ($alive) { Stop-Process -Id $p.Id -Force }
+          $log = Get-ChildItem D:\pf-install\logs -Filter *.log -ErrorAction SilentlyContinue | Get-Content -Raw
+          if ($log -notmatch 'Glide QML session started') { throw "Glide did not reach its QML session (no GPU on this runner is fine; a missing DLL or entry point is not)" }
+          $qmlErrors = @(($log -split "`n") | Where-Object { $_ -match '\[ERROR\] \[qml\]' })
+          if ($qmlErrors.Count) { $qmlErrors | ForEach-Object { Write-Host "::error::$_" }; throw "The interface logged QML errors at startup" }
+          Write-Host "Glide started and loaded its interface with no QML errors."
+          # Every main page and the capture dialog, each in a fresh profile: no QML errors either.
+          $pages = @(@('--page', 'pro', '--tab', 'fg'), @('--page', 'pro', '--tab', 'quality'), @('--page', 'pro', '--tab', 'display'),
+                     @('--page', 'set'), @('--page', 'min'), @('--page', 'exp'), @('--page', 'live'), @('--page', 'watch'), @('--page', 'home', '--dialog', 'capture'))
+          $i = 0
+          foreach ($pa in $pages) {
+            $i++
+            $env:VEYRA_LOG_FILE = "D:\pf-pages\page-$i.log"
+            New-Item -ItemType Directory -Force D:\pf-pages | Out-Null
+            $q = Start-Process D:\pf-install\Glide.exe -PassThru -ArgumentList ($pa + @('--data-dir', "D:\pf-pages\data-$i", '--exit-after', '12000'))
+            if (-not $q.WaitForExit(40000)) { Stop-Process -Id $q.Id -Force }
+            $plog = Get-Content "D:\pf-pages\page-$i.log" -Raw -ErrorAction SilentlyContinue
+            if ($plog -notmatch 'Glide QML session started') { throw "$($pa -join ' '): no QML session" }
+            $errs = @(($plog -split "`n") | Where-Object { $_ -match '\[ERROR\] \[qml\]' })
+            if ($errs.Count) { $errs | ForEach-Object { Write-Host "::error::$($pa -join ' '): $_" }; throw "QML errors on $($pa -join ' ')" }
+            Write-Host "$($pa -join ' '): no QML errors"
+          }
+          Remove-Item Env:VEYRA_LOG_FILE
+
+      # Corresponding source of the streaming libraries compiled into Glide.exe: Chiaki-ng with
+      # Veyra's patches applied (AGPL-3.0 with the OpenSSL exception), moonlight-common-c with ENet
+      # and nanors (GPL-3.0 / MIT), and the vcpkg recipes of the static libraries (OpenSSL, Opus,
+      # SDL3, libdatachannel and the rest, MPL-2.0 / BSD / MIT / zlib) at the pinned vcpkg commit.
+      - name: Streaming source archive
+        run: |
+          $src = Join-Path $env:RUNNER_TEMP "Glide-$env:PUSHFPS_VERSION-streaming-source"
+          New-Item -ItemType Directory -Force $src | Out-Null
+          robocopy "$env:DEPS\chiaki-stage" "$src\chiaki-ng" /E /XD .git android switch /XF .git /NFL /NDL /NJH /NJS | Out-Null
+          robocopy "$env:DEPS\moonlight-common-c" "$src\moonlight-common-c" /E /XD .git /XF .git /NFL /NDL /NJH /NJS | Out-Null
+          robocopy "$env:DEPS\vcpkg\ports" "$src\vcpkg-ports" /E /NFL /NDL /NJH /NJS | Out-Null
+          robocopy scripts\xbox\vcpkg-overlay "$src\vcpkg-overlay" /E /NFL /NDL /NJH /NJS | Out-Null
+          @"
+          Corresponding source for the streaming libraries in Glide $env:PUSHFPS_VERSION
+          chiaki-ng           https://github.com/streetpea/chiaki-ng  $env:CHIAKI_COMMIT  + scripts/remoteplay/patches (applied here)
+          moonlight-common-c  https://github.com/moonlight-stream/moonlight-common-c  $env:MOONLIGHT_COMMIT (with submodules)
+          vcpkg               https://github.com/microsoft/vcpkg  $env:VCPKG_COMMIT  (vcpkg-ports: the recipes used, triplet x64-windows-static)
+          vcpkg-overlay       Glide/Veyra overlay for libjuice (scripts/xbox/vcpkg-overlay)
+          Installed packages:
+          "@ | Set-Content "$src\SOURCES.txt" -Encoding utf8
+          & "$env:DEPS\vcpkg\vcpkg.exe" list --x-install-root="$env:DEPS\stream-installed" | Add-Content "$src\SOURCES.txt"
+          New-Item -ItemType Directory -Force dist | Out-Null
+          $zip = "dist\Glide-$env:PUSHFPS_VERSION-streaming-source.zip"
+          Compress-Archive -Path "$src\*" -DestinationPath $zip -Force
+          (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower() + "  " + (Split-Path $zip -Leaf) | Set-Content "$zip.sha256" -Encoding ascii
+          Get-Item $zip | Format-List Name, Length
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Glide-${{ env.PUSHFPS_VERSION }}
+          path: |
+            dist/*.zip
+            dist/*.sha256
+          if-no-files-found: error
+
+  # Glide for OBS Studio (obs-plugin/): built against OBS's public headers, then loaded into a
+  # real OBS Studio (latest release) with a scene that holds a Glide source, and the OBS log is
+  # checked for the plugin loading, the source being created and its capture child starting.
+  obs-plugin:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GH_TOKEN: ${{ github.token }}
+      OBS_HEADERS_TAG: 31.0.0
+      OBS_PLUGIN_VERSION: 1.2.0
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: OBS headers (obs-studio ${{ env.OBS_HEADERS_TAG }}, libobs + frontend API only)
+        run: |
+          git clone -q --depth 1 --filter=blob:none --sparse --branch $env:OBS_HEADERS_TAG https://github.com/obsproject/obs-studio.git D:\obs-src
+          git -C D:\obs-src sparse-checkout set libobs UI/obs-frontend-api frontend/api
+          if (-not (Test-Path D:\obs-src\libobs\obs-module.h)) { throw 'libobs headers missing' }
+
+      - name: Build pushfps-obs.dll
+        run: |
+          cmake -S obs-plugin -B D:\obs-build -G "Visual Studio 17 2022" -A x64 "-DOBS_SOURCE_DIR=D:\obs-src"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build D:\obs-build --config Release
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Exports and imports
+        run: |
+          $dll = 'D:\obs-build\Release\pushfps-obs.dll'
+          $vs = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -property installationPath
+          $dumpbin = Get-ChildItem "$vs\VC\Tools\MSVC" -Recurse -Filter dumpbin.exe | Where-Object FullName -match 'Hostx64\\x64' | Select-Object -First 1
+          $exports = & $dumpbin.FullName /nologo /exports $dll | Out-String
+          $imports = & $dumpbin.FullName /nologo /imports $dll | Out-String
+          $exports; $imports
+          foreach ($e in 'obs_module_load', 'obs_module_ver', 'obs_module_set_pointer', 'obs_module_post_load', 'obs_module_name') {
+            if ($exports -notmatch "\b$e\b") { throw "missing export $e" }
+          }
+          foreach ($i in 'obs.dll', 'obs-frontend-api.dll') { if ($imports -notmatch [regex]::Escape($i)) { throw "missing import $i" } }
+
+      - name: Package
+        run: |
+          $root = "D:\obs-pkg\Glide-OBS-Plugin-$env:OBS_PLUGIN_VERSION-win64"
+          New-Item -ItemType Directory -Force "$root\pushfps-obs\bin\64bit" | Out-Null
+          Copy-Item D:\obs-build\Release\pushfps-obs.dll "$root\pushfps-obs\bin\64bit\"
+          Copy-Item obs-plugin\packaging\* $root
+          Copy-Item LICENSE "$root\LICENSE.txt"
+          Copy-Item NOTICE.md "$root\NOTICE.md"
+          New-Item -ItemType Directory -Force dist | Out-Null
+          $zip = "dist\Glide-OBS-Plugin-$env:OBS_PLUGIN_VERSION-win64.zip"
+          Compress-Archive -Path "$root\*" -DestinationPath $zip -Force
+          $hash = (Get-FileHash $zip -Algorithm SHA256).Hash.ToLower()
+          "$hash  $(Split-Path $zip -Leaf)" | Set-Content "$zip.sha256" -Encoding ascii
+          Get-ChildItem dist | Format-Table Name, Length
+
+      - name: Load test in real OBS Studio
+        run: |
+          $pkg = (Get-ChildItem D:\obs-pkg -Directory | Select-Object -First 1).FullName
+          # Latest OBS (33+) with only the new plugin layout: what OBS 34 will require.
+          ./obs-plugin/ci/obs-load-test.ps1 -PackageDir $pkg -NewLayoutOnly -StopWhen 'capture method' `
+            -Expect '\[pushfps-obs\] loaded version 1\.2\.0', '\[pushfps-obs\] source created',
+                    '\[pushfps-obs\] capture method: game_capture', '\[pushfps-obs\] Glide is not running yet'
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: obs-load-test-log
+          path: D:\obs-logs
+          if-no-files-found: ignore
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Glide-OBS-Plugin
+          path: |
+            dist/*.zip
+            dist/*.sha256
+          if-no-files-found: error
+
+  # End to end: Glide installed in its default folder, the OBS plugin installed, OBS opens a scene with a
+  # Glide source, the source starts Glide itself (--obs-game-capture), finds its window and hands it to
+  # OBS game capture. No GPU here, so there is no picture to receive; the steps up to the hook are checked.
+  obs-integration:
+    needs: [build, obs-plugin]
+    runs-on: windows-2022
+    timeout-minutes: 40
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/download-artifact@v4
+        with:
+          path: art
+      - name: Install Glide (default folder) and unpack the plugin
+        run: |
+          $zip = Get-ChildItem art -Recurse -Filter 'Glide-*-win64.zip' | Where-Object Name -notmatch 'OBS-Plugin' | Select-Object -First 1
+          $obsZip = Get-ChildItem art -Recurse -Filter 'Glide-OBS-Plugin-*.zip' | Select-Object -First 1
+          Expand-Archive $zip.FullName D:\pf-zip
+          & D:\pf-zip\Install-Glide.ps1 -Gpu NVIDIA -NoShortcuts -NoLaunch -ExperimentalExtras No
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (-not (Test-Path "$env:LOCALAPPDATA\Programs\Glide\Glide.exe")) { throw 'Glide.exe not in the default folder' }
+          Expand-Archive $obsZip.FullName D:\obs-pkg
+      - name: OBS starts Glide and captures it
+        run: |
+          ./obs-plugin/ci/obs-load-test.ps1 -PackageDir D:\obs-pkg -Seconds 150 -StopWhen 'found the Glide window' `
+            -Expect '\[pushfps-obs\] source created', '\[pushfps-obs\] auto start: started', '\[pushfps-obs\] found the Glide window'
+          $pf = Get-Process Glide -ErrorAction SilentlyContinue
+          $plog = Get-Content "$env:LOCALAPPDATA\Programs\Glide\logs\veyra-qml.log" -Raw -ErrorAction SilentlyContinue
+          ($plog -split "`n") | Where-Object { $_ -match 'obs|OBS|renderer|session started' } | Select-Object -First 30 | Out-Host
+          if ($pf) { $pf | Stop-Process -Force }
+          if ($plog -notmatch 'Glide QML session started') { throw 'Glide (started by OBS) did not reach its QML session' }
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: obs-integration-log
+          path: D:\obs-logs
+          if-no-files-found: ignore
+
+  # Publishes a tagged build as a full (latest) GitHub release: the owner asked (November 2026) that
+  # every new build is released as a full release, never a pre-release. A manual run can still untick
+  # full_release for a one-off pre-release.
+  release:
+    if: startsWith(github.ref, 'refs/tags/v') || inputs.release_tag != ''
+    needs: [build, obs-plugin]
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ inputs.release_tag || github.ref_name }}
+      FULL_RELEASE: ${{ (github.event_name == 'workflow_dispatch' && !inputs.full_release) && 'false' || 'true' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            packaging/release-notes
+            scripts/release
+            docs
+            .github/workflows
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: Glide-*
+          merge-multiple: true
+      - name: Create the release
+        run: bash scripts/release/publish.sh

@@ -1,0 +1,1430 @@
+0|·  FEC kurtarılan
+1|·  bit hızı
+2|·  kod çözme
+3|·  düşen
+4|·  ana kare istekleri
+5|·  sırada
+6|·  alınan
+7|·  gidiş-dönüş
+8|·  kurtarılamayan
+9|(NR'den sonra eklendi
+10|(en fazla 4 katman)
+11|(en fazla 6 katman)
+12|(önerilmez)
+13|/ 4 alan
+14|/ çözülen
+15|kanal
+16|fps  ·  düşen
+17|fps  ·  paket
+18|kare
+19|öğe
+20|katman art arda
+21|ms (GPU, son saniye ortalaması)
+22|ms (son saniye)
+23|ms / kare
+24|düğüm ·
+25|pay
+26|· atlandı
+27|· atlandı
+28|· kalibre ediliyor
+29|· geçerli varsayılan
+30|· geçerli dosya, yaklaşık
+31|· downmix
+32|· ton
+33|· en fazla 4 katman)
+34|· düğüm
+35|· kapalı
+36|· duraklatıldı
+37|· sıfırla
+38|· geri yükle
+39|· doygunluk
+40|· güç
+41|· zamansal 4x (deneysel)
+42|· zamansal T2x (deneysel)
+43|· bekliyor
+44|→ Öneri:
+45|(paylaşılan)
+46|(adsız cihaz)
+47|+  NR katmanı ekle
+48|+  Güzellik katmanı ekle
+49|, aşağıya giriş kodunu yazın:
+50|0 = kaynağı izle
+51|0 = parlak alanları yumuşatma yok
+52|0 = sınır yok
+53|1 dk
+54|10 dk
+55|1080p · varsayılan
+56|15 sn
+57|2 öğe
+58|2 dk
+59|30 sn
+60|4 öğe
+61|5 öğe
+62|5 dk
+63|6 öğe
+64|8 haneli eşleştirme kodu
+65|; geçerli:
+66|Yapay zekâ iyileştirme
+67|Yapay zekâ görüntü iyileştirme
+68|AMD optik akış
+69|AMD performansı
+70|Hakkında
+71|Vurgu rengi
+72|Hesap
+73|Hesapla giriş · deneysel
+74|Biriken akış · varsayılan
+75|Biriken akış+
+76|Etkin
+77|Ekle
+78|Önce bir RTX Video HDR düğümü ekleyin
+79|Önce bir kenar yumuşatma düğümü ekleyin
+80|Geçerli dosyayı ekle
+81|Dosya ekle
+82|Oynatma listesine dosya ekle
+83|Elle ekle
+84|Düğüm ekle
+85|Birkaç video ekleyin veya buraya bırakın
+86|Başkasının hazır ayarını ekle
+87|Önce dışa aktarılacak dosyaları ekleyin
+88|Dışa aktarma kuyruğuna ekle
+89|Ayarlanıyor
+90|Ayarlama yöntemi
+91|Yönetici onayı iptal edildi
+92|Gelişmiş: hassas parametreler
+93|Kaynak pencereye hizala
+94|Alipay
+95|Tüm GPU'lar
+96|Tüm cilt
+97|Yırtılmaya izin ver
+98|Bu GPU'da da hesapla
+99|Sesi ana bilgisayarda da çal
+100|Her zaman göster
+101|Her zaman son adım
+102|Analiz ediliyor…
+103|Kenar yumuşatma
+104|Kenar yumuşatma 2
+105|Titreme önleme düzeyi
+106|Görünüm
+107|Bir video açıldığında geçerli olur
+108|Uygula
+109|Hazır ayar uygula…
+110|Ayarları uygula ve yeniden bağlan
+111|Alan genişletme
+112|En boy oranı
+113|Ses
+114|Sesi dinle
+115|Ses kaydırma
+116|Ses çıkışı henüz açılmadı
+117|Ses ayarları
+118|Ses ayarları…
+119|Ses senkronizasyonu
+120|Ses parçaları
+121|Ses/görüntü senkronizasyonu
+122|Otomatik
+123|Otomatik (yüke göre)
+124|Otomatik (harici GPU)
+125|Otomatik tahmin
+126|Otomatik maske · deneysel
+127|Otomatik hizala
+128|Ses parçasına göre otomatik hizala
+129|Hizalanıyor
+130|Otomatik gizle
+131|Otomatik yeniden bağlan
+132|Oynatırken otomatik seç
+133|Otomatik kontrol miktarı
+134|Otomatik taramasızlaştırma
+135|Otomatik ekran senkronizasyonu
+136|Otomatik kaldırma
+137|Otomatik ·
+138|Açılışta otomatik devam et
+139|Kullanılabilir
+140|Ortalama
+141|5 saniye geri / ileri
+142|Listeye dön
+143|Arka plan çubuğu
+144|Arka plan geçişi gücü
+145|Denge
+146|Dengeli
+147|Dengeli parlaklık
+148|Temel kontroller
+149|Bas güçlendirme
+150|Güzellik
+151|Güzellik 2
+152|Güzellik 3
+153|Güzellik 4
+154|Güzellik 5
+155|Güzellik 6
+156|Güzellik katmanı
+157|Güzellik hazır ayarları
+158|İyileştirmeden önce
+159|Bilibili
+160|Bit hızı
+161|Bit hızı (Mbps)
+162|Önce bitstream
+163|Siyah
+164|Siyah beyaz
+165|Blackmagic yerel yakalama
+166|Siyahlar
+167|Karıştırma
+168|Mavi
+169|Mavi ana renk
+170|Parlak
+171|Aydınlık oda
+172|Aydınlık oda telafisi
+173|Parlaklık
+174|Parlaklık dengesi
+175|Parlaklık değişimi
+176|Parlaklık en fazla
+177|Parlaklık en az
+178|Bütçe
+179|Arabelleğe alınıyor
+180|Yerleşik
+181|Geliştiriciye bir kahve ısmarla
+182|CPU yazılımı
+183|Kalibre et
+184|Kalibre ediliyor…
+185|Kaydedilebilir
+186|İptal
+187|Görüntü toplu işini iptal et
+188|İptal edildi · yeniden başlatılabilir
+189|Algılanamıyor
+190|Yakalama
+191|Yakalama kartı
+192|Yakalama kartı ayarları
+193|Yakalama kartı ayarları…
+194|Yakalama kartı ·
+195|Yakalama yöntemi
+196|Yakalama hedefi
+197|Zincir geçerli
+198|Değişim toleransı
+199|Değişiklikler burada anında görünür.
+200|Değiştir…
+201|Kanallar
+202|Denetle
+203|Denetle ve seç
+204|Güncellemeleri denetle
+205|Denetleniyor…
+206|Denetleniyor… oynatma sürüyor
+207|Seç
+208|Önce bir yakalama hedefi seçin
+209|Bir kare hızı seçin
+210|Bir piksel biçimi seçin
+211|Bir çözünürlük seçin
+212|Önce bir çözünürlük seçin
+213|Bir kayıt klasörü seçin…
+214|En az bir öğe seçin
+215|Dışa aktarma klasörünü seç
+216|İşlenecek görüntüleri seç
+217|Ekran görüntüsü klasörünü seç
+218|Kayıt klasörünü seç
+219|Parçaları seç
+220|Seç…
+221|Seçilen cihaz (bağlı değil)
+222|Renk koruması
+223|Sinema
+224|Sinematik
+225|Sinematik · HUD koruması yok
+226|Daire
+227|Netlik
+228|Temizle
+229|Film belleğini temizle
+230|Belleği temizle
+231|Bekleyenleri temizle
+232|Görüntüye tıklayın
+233|Bulmak için tıklayın
+234|Kapat
+235|Pencereyi kapat
+236|Kaba
+237|Kod kopyalandı
+238|Codec
+239|Daralt
+240|Renk
+241|Renk değişimi
+242|Renk düzenleme
+243|Renk hazır ayarı dışa aktarıldı
+244|Renk hazır ayarları
+245|Renk ayarları
+246|Renk ayarları kopyalandı
+247|Renk · örnek
+248|İçerik ve odayı birleştir
+249|Topluluk grupları
+250|Karşılaştır
+251|Uyumlu
+252|Bitiş sesi
+253|Bileşenler ve lisanslar
+254|Sıkıştırma gerekli
+255|Kurulumu onayla
+256|Kaldırmayı onayla
+257|Bağlan
+258|Bağlan ve başlat
+259|Bu girişe bağlan
+260|Bağlandı
+261|Bağlanıyor
+262|PS5'e bağlanılıyor…
+263|Konsol
+264|Kapsayıcı
+265|İçerik: karanlık ve aydınlık
+266|İçerik: düz eski aktarım
+267|İçerik: çoğunlukla karanlık
+268|İçerik: standart
+269|İçerik: güçlü parlak alanlar
+270|Dışa aktarmaya devam et
+271|Sonuncuya devam et
+272|Kontrast
+273|Kumanda
+274|Kumandada jiroskop yok
+275|Kumanda jiroskopu destekliyor
+276|Kopyala
+277|Yeni katman olarak kopyala
+278|Kodu kopyala
+279|Renk ayarlarını kopyala
+280|Dosyayı kopyala
+281|Düğümü kopyala
+282|Bu katmanı kopyala
+283|Kopyala · taşı · sıfırla · sil
+284|Kopyala · sıfırla · sil
+285|Kopyalayın ve raporunuza ekleyin
+286|Düzeltme modu
+287|Hazır ayar silinemedi
+288|Ölçülemedi
+289|Açılamadı
+290|Tarayıcı açılamadı
+291|Veri klasörü açılamadı
+292|Kaydedilemedi
+293|Kısayol kaydedilemedi
+294|Ses ayarı kaydedilemedi
+295|Kırpma (piksel)
+296|Gizlemek için Ctrl+Alt+Shift+S
+297|Geçerli kaydırma
+298|Geçerli oynatma ayarları
+299|Eğri kapalı
+300|Eğri, ölçümler ve rehber
+301|Eğriler
+302|Özel
+303|Özel EQ
+304|Özel sınır
+305|Özel sınır (FPS)
+306|Özel sıra
+307|Özel oynatma hızı
+308|Özel çözünürlük
+309|Özel…
+310|D3D12VA donanımı
+311|DLSS Frame Generation
+312|DLSS modeli
+313|DLSS performans modu
+314|Bozuk görüntü işleme
+315|Karanlık ve aydınlık
+316|Karanlık oda
+317|Kararma değişimi
+318|Kod çözme
+319|Varsayılan
+320|Varsayılan altyazı boyutu
+321|Pus giderme
+322|Sil
+323|Sil "
+324|Düğümü sil
+325|Bu oyun profilini sil
+326|Bu katmanı sil
+327|DengXian
+328|Ayrıntı koruması
+329|Algılama düzeyi
+330|Cihaz
+331|Cihaz arabellekleri
+332|Cihaz kare hızı (FPS)
+333|Cihaz bağlı değil
+334|Cihaz özellikleri
+335|Tanılama
+336|Tanılama kopyalandı
+337|Gerçekte kare oluşturmadı
+338|Başlamadı
+339|Devre dışı
+340|Bağlantıyı kes
+341|Yakalamayı kes
+342|Ekran
+343|Ekran belleği temizlendi
+344|Ekran tepe parlaklığı
+345|Ekran tepe parlaklığı (nit)
+346|Ekran senkronizasyonu
+347|Ekran değişken yenileme etkin
+348|Alttan uzaklık
+349|Dolby / DTS bitstream
+350|Saklama
+351|Sesi dinleme
+352|Bekleme
+353|Tamam
+354|Çift süper çözünürlük
+355|Douyin
+356|İndir —
+357|Taslak çalıştırılmadı
+358|Daire çiz
+359|Dikdörtgen çiz
+360|Sürücü varsayılanı
+361|Sürücü girişi
+362|Sürücü ayarları
+363|Oynatma listesine eklemek için bırakın
+364|Yinelenenleri kaldırma kapalı
+365|Edge Aegis
+366|Edge Aegis (jöle önleme)
+367|Kenar yumuşatma geçişi
+368|Kenar yumuşaklığı
+369|Kenar eşiği
+370|Düzenle
+371|Efekt zinciri
+372|Efektler
+373|Gömülü
+374|Gömülü altyazılar
+375|Boş
+376|Düzeltmeyi etkinleştir
+377|Etkin
+378|Etkin (HDR10)
+379|Kodlanan
+380|Uç nokta açık
+381|İyileştirilmiş
+382|İyileştirilmiş (önizleme)
+383|İyileştirme değişimi
+384|İyileştirme hazır ayarı
+385|Önce bir ad girin
+386|Hata
+387|Tahmini telafi
+388|Her kare · 512 px
+389|Tüm efektlerin dışında tut
+390|Genişlet
+391|Deneysel
+392|Dışa aktar
+393|Dışa aktar
+394|Dışa aktar "
+395|Renk hazır ayarını dışa aktar
+396|Hazır ayarı dışa aktar
+397|Geçerli görüntüyü dışa aktar
+398|Dışa aktarılıyor
+399|Pozlama (EV)
+400|Harici
+401|Harici altyazılar
+402|F11 / Alt+Enter da çalışır
+403|FG kapalı
+404|Yüz güvenilirliği
+405|Yüz algılama
+406|Yalnızca yüzler
+407|Etkinleştirilemedi
+408|Başarısız · yeniden denemek için tıklayın
+409|Yumuşatma (piksel)
+410|Dosya
+411|Doldur ve kırp
+412|PS5 sorduğunda girin
+413|Ekranı doldur
+414|Pencereyi doldur
+415|Film belleği temizlendi
+416|İnce
+417|Bitti
+418|Sığdır
+419|Pencereye sığdır
+420|Sabit
+421|Düz eski aktarım
+422|Dikey çevir
+423|İzle
+424|Arabellek düzeyini izle
+425|Sistemi izle
+426|Geliştiriciyi takip et
+427|Ekranı izle
+428|İyileştirme hazır ayarını izle
+429|Sistem varsayılanını izle
+430|Yazı tipi
+431|Yazı boyutu
+432|Ayak sesleri
+433|PCM'i zorla
+434|SDR önizlemeyi zorla
+435|Biçim ve görüntü
+436|Frame Gen
+437|Kare oluşturma yöntemi
+438|Kare oluşturma hareket kaynağı
+439|Kare oluşturma duraklatıldı
+440|Kare hızı
+441|Kare hızı ve tempo
+442|Kare hızı sınırı
+443|Kare senkronizasyonu · varsayılan olarak kapalı
+444|Tam
+445|Tam hazır ayarlar
+446|Aksiyon sahneleri için daha dolgun bas
+447|Tam ekran
+448|Tam ekran kilidi açıldı
+449|GPU optik akış
+450|GPU önceliği
+451|GPU aşamaları · 1 sn ortalama
+452|GPU kullanımı
+453|GPU kullanım izleyici
+454|Oyun
+455|Oyun kare hızı
+456|Oyun kare hızı · hedef
+457|Oyun modu
+458|Oyun modu: görüntüyü ayarla
+459|Oyun adı
+460|Oyun hazır ayarları
+461|Oyun profili
+462|GamePP
+463|Oyunlar ve programlar ·
+464|Gama
+465|Hesap kimliğini al
+466|Genel
+467|Git
+468|Yeşil
+469|Yeşil ana renk
+470|Jiroskop
+471|HDMI yakalama cihazı
+472|HDR parlaklık eğrisi
+473|HDR meta verileri
+474|HDR çıkış biçimi
+475|Yarım çözünürlük
+476|Donanımla kod çözme
+477|Yalnızca donanımla kod çözme
+478|Pay
+479|Oynatma çubuğunu gizle
+480|Yüksek
+481|Yüksek bit hızı
+482|Yüksek+Düşük
+483|Yüksek+Orta
+484|Parlak alan rehberi
+485|Parlak alan koruması
+486|Parlak alan başlangıcı (nit)
+487|Parlak alanlar
+488|Geçmiş reddi
+489|Geçmiş ağırlığı
+490|Orijinal için V tuşunu basılı tutun
+491|Orijinal için basılı tutun
+492|Orijinali görmek için basılı tutun
+493|Ana sayfa
+494|Ana bilgisayar
+495|Ana bilgisayar
+496|Ana bilgisayar adresi
+497|Ana bilgisayarlar
+498|Smooth Motion nasıl açılır
+499|Ton
+500|Ton merkezi
+501|Ton koruması
+502|Ton aralığı
+503|Görüntü
+504|Görüntü düzeltme
+505|Görüntü örneği istatistikleri
+506|Görüntüler (*.png *.jpg *.jpeg)
+507|İçe aktar
+508|.cube LUT içe aktar
+509|.cube içe aktar…
+510|.vpcolor içe aktar…
+511|Renk hazır ayarı içe aktar
+512|Klasör içe aktar
+513|Klasörü oynatma listesine aktar
+514|Hazır ayar içe aktar
+515|Giriş I
+516|Etkin değil:
+517|İçerir
+518|Giriş
+519|Giriş rengi (SDR / HDR)
+520|Giriş orijinali
+521|Giriş aralığı
+522|Giriş · optik akış
+523|Glide Virtual Speaker'ı kur
+524|Kuruldu
+525|Kur…
+526|Anlık tekrar
+527|Anlık tekrar kaydedildi
+528|Talimatlar
+529|Intel XeSS · deneysel
+530|Arayüz çizimi
+531|Arayüz dili
+532|Arayüz ölçeği
+533|Dahili işleme çözünürlüğü
+534|Geçersiz düzenleme modu
+535|Geçersiz tuş
+536|Sakla
+537|Hepsini sakla
+538|Görüntüyü koru
+539|Yerel ağ yayını
+540|LUT dosyası
+541|LUT adı çok uzun
+542|LUT gücü
+543|Büyük
+544|Son
+545|Gecikme P95
+546|Gecikme ölçülüyor
+547|Sonra
+548|Eski biçim listesi
+549|Eski biçim seçimi
+550|Lisans
+551|Karanlık sahneleri aydınlat
+552|Aydınlatma aralığı (nit)
+553|Gölgeleri aç
+554|Açık
+555|Açık yeşil
+556|Hafif yumuşatma
+557|Açıklık değişimi
+558|Açıklığı koru
+559|Sınırlı
+560|Liste
+561|Liste modu
+562|Liste hazır ayarları
+563|Yük bütçesi
+564|Harici altyazı yükle
+565|Harici altyazı yükle…
+566|Dosya yükle…
+567|Kaynağı yükle
+568|Yüklendi
+569|Yükleniyor
+570|Yerel sıkıştırma
+571|Yerel yapı
+572|Yerel ton
+573|Tam ekran kontrol çubuğunu sabitle
+574|Günlük
+575|Günlük klasörü kullanılamıyor
+576|Düşük
+577|Düşük frekanslı zamansal yeniden oluşturma
+578|Düşük gecikmeli kuyruk
+579|Parlaklık (luma)
+580|MP4 · MKV · görüntüler
+581|Macenta
+582|Magewell düşük gecikme modu
+583|Ana altyazı gecikmesi
+584|Ana altyazılar
+585|Ana altyazılar kapalı
+586|Yönet
+587|Hazır ayarları yönet
+588|Hazır ayarları Pro modunda yönet…
+589|Hazır ayarları yönet…
+590|Elle
+591|Elle 1/2 · 2 karede 1'i yeniden kullan
+592|Elle 1/3 · 3 karede 1'i yeniden kullan
+593|Elle 1/4 · 4 karede 1'i yeniden kullan
+594|Elle kaydırma
+595|Çok sayıda güçlü parlak alan
+596|Mastering tepe değeri (nit)
+597|Monitöre eşitle
+598|En fazla yüz
+599|Ekranı kapla
+600|Ölçülüyor:
+601|Orta
+602|Orta+Düşük
+603|Bellek ve otomasyon
+604|Girişle birleştir
+605|Yöntem
+606|Mikrofon cihazı
+607|Mikrofon ayrı parçada
+608|Orta gri
+609|Orta gri (nit)
+610|Orta tonlar
+611|Minimal
+612|Minimal mod
+613|Simge durumuna küçült
+614|En az
+615|Mikser
+616|Mod
+617|Model parametreleri
+618|Model gücü
+619|Değiştirilme: en yeni önce
+620|Değiştirilme: en eski önce
+621|İzleme katmanı uyumluluğu
+622|Daha fazla renk denetimi
+623|Çoğunlukla karanlık
+624|Hareket tahmini kalitesi
+625|Aşağı taşı
+626|Yukarı taşı
+627|Çarpan
+628|En yüksek değerin altında kalmalı
+629|Sessiz
+630|Hazır ayarım
+631|Yok
+632|NIS keskinleştirme
+633|NR
+634|NR çıkarımını otomatik yeniden kullanma
+635|NR iyileştirme
+636|NR genel korunan alanlar
+637|NR çalışmıyor
+638|NR katmanı
+639|NR katmanı 1
+640|NR katmanı 2
+641|NR katmanı 3
+642|NR katmanı 4
+643|NR hareket kaynağı
+644|NR sürümü
+645|NR → SR · tüm katmanlar
+646|NVIDIA Low Latency
+647|NVIDIA Low Latency · Açık
+648|Yalnızca NVIDIA NR
+649|NVIDIA oyun içi katmanı
+650|Ad
+651|Ad A → Z
+652|Ad Z → A
+653|Yerel
+654|Yerel pikseller
+655|Doğal
+656|Doğal yumuşatma
+657|Negatif = ses daha erken
+658|Ağ
+659|Ağ arabelleği
+660|Nötr renk koruması
+661|Yeni hazır ayar adı
+662|Sonraki öğe
+663|Gece modu
+664|Hayır
+665|FG yok
+666|LUT yok
+667|NR katmanı eklenmedi
+668|Sınır yok
+669|Yakalama cihazı algılanmadı
+670|Henüz yakalama geçmişi yok
+671|Renk düğümü yok
+672|Henüz renk hazır ayarı yok
+673|Telafi yok
+674|Kumanda algılanmadı
+675|Cihaz seçilmedi
+676|Yüz algılanmadı
+677|Kare oluşturma yok
+678|Kare oluşturma yok (referans)
+679|Hiçbir işlev açık değil
+680|Eğride sabit bir sınır yok
+681|Eşleşen biçim yok
+682|Çıkış yok
+683|Henüz eşleşmiş ana bilgisayar yok
+684|Kaydedilecek görüntü yok
+685|Küçültme yok
+686|Açık kaynak yok
+687|Devam edilecek kaynak henüz yok
+688|Ekranda altyazı yok
+689|Hedef seçilmedi
+690|Bu düğüm için henüz süre yok
+691|Düğüm modu
+692|Düğüm hazır ayarı:
+693|Düğüm hazır ayarları
+694|Düğümler
+695|Yok
+696|Normal
+697|8 haneli bir eşleştirme kodu değil
+698|Bağlı değil
+699|Etkin değil
+700|Yüklenmedi
+701|Ölçülmedi
+702|Açık değil
+703|Eşleşmedi
+704|Oynatılmıyor
+705|Ulaşılmadı
+706|Çalıştırılmadı
+707|Ayarlanmadı
+708|Giriş yapılmadı
+709|Belirtilmedi
+710|Desteklenmiyor
+711|Test edilmedi
+712|Ölçülmedi
+713|OBS Oyun Yakalama uyumluluğu
+714|Tamam
+715|Kapalı
+716|Çevrimdışı
+717|Kaydırma
+718|Açık
+719|Telefonunuzda veya tarayıcıda şunu açın:
+720|Açık · her şu kadarda 1 yeniden kullanılır:
+721|Açık · otomatik
+722|Açık · güç
+723|Çevrimiçi
+724|Çevrimiçi · bir oyun çalışıyor
+725|Yalnızca yerel dosyalar açılabilir
+726|Aç
+727|Windows kayıt ayarlarını aç
+728|Bir video veya görüntü açın
+729|Dosya aç
+730|Dosya aç / Dışa aktarma sayfası
+731|Dosya aç…
+732|Klasörü aç
+733|Oyun hazır ayarını aç
+734|Eski biçim listesini aç
+735|Medya URL'si aç
+736|Medya URL'si aç…
+737|Kaynak sayfasını aç
+738|Video aç
+739|Açık dünya · mini harita sol altta
+740|Açık dünya · mini harita sağ üstte
+741|Açılıyor
+742|Yakalama cihazı açılıyor…
+743|Açma zaman aşımına uğradı
+744|Optik akış
+745|Optik akış algoritması
+746|Optik akış · hareket tahmini
+747|Bilgisayarım için optimize et
+748|Seçenekler
+749|Turuncu
+750|Orijinal
+751|Orijinal / iyileştirilmiş karşılaştırma
+752|Orijinal yüzü geri getir
+753|Yalnızca orijinal
+754|Orijinal ses
+755|Diğer konsol
+756|Çıkış O
+757|Dış çizgi
+758|Çıkış
+759|Çıkış
+760|Çıkış sınırı
+761|Çıkış sınırı · şu an etkin değil
+762|Çıkış sınırı · ekranı izle
+763|Çıkış cihazı
+764|Çıkış cihazı ve downmix
+765|Çıkış ayarları
+766|Çıkış dengeleyici · titreme önleme
+767|Çıkış · ses
+768|Bütçe aşıldı
+769|Genel parlaklık
+770|Genel değişim gücü
+771|Genel güç
+772|PC yayını
+773|PC yayını…
+774|PIN gerekli
+775|PS5 konsolu
+776|PS5 kumanda kontrolü
+777|PS5 kumanda kontrolü bağlandı
+778|PS5 kumanda kontrolü durdu
+779|PS5 kumandası
+780|PS5 yayını
+781|PS5 yayını…
+782|PSN hesabı
+783|Açılışta gösterilen sayfa
+784|Sayfa değiştirici
+785|Eşleştir
+786|Eşleştir (ilk kez)
+787|Eşleştir ve kaydet
+788|Eşleşti
+789|Eşleştirme iptal edildi
+790|Uyandırmadan önce eşleştirme gerekir.
+791|Eşleştirme ayarları
+792|Eşleştir…
+793|Parametrik eğri
+794|Parametrik koyular
+795|Parametrik parlak alanlar
+796|Parametrik açıklar
+797|Parametrik gölgeler
+798|Bir PUSHFPS1: kodu yapıştırın
+799|Renk ayarlarını yapıştır
+800|Patreon sayfası
+801|Patreon, WeChat ve Alipay
+802|Dışa aktarmayı duraklat
+803|Duraklatıldı
+804|Tepe
+805|Tepe parlaklık (nit)
+806|Tepe sınırı (nit)
+807|Performans
+808|Görüntü
+809|Görüntü ve ses
+810|Yakalama kartından görüntü
+811|Görüntü stili
+812|Piksel biçimi
+813|Oynat / duraklat
+814|Bitince sonrakini oynat
+815|Oynatma
+816|Oynatma çubuğu gösteriliyor
+817|Oynatma başarısız
+818|Oynatma hızı
+819|Oynatılıyor
+820|Oynatma listesi
+821|Oynatma listesi · Klasör içe aktar
+822|Nokta eğrisi
+823|Pozitif değerler sesi geciktirir
+824|Hazırlanıyor:
+825|Sunum
+826|Hazır ayar kopyalandı
+827|Hazır ayar silindi
+828|Hazır ayar adı
+829|Hazır ayarın adı değişti
+830|Hazır ayar:
+831|Hazır ayarlar
+832|Hazır ayarlar ve
+833|Yeni tuşa basın…
+834|Önizleme
+835|Önizleme kullanılamıyor
+836|Önceki öğe
+837|Pro modu
+838|Görüntüleri toplu işle…
+839|İşleme sırası
+840|İşleme ölçeği
+841|İşleme süresi
+842|İşleniyor ·
+843|Parlak alanları koru
+844|HUD'u koru
+845|Canlılık
+846|Mor
+847|Glide Virtual Speaker
+848|Glide renk hazır ayarı (*.vpcolor)
+849|Glide oyun hazır ayarı (*.pushfps)
+850|Glide yeşili
+851|Glide hazır ayarı (*.vpreset)
+852|Kalite
+853|Kuyruk
+854|Hızlı hazır ayarlar
+855|Hızlı kurulum
+856|Oyundan çık
+857|RTX 50 · NVIDIA orijinali
+858|RTX Video SR · Yüksek bit hızı
+859|RTX Video SR · Standart
+860|RTX Video SR · Yayın
+861|RTX Video Super Resolution
+862|RX 7000 · RedDuke (deneysel)
+863|RX 9000 · lmxxf (deneysel)
+864|Hız denetimi
+865|Parçalar okunuyor…
+866|Gerçek zamanlı
+867|Alınan
+868|Kareler alınıyor
+869|Son kullanılanlar
+870|Önerilen
+871|Yeniden bağlan
+872|Yeniden bağlanıyor
+873|Kayıt
+874|Ses kaydet
+875|Mikrofonu kaydet
+876|Kayıt bit hızı
+877|Kayıt codec'i
+878|Kayıt klasörü
+879|Kayıt kare hızı
+880|Kayıt kaydedildi
+881|Kurtarılıyor
+882|Dikdörtgen
+883|Kırmızı
+884|Kırmızı ana renk
+885|Yinele
+886|Hareketi azalt
+887|İşleme kuyruğu derinliğini azalt
+888|İlk sonucu şuna küçült:
+889|Referans tabanı
+890|Yenile
+891|Cihazları yenile
+892|Ekran durumunu yenile
+893|Geri dönmek için bırakın
+894|Her filmi hatırla
+895|Son boyutu hatırla
+896|Ekran başına hatırla
+897|Oynatma konumunu hatırla
+898|Yinelenen kareleri kaldır
+899|Oynatma listesinden çıkar; dosyayı sakla
+900|Eşleştirmeyi kaldır
+901|Açılış varsayılanını kaldır
+902|Yeniden adlandır · kopyala · sil
+903|Tekrar uzunluğu
+904|Bildir
+905|Sorun bildir
+906|İstenen
+907|İstenen bit hızı
+908|AMD RX 7000 / 9000 gerekir
+909|AMD RX 9000 gerekir
+910|NVIDIA GPU gerekir
+911|Sıfırla
+912|Tümünü sıfırla
+913|Kanalı sıfırla
+914|Ekolayzırı sıfırla
+915|Düğümü sıfırla
+916|Bu sayfayı sıfırla
+917|Bu ayarı sıfırla
+918|Varsayılana döndür
+919|Kalan
+920|Çözünürlük
+921|Çözünürlük ve kare hızı
+922|Yeniden başlat
+923|Yeniden başlatma gerekli
+924|Geri getirme alanı
+925|Geri getirme gücü
+926|Devam edildi
+927|Yeniden kullanım modu
+928|Gidiş-dönüş
+929|Çalışıyor
+930|Orijinal geri getirildikten sonra çalışır
+931|SDK dahili
+932|SDK gönderimi
+933|SDR ekran, dönüştürülmedi
+934|Örnekleme
+935|Doygunluk
+936|Doygunluk en fazla
+937|Doygunluk en az
+938|Kaydet
+939|Farklı kaydet
+940|Oyun profili olarak kaydet
+941|Dosyayı kaydet
+942|Oyun hazır ayarını kaydet
+943|Anlık tekrarı kaydet
+944|Hazır ayarı kaydet
+945|Kaydetme zaman aşımına uğradı
+946|Şuraya kaydet
+947|Kaydedildi
+948|Kayıtlı cihaz (bağlı değil)
+949|Kayıtlı ana bilgisayar
+950|Kayıtlı ana bilgisayar
+951|Kaydediliyor…
+952|WeChat veya Alipay ile tarayın
+953|Klasörler taranıyor…
+954|Zamanlama düşürüldü
+955|Zamanlama bekleme P95
+956|Ekran yakalama
+957|Ekran yakalama…
+958|Ekran görüntüsü
+959|Ekran görüntüsü klasörü
+960|Ara
+961|Arama iptal edildi
+962|Ara, ör. 1920 60 NV12
+963|İkinci SR algoritması
+964|İkinci SR hedefi
+965|İkinci SR kademesi
+966|İkinci geçiş ölçeği
+967|İkincil altyazılar (iki dilli)
+968|İkincil altyazılar kapalı
+969|Kaynaktan seç
+970|Giriş seç
+971|Discord'a gönder
+972|Gönderiliyor…
+973|Açılış varsayılanı yap
+974|Profesyonel modda elle ayarla
+975|Ayarlar
+976|Gölge parlaklığı
+977|Gölge açma
+978|Gölge açma (0,01 EV)
+979|Gölge koruması
+980|Gölge tonu
+981|Gölgeler
+982|Gölgeler ve parlak alanlar
+983|Paylaş
+984|Bu hazır ayarı paylaş
+985|Discord'da paylaş
+986|Keskinlik
+987|Kısayol B
+988|Kısayollar
+989|Tüm kare hızlarını göster
+990|SDR olarak göster
+991|Geçerli dosyayı göster
+992|Klasörde göster
+993|Gecikmeyi ekranda göster
+994|Maskeyi göster
+995|Fare imlecini göster
+996|Oynatma çubuğunu göster
+997|Altyazıları göster
+998|Ana altyazıların üstünde gösterilir
+999|SR'den sonra şuna küçült:
+1000|Uzun satırları otomatik küçült
+1001|Giriş yap
+1002|Çıkış yap
+1003|Giriş PIN'i
+1004|Sinyal
+1005|Giriş yapıldı
+1006|SimHei
+1007|SimSun
+1008|Boyut: en büyük önce
+1009|Boyut: en küçük önce
+1010|Cilt aydınlatma
+1011|Yalnızca cilt
+1012|Cilt aralığı · gelişmiş
+1013|Cilt yumuşatma
+1014|Cilt değeri
+1015|Cilt · doğrulanmadı
+1016|Atlanan kaynak kareleri
+1017|Kaydırıcı klavye adımı
+1018|Hafif
+1019|Küçük
+1020|Her köşede küçük öğeler
+1021|Yumuşatma miktarı
+1022|Yumuşatma alanı
+1023|Yumuşatma yarıçapı
+1024|Yazılım
+1025|Yazılımla kod çözme
+1026|Sırala
+1027|Ses profili
+1028|Kaynak
+1029|Kaynak kodu
+1030|Kaynak rengini koru
+1031|Kaynak boyutu
+1032|Bölünmüş
+1033|Bölünmüş parlak alanlar
+1034|Bölünmüş orta tonlar
+1035|Bölünmüş gölgeler
+1036|Sabitleme gücü
+1037|Standart
+1038|Beklemede
+1039|Başlat
+1040|Kaydı başlat / durdur
+1041|Yakalamayı başlat
+1042|Dışa aktarmayı başlat
+1043|Yayını başlat
+1044|Ekran yakalama başlatılıyor…
+1045|Açılış ve pencere
+1046|Açılış arabelleği
+1047|Açılış varsayılanı
+1048|Açılış varsayılanı hazır ayarı kaldırıldı
+1049|Durağan birikim
+1050|Stereo
+1051|Stereo downmix
+1052|Durduruldu
+1053|Yayın
+1054|Yayın (yeniden bağlanınca geçerli)
+1055|Güç
+1056|Güç
+1057|Doldurmak için uzat
+1058|Katı kare oluşturma temposu
+1059|Güçlü
+1060|Güçlü parlak alanlar
+1061|Stil
+1062|Stil · deneysel
+1063|Gönder
+1064|Gönderim hızı
+1065|Altyazı ayarları
+1066|Altyazı ayarları…
+1067|Altyazı parçaları
+1068|Altyazının kendi yazı tipi
+1069|Altyazılar
+1070|Altyazılar: kapalı
+1071|Altyazılar: açık
+1072|Sunshine ana bilgisayarı
+1073|Süper çözünürlük
+1074|Süper çözünürlük hareket kaynağı
+1075|Geliştiriciyi destekle
+1076|Liste moduna geri dönülsün mü?
+1077|Liste moduna geç
+1078|Düğüm moduna geç
+1079|Düğüm moduna geçilsin mi?
+1080|Sistem varsayılan mikrofonu
+1081|Yeniden başlatınca geçerli olur
+1082|Hedef
+1083|Hedef kare hızı
+1084|Hedef satırlar
+1085|Hedef boyut
+1086|Sıcaklık (göreli)
+1087|Zamansal birikim
+1088|Zamansal titreme önleme
+1089|Zamansal kararlılık
+1090|Test edildi
+1091|Veyra geliştiricisi test etti
+1092|Glide ile test edildi
+1093|Doku
+1094|Doku korundu
+1095|HUD alanları uygulanmadı
+1096|PS5 giriş PIN'ini istiyor
+1097|Zincirde renk düğümü yok
+1098|Renk hazır ayarı yok
+1099|Efekt zinciri dolu
+1100|Dosya yok
+1101|Dosya artık yok
+1102|Hazır ayarın bir adı olmalı
+1103|Giriş PIN'i yalnızca rakam olmalı.
+1104|Hedef artık geçerli değil
+1105|İnce
+1106|Bu bilgisayarın ekran çözünürlüğü
+1107|Bu bir altyazı önizlemesidir.
+1108|Bu modun henüz hazır ayarı yok.
+1109|Bu kaynakta altyazı yok
+1110|Kademe
+1111|Süre
+1112|Renk tonu
+1113|Minimal / Pro arasında geç
+1114|Ölçmek için çok az kare
+1115|İzleme yumuşatma
+1116|Video cihazının kendi sesini deneyin
+1117|Yaylanma ve geçişleri kapat
+1118|Tür
+1119|Arayüz düzeltme · doğrulanmadı
+1120|Ultra
+1121|Kullanılamıyor
+1122|Şu an kullanılamıyor
+1123|Geri al
+1124|Son ayarı geri al
+1125|Kaldır…
+1126|Bilinmiyor
+1127|Bilinmeyen yapılandırma
+1128|Bilinmeyen kare oluşturma arka ucu
+1129|Kullanılmıyor
+1130|Güncelle veya oyun profili olarak kaydet
+1131|Güncelleniyor
+1132|Ölçekleme algoritması
+1133|Performans modelini kullan
+1134|Kullanıcı verileri
+1135|Çin anakarasındaki kullanıcılar
+1136|VB-Audio web sitesi
+1137|VB-CABLE zaten kurulu
+1138|VFG otomatik düzenleme
+1139|VFG kalitesi
+1140|VSync
+1141|Değer aralık dışında
+1142|Değişken yenileme
+1143|Değişken yenileme · etkin
+1144|Sürüm
+1145|Canlılık
+1146|Video
+1147|Video codec'i
+1148|Video giriş cihazı
+1149|Görünüm
+1150|Lisansı görüntüle
+1151|Yalnızca görüntüle
+1152|Güncellemeyi görüntüle
+1153|İzleniyor
+1154|Sayfayı ziyaret et
+1155|Canlı
+1156|Konuşma netliği
+1157|Ses düzeyi
+1158|Ana kareyi bekle
+1159|Örnekler bekleniyor
+1160|Sinyal bekleniyor
+1161|Dışa aktarma bekleniyor
+1162|Sunum bekleniyor
+1163|İşlem içi sunum bekleniyor
+1164|Uyandır
+1165|Uyandırma iptal edildi
+1166|WeChat Pay
+1167|Zayıf
+1168|Web
+1169|Beyaz
+1170|Beyaz parıltı
+1171|Tüm yüz
+1172|Pencere
+1173|Pencere veya ekran
+1174|Açılışta pencere boyutu
+1175|Windows GPU motoru kullanımı (
+1176|Windows HDR
+1177|Windows arşiv aracı bulunamadı
+1178|Aralık içinde
+1179|VB-CABLE Setup çalışıyor…
+1180|X sınırdır
+1181|Xbox yayını
+1182|Xbox yayını…
+1183|Sarı
+1184|Evet
+1185|Hareket yok
+1186|ör. Gece oyunu
+1187|jiroskop
+1188|yalnızca canlı önizleme
+1189|benimkiler
+1190|jiroskop yok
+1191|kısayol atanmadı
+1192|düğüm modunda henüz yok
+1193|kaynak yetersiz
+1194|HDR işlemede kullanılmaz
+1195|otomatik NR boyutuyla kullanılmaz
+1196|scRGB float
+1197|☕ Bana bir kahve ısmarla · 5 ABD doları
+1198|=
+1199|=
+1200|=
+1201|=
+1202|=
+1203|ANR FG · Apex Compute · deneysel
+1204|ANR paketi (*.zip nvngx_dlssg.dll);;Tüm dosyalar (*)
+1205|ANR kuruldu (%1 dosya). Glide’i yeniden başlatın, ardından kare oluşturma yöntemi olarak ANR’yi seçin
+1206|ANR kare oluşturma Apex Compute tarafından yapılmıştır ve GTX 16 serisi ve daha yeni ekran kartlarını destekler. Glide ile birlikte dağıtılamaz: Apex’in GitHub sayfasından anr-fg paketini indirin ve burada seçin
+1207|ANR kare oluşturma, Apex Compute’un Apex Neural Rendering teknolojisidir
+1208|ANR kare oluşturma, Apex Compute
+1209|Glide’in temeli, Likely7
+1210|ANR’yi indir
+1211|İndirilenden kur…
+1212|Önce Ayarlar → Bileşenler ve lisanslar bölümünden Apex’in ANR’sini kurun
+1213|Kurulu. ANR kare oluşturma Apex Compute tarafından yapılmıştır; Profesyonel modda kare oluşturma yöntemi olarak seçin
+1214|Geçici klasör oluşturulamadı
+1215|ANR dosyaları %1 konumuna kopyalanamadı
+1216|ANR paketi açılamadı: %1
+1217|Güncelle…
+1218|Kurulu değil
+1219|İndir ve kur
+1220|Bu dosyada ANR’nin nvngx_dlssg.dll dosyası yok. Apex’in anr-fg paketini seçin
+1221|Apex Compute’tan indirdiğiniz ANR paketini seçin
+1222|%1 FPS'lik bir oyun %2 FPS'te çalışır (%3× kare oluşturma)
+1223|%1 çalışıyor. Hem arayüze hem videoya bağlanır ve Glide'i dondurabilir. Uyumlu çizimi açmak için Glide'i yeniden başlatın: arayüz yazılımla çizilir ve %1 yalnızca videoyu etkiler. Şimdi yeniden başlatılsın mı? Oynatma veya yayın durur.
+1224|1% low yalnızca %1 FPS, yeterince kararlı değil
+1225|GTA VI gibi oyunlar için önerilen ayarlar, keskin mini harita ve HUD ile
+1226|Switch 2'yi 60 Hz'de dock'a yerleştirin. Oyunlarda HDCP yoktur, olduğu gibi yakalanır.
+1227|Xbox'ta Ayarlar → Genel → TV ve ekran seçenekleri'nden 60 Hz seçin. Oyunlarda HDCP yoktur, olduğu gibi yakalanır.
+1228|Profesyonel modda özel bir eğri ayarlı; sürüklemek onu değiştirir
+1229|Orta tonların parlaklığı; siyah ve beyaz değişmez
+1230|Konsol oyunları için kare hızını ve görüntüyü seçin. Diğer her şey Profesyonel moddadır.
+1231|Oyunlar konsolun kendi kare hızında kalır
+1232|Konsolunuz bir yakalama kartıyla, bilgisayarınız sayesinde 60 veya 120 FPS'te
+1233|Konsolu 60 Hz'e ayarlayın. PlayStation'da Ayarlar → Sistem → HDMI'dan HDCP'yi kapatın, yoksa yakalanan görüntü siyah kalır.
+1234|Konsolu 60 Hz'e ayarlayın ve böyle bir seçenek varsa HDCP'yi kapatın, yoksa yakalanan görüntü siyah kalabilir.
+1235|5 bantlı ekolayzır, bant başına ±12 dB
+1236|Geçerli ayarları hazır ayar olarak kaydet
+1237|Önce yakalama kartınızı bağlayın ve oyun görüntüsünü ekrana getirin, sonra başlatın
+1238|Kapalı: yalnızca kare oluşturma. Açık: her kare ayrıca daha keskin bir görüntü için NVIDIA'nın nöral işleyicisinden (DLSS 5 NR) geçer, GPU yükü artar
+1239|Daha az kuyruk, daha düşük giriş gecikmesi
+1240|“%1” silinsin
+1241|Hikâye oyunları ve filmler: tüm görüntüye kare oluşturma uygulanır
+1242|Ayrıntıları ve kenarları öne çıkarır (doku)
+1243|Aksiyon · HUD alt köşelerde
+1244|Oyunun kare hızını, hedef kare hızını ve Profesyonel modda çizdiğiniz “Tüm efektlerin dışında tut” alanlarını içerir
+1245|Yüksek ve alçak sesleri dengeler, gece geç saatler için
+1246|Yalnızca %1 FPS'e ulaştı
+1247|Sağ üst köşede mini harita veya pusula
+1248|Sağ alt köşede hız, vites ve mini harita
+1249|Her kombinasyonu gerçek görüntünüzde dener ve en iyisini seçer
+1250|Her kare oluşturma yöntemini, yapay zekâ iyileştirmeyi ve ölçekleyiciyi gerçek görüntünüzde dener; en akıcı ve en düşük gecikmeli kombinasyonu seçer
+1251|Kodu arkadaşlarınıza göndermek veya Reddit / Discord'da paylaşmak için kopyalayın ya da dosya olarak kaydedin
+1252|Konsol oyunlarının çoğu 30 FPS'te çalışır; performans modları için 60'ı seçin
+1253|Ölçülen PC gecikmesi (yakalama kartı görüntüsünün gelişinden ekrana verilmesine kadar) ve kare hızı; yakalama kartı, ekran ve oyun kendi gecikmelerini ekler
+1254|Daha net diyaloglar ve sesli sohbet, alçak uğultu olmadan
+1255|Nişancı · HUD dört köşede
+1256|Mini harita sol altta, para ve aranma seviyesi sağ üstte. Düzen GTA serisinden tahmin edildi; oynarken kontrol edin
+1257|Sol alt köşede yuvarlak veya kare mini harita
+1258|Sağlık sol altta, silah ve cephane sağ altta
+1259|“%1” kaydedildi (%2 HUD alanı)
+1260|“%1” silindi
+1261|Klip kopyalandı. Yapıştırmak için Discord'da Ctrl+V'ye basın
+1262|Kopyalandı. Herhangi bir sohbete veya klasöre yapıştırın
+1263|“%1” uygulandı
+1264|“%1” uygulandı: %2 HUD alanı korunuyor. Profesyonel mod → Kalite → Tüm efektlerin dışında tut bölümünden ince ayar yapın
+1265|“%1” eklendi
+1266|Tam ekran kilitli · kilidi açmak için Ctrl+L, tam ekrandan çıkmak için Esc
+1267|Gecikme %1 ms
+1268|Gecikme = yakalama kartı görüntüsünün PC'ye ulaşmasından ekrana verilmesine kadar geçen süre (yalnızca PC kısmı; yakalama kartı, ekran veya oyun değil). 1% low ortalamaya ne kadar yakınsa o kadar akıcıdır.
+1269|Çok fazla gecikme ekliyor (%1 ms)
+1270|İşleme zincirinde renk aşaması yok
+1271|Bu kare oluşturma yöntemi %1×'e kadar çıkar: %2 FPS'lik bir oyun yaklaşık %3 FPS'e ulaşır
+1272|Kayıt zaten oluşturulmuş kareler içeriyor. Kareler iki kez oluşturulmasın diye dışa aktarmadan önce Profesyonel modda kare oluşturmayı kapatın.
+1273|Bu ayarları bir oyun için kaydedin, sonra tek tıkla onlara geçin
+1274|Oynatma çubuğu gizli · geri getirmek için imleci yukarı götürün ve dock'taki göze tıklayın
+1275|Tüm görüntüde kare oluşturma
+1276|Referans görüntü ölçülemedi: %1
+1277|Daha dolgun bas ve tizler, hafif sıkıştırma
+1278|En iyi kombinasyon: %1. Uygulandı.
+1279|Bu oturumda tam ekranda VRAM kullanımı sürekli arttı. Pencerede oynatın; tam ekranı yeniden denemek için kaynağı yeniden açın.
+1280|Bu yazılım ücretsiz ve açık kaynaklıdır. İşinize yararsa şunu yapabilirsiniz →
+1281|%1 algılandı
+1282|RTSS ekran üstü gösterim hizmeti algılandı
+1283|RTSS ekran üstü gösterim hizmeti çalışıyor. Uyumlu çizimi açmak ve OSD'yi yalnızca videoda göstermek için Glide'i yeniden başlatın. Şimdi yeniden başlatılsın mı? Oynatma veya yayın durur.
+1284|Oyun başına önerilen ayarlar, keskin mini harita ve HUD ile (bu alanlara kare oluşturma ve efekt uygulanmaz)
+1285|Hiçbir kombinasyon hedefi kararlı biçimde tutamadı, bu yüzden ayarlarınız korundu. Daha düşük bir hedef deneyin veya diğer efektleri kapatıp yeniden çalıştırın
+1286|Çalışırken kaynağı değiştirmeyin; oynamaya devam edebilirsiniz
+1287|Ölçüm sırasında ayarlar değişti
+1288|Görüntü durdu. Optimizasyon iptal edildi ve ayarlarınız geri yüklendi
+1289|Ayak seslerini ve silah seslerini öne çıkarır, rekabetçi oyunlar için
+1290|Yeşil alanlar konsol görüntüsünü olduğu gibi korur, kare oluşturma uygulanmaz; böylece yazılar ve mini harita keskin kalır
+1291|Oyunu yakalama kartınızla ekrana getirin, sonra başlatın. Glide mevcut her kombinasyonu gerçek görüntünüzde dener (her biri yaklaşık 10 saniye, toplam 1–2 dakika), gerçek kare hızını, 1% low değerini ve gecikmeyi ölçer, en iyisini seçer.
+1292|Yarış · hız göstergesi sağ altta
+1293|Bu kartı henüz kimse bildirmedi; sonuçlarınızı GitHub'da paylaşın
+1294|Bu geçerli bir Glide hazır ayar kodu değil
+1295|Yerleşik bir hazır ayar bu adı zaten kullanıyor
+1296|Bu bilgisayar bu kombinasyonu çalıştıramıyor
+1297|Yakalama kartı karelerin %%1'ini düşürdü
+1298|. Kayıtlarda da korunur. Dolby / DTS geçişi etkilenmez
+1299|Gelişmiş kodlama ayarları
+1300|Hız denetimi, kodlayıcı ön ayarı, ana kare aralığı, ses bit hızı ve kapsayıcı; OBS çıkış ayarları gibi. Kapalıyken standart ayarlar kullanılır
+1301|VBR: bit hızı görüntünün karmaşıklığına göre değişir (standart). CBR: her saniye aynı bit hızı, yüklemeler için iyi. Sabit kalite: kalite sabit, dosya boyutu görüntüye göre değişir
+1302|Sabit kalite
+1303|Kalite düzeyi
+1304|1–51; düşük değer daha iyi kalite ve daha büyük dosya demektir; standart 22
+1305|Kodlayıcı ön ayarı
+1306|Sağa doğru kalite artar ama GPU kodlayıcısının yükü de artar; standart 4. Kayıtlar takılırsa düşürün
+1307|Ana kare aralığı
+1308|Saniye; kısa olması düzenlemeyi ve ileri sarmayı kolaylaştırır, dosya biraz büyür; standart 2
+1309|Ses bit hızı
+1310|Ses parçası başına kbps; standart 192
+1311|MP4 her yerde oynatılır (standart). MKV düzenleme yazılımları için uygundur; anlık tekrarlar her zaman MP4 olarak kaydedilir
+1312|Standart ayarlara dön
+1313|GPU bir birleşimi kullanamazsa kayıt standart ayarlara geçer ve sizi bilgilendirir
+1314|Geri yükle
+1315|GPU seçilen gelişmiş kodlama ayarlarını desteklemiyor; standart ayarlarla kaydediliyor
+zh:轻|Hafif
+zh:亮|Işık
+1316|G-SYNC veya FreeSync: monitör sabit bir hızda değil, yeni kare geldiğinde yenilenir; böylece dengesiz kare hızı yırtılma ve takılma yapmaz
+1317|HUD yanlış yerde mi?
+1318|HUD koruması
+1319|HUD algılama başarısız
+1320|NVIDIA Image Scaling, her marka ekran kartında çalışan açık kaynaklı bir büyütme ve keskinleştirme filtresidir. Çok fazla keskinlik kenarlarda beyaz haleler oluşturur
+1321|Konsol · %1 FPS
+1322|Karşılaştırma klibini durdur
+1323|Tümünü temizle
+1324|Anahtar kare tam bir resimdir; aradaki kareler yalnızca değişenleri saklar. Oynatıcılar ve video düzenleyiciler kod çözmeye yalnızca bir anahtar karede başlayabilir
+1325|Ekran kartında sırada bekleyen kare sayısı azalır; bir tuşa bastıktan sonra görüntü daha çabuk tepki verir. Yalnızca NVIDIA ekran kartları
+1326|HUD’yi kendi oyun görüntünde algıla veya kutuları elle sürükle
+1327|Yeni kutu çizmek için görüntü üzerinde sürükle (en fazla 4). Taşımak için kutuyu, boyutlandırmak için köşelerini sürükle
+1328|Karşılaştırma klibi
+1329|Karşılaştırma klibinde üretilmiş kare yok, iki yarı aynı. Kare üretiminin çalıştığını kontrol et
+1330|Mini harita, can ve cephane gibi sabit kısımlar konsolun kendi piksellerini korur ve ara kare üretilmez; bu yüzden net kalır. Otomatik algılamadan sonra kutuları sürükleyerek düzeltebilirsin
+1331|HUD koruması kapalı; tüm görüntüye ara kare üretiliyor
+1332|Uygulandı: %1 alan konsolun kendi piksellerini koruyor
+1333|Yardım
+1334|Geçerli görüntü biçimi otomatik HUD algılamayı desteklemiyor
+1335|15 saniyelik yan yana video kaydet: solda konsolun kendi kare hızı, sağda Glide
+1336|%1 HUD alanı bulundu. Yeşil kutuları kontrol et, gerekirse sürükleyerek düzelt, sonra Uygula’ya tıkla
+1337|Görüntü okunamadı; HUD algılama durduruldu
+1338|HUD’yi algılamak için yeterli video belleği yok
+1339|En fazla 4 kutu; önce birini sil
+1340|%1 saniyelik karşılaştırma klibi kaydediliyor: solda konsolun kendi kare hızı, sağda Glide
+1341|Görüntü alınıyor…
+1342|Görüntü izleniyor %1 / %2
+1343|Görüntü yaklaşık 5 saniye izleniyor. Oyunda kamerayı çevir veya yürü
+1344|Saniyede gösterilen en fazla kare. Kare üretimiyle çıkışı hedef kare hızında tutar; hareket daha düzenli olur
+1345|HUD bulunamadı. Görüntü üzerinde sürükleyerek elle kutu çizebilirsin
+1346|Görüntü gelmedi. Görüntünün oynatıldığını ve Glide penceresinin simge durumunda olmadığını kontrol et
+1347|Oynatılan bir şey yok, HUD algılanamıyor
+1348|Görüntü yok. Kutuları kendi oyun görüntünde ayarlamak için bir yakalama kartı bağla ve oynatmayı başlat
+1349|Kutu ekle
+1350|Oyunun kendisinin saniyede çizdiği yeni resim sayısı. Konsol her zaman 60 Hz sinyal gönderir; 30 FPS bir oyun her resmi iki kez gösterir. Glide kaç kare üreteceğine buna göre karar verir
+1351|Yapay zekâ yakalama kartı sıkıştırmasının bıraktığı blokları ve gürültüyü temizler, ayrıntılar daha net görünür. Kare üretiminden bağımsızdır, ayrıca açılıp kapatılabilir
+1352|Görüntü neredeyse hiç hareket etmedi, HUD ayırt edilemedi. Oyunda kamerayı çevir veya hareket et, sonra tekrar dene
+1353|Bit hızı, videonun saniyede kullandığı veri miktarıdır. Hız denetimi kodlayıcının bunu nasıl dağıtacağını belirler: daha fazla veri, daha iyi kalite ve daha büyük dosya demektir
+1354|Kodlayıcının her kareye harcadığı emek. Daha yavaş daha iyi sıkıştırır; aynı dosya boyutunda kalite daha yüksek olur
+1355|Mini haritayı ve HUD’yi otomatik bulur ve kare üretiminin dışında tutar; kutuları elle düzeltebilirsin
+1356|Otomatik algıla
+1357|Kare üretiminden sonra saniyede gösterilen resim sayısı. Üretilen kareler iki gerçek resmin arasına girer ve hareketi akıcılaştırır; kumanda daha hızlı tepki vermez
+1358|Sabit HUD’yi bulmak için görüntüyü birkaç saniye izler
+1359|Önce kare üretimini aç: karşılaştırma klibi konsolun kendi kare hızını üretilmiş görüntünün yanına koyar
+1360|Önce bir yakalama kartı bağla ve oynatmayı başlat
+1361|HUD alanlarını ayarla
+1362|Kamerayı çevir veya yürü: geri kalan hareket ederken HUD sabit kalır
+1363|Yeni görüntü al
+1364|15 saniyelik önce/sonra videosu
+1365|GTA VI ve dahası, HUD net kalır
+1366|Tema
+1367|Kayıt sırasında kullanılamaz
+1368|Kaydediliyor…
+1369|Her kombinasyonu dener, en iyisini seçer
+1370|Otomatik algılanır, elle ayarlanabilir
+1371|Oynatılan bir görüntü gerekir
+1372|AMD FRC · video kare ara değerleme · 2X
+1373|NVIDIA G-SYNC kurulumu
+1374|Ses girişi yok
+1375|Onar
+1376|Bu açılışta müziği durdur
+1377|Diğer masaüstü
+1378|Geçmek için tıklayın veya bir tuşa basın
+1379|Açılış animasyonu
+1380|Açılışta bağlan
+1381|Açılış müziği
+1382|Denetlenmedi
+1383|Pencere ve tam ekran ayarlanmadı
+1384|Pencere ve tam ekran izinli
+1385|Seçili
+1386|Bu profil tek başına değiştirilemez
+1387|Orijinali geri yükle
+1388|Yedek mevcut profille eşleşmiyor
+1389|Telefon ağır çekim hızı
+1390|Yedek kaydedilemiyor veya kaldırılamıyor
+1391|Gün batımı
+1392|Bölge çerçevelerini göster
+1393|Sürücü profili doğrulanmadı
+1394|Yerel ses izleme
+1395|Masaüstü %1
+1396|Masaüstü %1 · %2
+1397|Sürücü profili işleniyor…
+1398|Toplam gecikmeyi ölç
+1399|Renk düzeni
+1400|Aradaki kare sayısı
+1401|Her zaman üstte
+1402|Klasik
+1403|Bağlanınca tam ekran
+1404|Seç
+1405|Yönetici hakları gerekli
+1406|Ses girişi
+1407|Sürücü profili kullanımda
+1408|Sunset City logosu
+1409|Yayın anahtarı
+1410|Platform
+1411|Sunucu
+1412|Yayına başla
+1413|Yayında
+1414|Yayını durdur
+1415|Platform ekle
+1416|Oyun sesi
+1417|Video bit hızı
+1418|Özel RTMP
+1419|Yayın anahtarını yapıştırın
+1420|Başlamadı
+1421|Bağlantı başarısız
+1422|Mikrofon
+1423|Düzen
+1424|Yan yana
+1425|Kaydı başlat
+1426|Süre
+1427|Akıcı kare zamanlaması

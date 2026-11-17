@@ -1,0 +1,1430 @@
+0|·  FEC hersteld
+1|·  bitrate
+2|·  decoderen
+3|·  verloren
+4|·  keyframe-verzoeken
+5|·  in wachtrij
+6|·  ontvangen
+7|·  retourtijd
+8|·  niet hersteld
+9|(toegevoegd na NR
+10|(max. 4 lagen)
+11|(max. 6 lagen)
+12|(niet aanbevolen)
+13|/ 4 gebieden
+14|/ gedecodeerd
+15|kan.
+16|fps  ·  verloren
+17|fps  ·  pakketten
+18|frames
+19|items
+20|lagen achter elkaar
+21|ms (GPU, gemiddelde laatste seconde)
+22|ms (laatste seconde)
+23|ms / frame
+24|nodes ·
+25|aandeel
+26|· overgeslagen
+27|· overgeslagen
+28|· kalibreren
+29|· huidige standaard
+30|· huidig bestand, ongeveer
+31|· downmix
+32|· tint
+33|· max. 4 lagen)
+34|· node
+35|· uit
+36|· gepauzeerd
+37|· herstellen
+38|· terugzetten
+39|· verzadiging
+40|· sterkte
+41|· temporeel 4x (experimenteel)
+42|· temporeel T2x (experimenteel)
+43|· wacht
+44|→ Voorstel:
+45|(gedeeld)
+46|(naamloos apparaat)
+47|+  NR-laag toevoegen
+48|+  Beautylaag toevoegen
+49|, voer hieronder de aanmeldcode in:
+50|0 = bron volgen
+51|0 = geen afvlakking van hoge lichten
+52|0 = geen limiet
+53|1 min
+54|10 min
+55|1080p · standaard
+56|15 s
+57|2 items
+58|2 min
+59|30 s
+60|4 items
+61|5 items
+62|5 min
+63|6 items
+64|8-cijferige koppelcode
+65|; huidig:
+66|AI-verbetering
+67|AI-beeldverbetering
+68|AMD optical flow
+69|AMD-prestaties
+70|Over
+71|Accentkleur
+72|Account
+73|Aanmelden met account · experimenteel
+74|Opgebouwde flow · standaard
+75|Opgebouwde flow+
+76|Actief
+77|Toevoegen
+78|Voeg eerst een RTX Video HDR-node toe
+79|Voeg eerst een anti-aliasing-node toe
+80|Huidig bestand toevoegen
+81|Bestanden toevoegen
+82|Bestanden aan afspeellijst toevoegen
+83|Handmatig toevoegen
+84|Node toevoegen
+85|Voeg meerdere video's toe of sleep ze hierheen
+86|Preset van iemand anders toevoegen
+87|Voeg eerst de bestanden toe om te exporteren
+88|Aan exportwachtrij toevoegen
+89|Aanpassen
+90|Aanpassingsmethode
+91|Toestemming van beheerder geannuleerd
+92|Geavanceerd: precieze parameters
+93|Uitlijnen op bronvenster
+94|Alipay
+95|Alle GPU's
+96|Alle huid
+97|Tearing toestaan
+98|Ook op deze GPU rekenen
+99|Ook geluid afspelen op de host
+100|Altijd tonen
+101|Altijd de laatste stap
+102|Analyseren…
+103|Anti-aliasing
+104|Anti-aliasing 2
+105|Antiflikkerniveau
+106|Uiterlijk
+107|Geldt bij het openen van een video
+108|Toepassen
+109|Preset toepassen…
+110|Instellingen toepassen en opnieuw verbinden
+111|Gebiedsuitbreiding
+112|Beeldverhouding
+113|Audio
+114|Audio meeluisteren
+115|Audioverschuiving
+116|Audio-uitvoer nog niet geopend
+117|Audio-instellingen
+118|Audio-instellingen…
+119|Audiosynchronisatie
+120|Audiosporen
+121|Audio/video-synchronisatie
+122|Automatisch
+123|Automatisch (op belasting)
+124|Automatisch (losse GPU)
+125|Automatisch schatten
+126|Automatisch masker · experimenteel
+127|Automatisch uitlijnen
+128|Automatisch uitlijnen op audiospoor
+129|Bezig met uitlijnen
+130|Automatisch verbergen
+131|Automatisch opnieuw verbinden
+132|Automatisch kiezen bij afspelen
+133|Automatische regelhoeveelheid
+134|Automatisch de-interlacen
+135|Automatische schermsynchronisatie
+136|Automatisch verwijderen
+137|Automatisch ·
+138|Automatisch hervatten bij opstarten
+139|Beschikbaar
+140|Gemiddeld
+141|5 seconden terug / vooruit
+142|Terug naar lijst
+143|Achtergrondbalk
+144|Sterkte achtergrondverloop
+145|Balans
+146|Gebalanceerd
+147|Gebalanceerde helderheid
+148|Basisbediening
+149|Basversterking
+150|Beauty
+151|Beauty 2
+152|Beauty 3
+153|Beauty 4
+154|Beauty 5
+155|Beauty 6
+156|Beautylaag
+157|Beautypresets
+158|Vóór verbetering
+159|Bilibili
+160|Bitrate
+161|Bitrate (Mbps)
+162|Bitstream eerst
+163|Zwart
+164|Zwart-wit
+165|Blackmagic native opname
+166|Zwarten
+167|Mengen
+168|Blauw
+169|Blauwe primaire kleur
+170|Helder
+171|Lichte kamer
+172|Compensatie voor lichte kamer
+173|Helderheid
+174|Helderheidsbalans
+175|Helderheidsverandering
+176|Helderheid max.
+177|Helderheid min.
+178|Budget
+179|Bufferen
+180|Ingebouwd
+181|Trakteer de maker op koffie
+182|CPU-software
+183|Kalibreren
+184|Kalibreren…
+185|Kan worden opgeslagen
+186|Annuleren
+187|Afbeeldingenbatch annuleren
+188|Geannuleerd · kan opnieuw starten
+189|Niet te detecteren
+190|Opname
+191|Capturekaart
+192|Capturekaartinstellingen
+193|Capturekaartinstellingen…
+194|Capturekaart ·
+195|Opnamemethode
+196|Opnamedoel
+197|Keten is geldig
+198|Wijzigingstolerantie
+199|Wijzigingen zie je hier direct.
+200|Wijzigen…
+201|Kanalen
+202|Controleren
+203|Controleren en kiezen
+204|Zoeken naar updates
+205|Controleren…
+206|Controleren… afspelen gaat door
+207|Kiezen
+208|Kies eerst een opnamedoel
+209|Kies een framerate
+210|Kies een pixelformaat
+211|Kies een resolutie
+212|Kies eerst een resolutie
+213|Kies een opslagmap…
+214|Kies minstens één item
+215|Exportmap kiezen
+216|Te verwerken afbeeldingen kiezen
+217|Map voor schermafbeeldingen kiezen
+218|Opnamemap kiezen
+219|Sporen kiezen
+220|Kiezen…
+221|Gekozen apparaat (niet verbonden)
+222|Chromabescherming
+223|Bioscoop
+224|Filmisch
+225|Filmisch · geen HUD-bescherming
+226|Cirkel
+227|Helderheid (clarity)
+228|Wissen
+229|Filmgeheugen wissen
+230|Geheugen wissen
+231|Wachtrij wissen
+232|Klik op het beeld
+233|Klik om te zoeken
+234|Sluiten
+235|Venster sluiten
+236|Grof
+237|Code gekopieerd
+238|Codec
+239|Inklappen
+240|Kleur
+241|Kleurverandering
+242|Kleurcorrectie
+243|Kleurpreset geëxporteerd
+244|Kleurpresets
+245|Kleurinstellingen
+246|Kleurinstellingen gekopieerd
+247|Kleur · instantie
+248|Inhoud en kamer combineren
+249|Communitygroepen
+250|Vergelijken
+251|Compatibel
+252|Geluid bij voltooiing
+253|Onderdelen en licenties
+254|Compressie nodig
+255|Installatie bevestigen
+256|Verwijderen bevestigen
+257|Verbinden
+258|Verbinden en starten
+259|Met deze ingang verbinden
+260|Verbonden
+261|Verbinden
+262|Verbinden met PS5…
+263|Console
+264|Container
+265|Inhoud: donker en helder
+266|Inhoud: vlakke oudere overdracht
+267|Inhoud: vooral donker
+268|Inhoud: standaard
+269|Inhoud: sterke hoge lichten
+270|Export voortzetten
+271|Vorige voortzetten
+272|Contrast
+273|Controller
+274|Controller heeft geen gyro
+275|Controller ondersteunt gyro
+276|Kopiëren
+277|Kopiëren als nieuwe laag
+278|Code kopiëren
+279|Kleurinstellingen kopiëren
+280|Bestand kopiëren
+281|Node kopiëren
+282|Deze laag kopiëren
+283|Kopiëren · verplaatsen · terugzetten · verwijderen
+284|Kopiëren · terugzetten · verwijderen
+285|Kopieer en voeg toe aan je melding
+286|Correctiemodus
+287|Kon de preset niet verwijderen
+288|Kon niet meten
+289|Kon niet openen
+290|Kon de browser niet openen
+291|Kon de gegevensmap niet openen
+292|Kon niet opslaan
+293|Kon de sneltoets niet opslaan
+294|Kon de geluidsinstelling niet opslaan
+295|Bijsnijden (pixels)
+296|Ctrl+Alt+Shift+S om te verbergen
+297|Huidige verschuiving
+298|Huidige afspeelinstellingen
+299|Curve staat uit
+300|Curve, metingen en richtlijnen
+301|Curven
+302|Aangepast
+303|Aangepaste EQ
+304|Aangepaste limiet
+305|Aangepaste limiet (FPS)
+306|Aangepaste volgorde
+307|Aangepaste afspeelsnelheid
+308|Aangepaste resolutie
+309|Aangepast…
+310|D3D12VA-hardware
+311|DLSS Frame Generation
+312|DLSS-model
+313|DLSS-prestatiemodus
+314|Omgaan met beschadigd beeld
+315|Donker en helder
+316|Donkere kamer
+317|Verandering bij verdonkeren
+318|Decoderen
+319|Standaard
+320|Standaard ondertitelgrootte
+321|Ontwazen
+322|Verwijderen
+323|Verwijderen "
+324|Node verwijderen
+325|Dit gameprofiel verwijderen
+326|Deze laag verwijderen
+327|DengXian
+328|Detailbescherming
+329|Detectieniveau
+330|Apparaat
+331|Apparaatbuffers
+332|Framerate apparaat (FPS)
+333|Apparaat niet verbonden
+334|Apparaateigenschappen
+335|Diagnose
+336|Diagnose gekopieerd
+337|Heeft geen frames gegenereerd
+338|Niet gestart
+339|Uitgeschakeld
+340|Verbinding verbreken
+341|Opname loskoppelen
+342|Scherm
+343|Schermgeheugen gewist
+344|Schermpiek
+345|Schermpiek (nit)
+346|Schermsynchronisatie
+347|Variabele verversing van scherm actief
+348|Afstand tot onderkant
+349|Dolby / DTS-bitstream
+350|Niet bewaren
+351|Audio niet meeluisteren
+352|Niet wachten
+353|Klaar
+354|Dubbele superresolutie
+355|Douyin
+356|Downloaden —
+357|Concept niet uitgevoerd
+358|Cirkel tekenen
+359|Rechthoek tekenen
+360|Standaard van driver
+361|Driverinvoer
+362|Driverinstellingen
+363|Loslaten om aan afspeellijst toe te voegen
+364|Duplicaatverwijdering uit
+365|Edge Aegis
+366|Edge Aegis (anti-jelly)
+367|Randverzachting
+368|Randzachtheid
+369|Randdrempel
+370|Bewerken
+371|Effectketen
+372|Effecten
+373|Ingesloten
+374|Ingesloten ondertitels
+375|Leeg
+376|Correctie inschakelen
+377|Ingeschakeld
+378|Ingeschakeld (HDR10)
+379|Gecodeerd
+380|Endpoint open
+381|Verbeterd
+382|Verbeterd (voorbeeld)
+383|Verbeteringsverandering
+384|Verbeteringspreset
+385|Voer eerst een naam in
+386|Fout
+387|Geschatte compensatie
+388|Elk frame · 512 px
+389|Alle effecten uitsluiten
+390|Uitklappen
+391|Experimenteel
+392|Exporteren
+393|Exporteren
+394|Exporteren "
+395|Kleurpreset exporteren
+396|Preset exporteren
+397|Huidig beeld exporteren
+398|Exporteren
+399|Belichting (EV)
+400|Extern
+401|Externe ondertitels
+402|F11 / Alt+Enter werken ook
+403|FG uit
+404|Gezichtszekerheid
+405|Gezichtsdetectie
+406|Alleen gezichten
+407|Inschakelen mislukt
+408|Mislukt · klik om opnieuw te proberen
+409|Verzachting (pixels)
+410|Bestand
+411|Vullen en bijsnijden
+412|Invullen als de PS5 erom vraagt
+413|Scherm vullen
+414|Venster vullen
+415|Filmgeheugen gewist
+416|Fijn
+417|Voltooid
+418|Passend
+419|Passend in venster
+420|Vast
+421|Vlakke oudere overdracht
+422|Verticaal spiegelen
+423|Volgen
+424|Bufferniveau volgen
+425|Systeem volgen
+426|Volg de maker
+427|Scherm volgen
+428|Verbeteringspreset volgen
+429|Systeemstandaard volgen
+430|Lettertype
+431|Lettergrootte
+432|Voetstappen
+433|PCM forceren
+434|SDR-voorbeeld forceren
+435|Formaat en beeld
+436|Frame Gen
+437|Methode voor framegeneratie
+438|Bewegingsbron voor framegeneratie
+439|Framegeneratie gepauzeerd
+440|Framerate
+441|Framerate en ritme
+442|Frameratelimiet
+443|Framesynchronisatie · standaard uit
+444|Volledig
+445|Volledige presets
+446|Vollere bas, voor actiescènes
+447|Volledig scherm
+448|Volledig scherm ontgrendeld
+449|GPU optical flow
+450|GPU-prioriteit
+451|GPU-stappen · gemiddelde 1 s
+452|GPU-gebruik
+453|GPU-gebruiksmonitor
+454|Game
+455|Framerate game
+456|Framerate game · doel
+457|Gamemodus
+458|Gamemodus: beeld aanpassen
+459|Gamenaam
+460|Gamepresets
+461|Gameprofiel
+462|GamePP
+463|Games en programma's ·
+464|Gamma
+465|Account-ID ophalen
+466|Algemeen
+467|Ga
+468|Groen
+469|Groene primaire kleur
+470|Gyro
+471|HDMI-opnameapparaat
+472|HDR-helderheidscurve
+473|HDR-metadata
+474|HDR-uitvoerformaat
+475|Halve resolutie
+476|Hardwaredecodering
+477|Alleen hardwaredecodering
+478|Speelruimte
+479|Afspeelbalk verbergen
+480|Hoog
+481|Hoge bitrate
+482|Hoog+Laag
+483|Hoog+Midden
+484|Richtlijn hoge lichten
+485|Bescherming hoge lichten
+486|Start hoge lichten (nit)
+487|Hoge lichten
+488|Geschiedenis afwijzen
+489|Gewicht geschiedenis
+490|Houd V ingedrukt voor het origineel
+491|Vasthouden voor origineel
+492|Vasthouden om het origineel te zien
+493|Start
+494|Host
+495|Host
+496|Hostadres
+497|Hosts
+498|Smooth Motion inschakelen
+499|Tint
+500|Tintcentrum
+501|Tintbescherming
+502|Tintbereik
+503|Afbeelding
+504|Beeldcorrectie
+505|Statistieken beeldmonster
+506|Afbeeldingen (*.png *.jpg *.jpeg)
+507|Importeren
+508|.cube-LUT importeren
+509|.cube importeren…
+510|.vpcolor importeren…
+511|Kleurpreset importeren
+512|Map importeren
+513|Map in afspeellijst importeren
+514|Preset importeren
+515|In I
+516|Inactief:
+517|Bevat
+518|Ingang
+519|Ingangskleur (SDR / HDR)
+520|Origineel van ingang
+521|Ingangsbereik
+522|Ingang · optical flow
+523|Glide Virtual Speaker installeren
+524|Geïnstalleerd
+525|Installeren…
+526|Instant replay
+527|Instant replay opgeslagen
+528|Instructies
+529|Intel XeSS · experimenteel
+530|Interface tekenen
+531|Interfacetaal
+532|Interfaceschaal
+533|Interne verwerkingsresolutie
+534|Ongeldige bewerkingsmodus
+535|Ongeldige toets
+536|Bewaren
+537|Alles bewaren
+538|Beeld behouden
+539|LAN-streaming
+540|LUT-bestand
+541|LUT-naam is te lang
+542|LUT-sterkte
+543|Groot
+544|Laatste
+545|Te laat P95
+546|Latentie meten
+547|Later
+548|Oude formatenlijst
+549|Oude formaatkeuze
+550|Licentie
+551|Donkere scènes ophalen
+552|Ophaalbereik (nit)
+553|Schaduwen ophalen
+554|Licht
+555|Lichtgroen
+556|Licht vloeiend maken
+557|Lichtheidsverandering
+558|Lichtheid behouden
+559|Beperkt
+560|Lijst
+561|Lijstmodus
+562|Lijstpresets
+563|Belastingsbudget
+564|Externe ondertitels laden
+565|Externe ondertitels laden…
+566|Bestand laden…
+567|Bron laden
+568|Geladen
+569|Laden
+570|Lokale compressie
+571|Lokale structuur
+572|Lokale toon
+573|Bedieningsbalk in volledig scherm vastzetten
+574|Logboek
+575|Logmap niet beschikbaar
+576|Laag
+577|Laagfrequente temporele reconstructie
+578|Wachtrij met lage latentie
+579|Luminantie
+580|MP4 · MKV · afbeeldingen
+581|Magenta
+582|Magewell-modus met lage latentie
+583|Vertraging hoofdondertitels
+584|Hoofdondertitels
+585|Hoofdondertitels staan uit
+586|Beheren
+587|Presets beheren
+588|Presets beheren in Pro-modus…
+589|Presets beheren…
+590|Handmatig
+591|Handmatig 1/2 · 1 op 2 frames hergebruiken
+592|Handmatig 1/3 · 1 op 3 frames hergebruiken
+593|Handmatig 1/4 · 1 op 4 frames hergebruiken
+594|Handmatige verschuiving
+595|Veel sterke hoge lichten
+596|Mastering-piek (nit)
+597|Monitor volgen
+598|Max. gezichten
+599|Maximaliseren
+600|Meten:
+601|Midden
+602|Midden+Laag
+603|Geheugen en automatisering
+604|Samenvoegen in ingang
+605|Methode
+606|Microfoonapparaat
+607|Microfoon op een eigen spoor
+608|Middengrijs
+609|Middengrijs (nit)
+610|Middentonen
+611|Minimaal
+612|Minimale modus
+613|Minimaliseren
+614|Minimum
+615|Mixer
+616|Modus
+617|Modelparameters
+618|Modelsterkte
+619|Gewijzigd: nieuwste eerst
+620|Gewijzigd: oudste eerst
+621|Compatibiliteit met monitoroverlays
+622|Meer kleurinstellingen
+623|Vooral donker
+624|Kwaliteit bewegingsschatting
+625|Omlaag
+626|Omhoog
+627|Vermenigvuldiger
+628|Moet onder het maximum blijven
+629|Dempen
+630|Mijn preset
+631|n.v.t.
+632|NIS-verscherping
+633|NR
+634|NR automatisch hergebruik van inferentie
+635|NR-verbetering
+636|NR algemene beschermde gebieden
+637|NR is niet actief
+638|NR-laag
+639|NR-laag 1
+640|NR-laag 2
+641|NR-laag 3
+642|NR-laag 4
+643|NR-bewegingsbron
+644|NR-versie
+645|NR → SR · alle lagen
+646|NVIDIA Low Latency
+647|NVIDIA Low Latency · Aan
+648|Alleen NVIDIA NR
+649|NVIDIA in-game-overlay
+650|Naam
+651|Naam A → Z
+652|Naam Z → A
+653|Native
+654|Originele pixels
+655|Natuurlijk
+656|Natuurlijk vloeiend
+657|Negatief = geluid eerder
+658|Netwerk
+659|Netwerkbuffer
+660|Bescherming neutrale kleuren
+661|Naam nieuwe preset
+662|Volgend item
+663|Nachtmodus
+664|Nee
+665|Geen FG
+666|Geen LUT
+667|Geen NR-laag toegevoegd
+668|Geen limiet
+669|Geen opnameapparaat gevonden
+670|Nog geen opnamegeschiedenis
+671|Geen kleurnode
+672|Nog geen kleurpresets
+673|Geen compensatie
+674|Geen controller gevonden
+675|Geen apparaat gekozen
+676|Geen gezicht gevonden
+677|Geen framegeneratie
+678|Geen framegeneratie (basislijn)
+679|Geen functie ingeschakeld
+680|Er staat geen harde limiet op de curve
+681|Geen passende formaten
+682|Geen uitvoer
+683|Nog geen gekoppelde hosts
+684|Geen beeld om op te slaan
+685|Niet verkleinen
+686|Geen bron geopend
+687|Nog geen bron om voort te zetten
+688|Geen ondertitels in beeld
+689|Geen doel gekozen
+690|Nog geen timing voor deze node
+691|Nodemodus
+692|Nodepreset:
+693|Nodepresets
+694|Nodes
+695|Geen
+696|Normaal
+697|Geen 8-cijferige koppelcode
+698|Niet verbonden
+699|Niet ingeschakeld
+700|Niet geladen
+701|Niet gemeten
+702|Niet geopend
+703|Niet gekoppeld
+704|Speelt niet af
+705|Niet bereikt
+706|Niet uitgevoerd
+707|Niet ingesteld
+708|Niet aangemeld
+709|Niet opgegeven
+710|Niet ondersteund
+711|Niet getest
+712|Niet getimed
+713|Compatibiliteit met OBS Game Capture
+714|OK
+715|Uit
+716|Offline
+717|Verschuiving
+718|Aan
+719|Open op je telefoon of in je browser
+720|Aan · 1 hergebruikt op elke
+721|Aan · automatisch
+722|Aan · sterkte
+723|Online
+724|Online · er draait een game
+725|Alleen lokale bestanden kunnen worden geopend
+726|Openen
+727|Windows-opname-instellingen openen
+728|Open een video of afbeelding
+729|Bestand openen
+730|Bestand openen / Exportpagina
+731|Bestand openen…
+732|Map openen
+733|Gamepreset openen
+734|Oude formatenlijst openen
+735|Media-URL openen
+736|Media-URL openen…
+737|Bronpagina openen
+738|Video openen
+739|Open wereld · minimap linksonder
+740|Open wereld · minimap rechtsboven
+741|Openen
+742|Opnameapparaat openen…
+743|Openen duurde te lang
+744|Optical flow
+745|Optical-flow-algoritme
+746|Optical flow · bewegingsschatting
+747|Optimaliseren voor mijn pc
+748|Opties
+749|Oranje
+750|Origineel
+751|Origineel / verbeterd vergelijken
+752|Origineel gezicht herstellen
+753|Alleen origineel
+754|Origineel geluid
+755|Andere console
+756|Uit O
+757|Omlijning
+758|Uitvoer
+759|Uitvoer
+760|Uitvoerlimiet
+761|Uitvoerlimiet · nu niet actief
+762|Uitvoerlimiet · scherm volgen
+763|Uitvoerapparaat
+764|Uitvoerapparaat en downmix
+765|Uitvoerinstellingen
+766|Uitvoerstabilisator · antiflikker
+767|Uitvoer · audio
+768|Boven budget
+769|Algehele helderheid
+770|Algehele veranderingssterkte
+771|Algehele sterkte
+772|Pc-streaming
+773|Pc-streaming…
+774|Pincode nodig
+775|PS5-console
+776|PS5-controllerbediening
+777|PS5-controllerbediening verbonden
+778|PS5-controllerbediening gestopt
+779|PS5-controller
+780|PS5-streaming
+781|PS5-streaming…
+782|PSN-account
+783|Pagina bij opstarten
+784|Paginawisselaar
+785|Koppelen
+786|Koppelen (eerste keer)
+787|Koppelen en opslaan
+788|Gekoppeld
+789|Koppelen geannuleerd
+790|Koppelen is nodig voor het wekken.
+791|Koppelingsinstellingen
+792|Koppelen…
+793|Parametrische curve
+794|Parametrische donkere tonen
+795|Parametrische hoge lichten
+796|Parametrische lichte tonen
+797|Parametrische schaduwen
+798|Plak een PUSHFPS1:-code
+799|Kleurinstellingen plakken
+800|Patreon-pagina
+801|Patreon, WeChat en Alipay
+802|Export pauzeren
+803|Gepauzeerd
+804|Piek
+805|Piekhelderheid (nit)
+806|Pieklimiet (nit)
+807|Prestaties
+808|Beeld
+809|Beeld & geluid
+810|Beeld van een capturekaart
+811|Beeldstijl
+812|Pixelformaat
+813|Afspelen / pauzeren
+814|Volgende afspelen na afloop
+815|Afspelen
+816|Afspeelbalk zichtbaar
+817|Afspelen mislukt
+818|Afspeelsnelheid
+819|Speelt af
+820|Afspeellijst
+821|Afspeellijst · Map importeren
+822|Puntcurve
+823|Positieve waarden vertragen het geluid
+824|Voorbereiden:
+825|Weergeven
+826|Preset gekopieerd
+827|Preset verwijderd
+828|Presetnaam
+829|Preset hernoemd
+830|Preset:
+831|Presets
+832|Presets en
+833|Druk op de nieuwe toets…
+834|Voorbeeld
+835|Voorbeeld niet beschikbaar
+836|Vorig item
+837|Pro-modus
+838|Afbeeldingen in batch verwerken…
+839|Verwerkingsvolgorde
+840|Verwerkingsschaal
+841|Verwerkingstijd
+842|Verwerken ·
+843|Hoge lichten beschermen
+844|HUD beschermen
+845|Punch
+846|Paars
+847|Glide Virtual Speaker
+848|Glide-kleurpreset (*.vpcolor)
+849|Glide-gamepreset (*.pushfps)
+850|Glide-groen
+851|Glide-preset (*.vpreset)
+852|Kwaliteit
+853|Wachtrij
+854|Snelle presets
+855|Snelle instelling
+856|Game afsluiten
+857|RTX 50 · NVIDIA-origineel
+858|RTX Video SR · Hoge bitrate
+859|RTX Video SR · Standaard
+860|RTX Video SR · Streaming
+861|RTX Video Super Resolution
+862|RX 7000 · RedDuke (experimenteel)
+863|RX 9000 · lmxxf (experimenteel)
+864|Bitratebeheer
+865|Sporen lezen…
+866|Realtime
+867|Ontvangen
+868|Frames ontvangen
+869|Recent
+870|Aanbevolen
+871|Opnieuw verbinden
+872|Opnieuw verbinden
+873|Opnemen
+874|Audio opnemen
+875|Microfoon opnemen
+876|Opnamebitrate
+877|Opnamecodec
+878|Opnamemap
+879|Opnameframerate
+880|Opname opgeslagen
+881|Herstellen
+882|Rechthoek
+883|Rood
+884|Rode primaire kleur
+885|Opnieuw
+886|Beweging beperken
+887|Diepte verwerkingswachtrij verkleinen
+888|Eerste resultaat verkleinen naar
+889|Referentiebasis
+890|Vernieuwen
+891|Apparaten vernieuwen
+892|Schermstatus vernieuwen
+893|Loslaten om terug te gaan
+894|Elke film onthouden
+895|Laatste grootte onthouden
+896|Per scherm onthouden
+897|Afspeelpositie onthouden
+898|Dubbele frames verwijderen
+899|Uit afspeellijst halen; bestand bewaren
+900|Koppeling verwijderen
+901|Opstartstandaard verwijderen
+902|Hernoemen · kopiëren · verwijderen
+903|Replaylengte
+904|Melden
+905|Een probleem melden
+906|Gevraagd
+907|Gevraagde bitrate
+908|Vereist AMD RX 7000 / 9000
+909|Vereist AMD RX 9000
+910|Vereist een NVIDIA-GPU
+911|Terugzetten
+912|Alles terugzetten
+913|Kanaal terugzetten
+914|Equalizer terugzetten
+915|Node terugzetten
+916|Deze pagina terugzetten
+917|Deze instelling terugzetten
+918|Standaard herstellen
+919|Restant
+920|Resolutie
+921|Resolutie en framerate
+922|Herstarten
+923|Herstart nodig
+924|Herstelgebied
+925|Herstelsterkte
+926|Hervat
+927|Hergebruikmodus
+928|Retourtijd
+929|Actief
+930|Draait na het herstel van het origineel
+931|SDK intern
+932|SDK indienen
+933|SDR-scherm, niet omgezet
+934|Bemonstering
+935|Verzadiging
+936|Verzadiging max.
+937|Verzadiging min.
+938|Opslaan
+939|Opslaan als
+940|Opslaan als gameprofiel
+941|Bestand opslaan
+942|Gamepreset opslaan
+943|Instant replay opslaan
+944|Preset opslaan
+945|Opslaan duurde te lang
+946|Opslaan in
+947|Opgeslagen
+948|Opgeslagen apparaat (niet verbonden)
+949|Opgeslagen host
+950|Opgeslagen host
+951|Opslaan…
+952|Scan met WeChat of Alipay
+953|Mappen doorzoeken…
+954|Planning teruggeschakeld
+955|Planningswachttijd P95
+956|Schermopname
+957|Schermopname…
+958|Schermafbeelding
+959|Map voor schermafbeeldingen
+960|Zoeken
+961|Zoeken geannuleerd
+962|Zoek, bijv. 1920 60 NV12
+963|Tweede SR-algoritme
+964|Tweede SR-doel
+965|Tweede SR-niveau
+966|Schaal tweede ronde
+967|Tweede ondertitels (tweetalig)
+968|Tweede ondertitels staan uit
+969|Kiezen uit bron
+970|Ingang kiezen
+971|Naar Discord sturen
+972|Versturen…
+973|Instellen als opstartstandaard
+974|Handmatig instellen in Professionele modus
+975|Instellingen
+976|Schaduwhelderheid
+977|Schaduwen ophalen
+978|Schaduwen ophalen (0,01 EV)
+979|Schaduwbescherming
+980|Schaduwtint
+981|Schaduwen
+982|Schaduwen en hoge lichten
+983|Delen
+984|Deze preset delen
+985|Delen op Discord
+986|Scherpte
+987|Sneltoets B
+988|Sneltoetsen
+989|Alle beschikbare framerates tonen
+990|Als SDR tonen
+991|Huidig bestand tonen
+992|Tonen in map
+993|Latentie op het scherm tonen
+994|Masker tonen
+995|Muisaanwijzer tonen
+996|Afspeelbalk tonen
+997|Ondertitels tonen
+998|Getoond boven de hoofdondertitels
+999|Na SR verkleinen naar
+1000|Lange regels automatisch inkorten
+1001|Aanmelden
+1002|Afmelden
+1003|Aanmeldpincode
+1004|Signaal
+1005|Aangemeld
+1006|SimHei
+1007|SimSun
+1008|Grootte: grootste eerst
+1009|Grootte: kleinste eerst
+1010|Huid oplichten
+1011|Alleen huid
+1012|Huidbereik · geavanceerd
+1013|Huid gladmaken
+1014|Huidwaarde
+1015|Huid · niet geverifieerd
+1016|Overgeslagen bronframes
+1017|Toetsenbordstap voor schuifregelaars
+1018|Licht
+1019|Klein
+1020|Kleine elementen in elke hoek
+1021|Mate van vloeiendheid
+1022|Gebied voor vloeiendheid
+1023|Straal voor vloeiendheid
+1024|Software
+1025|Softwaredecodering
+1026|Sorteren
+1027|Geluidsprofiel
+1028|Bron
+1029|Broncode
+1030|Bronkleur behouden
+1031|Brongrootte
+1032|Splitsen
+1033|Hoge lichten splitsen
+1034|Middentonen splitsen
+1035|Schaduwen splitsen
+1036|Stabilisatiesterkte
+1037|Standaard
+1038|Stand-by
+1039|Starten
+1040|Opname starten / stoppen
+1041|Opname starten
+1042|Export starten
+1043|Streamen starten
+1044|Schermopname starten…
+1045|Opstarten & venster
+1046|Opstartbuffer
+1047|Opstartstandaard
+1048|Opstartstandaard-preset verwijderd
+1049|Statische opbouw
+1050|Stereo
+1051|Stereo-downmix
+1052|Gestopt
+1053|Streamen
+1054|Streamen (geldt na opnieuw verbinden)
+1055|Sterkte
+1056|Sterkte
+1057|Uitrekken om te vullen
+1058|Strikt ritme voor framegeneratie
+1059|Sterk
+1060|Sterke hoge lichten
+1061|Stijl
+1062|Stijl · experimenteel
+1063|Verzenden
+1064|Indieningssnelheid
+1065|Ondertitelinstellingen
+1066|Ondertitelinstellingen…
+1067|Ondertitelsporen
+1068|Eigen lettertype van ondertitel
+1069|Ondertitels
+1070|Ondertitels: uit
+1071|Ondertitels: aan
+1072|Sunshine-host
+1073|Superresolutie
+1074|Bewegingsbron voor superresolutie
+1075|Steun de maker
+1076|Terug naar lijstmodus?
+1077|Naar lijstmodus
+1078|Naar nodemodus
+1079|Naar nodemodus?
+1080|Standaardmicrofoon van systeem
+1081|Werkt na herstart
+1082|Doel
+1083|Doelframerate
+1084|Doellijnen
+1085|Doelgrootte
+1086|Temperatuur (relatief)
+1087|Temporele opbouw
+1088|Temporele antiflikker
+1089|Temporele stabiliteit
+1090|Getest
+1091|Getest door de ontwikkelaar van Veyra
+1092|Getest met Glide
+1093|Textuur
+1094|Textuur behouden
+1095|De HUD-gebieden zijn niet toegepast
+1096|De PS5 vraagt om de aanmeldpincode
+1097|De keten heeft geen kleurnode
+1098|De kleurpreset bestaat niet
+1099|De effectketen is vol
+1100|Het bestand bestaat niet
+1101|Het bestand bestaat niet meer
+1102|De preset heeft een naam nodig
+1103|De aanmeldpincode moet uit cijfers bestaan.
+1104|Het doel is niet meer geldig
+1105|Dun
+1106|Schermresolutie van deze pc
+1107|Dit is een voorbeeld van ondertitels.
+1108|Deze modus heeft nog geen presets.
+1109|Deze bron heeft geen ondertitels
+1110|Niveau
+1111|Tijd
+1112|Tint
+1113|Minimaal / Pro wisselen
+1114|Te weinig frames om te meten
+1115|Volgen vloeiend maken
+1116|Probeer de eigen audio van het videoapparaat
+1117|Veren en overgangen uitzetten
+1118|Type
+1119|UI-correctie · niet geverifieerd
+1120|Ultra
+1121|Niet beschikbaar
+1122|Nu niet beschikbaar
+1123|Ongedaan maken
+1124|Laatste aanpassing ongedaan maken
+1125|Verwijderen…
+1126|Onbekend
+1127|Onbekende configuratie
+1128|Onbekende backend voor framegeneratie
+1129|Ongebruikt
+1130|Bijwerken of opslaan als gameprofiel
+1131|Bijwerken
+1132|Upscaling-algoritme
+1133|Prestatiemodel gebruiken
+1134|Gebruikersgegevens
+1135|Gebruikers in het vasteland van China
+1136|Website van VB-Audio
+1137|VB-CABLE is al geïnstalleerd
+1138|VFG automatische regeling
+1139|VFG-kwaliteit
+1140|VSync
+1141|Waarde buiten bereik
+1142|Variabele verversing
+1143|Variabele verversing · actief
+1144|Versie
+1145|Levendigheid
+1146|Video
+1147|Videocodec
+1148|Video-ingangsapparaat
+1149|Weergave
+1150|Licentie bekijken
+1151|Alleen bekijken
+1152|Update bekijken
+1153|Bekijken
+1154|Pagina bezoeken
+1155|Levendig
+1156|Spraakhelderheid
+1157|Volume
+1158|Wachten op keyframe
+1159|Wachten op metingen
+1160|Wachten op signaal
+1161|Wacht op export
+1162|Wacht op weergave
+1163|Wacht op weergave in proces
+1164|Wekken
+1165|Wekken geannuleerd
+1166|WeChat Pay
+1167|Zwak
+1168|Web
+1169|Wit
+1170|Witte gloed
+1171|Hele gezicht
+1172|Venster
+1173|Venster of scherm
+1174|Venstergrootte bij opstarten
+1175|Gebruik van Windows-GPU-engine (
+1176|Windows HDR
+1177|Archiefprogramma van Windows niet gevonden
+1178|Binnen bereik
+1179|Bezig met VB-CABLE Setup…
+1180|X is de limiet
+1181|Xbox-streaming
+1182|Xbox-streaming…
+1183|Geel
+1184|Ja
+1185|Geen beweging
+1186|bijv. 's Avonds gamen
+1187|gyro
+1188|alleen live voorbeeld
+1189|van mij
+1190|geen gyro
+1191|geen sneltoets ingesteld
+1192|nog niet beschikbaar in nodemodus
+1193|onvoldoende middelen
+1194|niet gebruikt voor HDR-verwerking
+1195|niet gebruikt met automatische NR-grootte
+1196|scRGB float
+1197|☕ Trakteer me op koffie · US$5
+1198|=
+1199|=
+1200|=
+1201|=
+1202|=
+1203|ANR FG · Apex Compute · experimenteel
+1204|ANR-pakket (*.zip nvngx_dlssg.dll);;Alle bestanden (*)
+1205|ANR is geïnstalleerd (%1 bestanden). Start Glide opnieuw en kies ANR als methode voor framegeneratie
+1206|ANR-framegeneratie is gemaakt door Apex Compute en werkt op GTX 16-serie en nieuwere videokaarten. Het mag niet met Glide meegeleverd worden: download het anr-fg-pakket van Apex’ GitHub en kies het hier
+1207|ANR-framegeneratie is Apex Neural Rendering van Apex Compute
+1208|ANR-framegeneratie, door Apex Compute
+1209|Waar Glide op gebouwd is, door Likely7
+1210|ANR downloaden
+1211|Installeren uit download…
+1212|Installeer eerst ANR van Apex via Instellingen → Onderdelen en licenties
+1213|Geïnstalleerd. ANR-framegeneratie is gemaakt door Apex Compute; kies het als methode voor framegeneratie in Professionele modus
+1214|Kon geen tijdelijke map maken
+1215|Kon de ANR-bestanden niet naar %1 kopiëren
+1216|Kon het ANR-pakket niet uitpakken: %1
+1217|Bijwerken…
+1218|Niet geïnstalleerd
+1219|Downloaden en installeren
+1220|Dit bestand bevat geen nvngx_dlssg.dll van ANR. Kies het anr-fg-pakket van Apex
+1221|Kies het ANR-pakket dat je van Apex Compute hebt gedownload
+1222|Een game van %1 FPS draait op %2 FPS (%3× framegeneratie)
+1223|%1 draait. Het haakt in op zowel de interface als de video, waardoor Glide kan vastlopen. Start Glide opnieuw om compatibele weergave in te schakelen: de interface wordt dan in software getekend en %1 raakt alleen de video. Nu opnieuw starten? Afspelen of streamen stopt.
+1224|1% low maar %1 FPS, niet stabiel genoeg
+1225|Aanbevolen instellingen voor games zoals GTA VI, met een scherpe minimap en HUD
+1226|Zet de Switch 2 in het dock op 60 Hz. Games hebben geen HDCP, dus ze worden gewoon opgenomen.
+1227|Kies op Xbox 60 Hz bij Instellingen → Algemeen → Tv- en weergaveopties. Games hebben geen HDCP, dus ze worden gewoon opgenomen.
+1228|In Professionele modus is een eigen curve ingesteld; slepen vervangt die
+1229|Helderheid van de middentonen; zwart en wit blijven gelijk
+1230|Kies een framerate en beeld voor consolegames. Al het andere staat in Professionele modus.
+1231|Games houden de eigen framerate van de console
+1232|Je console via een capturekaart, door je pc opgekrikt naar 60 of 120 FPS
+1233|Zet de console op 60 Hz. Zet op PlayStation HDCP uit bij Instellingen → Systeem → HDMI, anders blijft het beeld zwart.
+1234|Zet de console op 60 Hz en zet HDCP uit als die optie er is, anders kan het beeld zwart blijven.
+1235|Equalizer met 5 banden, ±12 dB per band
+1236|Huidige instellingen opslaan als preset
+1237|Sluit eerst je capturekaart aan en zet het gamebeeld in beeld, start dan
+1238|Uit: alleen framegeneratie. Aan: elk frame gaat ook door de neurale renderer van NVIDIA (DLSS 5 NR) voor een scherper beeld, wat meer van de GPU vraagt
+1239|Minder wachtrij, lagere invoerlatentie
+1240|“%1” verwijderen
+1241|Verhaalgames en films: het hele beeld krijgt framegeneratie
+1242|Haalt details en randen naar voren (textuur)
+1243|Actie · HUD in de onderste hoeken
+1244|Bevat de framerate van de game, de doelframerate en de gebieden voor “Alle effecten uitsluiten” die je in Professionele modus hebt getekend
+1245|Maakt harde en zachte delen gelijker, voor 's avonds laat
+1246|Haalde maar %1 FPS
+1247|Minimap of kompas in de rechterbovenhoek
+1248|Snelheid, versnelling en minimap in de rechteronderhoek
+1249|Test elke combinatie op je echte beeld en kiest de beste
+1250|Test elke framegeneratiemethode, AI-verbetering en upscaler op je echte beeld en kiest de vloeiendste combinatie met de laagste latentie
+1251|Kopieer de code om naar vrienden te sturen of op Reddit / Discord te zetten, of sla hem op als bestand
+1252|De meeste consolegames draaien op 30 FPS; kies 60 voor prestatiemodi
+1253|Gemeten pc-latentie (van het binnenkomen van het capturebeeld tot het doorgeven aan het scherm) en framerate; de capturekaart, het scherm en de game tellen daar nog bij op
+1254|Duidelijkere dialogen en voicechat, zonder laag gerommel
+1255|Shooter · HUD in alle vier de hoeken
+1256|Minimap linksonder, geld en wanted-niveau rechtsboven. Indeling geschat op de GTA-reeks; controleer hem zodra je speelt
+1257|Ronde of vierkante minimap in de linkerbenedenhoek
+1258|Gezondheid linksonder, wapen en munitie rechtsonder
+1259|“%1” opgeslagen (%2 HUD-gebieden)
+1260|“%1” verwijderd
+1261|Clip gekopieerd. Druk in Discord op Ctrl+V om hem te plakken
+1262|Gekopieerd. Plak het in een chat of map
+1263|“%1” toegepast
+1264|“%1” toegepast: %2 HUD-gebieden beschermd. Verfijn ze in Professionele modus → Kwaliteit → Alle effecten uitsluiten
+1265|“%1” toegevoegd
+1266|Volledig scherm vergrendeld · Ctrl+L om te ontgrendelen, Esc om volledig scherm te verlaten
+1267|Latentie %1 ms
+1268|Latentie = tijd van het capturebeeld dat de pc bereikt tot het doorgeven aan het scherm (alleen het pc-deel; niet de capturekaart, het scherm of de game). Hoe dichter de 1% low bij het gemiddelde ligt, hoe vloeiender.
+1269|Voegt te veel latentie toe (%1 ms)
+1270|De verwerkingsketen heeft geen kleurstap
+1271|Deze framegeneratiemethode gaat tot %1×: een game van %2 FPS haalt ongeveer %3 FPS
+1272|De opname bevat al gegenereerde frames. Zet framegeneratie uit in Professionele modus voor je exporteert, zodat frames niet twee keer worden gegenereerd.
+1273|Sla deze instellingen op voor een game en schakel er met één klik naar over
+1274|Afspeelbalk verborgen · beweeg de aanwijzer naar boven en klik op het oog in het dock om hem terug te halen
+1275|Framegeneratie op het hele beeld
+1276|Kon het basisbeeld niet meten: %1
+1277|Vollere lagen en hogen, lichte compressie
+1278|Beste combinatie: %1. Toegepast.
+1279|Het VRAM bleef groeien in volledig scherm tijdens deze sessie. Speel in een venster af; open de bron opnieuw om volledig scherm weer te testen.
+1280|Deze software is gratis en open source. Heb je er iets aan, dan kun je →
+1281|%1 gevonden
+1282|RTSS-overlaydienst gevonden
+1283|De RTSS-overlaydienst draait. Start Glide opnieuw om compatibele weergave in te schakelen en de OSD alleen op de video te tonen. Nu opnieuw starten? Afspelen of streamen stopt.
+1284|Aanbevolen instellingen per game, met een scherpe minimap en HUD (die gebieden krijgen geen framegeneratie en geen effecten)
+1285|Geen enkele framegeneratiecombinatie hield het doel stabiel vast, dus je instellingen zijn bewaard. Probeer een lager doel of zet andere effecten uit en probeer het opnieuw
+1286|Wissel niet van bron terwijl het loopt; je kunt gewoon doorspelen
+1287|Instellingen veranderd tijdens de meting
+1288|Het beeld stopte. Optimaliseren is geannuleerd en je instellingen zijn hersteld
+1289|Laat voetstappen en schoten beter horen, voor competitieve games
+1290|Groene gebieden houden het consolebeeld zoals het is, zonder framegeneratie, zodat tekst en de minimap scherp blijven
+1291|Zet de game in beeld via je capturekaart en start dan. Glide test elke beschikbare combinatie op je echte beeld (ongeveer 10 seconden per stuk, 1 à 2 minuten in totaal), meet de echte framerate, 1% low en latentie, en kiest de beste.
+1292|Racen · snelheidsmeter rechtsonder
+1293|Nog niemand heeft deze kaart gemeld; deel je resultaten op GitHub
+1294|Dat is geen geldige Glide-presetcode
+1295|Een ingebouwde preset gebruikt deze naam al
+1296|Deze pc kan deze combinatie niet draaien
+1297|Capturekaart liet %1% van de frames vallen
+1298|. Opnames houden het ook. Dolby / DTS-passthrough wordt niet beïnvloed
+1299|Geavanceerde coderingsinstellingen
+1300|Bitratebeheer, encoderpreset, keyframe-interval, audiobitrate en container, zoals de uitvoerinstellingen van OBS. Uit gebruikt de standaardinstellingen
+1301|VBR: bitrate volgt hoe druk het beeld is (standaard). CBR: elke seconde dezelfde bitrate, goed voor uploads. Constante kwaliteit: vaste kwaliteit, de bestandsgrootte volgt het beeld
+1302|Constante kwaliteit
+1303|Kwaliteitsniveau
+1304|1–51; lager is betere kwaliteit en een groter bestand; standaard is 22
+1305|Encoderpreset
+1306|Verder naar rechts is betere kwaliteit maar meer werk voor de GPU-encoder; standaard is 4. Verlaag het als opnames haperen
+1307|Keyframe-interval
+1308|Seconden; korter is makkelijker bewerken en spoelen, met iets grotere bestanden; standaard is 2
+1309|Audiobitrate
+1310|kbps per audiospoor; standaard is 192
+1311|MP4 speelt overal af (standaard). MKV past bij bewerkingssoftware; instant replays worden altijd als MP4 opgeslagen
+1312|Standaardinstellingen herstellen
+1313|Kan de GPU een combinatie niet gebruiken, dan schakelt de opname over op de standaardinstellingen en meldt dat
+1314|Herstellen
+1315|De GPU ondersteunt de gekozen geavanceerde coderingsinstellingen niet; er wordt opgenomen met de standaardinstellingen
+zh:轻|Licht
+zh:亮|Licht
+1316|G-SYNC of FreeSync: de monitor ververst wanneer er een nieuw beeld is in plaats van met een vaste frequentie, dus een wisselende framerate scheurt en hapert niet
+1317|HUD op de verkeerde plek?
+1318|HUD-bescherming
+1319|HUD-herkenning mislukt
+1320|NVIDIA Image Scaling is een opensource-filter voor opschalen en verscherpen dat op videokaarten van elk merk werkt. Te veel verscherping geeft witte randen langs contouren
+1321|Console · %1 FPS
+1322|Vergelijkingsclip stoppen
+1323|Alles wissen
+1324|Een keyframe is een volledig beeld; de frames ertussen bewaren alleen wat veranderde. Spelers en video-editors kunnen alleen bij een keyframe beginnen met decoderen
+1325|Er wachten minder beelden in de rij op de videokaart, zodat het beeld sneller reageert nadat je op een knop drukt. Alleen NVIDIA-videokaarten
+1326|Herken de HUD op je eigen spelbeeld, of sleep de kaders met de hand
+1327|Sleep over het beeld om een nieuw kader te tekenen (maximaal 4). Sleep een kader om het te verplaatsen, sleep de hoeken om het te vergroten of verkleinen
+1328|Vergelijkingsclip
+1329|De vergelijkingsclip bevat geen gegenereerde beelden, dus beide helften zijn gelijk. Controleer of framegeneratie actief is
+1330|Vaste delen zoals de minimap, gezondheid en munitie houden de eigen pixels van de console en worden niet geïnterpoleerd, dus ze blijven scherp. Na de automatische herkenning kun je de kaders verslepen om ze te corrigeren
+1331|HUD-bescherming staat uit; het hele beeld wordt geïnterpoleerd
+1332|Toegepast: %1 gebieden houden de eigen pixels van de console
+1333|Help
+1334|Het huidige beeldformaat ondersteunt geen automatische HUD-herkenning
+1335|Neem een video van 15 seconden naast elkaar op: links de eigen framerate van de console, rechts Glide
+1336|%1 HUD-gebieden gevonden. Controleer de groene kaders, versleep ze zo nodig en klik dan op Toepassen
+1337|Kan het beeld niet lezen; HUD-herkenning gestopt
+1338|Onvoldoende videogeheugen om de HUD te herkennen
+1339|Maximaal 4 kaders; verwijder er eerst een
+1340|Vergelijkingsclip van %1 seconden wordt opgenomen: links de eigen framerate van de console, rechts Glide
+1341|Beeld ophalen…
+1342|Beeld bekijken %1 / %2
+1343|Het beeld wordt ongeveer 5 seconden bekeken. Draai de camera of loop rond in het spel
+1344|Het maximale aantal beelden per seconde. Met framegeneratie houdt het de uitvoer op de doelframerate, zodat beweging gelijkmatiger is
+1345|Geen HUD gevonden. Sleep over het beeld om zelf kaders te tekenen
+1346|Er kwam geen beeld binnen. Controleer of het beeld speelt en het Glide-venster niet geminimaliseerd is
+1347|Er speelt niets, dus de HUD kan niet worden herkend
+1348|Geen beeld. Sluit een capturekaart aan en start het afspelen om de kaders op je eigen spelbeeld aan te passen
+1349|Kader toevoegen
+1350|Hoeveel nieuwe beelden het spel zelf per seconde tekent. De console stuurt altijd een 60 Hz-signaal, dus een spel van 30 FPS toont elk beeld twee keer. Glide bepaalt hiermee hoeveel frames er gegenereerd worden
+1351|AI verwijdert de blokjes en ruis van de compressie van de capturekaart, zodat details duidelijker worden. Staat los van framegeneratie en kan apart aan of uit
+1352|Het beeld bewoog nauwelijks, dus de HUD was niet te onderscheiden. Draai de camera of beweeg in het spel en probeer het opnieuw
+1353|Bitrate is hoeveel data de video per seconde gebruikt. Bitratebeheer bepaalt hoe de encoder die verdeelt: meer data betekent betere kwaliteit en een groter bestand
+1354|Hoeveel moeite de encoder per frame doet. Langzamer comprimeert beter, dus dezelfde bestandsgrootte geeft hogere kwaliteit
+1355|Vindt de minimap en HUD automatisch en houdt ze buiten framegeneratie; je kunt de kaders met de hand corrigeren
+1356|Automatisch herkennen
+1357|Beelden per seconde na framegeneratie. Gegenereerde frames komen tussen twee echte beelden om beweging vloeiender te maken; de controller reageert er niet sneller door
+1358|Bekijkt het beeld enkele seconden om de vaste HUD te vinden
+1359|Zet eerst framegeneratie aan: de vergelijkingsclip zet de eigen framerate van de console naast het gegenereerde beeld
+1360|Sluit eerst een capturekaart aan en start het afspelen
+1361|HUD-gebieden aanpassen
+1362|Draai de camera of loop rond: de HUD blijft staan terwijl de rest beweegt
+1363|Nieuw beeld ophalen
+1364|Voor/na-video van 15 seconden
+1365|GTA VI en meer, HUD blijft scherp
+1366|Thema
+1367|Niet beschikbaar tijdens opnemen
+1368|Opnemen…
+1369|Test elke combinatie, kiest de beste
+1370|Automatisch herkend, met de hand aan te passen
+1371|Vereist een spelend beeld
+1372|AMD FRC · video-tussenbeelden · 2X
+1373|NVIDIA G-SYNC instellen
+1374|Geen audio-invoer
+1375|Herstellen
+1376|Muziek stoppen voor deze sessie
+1377|Ander bureaublad
+1378|Klik of druk op een toets om over te slaan
+1379|Startanimatie
+1380|Verbinden bij starten
+1381|Startmuziek
+1382|Niet gecontroleerd
+1383|Venster en volledig scherm niet ingesteld
+1384|Venster en volledig scherm toegestaan
+1385|Geselecteerd
+1386|Dit profiel kan niet los worden gewijzigd
+1387|Origineel herstellen
+1388|Back-up komt niet overeen met het huidige profiel
+1389|Slow-motionsnelheid telefoon
+1390|Back-up kan niet worden opgeslagen of verwijderd
+1391|Schemering
+1392|Gebiedsranden tonen
+1393|Stuurprogrammaprofiel niet bevestigd
+1394|Audio lokaal beluisteren
+1395|Bureaublad %1
+1396|Bureaublad %1 · %2
+1397|Stuurprogrammaprofiel verwerken…
+1398|Totale vertraging meten
+1399|Kleurenschema
+1400|Beelden ertussen
+1401|Altijd bovenop
+1402|Klassiek
+1403|Volledig scherm bij verbinden
+1404|Selecteren
+1405|Beheerdersrechten vereist
+1406|Audio-invoer
+1407|Stuurprogrammaprofiel is in gebruik
+1408|Sunset City-logo
+1409|Streamsleutel
+1410|Platform
+1411|Server
+1412|Live gaan
+1413|Live
+1414|Stream stoppen
+1415|Platform toevoegen
+1416|Spelgeluid
+1417|Videobitrate
+1418|Aangepaste RTMP
+1419|Streamsleutel plakken
+1420|Niet gestart
+1421|Verbinding mislukt
+1422|Microfoon
+1423|Indeling
+1424|Naast elkaar
+1425|Opname starten
+1426|Lengte
+1427|Vloeiende framepacing

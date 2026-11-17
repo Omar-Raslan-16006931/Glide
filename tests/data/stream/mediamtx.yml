@@ -1,0 +1,18 @@
+# Local test server for tests/integration/LiveStreamTests.cpp (MediaMTX, MIT licence, downloaded by CI).
+logLevel: info
+rtmp: yes
+rtmpAddress: 127.0.0.1:1935
+rtmpEncryption: optional
+rtmpsAddress: 127.0.0.1:1936
+rtmpServerKey: server.key
+rtmpServerCert: server.crt
+rtsp: no
+hls: no
+webrtc: no
+srt: no
+api: no
+metrics: no
+pprof: no
+playback: no
+paths:
+  all_others:

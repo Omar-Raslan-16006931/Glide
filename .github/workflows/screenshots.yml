@@ -1,0 +1,180 @@
+# Manual helper: installs a Glide release on a Windows runner, opens each main screen with the program's
+# own startup options (--page / --tab / --dialog / --size) and saves a screenshot of the real window.
+# The runner has no GPU, so NVIDIA-only controls show as unavailable, exactly as on a PC without one.
+name: screenshots
+
+on:
+  workflow_dispatch:
+    inputs:
+      release_tag:
+        description: Release to install; leave empty to use the latest successful build of the branch below
+        default: ''
+        required: false
+      branch:
+        description: Branch whose latest successful build-windows run is used when no release is given
+        default: main
+        required: false
+
+# contents: write only to push the images to the `screenshots` branch (replaced on every run).
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  shots:
+    runs-on: windows-2022
+    timeout-minutes: 30
+    defaults:
+      run:
+        shell: pwsh
+    env:
+      GH_TOKEN: ${{ github.token }}
+      RELEASE_TAG: ${{ inputs.release_tag }}
+      BUILD_BRANCH: ${{ inputs.branch || 'main' }}
+    steps:
+      - name: Screen resolution
+        run: |
+          try { Set-DisplayResolution -Width 1920 -Height 1080 -Force -ErrorAction Stop } catch { Write-Host "Set-DisplayResolution: $_" }
+          Add-Type -AssemblyName System.Windows.Forms
+          [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+
+      - name: Install Glide
+        run: |
+          if ($env:RELEASE_TAG) {
+            gh release download $env:RELEASE_TAG -R $env:GITHUB_REPOSITORY -p 'Glide-[0-9]*-win64.zip' -O pf.zip
+          } else {
+            $run = gh run list -R $env:GITHUB_REPOSITORY -w build-windows -b $env:BUILD_BRANCH -s success -L 1 --json databaseId -q '.[0].databaseId'
+            if (-not $run) { throw "no successful build-windows run on $env:BUILD_BRANCH" }
+            Write-Host "Using build run $run ($env:BUILD_BRANCH)"
+            gh run download $run -R $env:GITHUB_REPOSITORY -p 'Glide-*' -D art
+            Move-Item (Get-ChildItem art -Recurse -Filter 'Glide-*-win64.zip' | Where-Object Name -notlike '*OBS*' | Select-Object -First 1).FullName pf.zip
+          }
+          Expand-Archive pf.zip -DestinationPath pf
+          & .\pf\Install-Glide.ps1 -Gpu NVIDIA -InstallDir D:\pf -NoShortcuts -NoLaunch
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Take screenshots
+        run: |
+          Add-Type -AssemblyName System.Drawing, System.Windows.Forms
+          Add-Type @'
+          using System; using System.Runtime.InteropServices;
+          public static class W {
+            [StructLayout(LayoutKind.Sequential)] public struct RECT { public int L, T, R, B; }
+            [DllImport("user32.dll")] public static extern bool GetWindowRect(IntPtr h, out RECT r);
+            [DllImport("user32.dll")] public static extern bool SetForegroundWindow(IntPtr h);
+            [DllImport("user32.dll")] public static extern bool SetProcessDPIAware();
+          }
+          '@
+          [W]::SetProcessDPIAware() | Out-Null
+          $screen = [System.Windows.Forms.Screen]::PrimaryScreen.Bounds
+          $w = [Math]::Min(1440, $screen.Width - 40); $h = [Math]::Min(900, $screen.Height - 60)
+          New-Item -ItemType Directory -Force shots | Out-Null
+          # 1-6 and 10 are the README screens; 7-9 and 11 check the layout at small window sizes and other pages.
+          $list = @(
+            @{ name = '1-home';            args = @('--page', 'home', '--dock-pinned') },
+            @{ name = '2-frame-generation'; args = @('--page', 'pro', '--tab', 'fg') },
+            @{ name = '3-capture-card';    args = @('--page', 'home', '--dialog', 'capture') },
+            @{ name = '4-picture';         args = @('--page', 'pro', '--tab', 'quality') },
+            @{ name = '5-display';         args = @('--page', 'pro', '--tab', 'display') },
+            @{ name = '6-settings';        args = @('--page', 'set') },
+            @{ name = '7-home-small';      args = @('--page', 'home'); size = '1100x680' },
+            @{ name = '8-pro-small';       args = @('--page', 'pro', '--tab', 'fg'); size = '1100x680' },
+            @{ name = '9-cinema';          args = @('--page', 'min', '--dock-pinned') },
+            @{ name = '10-picture-sound';  args = @('--page', 'home', '--tab', 'tuning') },
+            @{ name = '11-pro-audio';      args = @('--page', 'pro', '--tab', 'audio') },
+            @{ name = '12-optimize';       args = @('--page', 'home', '--dialog', 'optimize') },
+            @{ name = '13-game-presets';   args = @('--page', 'home', '--dialog', 'games') },
+            @{ name = '14-settings-playback'; args = @('--page', 'set') },
+            # Appearance modes and languages: every text must stay readable.
+            @{ name = '15-light-home';     args = @('--page', 'home', '--dock-pinned', '--theme', 'light') },
+            @{ name = '16-light-pro';      args = @('--page', 'pro', '--tab', 'fg', '--theme', 'light') },
+            @{ name = '17-light-settings'; args = @('--page', 'set', '--theme', 'light') },
+            @{ name = '18-light-optimize'; args = @('--page', 'home', '--dialog', 'optimize', '--theme', 'light') },
+            @{ name = '19-light-node';     args = @('--page', 'node', '--theme', 'light') },
+            @{ name = '20-light-picture';  args = @('--page', 'home', '--tab', 'tuning', '--theme', 'light') },
+            @{ name = '21-black-home';     args = @('--page', 'home', '--dock-pinned', '--theme', 'black') },
+            @{ name = '22-black-pro';      args = @('--page', 'pro', '--tab', 'quality', '--theme', 'black') },
+            @{ name = '23-black-games';    args = @('--page', 'home', '--dialog', 'games', '--theme', 'black') },
+            @{ name = '24-lang-de';        args = @('--page', 'home', '--lang', 'de') },
+            @{ name = '25-lang-ar';        args = @('--page', 'home', '--lang', 'ar') },
+            @{ name = '26-lang-es-pro';    args = @('--page', 'pro', '--tab', 'fg', '--lang', 'es') },
+            @{ name = '27-lang-tr';        args = @('--page', 'set', '--lang', 'tr') },
+            @{ name = '28-lang-nl';        args = @('--page', 'home', '--lang', 'nl') },
+            @{ name = '29-settings-anr';   args = @('--page', 'set', '--tab', 'comp') },
+            @{ name = '30-settings-about'; args = @('--page', 'set', '--tab', 'about') },
+            @{ name = '31-light-about';    args = @('--page', 'set', '--tab', 'about', '--theme', 'light') },
+            @{ name = '32-settings-recording'; args = @('--page', 'set', '--tab', 'play', '--scroll-to', 'set-recbitrate') },
+            @{ name = '33-recording-advanced'; args = @('--page', 'set', '--tab', 'play', '--scroll-to', 'set-recadvanced', '--pref', 'recordAdvanced=true', '--pref', 'recordRateControl=2') },
+            @{ name = '34-recording-advanced-light'; args = @('--page', 'set', '--tab', 'play', '--scroll-to', 'set-recadvanced', '--theme', 'light', '--pref', 'recordAdvanced=true') },
+            @{ name = '35-hud-protection'; args = @('--page', 'home', '--dialog', 'hud') },
+            @{ name = '36-hud-protection-light'; args = @('--page', 'home', '--dialog', 'hud', '--theme', 'light') },
+            @{ name = '37-hud-protection-de'; args = @('--page', 'home', '--dialog', 'hud', '--lang', 'de') },
+            @{ name = '38-recording-help'; args = @('--page', 'set', '--tab', 'play', '--scroll-to', 'set-recadvanced', '--pref', 'recordAdvanced=true', '--pref', 'recordRateControl=2', '--lang', 'en') },
+            @{ name = '39-ps5-streaming'; args = @('--page', 'home', '--dialog', 'ps5') },
+            @{ name = '40-pc-streaming';  args = @('--page', 'home', '--dialog', 'moonlight') },
+            @{ name = '41-xbox-streaming'; args = @('--page', 'home', '--dialog', 'xbox') },
+            @{ name = '42-latency-guide'; args = @('--page', 'home', '--dialog', 'latencyguide') },
+            @{ name = '43-intro-chevrons'; args = @('--page', 'home', '--intro-at', '700') },
+            @{ name = '44-intro-sunset'; args = @('--page', 'home', '--intro-at', '2300') },
+            @{ name = '45-intro-glide'; args = @('--page', 'home', '--intro-at', '3000') },
+            @{ name = '46-home-classic'; args = @('--page', 'home', '--pref', 'pushSunset=false') },
+            @{ name = '47-switch2-presets'; args = @('--page', 'home', '--dialog', 'games', '--pref', 'pushConsole=switch2') },
+            # README screens in the Glide brand (the Sunset City logo is for the app and website only).
+            @{ name = '48-home-classic-light'; args = @('--page', 'home', '--dock-pinned', '--theme', 'light', '--pref', 'pushSunset=false') },
+            @{ name = '49-home-classic-black'; args = @('--page', 'home', '--dock-pinned', '--theme', 'black', '--pref', 'pushSunset=false') },
+            @{ name = '50-home-classic-pinned'; args = @('--page', 'home', '--dock-pinned', '--pref', 'pushSunset=false') },
+            # Going live (2.9.0): three outputs, the way a multistream setup looks before going live. Start-Process
+            # does not escape quotes, so the JSON carries \" for the Windows command line.
+            @{ name = '51-go-live'; args = @('--page', 'home', '--dialog', 'stream', '--lang', 'en', '--pref', ('streamTargets=' + '[{"id":"o1","platform":"twitch","name":"","server":"","enabled":true},{"id":"o2","platform":"youtube","name":"","server":"","enabled":true},{"id":"o3","platform":"kick","name":"","server":"","enabled":false}]'.Replace('"', '\"'))) },
+            @{ name = '52-optimize-goals'; args = @('--page', 'home', '--dialog', 'optimize', '--lang', 'en', '--pref', 'pushOptimizeGoal=balanced') },
+            # Glide 3.0/3.1 modes: streaming mode (classic and sunset), video playback mode, the comparison dialog's vertical layout.
+            @{ name = '60-streaming-mode'; args = @('--page', 'live', '--lang', 'en', '--pref', 'pushSunset=false') },
+            @{ name = '61-video-playback'; args = @('--page', 'watch', '--lang', 'en', '--pref', 'pushSunset=false') },
+            @{ name = '62-compare-vertical'; args = @('--page', 'home', '--dialog', 'compare', '--lang', 'en', '--pref', 'pushCompareLayout=2', '--pref', 'pushSunset=false') },
+            @{ name = '63-streaming-mode-sunset'; args = @('--page', 'live', '--lang', 'en') }
+          )
+          foreach ($s in $list) {
+            $data = "D:\pfdata\$($s.name)"
+            $size = if ($s.size) { $s.size } else { "${w}x${h}" }
+            $a = $s.args + @('--size', $size, '--data-dir', $data, '--reduced-motion', '--no-update-check')
+            $p = Start-Process D:\pf\Glide.exe -ArgumentList $a -PassThru
+            Start-Sleep -Seconds 14
+            $p.Refresh()
+            $hwnd = $p.MainWindowHandle
+            if ($p.HasExited -or $hwnd -eq [IntPtr]::Zero) { Write-Host "::warning::$($s.name): no window"; if (-not $p.HasExited) { Stop-Process -Id $p.Id -Force }; continue }
+            [W]::SetForegroundWindow($hwnd) | Out-Null; Start-Sleep -Milliseconds 800
+            $r = New-Object W+RECT; [W]::GetWindowRect($hwnd, [ref]$r) | Out-Null
+            $bw = $r.R - $r.L; $bh = $r.B - $r.T
+            $bmp = New-Object System.Drawing.Bitmap $bw, $bh
+            $g = [System.Drawing.Graphics]::FromImage($bmp)
+            $g.CopyFromScreen($r.L, $r.T, 0, 0, $bmp.Size)
+            $bmp.Save("shots\$($s.name).png", [System.Drawing.Imaging.ImageFormat]::Png)
+            $g.Dispose(); $bmp.Dispose()
+            Write-Host "$($s.name): ${bw}x${bh}"
+            Stop-Process -Id $p.Id -Force
+            Start-Sleep -Seconds 2
+          }
+          Get-ChildItem shots | Format-Table Name, Length
+
+      - name: Interface errors and warnings during the screenshot runs
+        run: |
+          $lines = Get-ChildItem D:\pf\logs -Filter *.log -ErrorAction SilentlyContinue | Get-Content |
+            Where-Object { $_ -match '\[qml\]' -and $_ -match 'ERROR|TypeError|ReferenceError|Binding loop|Cannot assign|Unable to assign|is not a function|undefined' }
+          $lines | Select-Object -Unique | Set-Content shots\qml-report.txt
+          if ($lines) { Write-Host "::warning::$(@($lines).Count) interface warnings, see qml-report.txt"; $lines | Select-Object -Unique -First 80 | Out-Host }
+          else { 'No QML errors or warnings in any screenshot run.' | Set-Content shots\qml-report.txt; Write-Host 'No QML errors or warnings.' }
+
+      - name: Publish to the screenshots branch
+        run: |
+          Set-Location shots
+          git init -q -b screenshots
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com add *.png qml-report.txt
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -q -m "Glide screenshots"
+          git push -q --force "https://x-access-token:$env:GH_TOKEN@github.com/$env:GITHUB_REPOSITORY.git" screenshots
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: pushfps-screenshots
+          path: shots/*
+          if-no-files-found: error

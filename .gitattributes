@@ -1,0 +1,13 @@
+
+# Unified dependency patches must remain applicable after a Windows checkout.
+scripts/remoteplay/patches/*.patch text eol=lf
+# A single space is a required empty context line in unified diff syntax.
+scripts/ffmpeg/*.patch text eol=lf whitespace=-blank-at-eol
+third_party/lmxxf/*.patch text eol=lf whitespace=-blank-at-eol
+# PushFPS: Windows scripts keep CRLF line endings.
+packaging/*.cmd text eol=crlf
+packaging/*.ps1 text eol=crlf
+obs-plugin/packaging/*.cmd text eol=crlf
+obs-plugin/packaging/*.ps1 text eol=crlf
+obs-plugin/ci/*.ps1 text eol=crlf
+Glide.cmd text eol=crlf

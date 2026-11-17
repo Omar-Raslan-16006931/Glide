@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PushFPS: play 30 FPS console games at 60 or 120 FPS</title>
+<meta name="description" content="Free, open-source frame generation for consoles. PushFPS takes the picture from your capture card and adds generated frames in real time on your PC. Windows 11, NVIDIA, AMD and Intel.">
+<meta name="theme-color" content="#0e1013">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PushFPS: your console at 60 or 120 FPS">
+<meta property="og:description" content="Free, open-source frame generation for console games through a capture card. Built on Veyra, with ANR by Apex Compute.">
+<meta property="og:image" content="https://dosukasol.github.io/PushFPS/assets/og-image.png">
+<meta property="og:url" content="https://dosukasol.github.io/PushFPS/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/favicon-64.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preload" href="fonts/BarlowSemiCondensed-ExtraBoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/Barlow-Regular.woff2" as="font" type="font/woff2" crossorigin>
+<script>
+  // Theme before the first paint: Sunset City by default, or the visitor's last choice.
+  (function () {
+    var t = "sunset";
+    try { var s = localStorage.getItem("pushfps-theme"); if (s === "classic" || s === "light" || s === "sunset") t = s; } catch (e) {}
+    document.documentElement.setAttribute("data-theme", t);
+  })();
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<canvas id="sky" aria-hidden="true"></canvas>
+<canvas id="flow" aria-hidden="true"></canvas>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="top">
+  <div class="wrap nav-row">
+    <a class="brand" href="#top" aria-label="PushFPS home">
+      <img src="assets/mark.png" alt="" width="30" height="30">
+      <span class="wordmark">Push<span>FPS</span></span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav-links">
+        <li><a href="#how">How it works</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#requirements">Requirements</a></li>
+        <li><a href="#guide">Setup guide</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <div class="theme-switch" role="group" aria-label="Look">
+        <button type="button" data-theme-choice="sunset" aria-pressed="false" aria-label="Sunset City look" title="Sunset City">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 15a7 7 0 0 1 14 0" /><path d="M2 15h20M5 18.5h14M8 22h8" /></svg>
+        </button>
+        <button type="button" data-theme-choice="classic" aria-pressed="false" aria-label="Dark look" title="Dark">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z" /></svg>
+        </button>
+        <button type="button" data-theme-choice="light" aria-pressed="false" aria-label="Light look" title="Light">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" /><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" /></svg>
+        </button>
+      </div>
+      <a class="btn ghost small" href="https://github.com/DosukaSOL/PushFPS">GitHub</a>
+      <a class="btn small" href="#download">Download</a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- Hero -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <img class="hero-logo logo-sunset" src="assets/sunset-logo-560.webp" srcset="assets/sunset-logo-560.webp 560w, assets/sunset-logo.webp 1100w" sizes="(max-width: 700px) 92vw, 470px" width="470" height="193" alt="PushFPS" loading="lazy">
+      <img class="hero-logo logo-classic" src="assets/pushfps-logo-600.webp" srcset="assets/pushfps-logo-600.webp 600w, assets/pushfps-logo.webp 1200w" sizes="(max-width: 700px) 80vw, 420px" width="420" height="144" alt="PushFPS" loading="lazy">
+      <img class="hero-logo logo-light" src="assets/pushfps-logo-light-600.webp" srcset="assets/pushfps-logo-light-600.webp 600w, assets/pushfps-logo-light.webp 1200w" sizes="(max-width: 700px) 80vw, 420px" width="420" height="144" alt="PushFPS" loading="lazy">
+      <h1>Your console at 60 or 120&nbsp;FPS, straight from your capture card.</h1>
+      <p class="lede">PushFPS reads the picture from your capture card and adds generated frames in real time on your PC. Nothing changes on the console or in the game. Free and open source, for Windows&nbsp;11.</p>
+      <div class="cta-row">
+        <a class="btn big" id="hero-download" href="https://github.com/DosukaSOL/PushFPS/releases/latest">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16" /></svg>
+          Download for Windows
+        </a>
+        <a class="btn ghost big" href="#how">See how it works</a>
+      </div>
+      <p class="fine" id="release-line">Latest release on GitHub. Works with NVIDIA, AMD and Intel graphics.</p>
+    </div>
+
+    <figure class="lab" aria-label="Frame rate demonstration">
+      <div class="lab-head">
+        <span class="lab-title">Same game, same moment</span>
+        <div class="seg" role="radiogroup" aria-label="PushFPS frame rate">
+          <button type="button" role="radio" aria-checked="false" data-target="60">60 FPS</button>
+          <button type="button" role="radio" aria-checked="true" data-target="120">120 FPS</button>
+        </div>
+      </div>
+      <div class="lane" data-lane="console">
+        <div class="lane-label"><b>Console</b><span>30 frames each second</span></div>
+        <canvas class="lane-view" width="560" height="120" aria-hidden="true"></canvas>
+        <canvas class="tape" width="560" height="18" aria-hidden="true"></canvas>
+      </div>
+      <div class="lane" data-lane="push">
+        <div class="lane-label"><b class="green">PushFPS</b><span id="push-rate">120 frames each second</span></div>
+        <canvas class="lane-view" width="560" height="120" aria-hidden="true"></canvas>
+        <canvas class="tape" width="560" height="18" aria-hidden="true"></canvas>
+      </div>
+      <figcaption>
+        <span class="key"><i class="k-real"></i>Frames from the console</span>
+        <span class="key"><i class="k-gen"></i>Frames PushFPS generates</span>
+        <button type="button" class="link-btn" id="lab-pause" aria-pressed="false">Pause</button>
+      </figcaption>
+      <p class="lab-note" id="lab-note" hidden></p>
+    </figure>
+  </div>
+</section>
+
+<!-- Credits strip -->
+<section class="credits-strip" aria-label="Built with">
+  <div class="wrap strip-row">
+    <a class="credit" href="https://github.com/Likely7/Veyra-NRVideo">
+      <img src="assets/veyra-logo.png" alt="" width="42" height="32">
+      <span>Built on <b>Veyra</b>, the open-source video enhancer by Likely7</span>
+    </a>
+    <a class="credit" href="https://github.com/apex-compute/ANR">
+      <span class="credit-mark" aria-hidden="true">ANR</span>
+      <span>ANR frame generation by <b>Apex Compute</b></span>
+    </a>
+  </div>
+</section>
+
+<!-- How it works -->
+<section class="section" id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="section-lede">A 30 FPS game repeats every picture twice inside the console's 60&nbsp;Hz signal. PushFPS keeps the real pictures and fills the gaps with new frames on your graphics card.</p>
+    <ol class="pipe">
+      <li class="pipe-step">
+        <div class="pipe-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="14" width="36" height="22" rx="7"/><circle cx="16" cy="25" r="3"/><path d="M30 22h6M33 19v6"/></svg></div>
+        <h3>Console</h3>
+        <p>PS5, Xbox Series or Switch 2, set to 60&nbsp;Hz output (120&nbsp;Hz if your capture card captures 120&nbsp;Hz).</p>
+      </li>
+      <li class="pipe-link" aria-hidden="true"><span>HDMI</span></li>
+      <li class="pipe-step">
+        <div class="pipe-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="16" width="32" height="16" rx="4"/><path d="M14 24h10M30 22v4"/></svg></div>
+        <h3>Capture card</h3>
+        <p>Any card Windows sees as a camera, USB or PCIe.</p>
+      </li>
+      <li class="pipe-link" aria-hidden="true"><span>USB / PCIe</span></li>
+      <li class="pipe-step accent">
+        <div class="pipe-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><path d="M13 14l11 10-11 10M25 14l11 10-11 10"/></svg></div>
+        <h3>PushFPS</h3>
+        <p>Finds the real frames, then generates the ones in between on your GPU.</p>
+      </li>
+      <li class="pipe-link" aria-hidden="true"><span>60 / 120 FPS</span></li>
+      <li class="pipe-step">
+        <div class="pipe-icon"><svg viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="10" width="36" height="24" rx="3"/><path d="M18 40h12M24 34v6"/></svg></div>
+        <h3>Your monitor</h3>
+        <p>Play at the frame rate you picked. Optionally stream it with OBS.</p>
+      </li>
+    </ol>
+    <div class="honest">
+      <h3>Smoother, not faster</h3>
+      <p>Generated frames make motion look smoother. They don't make the game react faster: your inputs still land at the game's own pace, plus the capture card's delay and up to one game frame (about 33&nbsp;ms at 30&nbsp;FPS). PushFPS measures its own part and can show it on screen. For competitive games, play on the console's own display path.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="wrap">
+    <h2>Made for console players</h2>
+    <p class="section-lede">Veyra is a powerful video enhancer. PushFPS turns it into a console tool: three choices instead of hundreds, and tools that tune and protect the picture for you.</p>
+
+    <div class="showcase">
+      <div class="tabs" role="tablist" aria-label="Features" aria-orientation="vertical">
+        <button role="tab" id="t-optimize" aria-controls="p-show" aria-selected="true" data-shot="optimize" data-alt="Optimise for my PC dialog with the test plan and results">
+          <b>Optimise for my PC</b>
+          <span>One click while your game is on screen. Pick a goal (balanced, lowest latency, smoothest or best picture) and PushFPS tests every frame generation method your PC has, AI enhancement and the upscalers on your real picture, up to 144 or 240&nbsp;Hz, and keeps the best. Undo puts everything back.</span>
+        </button>
+        <button role="tab" id="t-quick" aria-controls="p-show" aria-selected="false" data-shot="home" data-alt="PushFPS home screen with capture card, streaming sources and quick setup">
+          <b>Quick setup</b>
+          <span>Pick your console, the game's frame rate and the frame rate you want. Save it as a game profile and switch back in one click.</span>
+        </button>
+        <button role="tab" id="t-hud" aria-controls="p-show" aria-selected="false" data-shot="hud-protection" data-alt="HUD protection dialog with automatic detection and editable boxes">
+          <b>HUD that stays sharp</b>
+          <span>Automatic HUD detection finds the minimap, health and ammo, and keeps the console's own pixels there. Drag the boxes to correct them, or start from a game preset such as GTA VI.</span>
+        </button>
+        <button role="tab" id="t-presets" aria-controls="p-show" aria-selected="false" data-shot="game-presets" data-alt="Game presets dialog with GTA VI selected">
+          <b>Game presets</b>
+          <span>Ready-made layouts for open-world, racing, action and shooter games. Save your own and share them as a code.</span>
+        </button>
+        <button role="tab" id="t-stream" aria-controls="p-show" aria-selected="false" data-shot="ps5-streaming" data-alt="PS5 streaming dialog with host address and pairing">
+          <b>No capture card? Stream instead</b>
+          <span>PS5 Remote Play, PC streaming through Sunshine (Moonlight) and Xbox streaming, with the same frame generation. Built on Veyra's streaming support.</span>
+        </button>
+        <button role="tab" id="t-compare" aria-controls="p-show" aria-selected="false" data-shot="frame-generation" data-alt="Professional mode with the quick setup tool cards">
+          <b>Before/after clips</b>
+          <span>Record 10 to 60 seconds of the raw console picture next to PushFPS: split screen, side by side, or vertical 9:16 for TikTok, Shorts and Reels. Both sides are labelled with their frame rate. Share it to Discord in one click.</span>
+        </button>
+        <button role="tab" id="t-anr" aria-controls="p-show" aria-selected="false" data-shot="anr" data-alt="Settings page with the ANR install card">
+          <b>ANR by Apex Compute</b>
+          <span>AI frame generation that also supports older cards (GTX 16 and newer, Radeon RX 5000 and newer, Intel Arc). Download it from Apex, install it in one click.</span>
+        </button>
+        <button role="tab" id="t-picture" aria-controls="p-show" aria-selected="false" data-shot="picture-sound" data-alt="Picture and sound panel with styles and sound profiles">
+          <b>Picture and sound</b>
+          <span>Picture styles, gamma and sharpness, plus sound profiles: bass boost, footsteps, night mode, cinema and a five-band EQ.</span>
+        </button>
+      </div>
+      <div class="show" id="p-show" role="tabpanel" aria-labelledby="t-optimize" tabindex="0">
+        <div class="frame">
+          <div class="frame-bar" aria-hidden="true"><i></i><i></i><i></i></div>
+          <img id="show-img" src="assets/shots/optimize.webp" width="1440" height="900" alt="Optimise for my PC dialog with the test plan and results" loading="lazy">
+        </div>
+      </div>
+    </div>
+
+    <ul class="more">
+      <li><b>Video playback mode</b><span>Frame generation, sharper upscaling, AI enhancement and SDR to HDR on any video on your PC: YouTube in your browser, video apps or files.</span></li>
+      <li><b>Streaming mode</b><span>An OBS-style page: scenes (logo and text overlays, Starting soon and Be right back cards), preview, controls, an audio mixer for game sound, microphone and monitor with level meters, and microphone filters (EQ, noise gate, compressor).</span></li>
+      <li><b>Lowest latency in one tap</b><span>Every latency setting that costs no picture quality, switched on together. Off brings your previous settings back.</span></li>
+      <li><b>Smooth frame pacing</b><span>Every generated frame shown once, with G-SYNC/FreeSync where your screen has it, so playing looks like the recording.</span></li>
+      <li><b>Adaptive multiplier</b><span>Follows the game's real frame rate as it dips and picks the multiplier closest to your target.</span></li>
+      <li><b>Go live</b><span>Stream straight to Twitch, YouTube, Kick, TikTok and more, to several platforms at once. Stream keys are stored encrypted.</span></li>
+      <li><b>Frame Pacing Repair</b><span>Evens out the uneven frame timing of many 30&nbsp;FPS console games before frames are generated.</span></li>
+      <li><b>Live HUD Lock</b><span>Keeps still text, crosshairs and bars sharp in generated frames, found on every frame, no boxes needed.</span></li>
+      <li><b>Latency on screen</b><span>Measured PC latency, frame rate and 1% low over the picture.</span></li>
+      <li><b>OBS Studio plugin</b><span>Your boosted picture as a source in OBS, generated frames included.</span></li>
+      <li><b>Recording and instant replay</b><span>With optional OBS-style encoding settings: rate control, quality, preset, keyframes, MP4 or MKV.</span></li>
+      <li><b>NVIDIA Image Scaling</b><span>Fast upscaling and sharpening on NVIDIA, AMD and Intel graphics.</span></li>
+      <li><b>Tested capture cards</b><span>See in the app which cards are known to work, and report yours.</span></li>
+      <li><b>14 languages</b><span>English, Simplified and Traditional Chinese, Japanese, Dutch, German, Spanish, French, Italian, Portuguese, Turkish, Polish, Russian, Arabic.</span></li>
+      <li><b>Dark, black and light</b><span>An almost-black mode for OLED screens and a light mode.</span></li>
+      <li><b>Help where you need it</b><span>A small ? beside settings that need explaining.</span></li>
+      <li><b>Plug and play</b><span>Connects to your capture card when PushFPS opens and goes fullscreen when the picture appears.</span></li>
+      <li><b>Measure total delay</b><span>A guided slow-motion phone test of the whole delay over your passthrough.</span></li>
+      <li><b>Two graphics cards</b><span>Run PushFPS on a second card, with a warning when frames have to cross between cards.</span></li>
+      <li><b>Always on top</b><span>Keep PushFPS above a guide or a chat window.</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- Gallery -->
+<section class="section tight" id="screenshots" aria-label="Screenshots">
+  <div class="wrap">
+    <h2>A look inside</h2>
+  </div>
+  <div class="gallery" tabindex="0" aria-label="Screenshots, scroll sideways">
+    <button class="shot" data-src="assets/shots/home.webp" data-cap="Home: capture card, streaming sources and quick setup"><img src="assets/shots/home.webp" alt="Home screen" loading="lazy" width="1440" height="900"><span>Home</span></button>
+    <button class="shot" data-src="assets/shots/frame-generation.webp" data-cap="Professional mode: every detail of frame generation"><img src="assets/shots/frame-generation.webp" alt="Professional mode" loading="lazy" width="1440" height="900"><span>Professional mode</span></button>
+    <button class="shot" data-src="assets/shots/capture-card.webp" data-cap="Capture card: device, format, frame rate, colour and audio"><img src="assets/shots/capture-card.webp" alt="Capture card dialog" loading="lazy" width="1440" height="900"><span>Capture card</span></button>
+    <button class="shot" data-src="assets/shots/pc-streaming.webp" data-cap="PC streaming from a Sunshine host"><img src="assets/shots/pc-streaming.webp" alt="PC streaming dialog" loading="lazy" width="1440" height="900"><span>PC streaming</span></button>
+    <button class="shot" data-src="assets/shots/recording-advanced.webp" data-cap="Advanced encoding settings for recordings"><img src="assets/shots/recording-advanced.webp" alt="Advanced encoding settings" loading="lazy" width="1440" height="900"><span>Advanced encoding</span></button>
+    <button class="shot" data-src="assets/shots/appearance-light.webp" data-cap="Light mode"><img src="assets/shots/appearance-light.webp" alt="Light mode" loading="lazy" width="1440" height="900"><span>Light mode</span></button>
+    <button class="shot" data-src="assets/shots/appearance-black.webp" data-cap="Black mode for OLED screens"><img src="assets/shots/appearance-black.webp" alt="Black mode" loading="lazy" width="1440" height="900"><span>Black mode</span></button>
+    <button class="shot" data-src="assets/shots/settings.webp" data-cap="Settings"><img src="assets/shots/settings.webp" alt="Settings" loading="lazy" width="1440" height="900"><span>Settings</span></button>
+  </div>
+  <div class="wrap"><p class="fine">Screenshots of the real app, taken automatically on a build machine without a graphics card, so NVIDIA-only controls show as unavailable.</p></div>
+</section>
+
+<!-- Requirements -->
+<section class="section" id="requirements">
+  <div class="wrap">
+    <h2>What you need</h2>
+    <div class="table-wrap">
+      <table class="spec">
+        <thead><tr><th scope="col"></th><th scope="col">Minimum</th><th scope="col">Recommended</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">System</th><td data-label="Minimum">Windows 11 64-bit with DirectX 12</td><td data-label="Recommended">Latest Windows updates</td></tr>
+          <tr><th scope="row">Graphics card</th><td data-label="Minimum">Any DirectX 12 card for 2× with AMD FSR; NVIDIA RTX 30 for NVIDIA's methods</td><td data-label="Recommended">NVIDIA RTX 40 or 50 series</td></tr>
+          <tr><th scope="row">Capture card</th><td data-label="Minimum">Shows up as a camera in Windows, 1080p at 60&nbsp;FPS without compression, or stream instead</td><td data-label="Recommended">4K60 capture with HDMI passthrough</td></tr>
+          <tr><th scope="row">Connection</th><td data-label="Minimum">USB 3 port directly on the PC</td><td data-label="Recommended">USB 3.2 Gen 2 or a PCIe card</td></tr>
+          <tr><th scope="row">Console</th><td data-label="Minimum">Any console with HDMI out</td><td data-label="Recommended">60&nbsp;Hz output, or 120&nbsp;Hz if your capture card captures 120&nbsp;Hz (<a href="#guide-hz">60 or 120&nbsp;Hz?</a>)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h">Frame generation methods</h3>
+    <div class="table-wrap">
+      <table class="spec methods">
+        <thead><tr><th scope="col">Method</th><th scope="col">Graphics cards</th><th scope="col">Up to</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">NVIDIA Video Frame Generation</th><td data-label="Graphics cards">RTX 40, RTX 50 (RTX 30 experimental)</td><td data-label="Up to">8×</td></tr>
+          <tr><th scope="row">NVIDIA Frame Generation for games</th><td data-label="Graphics cards">RTX 40 (2×), RTX 50</td><td data-label="Up to">6×</td></tr>
+          <tr><th scope="row">ANR by Apex Compute <em>experimental</em></th><td data-label="Graphics cards">GTX 16 and newer, Radeon RX 5000 and newer, Intel Arc (Apex's list)</td><td data-label="Up to">6×</td></tr>
+          <tr><th scope="row">Intel XeSS Frame Generation <em>experimental</em></th><td data-label="Graphics cards">DirectX 12 cards</td><td data-label="Up to">4×</td></tr>
+          <tr><th scope="row">AMD FSR Frame Generation</th><td data-label="Graphics cards">DirectX 12 cards (FSR 4 ML on a Radeon RX 9000, FSR 3.1 otherwise)</td><td data-label="Up to">2×</td></tr>
+          <tr><th scope="row">AMD FRC video interpolation</th><td data-label="Graphics cards">AMD graphics with a current AMD driver</td><td data-label="Up to">2×</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- Setup guide: recommended settings, console, Windows and HDR -->
+<section class="section" id="guide">
+  <div class="wrap">
+    <h2>Setup guide: the best settings</h2>
+    <p class="section-lede">Where to start in PushFPS, how to tune it from there, and what to set on your console, your capture card and in Windows. Also as a text file: <a href="https://github.com/DosukaSOL/PushFPS/blob/main/docs/PushFPS-Setup-Guide.txt">PushFPS-Setup-Guide.txt</a>, attached to every release.</p>
+
+    <h3 class="sub-h">1. Start here</h3>
+    <ol class="steps guide-steps">
+      <li><h3>Get the game on screen</h3><p>Connect the capture card and start your game, so PushFPS can see the real picture. Capture at <b>60&nbsp;FPS</b>, even for a 30&nbsp;FPS game (<a href="#guide-capture">why</a>).</p></li>
+      <li><h3>Fill in the quick setup</h3><p>Your console, game frame rate <b>30</b> (40 or 60 for those modes), and the target for your monitor from <a href="#guide-rates">the table below</a>: <b>60</b> on a 60&nbsp;Hz monitor, <b>120&nbsp;FPS</b> on 120&nbsp;Hz and faster. Pick the game preset if it's listed.</p></li>
+      <li><h3>Keep these on</h3><p><b>Smooth frame pacing</b>, <b>Frame Pacing Repair</b> and <b>Live HUD Lock</b>. <b>Adaptive multiplier</b> for games that dip. <b>Lowest latency</b> for action games. AI enhancement off to start.</p></li>
+      <li><h3>Optimise for my PC</h3><p>With the game on screen, goal <b>Balanced</b>. PushFPS tests every method your PC has and keeps the best. Undo puts everything back.</p></li>
+    </ol>
+
+    <h3 class="sub-h" id="guide-rates">Which target for your monitor</h3>
+    <p class="guide-note">Pick a target your monitor's refresh rate divides evenly, so every frame stays on screen equally long. That's why 120 beats 144: 144 isn't a whole multiple of 30 or 60. <b>Match monitor</b> sets the target to your monitor's own rate.</p>
+    <div class="table-wrap">
+      <table class="spec rates">
+        <thead><tr><th scope="col">Monitor</th><th scope="col">30&nbsp;FPS game (GTA VI)</th><th scope="col">60&nbsp;FPS game</th><th scope="col">Good to know</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">60&nbsp;Hz</th><td data-label="30 FPS game"><b>60</b><em>2×</em></td><td data-label="60 FPS game"><b>Off</b></td><td data-label="Good to know">A 60&nbsp;FPS game already fills the monitor: use Lowest latency only.</td></tr>
+          <tr><th scope="row">75 or 100&nbsp;Hz</th><td data-label="30 FPS game"><b>60</b><em>2×</em></td><td data-label="60 FPS game"><b>Off</b></td><td data-label="Good to know">Turn G-SYNC/FreeSync on, or set Windows to 60&nbsp;Hz.</td></tr>
+          <tr><th scope="row">120&nbsp;Hz</th><td data-label="30 FPS game"><b>120</b><em>4×</em></td><td data-label="60 FPS game"><b>120</b><em>2×</em></td><td data-label="Good to know">The sweet spot for console games.</td></tr>
+          <tr><th scope="row">144 or 165&nbsp;Hz</th><td data-label="30 FPS game"><b>120</b><em>4×</em></td><td data-label="60 FPS game"><b>120</b><em>2×</em></td><td data-label="Good to know">Turn G-SYNC/FreeSync on so 120&nbsp;FPS shows evenly; without it, set Windows to 120&nbsp;Hz.</td></tr>
+          <tr><th scope="row">180&nbsp;Hz</th><td data-label="30 FPS game"><b>120</b><em>4×</em> or <span class="nw">Match monitor <em>6×</em></span></td><td data-label="60 FPS game"><b>Match monitor</b><em>3×</em></td><td data-label="Good to know">180 is 6 × 30 and 3 × 60, so Match monitor works if your method offers that multiplier.</td></tr>
+          <tr><th scope="row">240&nbsp;Hz</th><td data-label="30 FPS game"><b>120</b><em>4×</em> or <span class="nw">Match monitor <em>8×</em></span></td><td data-label="60 FPS game"><b>120</b><em>2×</em> or <span class="nw">Match monitor <em>4×</em></span></td><td data-label="Good to know">Start at 120. 8× from 30&nbsp;FPS needs NVIDIA Video Frame Generation (RTX 40/50).</td></tr>
+          <tr><th scope="row">360&nbsp;Hz</th><td data-label="30 FPS game"><b>120</b><em>4×</em></td><td data-label="60 FPS game"><b>120</b><em>2×</em> or <span class="nw">Match monitor <em>6×</em></span></td><td data-label="Good to know">360 is 3 × 120, so 120 stays even.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="guide-note">Which multipliers your method offers: <b>2×</b> every method; <b>3× and 4×</b> NVIDIA Video Frame Generation, NVIDIA Frame Generation for games on RTX 50, ANR and Intel XeSS; <b>6×</b> NVIDIA Video Frame Generation, NVIDIA Frame Generation for games on RTX 50 and ANR; <b>8×</b> NVIDIA Video Frame Generation only. AMD FSR stops at 2×, so a 30&nbsp;FPS game goes to 60. More generated frames per real frame show more wobble in fast motion: if you see it, step down to 120 or 60. Not sure? <b>Optimise for my PC</b> tests 120 and your monitor's rate when your PC can reach it, and keeps what passes.</p>
+
+    <h3 class="sub-h">2. Then tune it to your liking</h3>
+    <p class="guide-note">Change one thing at a time, play a minute, then decide.</p>
+    <div class="table-wrap">
+      <table class="spec tune">
+        <thead><tr><th scope="col">If you see</th><th scope="col">Try</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Smeared HUD or text in fast motion</th><td data-label="Try">Live HUD Lock on, the game preset or Automatic HUD detection, or a lower target (60 instead of 120)</td></tr>
+          <tr><th scope="row">Wobbly edges in fast motion</th><td data-label="Try">A lower target, or a higher frame generation quality in Pro mode</td></tr>
+          <tr><th scope="row">Stutter or uneven motion</th><td data-label="Try">Smooth frame pacing on, G-SYNC/FreeSync on in your driver, capture card at exactly 60&nbsp;FPS, fullscreen (F11)</td></tr>
+          <tr><th scope="row">The game feels slow to react</th><td data-label="Try">Lowest latency on, 120&nbsp;Hz console output if your card captures 120&nbsp;Hz, or target Off for competitive games</td></tr>
+          <tr><th scope="row">Ghosting or wobbly "jelly" with a 30&nbsp;FPS game</th><td data-label="Try">On an RTX 40/50: NVIDIA Video Frame Generation, which handles low frame rates best. Quality <b>Medium</b> to start; <b>High</b> at 2× if your card keeps up (<a href="#guide-vfg">how heavy</a>)</td></tr>
+          <tr><th scope="row">Soft or blocky picture</th><td data-label="Try">RTX Video Super Resolution at <b>Medium</b> (PushFPS's default) on NVIDIA, NVIDIA Image Scaling on any card, or AI picture enhancement (RTX 40/50)</td></tr>
+          <tr><th scope="row">Frame rate drops with AI enhancement</th><td data-label="Try">AI enhancement off, or a lower target</td></tr>
+          <tr><th scope="row">Washed-out or too dark picture</th><td data-label="Try">Match the capture dialog's colour settings to the console: HDR or SDR, Limited or Full range</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub-h">3. Console settings</h3>
+    <p class="guide-note">For every console: <b>VRR off</b> (capture needs a steady signal), and the resolution your card captures at 60&nbsp;FPS. A 30&nbsp;FPS quality mode gives the sharpest picture; a 60&nbsp;FPS mode gives less delay.</p>
+    <h4 class="guide-h4" id="guide-hz">60 or 120&nbsp;Hz? It depends on your capture card, not your console</h4>
+    <div class="table-wrap">
+      <table class="spec hz">
+        <thead><tr><th scope="col">Your capture card</th><th scope="col">Console output</th><th scope="col">Why</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Captures 120&nbsp;Hz at your resolution<br><small>e.g. Elgato 4K X; Elgato 4K S at 1080p or 1440p</small></th><td data-label="Console output"><b>120&nbsp;Hz</b></td><td data-label="Why">Each frame reaches the PC about 8&nbsp;ms sooner, and 40&nbsp;FPS modes (which need 120&nbsp;Hz) work.</td></tr>
+          <tr><th scope="row">Captures 60&nbsp;Hz<br><small>most cards, many cards at 4K, and cards that only pass 120&nbsp;Hz through to your TV, like the Elgato HD60 X</small></th><td data-label="Console output"><b>60&nbsp;Hz</b></td><td data-label="Why">The card can't capture more. With passthrough, the console may still pick 120&nbsp;Hz from your TV: you then get a black picture or stutter.</td></tr>
+          <tr><th scope="row">Not sure</th><td data-label="Console output"><b>60&nbsp;Hz</b> first</td><td data-label="Why">Then try 120&nbsp;Hz and check the picture stays steady. Check your card's <b>capture</b> rates; passthrough rates don't count.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="guide-note">This is the same on PS5, PS5 Pro, Xbox Series X|S and Switch 2. A 120&nbsp;Hz signal doesn't make the game run faster: a 30&nbsp;FPS game stays 30&nbsp;FPS, so the game frame rate in PushFPS stays 30.</p>
+    <div class="console-tabs">
+      <div class="ctabs" role="tablist" aria-label="Console">
+        <button role="tab" id="ct-ps5" aria-controls="cp-ps5" aria-selected="true">PS5 and PS5 Pro</button>
+        <button role="tab" id="ct-xbox" aria-controls="cp-xbox" aria-selected="false" tabindex="-1">Xbox Series X|S</button>
+        <button role="tab" id="ct-switch" aria-controls="cp-switch" aria-selected="false" tabindex="-1">Switch and Switch 2</button>
+      </div>
+      <div class="cpanel" role="tabpanel" id="cp-ps5" aria-labelledby="ct-ps5">
+        <ul class="setlist">
+          <li><span>System → HDMI → <b>Enable HDCP</b></span><span class="chip off">Off</span><small>Required: with HDCP on the capture card shows black</small></li>
+          <li><span>Screen and Video → Video Output → <b>Resolution</b></span><span class="chip">Match your card</span></li>
+          <li><span><b>120 Hz Output</b></span><span class="chip">Off / Automatic</span><small>Automatic only if your card captures 120&nbsp;Hz (<a href="#guide-hz">which cards</a>); otherwise Off</small></li>
+          <li><span><b>VRR</b></span><span class="chip off">Off</span></li>
+          <li><span><b>HDR</b></span><span class="chip">See HDR below</span></li>
+          <li><span><b>RGB Range</b></span><span class="chip">Automatic</span><small>Match it in PushFPS's capture dialog</small></li>
+        </ul>
+      </div>
+      <div class="cpanel" role="tabpanel" id="cp-xbox" aria-labelledby="ct-xbox" hidden>
+        <ul class="setlist">
+          <li><span>General → TV &amp; display options → <b>Resolution</b></span><span class="chip">Match your card</span></li>
+          <li><span><b>Refresh rate</b></span><span class="chip">60 Hz</span><small>120&nbsp;Hz only if your card captures 120&nbsp;Hz (<a href="#guide-hz">which cards</a>)</small></li>
+          <li><span>Video modes → <b>Allow variable refresh rate</b></span><span class="chip off">Off</span></li>
+          <li><span>Video modes → <b>Allow 24 Hz</b></span><span class="chip off">Off</span></li>
+          <li><span><b>HDR10</b> and <b>Auto HDR</b></span><span class="chip">See HDR below</span></li>
+          <li><span><b>HDCP</b></span><span class="chip">Nothing to change</span><small>Xbox games are not HDCP protected</small></li>
+        </ul>
+      </div>
+      <div class="cpanel" role="tabpanel" id="cp-switch" aria-labelledby="ct-switch" hidden>
+        <ul class="setlist">
+          <li><span>Play <b>docked</b></span><span class="chip on">On</span></li>
+          <li><span>Switch: TV Output → <b>TV resolution</b></span><span class="chip">1080p</span></li>
+          <li><span>Switch 2: <b>TV resolution</b></span><span class="chip">1080p or 4K</span><small>4K only if your card captures 4K60; 60&nbsp;Hz output</small></li>
+          <li><span><b>RGB range</b></span><span class="chip">Automatic</span><small>Match it in PushFPS's capture dialog</small></li>
+          <li><span>Switch 2: <b>HDR</b></span><span class="chip">See HDR below</span></li>
+          <li><span><b>HDCP</b></span><span class="chip">Nothing to change</span><small>Switch games are not HDCP protected</small></li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 class="sub-h" id="guide-capture">4. Capture card settings</h3>
+    <p class="guide-note">With thanks to Likely7, Veyra's developer: the delay figures and card picks below are his, checked against the makers' specs and corrected where needed.</p>
+    <ul class="setlist">
+      <li><span><b>Frame rate</b></span><span class="chip on">60 FPS</span><small>Also for a 30&nbsp;FPS game: each new picture reaches the PC sooner than with a 30&nbsp;FPS capture. Half the captured frames are then repeats (AABBCC), so PushFPS removes them before generating frames. The quick setup and Optimise for my PC do this for you; in Pro mode it's <i>Remove duplicate frames</i> (Automatic removal or 60→30). 120&nbsp;FPS only if your card captures 120&nbsp;Hz.</small></li>
+      <li><span><b>Format</b></span><span class="chip">NV12, or P010 for HDR</span><small>Uncompressed. Avoid MJPEG where you can: it's compressed and has to be decoded. On a 5&nbsp;Gbps card, 4K60 only exists as MJPEG (the Elgato 4K S, for example).</small></li>
+      <li><span><b>Resolution for the lowest delay</b></span><span class="chip">1440p60 NV12</span><small>Then let RTX Video Super Resolution (Medium) or NVIDIA Image Scaling upscale it. Want HDR on an HDR monitor without HDR capture? RTX Video HDR in Pro mode turns SDR into HDR (NVIDIA RTX).</small></li>
+    </ul>
+    <div class="table-wrap">
+      <table class="spec capfmt">
+        <thead><tr><th scope="col">Capture format</th><th scope="col">Delay</th><th scope="col">Good to know</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">1440p 60&nbsp;FPS NV12</th><td data-label="Delay"><b>10–20&nbsp;ms</b></td><td data-label="Good to know">The lowest delay. Works on 5&nbsp;Gbps cards.</td></tr>
+          <tr><th scope="row">4K 60&nbsp;FPS NV12</th><td data-label="Delay"><b>30–40&nbsp;ms</b></td><td data-label="Good to know">Needs a 10&nbsp;Gbps card on a 10&nbsp;Gbps port, or PCIe.</td></tr>
+          <tr><th scope="row">4K 30&nbsp;FPS P010 (HDR)</th><td data-label="Delay"><b>80–100&nbsp;ms</b></td><td data-label="Good to know">Avoid for playing: the most delay, and only 30 pictures a second reach the PC. For 4K60 HDR you need a PCIe card.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="guide-note">Delay measured by Veyra's developer for the capture step alone; your card can differ a little. Cards with the same chip differ by about 5&nbsp;ms or less, whatever the brand.</p>
+    <h4 class="guide-h4">Which capture card</h4>
+    <div class="table-wrap">
+      <table class="spec cards">
+        <thead><tr><th scope="col">Connection</th><th scope="col">Uncompressed capture</th><th scope="col">Examples</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">USB 5&nbsp;Gbps</th><td data-label="Uncompressed capture">1440p60 and 4K30 NV12; 1080p60 HDR on some</td><td data-label="Examples">Elgato HD60 X, Elgato 4K S (4K60 only as MJPEG), AVerMedia GC553 Pro / GC551G2, MICHENSEN T800 / T900, KUHAIMI 27P / 26P, ACASIS 007 Pro / 009 Pro</td></tr>
+          <tr><th scope="row">USB 10&nbsp;Gbps</th><td data-label="Uncompressed capture">4K60 NV12, 1440p60 HDR, 4K30 HDR</td><td data-label="Examples">Elgato 4K X, AVerMedia GC553G2 (both also capture 120&nbsp;Hz), MICHENSEN T911, KUHAIMI G50. Plug into a real 10&nbsp;Gbps port (USB 3.2 Gen 2) on the PC; on 5&nbsp;Gbps they capture less.</td></tr>
+          <tr><th scope="row">PCIe</th><td data-label="Uncompressed capture">4K60 HDR</td><td data-label="Examples">AVerMedia GC573, Elgato 4K Pro</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="guide-note">Tested with PushFPS: Elgato 4K X, HD60 X and 4K S. The other models are Veyra's developer's picks and aren't tested with PushFPS yet. Any card that shows up as a camera in Windows works.</p>
+
+    <h4 class="guide-h4" id="guide-vfg">NVIDIA Video Frame Generation: Medium or High?</h4>
+    <p class="guide-note">For 30&nbsp;FPS games it gives the least ghosting and wobble of the methods (RTX 40/50; RTX 30 experimental). <b>High</b> is the cleanest but heavy: Veyra's developer measured about 20&nbsp;ms per generated 4K frame on an RTX 5070. That fits 2× (one new frame per 33&nbsp;ms game frame) but not 4×, which needs three. <b>Medium</b> costs about a third to a quarter of High and still beats the other methods at 30&nbsp;FPS, so it's the default. In between, <b>High+Medium</b> uses High only for the middle frame of each pair. At 2×, <i>VFG auto regulation</i> drops a pair to the next tier when it can't keep up, instead of dropping frames. Find these in Pro mode under Frame generation, or let <b>Optimise for my PC</b> test what your card keeps up with.</p>
+
+    <h3 class="sub-h">5. Windows settings</h3>
+    <ul class="setlist wingrid">
+      <li><span><b>Hardware-accelerated GPU scheduling</b><br>Settings → System → Display → Graphics</span><span class="chip on">On</span><small>Required for NVIDIA's frame generation; on by default in Windows 11. Restart after changing it</small></li>
+      <li><span><b>Monitor refresh rate</b><br>Settings → System → Display → Advanced display</span><span class="chip">Highest</span></li>
+      <li><span><b>G-SYNC / FreeSync</b><br>NVIDIA Control Panel or AMD Software</span><span class="chip on">On</span><small>For fullscreen and windowed mode</small></li>
+      <li><span><b>Game Mode</b></span><span class="chip on">On</span><small>The Windows default</small></li>
+      <li><span><b>Graphics driver</b></span><span class="chip">Up to date</span></li>
+      <li><span><b>Microphone access for desktop apps</b><br>Privacy &amp; security → Microphone</span><span class="chip on">On</span><small>Only if you add your mic to recordings or streams</small></li>
+      <li><span><b>Other apps using the capture card</b><br>OBS, the card's own software</span><span class="chip off">Closed</span></li>
+      <li><span><b>Play fullscreen</b> (F11)</span><span class="chip on">On</span><small>Skips the desktop compositor: less delay</small></li>
+    </ul>
+
+    <h3 class="sub-h">6. When to use HDR</h3>
+    <p class="guide-note">HDR only works when every step is HDR. One SDR step means SDR.</p>
+    <figure class="hdr-chain" aria-label="HDR needs every step: console, capture card, Windows and monitor">
+      <svg viewBox="0 0 760 92" role="img" aria-hidden="true">
+        <g class="hc-node"><rect x="2" y="18" width="150" height="56" rx="12"/><text x="77" y="44">Console</text><text class="hc-sub" x="77" y="62">HDR on</text></g>
+        <g class="hc-node"><rect x="204" y="18" width="150" height="56" rx="12"/><text x="279" y="44">Capture card</text><text class="hc-sub" x="279" y="62">captures HDR</text></g>
+        <g class="hc-node"><rect x="406" y="18" width="150" height="56" rx="12"/><text x="481" y="44">Windows</text><text class="hc-sub" x="481" y="62">HDR on</text></g>
+        <g class="hc-node"><rect x="608" y="18" width="150" height="56" rx="12"/><text x="683" y="44">Monitor</text><text class="hc-sub" x="683" y="62">HDR display</text></g>
+        <path class="hc-link" d="M156 46h44M358 46h44M560 46h44"/>
+      </svg>
+    </figure>
+    <div class="table-wrap">
+      <table class="spec hdr">
+        <thead><tr><th scope="col">What you do</th><th scope="col">Console HDR</th><th scope="col">Windows HDR</th><th scope="col">Notes</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Play on an HDR monitor</th><td data-label="Console HDR"><span class="chip on">On</span></td><td data-label="Windows HDR"><span class="chip on">On</span></td><td data-label="Notes">Capture card set to HDR in the capture dialog, at 60&nbsp;FPS (1080p or 1440p on USB cards; 4K60 HDR needs PCIe). No HDR capture? RTX Video HDR on NVIDIA</td></tr>
+          <tr><th scope="row">Play on an SDR monitor</th><td data-label="Console HDR"><span class="chip off">Off</span></td><td data-label="Windows HDR"><span class="chip off">Off</span></td><td data-label="Notes">Nothing else to change</td></tr>
+          <tr><th scope="row">Record clips to share (Discord, TikTok, Shorts, Reels)</th><td data-label="Console HDR"><span class="chip off">Off</span></td><td data-label="Windows HDR"><span class="chip off">Off</span></td><td data-label="Notes">SDR H.264 plays everywhere. Or keep console HDR and turn on <i>Show as SDR</i> in the capture dialog</td></tr>
+          <tr><th scope="row">Record in HDR (YouTube HDR, HDR editing)</th><td data-label="Console HDR"><span class="chip on">On</span></td><td data-label="Windows HDR"><span class="chip on">On</span></td><td data-label="Notes">Needs an NVIDIA graphics card: HEVC 10-bit HDR files</td></tr>
+          <tr><th scope="row">Go live</th><td data-label="Console HDR"><span class="chip off">Off</span></td><td data-label="Windows HDR"><span class="chip off">Off</span></td><td data-label="Notes">Streaming needs SDR; PushFPS asks you to turn HDR off first</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <p><b>Picture grey or washed out?</b> One step disagrees: check the console's HDR setting, the capture dialog's colour settings and Windows HDR.</p>
+      <p><b>Xbox Auto HDR</b> adds HDR to SDR games: leave it off for SDR clips and streams. Switching Windows HDR changes the whole desktop, so turn it on only for HDR play and HDR recordings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Download -->
+<section class="section download" id="download">
+  <div class="wrap">
+    <div class="dl-head">
+      <div>
+        <h2>Download PushFPS</h2>
+        <p class="section-lede">Free, no account, no ads, no telemetry. The installer needs no administrator rights.</p>
+      </div>
+      <div class="dl-buttons">
+        <a class="btn big" id="dl-main" href="https://github.com/DosukaSOL/PushFPS/releases/latest">Download for Windows</a>
+        <a class="btn ghost" id="dl-obs" href="https://github.com/DosukaSOL/PushFPS/releases/latest">OBS Studio plugin</a>
+        <a class="btn ghost" id="dl-linux" href="https://github.com/DosukaSOL/PushFPS/releases/latest">Linux (preview)</a>
+        <a class="btn ghost" id="dl-mac" href="https://github.com/DosukaSOL/PushFPS/releases/latest">macOS (preview)</a>
+        <p class="fine" id="dl-version">From the latest release on GitHub.</p>
+      </div>
+    </div>
+    <ol class="steps">
+      <li><h3>Download and extract</h3><p>Get <code>PushFPS-…-win64.zip</code> from the latest release and extract it anywhere.</p></li>
+      <li><h3>Run the installer</h3><p>Double-click <code>Install-PushFPS.cmd</code>. It downloads Veyra's runtime package from Veyra's own GitHub release, checks it, and installs PushFPS to your user folder with Start menu and desktop shortcuts.</p></li>
+      <li><h3>Connect your console</h3><p>Console HDMI into the capture card, the card into your PC. Set the console to 60&nbsp;Hz, or 120&nbsp;Hz if your card captures 120&nbsp;Hz. On PlayStation, turn off <em>Enable HDCP</em> in Settings, System, HDMI, or the picture stays black.</p></li>
+      <li><h3>Pick your frame rate</h3><p>Open PushFPS, click <b>Connect</b> on the capture card and fill in the quick setup, or let <b>Optimise for my PC</b> do it. Press F11 for fullscreen.</p></li>
+    </ol>
+    <div class="note">
+      <p><b>Portable:</b> run <code>Install-PushFPS.cmd -InstallDir D:\PushFPS -NoShortcuts</code> to keep PushFPS and its settings in one folder of your choice. Every release lists SHA-256 checksums in <code>SHA256SUMS.txt</code>.</p>
+      <p><b>Windows warns about an unknown publisher?</b> PushFPS isn't code signed yet. If you downloaded it from the PushFPS GitHub releases, choose <em>More info</em>, then <em>Run anyway</em>. To update, run the newer installer; your settings are kept. To uninstall, run <code>Install-PushFPS.cmd -Uninstall</code>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" id="faq">
+  <div class="wrap faq-wrap">
+    <h2>Questions</h2>
+    <div class="faq">
+      <details><summary>Is PushFPS really free?</summary><p>Yes. It's free and open source under the GPL-3.0, like Veyra. There are no accounts, ads or paid tiers.</p></details>
+      <details><summary>Does it change my console or the game?</summary><p>No. PushFPS only processes the video coming out of the capture card. Nothing is installed on the console and the game isn't touched.</p></details>
+      <details><summary>Does it add input lag?</summary><p>A little. To place a frame between two real frames, PushFPS waits for the second one: up to one game frame, about 33&nbsp;ms at 30&nbsp;FPS, on top of your capture card's own delay. Motion looks smoother, but the game doesn't react faster. Turn on <em>Lowest latency</em> for every setting that cuts delay without costing picture quality, and <em>Show latency on screen</em> to see PushFPS's part measured, and use <em>Measure total delay</em> for the whole chain. If your capture card captures 120&nbsp;Hz (passthrough doesn't count), a 120&nbsp;Hz console output gets each frame to the PC about 8&nbsp;ms sooner.</p></details>
+      <details><summary>Do I need an NVIDIA card?</summary><p>No. AMD FSR frame generation runs on any DirectX 12 card, and ANR by Apex Compute supports GTX 16 and newer, Radeon RX 5000 and newer and Intel Arc. AMD cards also get AMD FRC through the AMD driver. NVIDIA RTX 40 and 50 cards get the most options, including up to 8× frame generation and AI picture enhancement.</p></details>
+      <details><summary>Which capture cards work?</summary><p>Any card that Windows shows as a camera and that sends 1080p at 60&nbsp;FPS without compression. The Elgato 4K X, HD60 X and 4K S are tested. The app shows each card's status and has a report form for untested cards.</p></details>
+      <details><summary>Can I use it without a capture card?</summary><p>Yes. PS5 streaming (Remote Play over your home network), PC streaming from a Sunshine host and Xbox streaming are built in. A capture card still gives the sharpest picture and the lowest delay.</p></details>
+      <details><summary>Does it work with 60 FPS games?</summary><p>Yes. Set the game frame rate to 60 and pick 120&nbsp;FPS or <em>Match monitor</em>.</p></details>
+      <details><summary>Can I stream or record it?</summary><p>Yes. PushFPS records, keeps an instant replay and goes live itself: to Twitch, YouTube, Kick, TikTok, Facebook, Trovo or your own RTMP server, several at once. Streaming mode lays it out like OBS, with an audio mixer for game sound and your microphone. The OBS Studio plugin adds the boosted picture to your OBS scenes if you prefer OBS.</p></details>
+      <details><summary>Is there a macOS or Linux version?</summary><p>Yes, as a preview. It has PushFPS's own frame generation, Frame Pacing Repair and Live HUD Lock on Vulkan, OpenGL or Metal, without NVIDIA, AMD or Intel components (those exist only for Windows). Linux comes as an AppImage, macOS as one app for Apple Silicon and Intel. Recording and going live are Windows-only for now.</p></details>
+      <details><summary>Does PushFPS collect any data?</summary><p>No. There's no telemetry or analytics. It only goes online for the update check on GitHub, when you share a clip to your own Discord webhook, when you connect a streaming source and when you go live (only to the platforms you chose). See the <a href="https://github.com/DosukaSOL/PushFPS/blob/main/PRIVACY.md">privacy policy</a>.</p></details>
+      <details><summary>Where do I report a problem?</summary><p>In the app, <em>Settings, Report a problem</em> copies diagnostic information and opens <a href="https://github.com/DosukaSOL/PushFPS/issues">GitHub Issues</a>. Read it before pasting.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- Credits and license -->
+<section class="section" id="credits">
+  <div class="wrap">
+    <h2>Credits and license</h2>
+    <div class="credit-cards">
+      <article class="credit-card">
+        <img src="assets/veyra-logo.png" alt="Veyra logo" width="84" height="64">
+        <div>
+          <h3>Veyra by Likely7</h3>
+          <p>PushFPS is a modified version of Veyra. Nearly all of the engine, the capture support, the streaming sources and the frame generation integration are Likely7's work.</p>
+          <p class="links">
+            <a href="https://github.com/Likely7/Veyra-NRVideo">Veyra on GitHub</a>
+            <a href="https://www.youtube.com/watch?v=ZJ42jzNAbik">Video tutorial</a>
+            <a href="https://www.youtube.com/@Likely7Ai">YouTube</a>
+            <a href="https://x.com/likely2002">X</a>
+            <a href="https://www.patreon.com/cw/Likely7">Support Likely7</a>
+          </p>
+        </div>
+      </article>
+      <article class="credit-card">
+        <span class="credit-mark big" aria-hidden="true">ANR</span>
+        <div>
+          <h3>ANR by Apex Compute</h3>
+          <p>ANR frame generation is Apex Neural Rendering from Apex Compute. PushFPS contains Veyra's ANR host code and no ANR files; you download ANR from Apex. PushFPS isn't affiliated with Apex Compute.</p>
+          <p class="links">
+            <a href="https://github.com/apex-compute/ANR">ANR on GitHub</a>
+            <a href="https://github.com/apex-compute/ANR/releases">ANR downloads</a>
+            <a href="https://apexcompute.com">apexcompute.com</a>
+          </p>
+        </div>
+      </article>
+    </div>
+    <div class="license">
+      <p><b>License.</b> PushFPS is free software under the <a href="https://github.com/DosukaSOL/PushFPS/blob/main/LICENSE">GNU GPL-3.0</a>. PS5 streaming uses chiaki-ng (AGPL-3.0 with an OpenSSL exception), PC streaming uses moonlight-common-c (GPL-3.0), and Xbox streaming uses libdatachannel (MPL-2.0); each release attaches the exact source of these libraries. Modification notice and third-party notices: <a href="https://github.com/DosukaSOL/PushFPS/blob/main/NOTICE.md">NOTICE.md</a>, <a href="https://github.com/DosukaSOL/PushFPS/blob/main/THIRD_PARTY_NOTICES.md">THIRD_PARTY_NOTICES.md</a>.</p>
+      <p>PushFPS incorporates the NVIDIA DLSS SDK and NGX SDK under the NVIDIA RTX SDKs License. NVIDIA, NVIDIA RTX and DLSS are trademarks of NVIDIA Corporation. PushFPS isn't sponsored or endorsed by NVIDIA, AMD, Intel, Sony, Microsoft, Nintendo or any game publisher. PlayStation, Xbox and Nintendo Switch are trademarks of their owners. This website uses the Barlow typeface (SIL Open Font License).</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap foot-row">
+    <a class="brand" href="#top" aria-label="Back to top">
+      <img src="assets/mark.png" alt="" width="26" height="26">
+      <span class="wordmark">Push<span>FPS</span></span>
+    </a>
+    <ul class="foot-links">
+      <li><a href="https://github.com/DosukaSOL/PushFPS">Source code</a></li>
+      <li><a href="https://github.com/DosukaSOL/PushFPS/releases">Releases</a></li>
+      <li><a href="https://github.com/DosukaSOL/PushFPS/issues">Report a problem</a></li>
+      <li><a href="https://github.com/DosukaSOL/PushFPS/blob/main/PRIVACY.md">Privacy</a></li>
+      <li><a href="https://github.com/DosukaSOL/PushFPS/blob/main/LICENSE">License</a></li>
+    </ul>
+    <p class="fine">Made by <a href="https://github.com/DosukaSOL">DosukaSOL</a> on top of Veyra by Likely7. This site sets no cookies and loads nothing from other servers except the release information from GitHub.</p>
+  </div>
+</footer>
+
+<dialog id="lightbox" aria-label="Screenshot">
+  <form method="dialog"><button class="close" aria-label="Close">×</button></form>
+  <img id="lightbox-img" src="" alt="">
+  <p id="lightbox-cap"></p>
+</dialog>
+
+<script src="app.js" defer></script>
+</body>
+</html>

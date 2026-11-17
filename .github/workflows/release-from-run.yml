@@ -1,0 +1,49 @@
+# Publishes a release from the files of an earlier build-windows run, without building again
+# (for example when the release step of that run failed). The files are the run's own artifacts,
+# so they are exactly what that run built and tested.
+name: release-from-run
+
+on:
+  workflow_dispatch:
+    inputs:
+      run_id:
+        description: 'ID of the successful build-windows run whose files to publish'
+        required: true
+      release_tag:
+        description: 'Release tag (vX.Y.Z)'
+        required: true
+      full_release:
+        description: 'Publish as a full (latest) release (the default, as the owner asked)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    env:
+      GH_TOKEN: ${{ github.token }}
+      TAG: ${{ inputs.release_tag }}
+      FULL_RELEASE: ${{ inputs.full_release && 'true' || 'false' }}
+    steps:
+      - name: Check the tag
+        run: echo "$TAG" | grep -qE '^v[0-9]+\.[0-9]+\.[0-9]+$'
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            packaging/release-notes
+            scripts/release
+            docs
+            .github/workflows
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          pattern: Glide-*
+          merge-multiple: true
+          run-id: ${{ inputs.run_id }}
+          github-token: ${{ github.token }}
+      - name: Create the release
+        run: bash scripts/release/publish.sh

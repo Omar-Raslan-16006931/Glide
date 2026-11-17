@@ -1,0 +1,254 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (C) 2026 DosukaSOL and the PushFPS contributors. Part of PushFPS, a modified version of Veyra.
+// Game presets (PushGamePresetsDialog + PushGamePresets.js), the latency readout,
+// the capture card status and Discord sharing, against the fixture bridge.
+import QtQuick
+import QtTest
+import Veyra
+import "../qml/Veyra/PushGamePresets.js" as Presets
+Item {
+    id: root
+    width: 900; height: 1000
+    Item { id: host; anchors.fill: parent; property string dialog: "games"; function close() { dialog = "" } }
+    PushGamePresetsDialog { id: games; dialogHost: host }
+    PushLatencyBadge { id: badge; x: 10; y: 10 }
+    PushQuickSetup { id: quick; width: 560; y: 400 }
+    PushRecordingSaved { id: card; x: 10; y: 900 }
+
+    TestCase {
+        name: "PushPresets"
+        when: windowShown
+        function init() {
+            veyra.preferences = ({ pushGameFps: 30 })
+            veyra.fgEnabled = false; veyra.fgMultiplier = 1; veyra.outputRateMode = 0; veyra.outputCustomFps = 0
+            veyra.displayRefreshHz = 240
+            veyra.exclusionState = ({ enabled: false, feather: 6, regions: [] })
+            veyra.lastRegions = null; veyra.lastCopiedText = ""; veyra.lastCopiedFile = ""; veyra.discordOpened = 0; veyra.lastSharedFile = ""
+            veyra.liveStats = ({ running: false })
+            veyra.captureDeviceLabel = ""
+            host.dialog = "games"
+            games.protectHud = true
+            games.consoleFilter = ""
+            games.selectedName = "GTA VI"
+            veyra.fgAdaptive = false; veyra.contentRate = 0
+            veyra.fgMultiplierChoices = [{id:"1"},{id:"2"},{id:"3"},{id:"4"}]
+        }
+        function cleanup() { init() }
+
+        // --- presets ---------------------------------------------------------
+        function test_library_is_valid() {
+            verify(Presets.builtIn.length >= 5)
+            for (const p of Presets.builtIn) {
+                const s = Presets.sanitize(p)
+                verify(s !== null, p.name)
+                compare(s.regions.length, p.regions.length, p.name + " keeps every region")
+                for (const r of s.regions) verify(r.left < r.right && r.top < r.bottom && r.right <= 1 && r.bottom <= 1, p.name)
+            }
+            compare(Presets.builtIn[0].name, "GTA VI")
+        }
+        function test_apply_gta_vi() {
+            games.apply(games.selected)
+            compare(veyra.lastRegions.length, 2, "minimap and money/wanted areas")
+            compare(veyra.fgMultiplier, 4, "auto target on a 240 Hz screen: 120 FPS from 30")
+            compare(veyra.outputCustomFps, 120)
+            compare(veyra.preferences.pushGameFps, 30)
+            verify(games.message.indexOf("GTA VI") >= 0)
+            verify(!games.messageError)
+        }
+        function test_apply_without_hud_protection() {
+            games.protectHud = false
+            games.apply(games.selected)
+            compare(veyra.lastRegions.length, 0)
+        }
+        function test_auto_target_on_a_60_hz_screen() {
+            veyra.displayRefreshHz = 60
+            games.apply(games.selected)
+            compare(veyra.fgMultiplier, 2)
+            compare(veyra.outputCustomFps, 60)
+        }
+        function test_share_code_round_trip() {
+            const code = games.shareCode(games.selected)
+            verify(code.indexOf("PUSHFPS1:") === 0)
+            const back = Presets.decode(code, Qt.atob)
+            compare(back.name, "GTA VI")
+            compare(back.regions.length, 2)
+            fuzzyCompare(back.regions[0].left, 0.012, 0.001)
+            const unicode = Presets.decode(Presets.encode({ name: "原神 ★ test", fps: 60, regions: [] }, Qt.btoa), Qt.atob)
+            compare(unicode.name, "原神 ★ test")
+            compare(unicode.fps, 60)
+            compare(Presets.decode("PUSHFPS1:not-base64!!", Qt.atob), null)
+            compare(Presets.decode("hello", Qt.atob), null)
+            compare(Presets.decode("", Qt.atob), null)
+        }
+        function test_bad_values_are_cleaned() {
+            const p = Presets.sanitize({ name: "  x  ", fps: 999, target: "9000", feather: -5,
+                                         regions: [{ l: -1, t: 2, r: 0.5, b: 0.5 }, { l: 0.1, t: 0.1, r: 0.1, b: 0.9 }, {}, {}, {}, {}] })
+            compare(p.name, "x")
+            compare(p.fps, 30)
+            compare(p.target, "auto")
+            compare(p.feather, 0)
+            compare(p.regions.length, 1, "empty and zero-width regions dropped")
+            compare(p.regions[0].left, 0); compare(p.regions[0].top, 0.5); compare(p.regions[0].bottom, 1)
+            compare(Presets.sanitize({ name: "" }), null)
+            const many = Presets.sanitize({ name: "m", regions: [0, 1, 2, 3, 4, 5].map(i => ({ l: i * 0.1, t: 0, r: i * 0.1 + 0.05, b: 0.1 })) })
+            compare(many.regions.length, 4, "at most four regions")
+        }
+        function test_save_import_and_delete_own_presets() {
+            veyra.exclusionState = ({ enabled: true, feather: 4, regions: [{ left: 0.1, top: 0.1, right: 0.3, bottom: 0.3, ellipse: true }] })
+            veyra.fgEnabled = true; veyra.outputRateMode = 2; veyra.outputCustomFps = 120
+            verify(games.saveMine("My Racer"))
+            const stored = JSON.parse(veyra.preferences.pushGamePresets)
+            compare(stored.length, 1)
+            compare(stored[0].target, "120")
+            compare(stored[0].regions[0].ellipse, true)
+            compare(games.selectedName, "My Racer")
+            verify(games.selected.mine)
+            verify(!games.saveMine("GTA VI"), "built-in names are reserved")
+            const code = games.shareCode(games.selected)
+            games.deleteMine("My Racer")
+            compare(JSON.parse(veyra.preferences.pushGamePresets).length, 0)
+            verify(games.addImported(Presets.decode(code, Qt.atob)))
+            compare(JSON.parse(veyra.preferences.pushGamePresets)[0].name, "My Racer")
+            verify(!games.addImported(null))
+            verify(games.messageError)
+            verify(games.addImported(Presets.decode(games.shareCode(Presets.builtIn[0]), Qt.atob)))
+            verify(games.all.some(p => p.name.indexOf("GTA VI ") === 0 && p.mine), "a shared copy of a built-in gets its own name")
+        }
+        // --- Switch and Switch 2 ---------------------------------------------------
+        function test_switch_library() {
+            const sw = Presets.builtIn.map(Presets.sanitize).filter(p => p.console === "switch")
+            const sw2 = Presets.builtIn.map(Presets.sanitize).filter(p => p.console === "switch2")
+            verify(sw.length >= 10, "Switch games: " + sw.length)
+            verify(sw2.length >= 8, "Switch 2 games: " + sw2.length)
+            for (const p of sw.concat(sw2)) {
+                compare(p.fps, 30, p.name)
+                verify(p.name.length <= Presets.kMaxName, p.name)
+                verify(games.noteFor(p).length > 20, p.name + " has a translated note")
+            }
+            const names = Presets.builtIn.map(p => p.name)
+            compare(new Set(names).size, names.length, "names are unique")
+            verify(sw.some(p => p.name === "Pokémon Legends: Arceus"))
+            verify(sw2.find(p => p.name === "Elden Ring").adaptive, "Elden Ring dips: adaptive")
+            verify(!sw.find(p => p.name === "Pokémon Legends: Arceus").adaptive)
+        }
+        function test_console_filter_follows_the_quick_setup() {
+            veyra.preferences = ({ pushGameFps: 30, pushConsole: "switch2" })
+            host.dialog = ""; wait(0); host.dialog = "games"; wait(0)
+            compare(games.consoleFilter, "switch2")
+            verify(games.listed.length > 0 && games.listed.every(p => p.console === "switch2"))
+            compare(games.selected.console, "switch2", "the first Switch 2 game is selected")
+            findChild(games, "pushfps-game-preset-console").picked("")
+            verify(games.listed.length === games.all.length)
+        }
+        function test_apply_a_steady_switch_game() {
+            games.selectedName = "Pokémon Legends: Arceus"
+            games.apply(games.selected)
+            compare(veyra.preferences.pushConsole, "switch")
+            compare(veyra.preferences.pushGameFps, 30)
+            compare(veyra.fgAdaptive, false)
+            compare(veyra.fgMultiplier, 4, "30 FPS to 120 on a 240 Hz screen")
+            compare(veyra.lastRegions.length, 0)
+        }
+        function test_apply_a_game_that_dips_turns_on_adaptive() {
+            games.selectedName = "Elden Ring"
+            games.apply(games.selected)
+            compare(veyra.preferences.pushConsole, "switch2")
+            verify(veyra.fgAdaptive, "adaptive on")
+            compare(veyra.contentRate, 1, "duplicate removal on, to measure the game's frame rate")
+            compare(veyra.fgMultiplier, 4, "ceiling: the largest offered multiplier (4X here) for a 120 FPS target")
+            compare(veyra.outputCustomFps, 120)
+            compare(veyra.lastRegions.length, 3, "HP bars, items and runes")
+            verify(games.noteFor(games.selected).indexOf(qsTr("帧率会波动，已开启自适应倍率。")) >= 0)
+        }
+        function test_adaptive_is_skipped_when_only_2x_exists() {
+            veyra.fgMultiplierChoices = [{id:"1"},{id:"2"}]
+            games.selectedName = "Elden Ring"
+            games.apply(games.selected)
+            compare(veyra.fgAdaptive, false)
+            compare(veyra.fgMultiplier, 2)
+        }
+        function test_adaptive_ceiling() {
+            compare(Presets.adaptiveCeiling([2, 3, 4, 6], 120), 6)
+            compare(Presets.adaptiveCeiling([2, 3, 4], 120), 4)
+            compare(Presets.adaptiveCeiling([2, 3, 4, 6], 60), 3)
+            compare(Presets.adaptiveCeiling([2, 3, 4, 5, 6, 7, 8], 144), 7)
+            compare(Presets.adaptiveCeiling([2], 120), 2)
+            compare(Presets.adaptiveCeiling([], 120), 0)
+        }
+        function test_share_code_keeps_console_and_adaptive() {
+            const back = Presets.decode(Presets.encode(Presets.builtIn.find(p => p.name === "Cyberpunk 2077"), Qt.btoa), Qt.atob)
+            compare(back.console, "switch2")
+            compare(back.adaptive, true)
+            compare(back.regions.length, 2)
+        }
+        function test_copy_button() {
+            const b = findChild(games, "pushfps-game-preset-copy")
+            verify(b !== null)
+            b.clicked()
+            verify(veyra.lastCopiedText.indexOf("PUSHFPS1:") === 0)
+        }
+
+        // --- latency readout -------------------------------------------------
+        function test_latency_badge() {
+            verify(!badge.visible, "off by default")
+            veyra.preferences = ({ pushLatencyOverlay: true })
+            veyra.liveStats = ({ running: true, latencyMs: 14.4, latencyP95Ms: 19.6, submitFps: 119.7, submitLowFps: 112.2 })
+            badge.refresh()
+            verify(badge.visible)
+            compare(findChild(badge, "pushfps-latency-ms").text, qsTr("延迟 %1 ms").arg("14"))
+            compare(badge.level, Theme.accent)
+            veyra.liveStats = ({ running: true, latencyMs: 75 })
+            badge.refresh()
+            verify(badge.level !== Theme.accent)
+            veyra.liveStats = ({ running: true })
+            badge.refresh()
+            compare(findChild(badge, "pushfps-latency-ms").text, qsTr("延迟 测量中"))
+        }
+
+        // --- capture card list -------------------------------------------------
+        function test_capture_card_status() {
+            const row = findChild(quick, "pushfps-card-row")
+            verify(!row.visible, "no card, no row")
+            veyra.captureDeviceLabel = "Game Capture 4K X"
+            verify(row.visible)
+            compare(findChild(quick, "pushfps-card-status").text, qsTr("已测试"))
+            veyra.captureDeviceLabel = "USB Video"
+            compare(findChild(quick, "pushfps-card-status").text, qsTr("未测试"))
+        }
+        function test_tools_open_their_dialogs() {
+            const list = []
+            const handler = p => list.push(p)
+            veyra.navigate.connect(handler)
+            findChild(quick, "pushfps-optimize").clicked()
+            findChild(quick, "pushfps-game-presets").clicked()
+            veyra.navigate.disconnect(handler)
+            verify(list.indexOf("optimize") >= 0 && list.indexOf("games") >= 0, list.join(","))
+            compare(list[0], "pro", "the picture is shown before it is measured")
+        }
+
+        // --- Discord ------------------------------------------------------------
+        function test_share_to_discord_without_webhook() {
+            card.show("C:/Videos/Glide/Glide-Replay-1.mp4", true)
+            tryVerify(() => card.opacity > 0.99, 2000)
+            const b = findChild(card, "pushfps-recording-discord")
+            verify(b !== null && b.visible)
+            b.clicked()
+            compare(veyra.lastCopiedFile, "C:/Videos/Glide/Glide-Replay-1.mp4")
+            compare(veyra.discordOpened, 1)
+            verify(card.shareText.length > 0)
+            card.on = false
+        }
+        function test_send_to_discord_with_webhook() {
+            veyra.preferences = ({ pushDiscordWebhook: "https://discord.com/api/webhooks/1/abc" })
+            card.show("C:/r.mp4", false)
+            tryVerify(() => card.opacity > 0.99, 2000)
+            findChild(card, "pushfps-recording-discord").clicked()
+            compare(veyra.lastSharedFile, "C:/r.mp4")
+            verify(card.sending)
+            veyra.pushShareFinished(true, "sent")
+            verify(!card.sending)
+            compare(card.shareText, "sent")
+            card.on = false
+        }
+    }
+}

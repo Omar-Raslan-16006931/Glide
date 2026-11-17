@@ -1,0 +1,36 @@
+// SPDX-License-Identifier: GPL-3.0-or-later
+// Copyright (C) 2026 DosukaSOL and the PushFPS contributors. Part of PushFPS, a modified version of Veyra.
+//
+// Capture cards and what is known about them in Glide. "tested" means a person
+// ran Glide (or Veyra, said so) with this card and a real console; nothing here
+// is inferred from specifications. The same list is in README.md; reports come in
+// through the "Capture card report" issue form.
+.pragma library
+
+var reportUrl = "https://github.com/DosukaSOL/PushFPS/issues/new?template=capture-card-report.yml"
+
+// match: lower-case fragments of the name Windows gives the device.
+var cards = [
+    { name: "Elgato 4K X", match: ["4k x"], status: "tested",
+      note: "Tested by the Glide developer with an RTX 5090: frame generation on console games and videos." },
+    { name: "T911 4K60", match: ["t911"], status: "veyra",
+      note: "Tested by Veyra's developer (Veyra 2.1.6 measurements: 4K60 NV12 with an RTX 5070)." },
+    { name: "Elgato HD60 X", match: ["hd60 x"], status: "tested", note: "Tested with Glide on a console." },
+    { name: "Elgato 4K S", match: ["4k s"], status: "tested", note: "Tested with Glide on a console." },
+    { name: "Elgato 4K Pro / 4K60 Pro", match: ["4k pro", "4k60 pro"], status: "untested", note: "" },
+    { name: "AVerMedia Live Gamer 4K 2.1 (GC575)", match: ["gc575", "live gamer 4k"], status: "untested", note: "" },
+    { name: "AVerMedia Live Gamer Ultra 2.1 (GC553G2)", match: ["gc553", "live gamer ultra"], status: "untested", note: "" },
+    { name: "Magewell USB Capture HDMI 4K Plus", match: ["usb capture hdmi 4k"], status: "untested",
+      note: "Magewell cards have a native low-latency mode in Veyra." },
+    { name: "Blackmagic DeckLink / UltraStudio", match: ["decklink", "ultrastudio"], status: "untested",
+      note: "Supported through Blackmagic's own interface in Veyra." }
+]
+
+function find(deviceName) {
+    var n = String(deviceName || "").toLowerCase()
+    if (n.length === 0) return null
+    for (var i = 0; i < cards.length; ++i)
+        for (var j = 0; j < cards[i].match.length; ++j)
+            if (n.indexOf(cards[i].match[j]) >= 0) return cards[i]
+    return null
+}

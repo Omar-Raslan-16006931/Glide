@@ -1,0 +1,1430 @@
+0|·  FEC wiederhergestellt
+1|·  Bitrate
+2|·  Dekodierung
+3|·  verworfen
+4|·  Keyframe-Anfragen
+5|·  in Warteschlange
+6|·  empfangen
+7|·  Umlaufzeit
+8|·  nicht wiederhergestellt
+9|(nach NR hinzugefügt
+10|(max. 4 Ebenen)
+11|(max. 6 Ebenen)
+12|(nicht empfohlen)
+13|/ 4 Bereiche
+14|/ dekodiert
+15|Kan.
+16|fps  ·  verworfen
+17|fps  ·  Pakete
+18|Frames
+19|Einträge
+20|Ebenen nacheinander
+21|ms (GPU, Mittel der letzten Sekunde)
+22|ms (letzte Sekunde)
+23|ms / Frame
+24|Knoten ·
+25|Anteil
+26|· umgangen
+27|· umgangen
+28|· kalibriert
+29|· aktueller Standard
+30|· aktuelle Datei, etwa
+31|· Downmix
+32|· Farbton
+33|· max. 4 Ebenen)
+34|· Knoten
+35|· aus
+36|· pausiert
+37|· zurücksetzen
+38|· wiederherstellen
+39|· Sättigung
+40|· Stärke
+41|· temporal 4x (experimentell)
+42|· temporal T2x (experimentell)
+43|· wartet
+44|→ Vorschlag:
+45|(geteilt)
+46|(unbenanntes Gerät)
+47|+  NR-Ebene hinzufügen
+48|+  Beauty-Ebene hinzufügen
+49|, gib unten den Anmeldecode ein:
+50|0 = der Quelle folgen
+51|0 = kein Abrollen der Lichter
+52|0 = keine Grenze
+53|1 Min.
+54|10 Min.
+55|1080p · Standard
+56|15 s
+57|2 Einträge
+58|2 Min.
+59|30 s
+60|4 Einträge
+61|5 Einträge
+62|5 Min.
+63|6 Einträge
+64|8-stelliger Kopplungscode
+65|; aktuell:
+66|KI-Verbesserung
+67|KI-Bildverbesserung
+68|AMD Optical Flow
+69|AMD-Leistung
+70|Über
+71|Akzentfarbe
+72|Konto
+73|Kontoanmeldung · experimentell
+74|Akkumulierter Fluss · Standard
+75|Akkumulierter Fluss+
+76|Aktiv
+77|Hinzufügen
+78|Zuerst einen RTX-Video-HDR-Knoten hinzufügen
+79|Zuerst einen Kantenglättungs-Knoten hinzufügen
+80|Aktuelle Datei hinzufügen
+81|Dateien hinzufügen
+82|Dateien zur Wiedergabeliste hinzufügen
+83|Manuell hinzufügen
+84|Knoten hinzufügen
+85|Mehrere Videos hinzufügen oder hierher ziehen
+86|Preset einer anderen Person hinzufügen
+87|Zuerst die zu exportierenden Dateien hinzufügen
+88|Zur Export-Warteschlange hinzufügen
+89|Wird angepasst
+90|Anpassungsmethode
+91|Administratorfreigabe abgebrochen
+92|Erweitert: genaue Parameter
+93|An Quellfenster ausrichten
+94|Alipay
+95|Alle GPUs
+96|Gesamte Haut
+97|Tearing erlauben
+98|Auch auf dieser GPU rechnen
+99|Ton auch auf dem Host abspielen
+100|Immer anzeigen
+101|Immer der letzte Schritt
+102|Wird analysiert…
+103|Kantenglättung
+104|Kantenglättung 2
+105|Anti-Flimmer-Stufe
+106|Darstellung
+107|Gilt beim Öffnen eines Videos
+108|Übernehmen
+109|Preset anwenden…
+110|Einstellungen übernehmen und neu verbinden
+111|Bereichserweiterung
+112|Seitenverhältnis
+113|Audio
+114|Audio mithören
+115|Audioversatz
+116|Audioausgabe noch nicht geöffnet
+117|Audioeinstellungen
+118|Audioeinstellungen…
+119|Audiosynchronisation
+120|Audiospuren
+121|Audio/Video-Synchronisation
+122|Automatisch
+123|Automatisch (nach Last)
+124|Automatisch (dedizierte GPU)
+125|Automatisch schätzen
+126|Automatische Maske · experimentell
+127|Automatisch ausrichten
+128|Automatisch an Audiospur ausrichten
+129|Wird ausgerichtet
+130|Automatisch ausblenden
+131|Automatisch neu verbinden
+132|Bei Wiedergabe automatisch wählen
+133|Automatische Regelmenge
+134|Automatisches Deinterlacing
+135|Automatische Bildschirmsynchronisation
+136|Automatisch entfernen
+137|Automatisch ·
+138|Beim Start automatisch fortsetzen
+139|Verfügbar
+140|Durchschnitt
+141|5 Sekunden zurück / vor
+142|Zurück zur Liste
+143|Hintergrundbalken
+144|Stärke des Hintergrundverlaufs
+145|Balance
+146|Ausgewogen
+147|Ausgewogene Helligkeit
+148|Grundsteuerung
+149|Bassverstärkung
+150|Beauty
+151|Beauty 2
+152|Beauty 3
+153|Beauty 4
+154|Beauty 5
+155|Beauty 6
+156|Beauty-Ebene
+157|Beauty-Presets
+158|Vor der Verbesserung
+159|Bilibili
+160|Bitrate
+161|Bitrate (Mbit/s)
+162|Bitstream zuerst
+163|Schwarz
+164|Schwarzweiß
+165|Native Blackmagic-Aufnahme
+166|Schwarztöne
+167|Mischen
+168|Blau
+169|Blau-Primärfarbe
+170|Hell
+171|Heller Raum
+172|Ausgleich für hellen Raum
+173|Helligkeit
+174|Helligkeitsbalance
+175|Helligkeitsänderung
+176|Helligkeit max.
+177|Helligkeit min.
+178|Budget
+179|Puffern
+180|Integriert
+181|Spendiere dem Entwickler einen Kaffee
+182|CPU-Software
+183|Kalibrieren
+184|Wird kalibriert…
+185|Kann gespeichert werden
+186|Abbrechen
+187|Bilderstapel abbrechen
+188|Abgebrochen · kann neu gestartet werden
+189|Nicht erkennbar
+190|Aufnahme
+191|Capture-Karte
+192|Capture-Karten-Einstellungen
+193|Capture-Karten-Einstellungen…
+194|Capture-Karte ·
+195|Aufnahmemethode
+196|Aufnahmeziel
+197|Kette ist gültig
+198|Änderungstoleranz
+199|Änderungen siehst du hier sofort.
+200|Ändern…
+201|Kanäle
+202|Prüfen
+203|Prüfen und auswählen
+204|Nach Updates suchen
+205|Wird geprüft…
+206|Wird geprüft… Wiedergabe läuft weiter
+207|Auswählen
+208|Zuerst ein Aufnahmeziel wählen
+209|Bildrate wählen
+210|Pixelformat wählen
+211|Auflösung wählen
+212|Zuerst eine Auflösung wählen
+213|Speicherordner wählen…
+214|Mindestens einen Eintrag wählen
+215|Exportordner wählen
+216|Zu bearbeitende Bilder wählen
+217|Screenshot-Ordner wählen
+218|Aufnahmeordner wählen
+219|Spuren wählen
+220|Auswählen…
+221|Gewähltes Gerät (nicht verbunden)
+222|Chroma-Schutz
+223|Kino
+224|Filmisch
+225|Filmisch · kein HUD-Schutz
+226|Kreis
+227|Klarheit
+228|Leeren
+229|Film-Speicher leeren
+230|Speicher leeren
+231|Warteschlange leeren
+232|Ins Bild klicken
+233|Zum Finden klicken
+234|Schließen
+235|Fenster schließen
+236|Grob
+237|Code kopiert
+238|Codec
+239|Einklappen
+240|Farbe
+241|Farbänderung
+242|Farbkorrektur
+243|Farb-Preset exportiert
+244|Farb-Presets
+245|Farbeinstellungen
+246|Farbeinstellungen kopiert
+247|Farbe · Instanz
+248|Inhalt und Raum kombinieren
+249|Community-Gruppen
+250|Vergleichen
+251|Kompatibel
+252|Ton bei Abschluss
+253|Komponenten und Lizenzen
+254|Komprimierung nötig
+255|Installation bestätigen
+256|Deinstallation bestätigen
+257|Verbinden
+258|Verbinden und starten
+259|Mit diesem Eingang verbinden
+260|Verbunden
+261|Wird verbunden
+262|Verbindung zur PS5…
+263|Konsole
+264|Container
+265|Inhalt: dunkel und hell
+266|Inhalt: flache ältere Übertragung
+267|Inhalt: überwiegend dunkel
+268|Inhalt: Standard
+269|Inhalt: starke Lichter
+270|Export fortsetzen
+271|Letzte fortsetzen
+272|Kontrast
+273|Controller
+274|Controller hat kein Gyro
+275|Controller unterstützt Gyro
+276|Kopieren
+277|Als neue Ebene kopieren
+278|Code kopieren
+279|Farbeinstellungen kopieren
+280|Datei kopieren
+281|Knoten kopieren
+282|Diese Ebene kopieren
+283|Kopieren · verschieben · zurücksetzen · löschen
+284|Kopieren · zurücksetzen · löschen
+285|Kopieren und an deinen Bericht anhängen
+286|Korrekturmodus
+287|Preset konnte nicht gelöscht werden
+288|Messung nicht möglich
+289|Öffnen nicht möglich
+290|Browser konnte nicht geöffnet werden
+291|Datenordner konnte nicht geöffnet werden
+292|Speichern nicht möglich
+293|Tastenkürzel konnte nicht gespeichert werden
+294|Toneinstellung konnte nicht gespeichert werden
+295|Zuschneiden (Pixel)
+296|Strg+Alt+Umschalt+S zum Ausblenden
+297|Aktueller Versatz
+298|Aktuelle Wiedergabeeinstellungen
+299|Kurve ist aus
+300|Kurve, Messwerte und Hinweise
+301|Kurven
+302|Benutzerdefiniert
+303|Eigener EQ
+304|Eigene Grenze
+305|Eigene Grenze (FPS)
+306|Eigene Reihenfolge
+307|Eigene Wiedergabegeschwindigkeit
+308|Eigene Auflösung
+309|Benutzerdefiniert…
+310|D3D12VA-Hardware
+311|DLSS Frame Generation
+312|DLSS-Modell
+313|DLSS-Leistungsmodus
+314|Umgang mit beschädigtem Bild
+315|Dunkel und hell
+316|Dunkler Raum
+317|Änderung beim Abdunkeln
+318|Dekodierung
+319|Standard
+320|Standard-Untertitelgröße
+321|Dunst entfernen
+322|Löschen
+323|Löschen "
+324|Knoten löschen
+325|Dieses Spielprofil löschen
+326|Diese Ebene löschen
+327|DengXian
+328|Detailschutz
+329|Erkennungsstufe
+330|Gerät
+331|Gerätepuffer
+332|Gerätebildrate (FPS)
+333|Gerät nicht verbunden
+334|Geräteeigenschaften
+335|Diagnose
+336|Diagnose kopiert
+337|Hat keine Frames erzeugt
+338|Nicht gestartet
+339|Deaktiviert
+340|Trennen
+341|Aufnahme trennen
+342|Anzeige
+343|Anzeigespeicher geleert
+344|Anzeige-Spitzenhelligkeit
+345|Anzeige-Spitzenhelligkeit (nit)
+346|Anzeigesynchronisation
+347|Variable Bildwiederholrate aktiv
+348|Abstand vom unteren Rand
+349|Dolby / DTS-Bitstream
+350|Nicht behalten
+351|Audio nicht mithören
+352|Nicht warten
+353|Fertig
+354|Doppelte Superauflösung
+355|Douyin
+356|Herunterladen —
+357|Entwurf nicht ausgeführt
+358|Kreis zeichnen
+359|Rechteck zeichnen
+360|Treiberstandard
+361|Treibereingang
+362|Treibereinstellungen
+363|Loslassen, um zur Wiedergabeliste hinzuzufügen
+364|Duplikatentfernung aus
+365|Edge Aegis
+366|Edge Aegis (Anti-Jelly)
+367|Kantenverlauf
+368|Kantenweichheit
+369|Kantenschwelle
+370|Bearbeiten
+371|Effektkette
+372|Effekte
+373|Eingebettet
+374|Eingebettete Untertitel
+375|Leer
+376|Korrektur aktivieren
+377|Aktiviert
+378|Aktiviert (HDR10)
+379|Kodiert
+380|Endpunkt offen
+381|Verbessert
+382|Verbessert (Vorschau)
+383|Verbesserungsänderung
+384|Verbesserungs-Preset
+385|Zuerst einen Namen eingeben
+386|Fehler
+387|Geschätzter Ausgleich
+388|Jeder Frame · 512 px
+389|Alle Effekte ausschließen
+390|Ausklappen
+391|Experimentell
+392|Exportieren
+393|Exportieren
+394|Exportieren "
+395|Farb-Preset exportieren
+396|Preset exportieren
+397|Aktuelles Bild exportieren
+398|Wird exportiert
+399|Belichtung (EV)
+400|Extern
+401|Externe Untertitel
+402|F11 / Alt+Eingabe gehen auch
+403|FG aus
+404|Gesichtssicherheit
+405|Gesichtserkennung
+406|Nur Gesichter
+407|Aktivieren fehlgeschlagen
+408|Fehlgeschlagen · zum Wiederholen klicken
+409|Weiche Kante (Pixel)
+410|Datei
+411|Füllen und zuschneiden
+412|Eingeben, wenn die PS5 danach fragt
+413|Bildschirm füllen
+414|Fenster füllen
+415|Film-Speicher geleert
+416|Fein
+417|Fertig
+418|Einpassen
+419|An Fenster anpassen
+420|Fest
+421|Flache ältere Übertragung
+422|Vertikal spiegeln
+423|Folgen
+424|Pufferfüllstand folgen
+425|System folgen
+426|Dem Entwickler folgen
+427|Der Anzeige folgen
+428|Dem Verbesserungs-Preset folgen
+429|Dem Systemstandard folgen
+430|Schriftart
+431|Schriftgröße
+432|Schritte
+433|PCM erzwingen
+434|SDR-Vorschau erzwingen
+435|Format und Bild
+436|Frame Gen
+437|Methode der Frame-Generierung
+438|Bewegungsquelle der Frame-Generierung
+439|Frame-Generierung pausiert
+440|Bildrate
+441|Bildrate und Taktung
+442|Bildratengrenze
+443|Frame-Synchronisation · standardmäßig aus
+444|Voll
+445|Vollständige Presets
+446|Vollerer Bass, für Actionszenen
+447|Vollbild
+448|Vollbild entsperrt
+449|GPU Optical Flow
+450|GPU-Priorität
+451|GPU-Stufen · 1-s-Mittel
+452|GPU-Auslastung
+453|GPU-Auslastungsanzeige
+454|Spiel
+455|Bildrate des Spiels
+456|Bildrate des Spiels · Ziel
+457|Spielmodus
+458|Spielmodus: Bild anpassen
+459|Spielname
+460|Spiel-Presets
+461|Spielprofil
+462|GamePP
+463|Spiele und Programme ·
+464|Gamma
+465|Konto-ID abrufen
+466|Global
+467|Los
+468|Grün
+469|Grün-Primärfarbe
+470|Gyro
+471|HDMI-Aufnahmegerät
+472|HDR-Helligkeitskurve
+473|HDR-Metadaten
+474|HDR-Ausgabeformat
+475|Halbe Auflösung
+476|Hardware-Dekodierung
+477|Nur Hardware-Dekodierung
+478|Reserve
+479|Wiedergabeleiste ausblenden
+480|Hoch
+481|Hohe Bitrate
+482|Hoch+Niedrig
+483|Hoch+Mittel
+484|Hinweise zu Lichtern
+485|Lichterschutz
+486|Lichter ab (nit)
+487|Lichter
+488|Verlaufsablehnung
+489|Verlaufsgewicht
+490|V gedrückt halten für das Original
+491|Halten für Original
+492|Halten, um das Original zu sehen
+493|Start
+494|Host
+495|Host
+496|Host-Adresse
+497|Hosts
+498|Smooth Motion einschalten
+499|Farbton
+500|Farbtonmitte
+501|Farbtonschutz
+502|Farbtonbereich
+503|Bild
+504|Bildkorrektur
+505|Bildstichproben-Statistik
+506|Bilder (*.png *.jpg *.jpeg)
+507|Importieren
+508|.cube-LUT importieren
+509|.cube importieren…
+510|.vpcolor importieren…
+511|Farb-Preset importieren
+512|Ordner importieren
+513|Ordner in Wiedergabeliste importieren
+514|Preset importieren
+515|In I
+516|Inaktiv:
+517|Enthält
+518|Eingang
+519|Eingangsfarbe (SDR / HDR)
+520|Eingangsoriginal
+521|Eingangsbereich
+522|Eingang · Optical Flow
+523|Glide Virtual Speaker installieren
+524|Installiert
+525|Installieren…
+526|Sofortwiederholung
+527|Sofortwiederholung gespeichert
+528|Anleitung
+529|Intel XeSS · experimentell
+530|Oberflächen-Zeichnung
+531|Sprache der Oberfläche
+532|Skalierung der Oberfläche
+533|Interne Verarbeitungsauflösung
+534|Ungültiger Bearbeitungsmodus
+535|Ungültige Taste
+536|Behalten
+537|Alle behalten
+538|Bild behalten
+539|LAN-Streaming
+540|LUT-Datei
+541|LUT-Name ist zu lang
+542|LUT-Stärke
+543|Groß
+544|Letzte
+545|Verspätet P95
+546|Latenz wird gemessen
+547|Später
+548|Alte Formatliste
+549|Alte Formatauswahl
+550|Lizenz
+551|Dunkle Szenen anheben
+552|Anhebebereich (nit)
+553|Schatten anheben
+554|Hell
+555|Hellgrün
+556|Leichte Glättung
+557|Helligkeitsänderung
+558|Helligkeit erhalten
+559|Begrenzt
+560|Liste
+561|Listenmodus
+562|Listen-Presets
+563|Lastbudget
+564|Externe Untertitel laden
+565|Externe Untertitel laden…
+566|Datei laden…
+567|Quelle laden
+568|Geladen
+569|Wird geladen
+570|Lokale Kompression
+571|Lokale Struktur
+572|Lokaler Ton
+573|Vollbild-Steuerleiste fixieren
+574|Protokoll
+575|Protokollordner nicht verfügbar
+576|Niedrig
+577|Niederfrequente temporale Rekonstruktion
+578|Warteschlange mit niedriger Latenz
+579|Luminanz
+580|MP4 · MKV · Bilder
+581|Magenta
+582|Magewell-Modus mit niedriger Latenz
+583|Verzögerung Hauptuntertitel
+584|Hauptuntertitel
+585|Hauptuntertitel sind aus
+586|Verwalten
+587|Presets verwalten
+588|Presets im Pro-Modus verwalten…
+589|Presets verwalten…
+590|Manuell
+591|Manuell 1/2 · 1 von 2 Frames wiederverwenden
+592|Manuell 1/3 · 1 von 3 Frames wiederverwenden
+593|Manuell 1/4 · 1 von 4 Frames wiederverwenden
+594|Manueller Versatz
+595|Viele starke Lichter
+596|Mastering-Spitze (nit)
+597|Monitor anpassen
+598|Max. Gesichter
+599|Maximieren
+600|Messung:
+601|Mittel
+602|Mittel+Niedrig
+603|Speicher und Automatik
+604|In Eingang zusammenführen
+605|Methode
+606|Mikrofongerät
+607|Mikrofon auf eigener Spur
+608|Mittelgrau
+609|Mittelgrau (nit)
+610|Mitteltöne
+611|Minimal
+612|Minimalmodus
+613|Minimieren
+614|Minimum
+615|Mischer
+616|Modus
+617|Modellparameter
+618|Modellstärke
+619|Geändert: neueste zuerst
+620|Geändert: älteste zuerst
+621|Kompatibilität mit Monitoring-Overlays
+622|Weitere Farbregler
+623|Überwiegend dunkel
+624|Qualität der Bewegungsschätzung
+625|Nach unten
+626|Nach oben
+627|Faktor
+628|Muss unter dem Maximum bleiben
+629|Stumm
+630|Mein Preset
+631|k. A.
+632|NIS-Schärfung
+633|NR
+634|NR automatische Wiederverwendung der Inferenz
+635|NR-Verbesserung
+636|NR globale Schutzbereiche
+637|NR läuft nicht
+638|NR-Ebene
+639|NR-Ebene 1
+640|NR-Ebene 2
+641|NR-Ebene 3
+642|NR-Ebene 4
+643|NR-Bewegungsquelle
+644|NR-Version
+645|NR → SR · alle Ebenen
+646|NVIDIA Low Latency
+647|NVIDIA Low Latency · An
+648|Nur NVIDIA NR
+649|NVIDIA-In-Game-Overlay
+650|Name
+651|Name A → Z
+652|Name Z → A
+653|Nativ
+654|Originalpixel
+655|Natürlich
+656|Natürliche Glättung
+657|Negativ = Ton früher
+658|Netzwerk
+659|Netzwerkpuffer
+660|Schutz neutraler Farben
+661|Name des neuen Presets
+662|Nächster Eintrag
+663|Nachtmodus
+664|Nein
+665|Keine FG
+666|Keine LUT
+667|Keine NR-Ebene hinzugefügt
+668|Keine Grenze
+669|Kein Aufnahmegerät erkannt
+670|Noch kein Aufnahmeverlauf
+671|Kein Farbknoten
+672|Noch keine Farb-Presets
+673|Kein Ausgleich
+674|Kein Controller erkannt
+675|Kein Gerät gewählt
+676|Kein Gesicht erkannt
+677|Keine Frame-Generierung
+678|Keine Frame-Generierung (Ausgangswert)
+679|Keine Funktion eingeschaltet
+680|Auf der Kurve ist keine feste Grenze gesetzt
+681|Keine passenden Formate
+682|Keine Ausgabe
+683|Noch keine gekoppelten Hosts
+684|Kein Bild zum Speichern
+685|Nicht verkleinern
+686|Keine Quelle geöffnet
+687|Noch keine Quelle zum Fortsetzen
+688|Keine Untertitel im Bild
+689|Kein Ziel gewählt
+690|Noch keine Zeitmessung für diesen Knoten
+691|Knotenmodus
+692|Knoten-Preset:
+693|Knoten-Presets
+694|Knoten
+695|Keine
+696|Normal
+697|Kein 8-stelliger Kopplungscode
+698|Nicht verbunden
+699|Nicht aktiviert
+700|Nicht geladen
+701|Nicht gemessen
+702|Nicht geöffnet
+703|Nicht gekoppelt
+704|Keine Wiedergabe
+705|Nicht erreicht
+706|Nicht ausgeführt
+707|Nicht festgelegt
+708|Nicht angemeldet
+709|Nicht angegeben
+710|Nicht unterstützt
+711|Nicht getestet
+712|Nicht gemessen
+713|Kompatibilität mit OBS-Spielaufnahme
+714|OK
+715|Aus
+716|Offline
+717|Versatz
+718|An
+719|Öffne auf dem Handy oder im Browser
+720|An · 1 wiederverwendet je
+721|An · automatisch
+722|An · Stärke
+723|Online
+724|Online · ein Spiel läuft
+725|Nur lokale Dateien können geöffnet werden
+726|Öffnen
+727|Windows-Aufnahmeeinstellungen öffnen
+728|Video oder Bild öffnen
+729|Datei öffnen
+730|Datei öffnen / Exportseite
+731|Datei öffnen…
+732|Ordner öffnen
+733|Spiel-Preset öffnen
+734|Alte Formatliste öffnen
+735|Medien-URL öffnen
+736|Medien-URL öffnen…
+737|Quellseite öffnen
+738|Video öffnen
+739|Open World · Minikarte unten links
+740|Open World · Minikarte oben rechts
+741|Wird geöffnet
+742|Aufnahmegerät wird geöffnet…
+743|Zeitüberschreitung beim Öffnen
+744|Optical Flow
+745|Optical-Flow-Algorithmus
+746|Optical Flow · Bewegungsschätzung
+747|Für meinen PC optimieren
+748|Optionen
+749|Orange
+750|Original
+751|Vergleich Original / verbessert
+752|Originalgesicht wiederherstellen
+753|Nur Original
+754|Originalton
+755|Andere Konsole
+756|Out O
+757|Kontur
+758|Ausgabe
+759|Ausgabe
+760|Ausgabegrenze
+761|Ausgabegrenze · derzeit inaktiv
+762|Ausgabegrenze · der Anzeige folgen
+763|Ausgabegerät
+764|Ausgabegerät und Downmix
+765|Ausgabeeinstellungen
+766|Ausgabestabilisator · Anti-Flimmern
+767|Ausgabe · Audio
+768|Über Budget
+769|Gesamthelligkeit
+770|Gesamtstärke der Änderung
+771|Gesamtstärke
+772|PC-Streaming
+773|PC-Streaming…
+774|PIN nötig
+775|PS5-Konsole
+776|PS5-Controller-Steuerung
+777|PS5-Controller-Steuerung verbunden
+778|PS5-Controller-Steuerung beendet
+779|PS5-Controller
+780|PS5-Streaming
+781|PS5-Streaming…
+782|PSN-Konto
+783|Seite beim Start
+784|Seitenwechsler
+785|Koppeln
+786|Koppeln (erstes Mal)
+787|Koppeln und speichern
+788|Gekoppelt
+789|Koppeln abgebrochen
+790|Vor dem Aufwecken ist eine Kopplung nötig.
+791|Kopplungseinstellungen
+792|Koppeln…
+793|Parametrische Kurve
+794|Parametrische Tiefen
+795|Parametrische Lichter
+796|Parametrische Helltöne
+797|Parametrische Schatten
+798|PUSHFPS1:-Code einfügen
+799|Farbeinstellungen einfügen
+800|Patreon-Seite
+801|Patreon, WeChat und Alipay
+802|Export pausieren
+803|Pausiert
+804|Spitze
+805|Spitzenhelligkeit (nit)
+806|Spitzengrenze (nit)
+807|Leistung
+808|Bild
+809|Bild & Ton
+810|Bild von einer Capture-Karte
+811|Bildstil
+812|Pixelformat
+813|Wiedergabe / Pause
+814|Nach dem Ende nächsten abspielen
+815|Wiedergabe
+816|Wiedergabeleiste sichtbar
+817|Wiedergabe fehlgeschlagen
+818|Wiedergabegeschwindigkeit
+819|Wird abgespielt
+820|Wiedergabeliste
+821|Wiedergabeliste · Ordner importieren
+822|Punktkurve
+823|Positive Werte verzögern den Ton
+824|Vorbereitung:
+825|Ausgabe
+826|Preset kopiert
+827|Preset gelöscht
+828|Preset-Name
+829|Preset umbenannt
+830|Preset:
+831|Presets
+832|Presets und
+833|Neue Taste drücken…
+834|Vorschau
+835|Vorschau nicht verfügbar
+836|Vorheriger Eintrag
+837|Pro-Modus
+838|Bilder stapelweise verarbeiten…
+839|Verarbeitungsreihenfolge
+840|Verarbeitungsmaßstab
+841|Verarbeitungszeit
+842|Verarbeitung ·
+843|Lichter schützen
+844|HUD schützen
+845|Punch
+846|Lila
+847|Glide Virtual Speaker
+848|Glide-Farb-Preset (*.vpcolor)
+849|Glide-Spiel-Preset (*.pushfps)
+850|Glide-Grün
+851|Glide-Preset (*.vpreset)
+852|Qualität
+853|Warteschlange
+854|Schnell-Presets
+855|Schnelleinrichtung
+856|Spiel beenden
+857|RTX 50 · NVIDIA-Original
+858|RTX Video SR · Hohe Bitrate
+859|RTX Video SR · Standard
+860|RTX Video SR · Streaming
+861|RTX Video Super Resolution
+862|RX 7000 · RedDuke (experimentell)
+863|RX 9000 · lmxxf (experimentell)
+864|Ratensteuerung
+865|Spuren werden gelesen…
+866|Echtzeit
+867|Empfangen
+868|Frames werden empfangen
+869|Zuletzt
+870|Empfohlen
+871|Neu verbinden
+872|Wird neu verbunden
+873|Aufnehmen
+874|Audio aufnehmen
+875|Mikrofon aufnehmen
+876|Aufnahme-Bitrate
+877|Aufnahme-Codec
+878|Aufnahmeordner
+879|Aufnahme-Bildrate
+880|Aufnahme gespeichert
+881|Wird wiederhergestellt
+882|Rechteck
+883|Rot
+884|Rot-Primärfarbe
+885|Wiederholen
+886|Bewegung reduzieren
+887|Tiefe der Verarbeitungswarteschlange verringern
+888|Erstes Ergebnis verkleinern auf
+889|Referenzbasis
+890|Aktualisieren
+891|Geräte aktualisieren
+892|Anzeigestatus aktualisieren
+893|Loslassen, um zurückzugehen
+894|Jeden Film merken
+895|Letzte Größe merken
+896|Pro Anzeige merken
+897|Wiedergabeposition merken
+898|Doppelte Frames entfernen
+899|Aus Wiedergabeliste entfernen; Datei behalten
+900|Kopplung entfernen
+901|Startstandard entfernen
+902|Umbenennen · kopieren · löschen
+903|Länge der Wiederholung
+904|Melden
+905|Problem melden
+906|Angefordert
+907|Angeforderte Bitrate
+908|Erfordert AMD RX 7000 / 9000
+909|Erfordert AMD RX 9000
+910|Erfordert eine NVIDIA-GPU
+911|Zurücksetzen
+912|Alles zurücksetzen
+913|Kanal zurücksetzen
+914|Equalizer zurücksetzen
+915|Knoten zurücksetzen
+916|Diese Seite zurücksetzen
+917|Diese Einstellung zurücksetzen
+918|Auf Standard zurücksetzen
+919|Rest
+920|Auflösung
+921|Auflösung und Bildrate
+922|Neu starten
+923|Neustart erforderlich
+924|Wiederherstellungsbereich
+925|Wiederherstellungsstärke
+926|Fortgesetzt
+927|Wiederverwendungsmodus
+928|Umlaufzeit
+929|Läuft
+930|Läuft nach der Wiederherstellung des Originals
+931|SDK intern
+932|SDK-Übergabe
+933|SDR-Anzeige, nicht umgewandelt
+934|Abtastung
+935|Sättigung
+936|Sättigung max.
+937|Sättigung min.
+938|Speichern
+939|Speichern unter
+940|Als Spielprofil speichern
+941|Datei speichern
+942|Spiel-Preset speichern
+943|Sofortwiederholung speichern
+944|Preset speichern
+945|Zeitüberschreitung beim Speichern
+946|Speichern in
+947|Gespeichert
+948|Gespeichertes Gerät (nicht verbunden)
+949|Gespeicherter Host
+950|Gespeicherter Host
+951|Wird gespeichert…
+952|Mit WeChat oder Alipay scannen
+953|Ordner werden durchsucht…
+954|Planung heruntergestuft
+955|Planungswartezeit P95
+956|Bildschirmaufnahme
+957|Bildschirmaufnahme…
+958|Screenshot
+959|Screenshot-Ordner
+960|Suchen
+961|Suche abgebrochen
+962|Suche, z. B. 1920 60 NV12
+963|Zweiter SR-Algorithmus
+964|Zweites SR-Ziel
+965|Zweite SR-Stufe
+966|Maßstab zweiter Durchgang
+967|Zweituntertitel (zweisprachig)
+968|Zweituntertitel sind aus
+969|Aus Quelle wählen
+970|Eingang wählen
+971|An Discord senden
+972|Wird gesendet…
+973|Als Startstandard festlegen
+974|Von Hand im Profi-Modus einstellen
+975|Einstellungen
+976|Schattenhelligkeit
+977|Schatten anheben
+978|Schatten anheben (0,01 EV)
+979|Schattenschutz
+980|Schattentönung
+981|Schatten
+982|Schatten und Lichter
+983|Teilen
+984|Dieses Preset teilen
+985|Auf Discord teilen
+986|Schärfe
+987|Tastenkürzel B
+988|Tastenkürzel
+989|Alle verfügbaren Bildraten zeigen
+990|Als SDR zeigen
+991|Aktuelle Datei zeigen
+992|Im Ordner zeigen
+993|Latenz im Bild anzeigen
+994|Maske zeigen
+995|Mauszeiger zeigen
+996|Wiedergabeleiste zeigen
+997|Untertitel zeigen
+998|Über den Hauptuntertiteln angezeigt
+999|Nach SR verkleinern auf
+1000|Lange Zeilen automatisch verkleinern
+1001|Anmelden
+1002|Abmelden
+1003|Anmelde-PIN
+1004|Signal
+1005|Angemeldet
+1006|SimHei
+1007|SimSun
+1008|Größe: größte zuerst
+1009|Größe: kleinste zuerst
+1010|Haut aufhellen
+1011|Nur Haut
+1012|Hautbereich · erweitert
+1013|Haut glätten
+1014|Hautwert
+1015|Haut · nicht geprüft
+1016|Übersprungene Quellframes
+1017|Tastaturschritt für Regler
+1018|Leicht
+1019|Klein
+1020|Kleine Elemente in jeder Ecke
+1021|Glättungsmenge
+1022|Glättungsbereich
+1023|Glättungsradius
+1024|Software
+1025|Software-Dekodierung
+1026|Sortieren
+1027|Klangprofil
+1028|Quelle
+1029|Quellcode
+1030|Quellfarbe erhalten
+1031|Quellgröße
+1032|Teilen
+1033|Lichter teilen
+1034|Mitteltöne teilen
+1035|Schatten teilen
+1036|Stabilisierungsstärke
+1037|Standard
+1038|Bereitschaft
+1039|Starten
+1040|Aufnahme starten / stoppen
+1041|Aufnahme starten
+1042|Export starten
+1043|Streaming starten
+1044|Bildschirmaufnahme wird gestartet…
+1045|Start & Fenster
+1046|Startpuffer
+1047|Startstandard
+1048|Startstandard-Preset entfernt
+1049|Statische Akkumulation
+1050|Stereo
+1051|Stereo-Downmix
+1052|Gestoppt
+1053|Streaming
+1054|Streaming (gilt nach Neuverbindung)
+1055|Stärke
+1056|Stärke
+1057|Strecken zum Füllen
+1058|Strikte Taktung der Frame-Generierung
+1059|Stark
+1060|Starke Lichter
+1061|Stil
+1062|Stil · experimentell
+1063|Senden
+1064|Übergaberate
+1065|Untertiteleinstellungen
+1066|Untertiteleinstellungen…
+1067|Untertitelspuren
+1068|Eigene Schrift des Untertitels
+1069|Untertitel
+1070|Untertitel: aus
+1071|Untertitel: an
+1072|Sunshine-Host
+1073|Superauflösung
+1074|Bewegungsquelle der Superauflösung
+1075|Entwickler unterstützen
+1076|Zurück zum Listenmodus?
+1077|Zum Listenmodus wechseln
+1078|Zum Knotenmodus wechseln
+1079|Zum Knotenmodus wechseln?
+1080|Standardmikrofon des Systems
+1081|Wirkt nach Neustart
+1082|Ziel
+1083|Ziel-Bildrate
+1084|Zielzeilen
+1085|Zielgröße
+1086|Temperatur (relativ)
+1087|Temporale Akkumulation
+1088|Temporales Anti-Flimmern
+1089|Temporale Stabilität
+1090|Getestet
+1091|Vom Veyra-Entwickler getestet
+1092|Mit Glide getestet
+1093|Textur
+1094|Textur erhalten
+1095|Die HUD-Bereiche wurden nicht übernommen
+1096|Die PS5 fragt nach der Anmelde-PIN
+1097|Die Kette hat keinen Farbknoten
+1098|Das Farb-Preset existiert nicht
+1099|Die Effektkette ist voll
+1100|Die Datei existiert nicht
+1101|Die Datei existiert nicht mehr
+1102|Das Preset braucht einen Namen
+1103|Die Anmelde-PIN darf nur Ziffern enthalten.
+1104|Das Ziel ist nicht mehr gültig
+1105|Dünn
+1106|Bildschirmauflösung dieses PCs
+1107|Dies ist eine Untertitelvorschau.
+1108|Dieser Modus hat noch keine Presets.
+1109|Diese Quelle hat keine Untertitel
+1110|Stufe
+1111|Zeit
+1112|Tönung
+1113|Minimal / Pro umschalten
+1114|Zu wenige Frames zum Messen
+1115|Tracking-Glättung
+1116|Eigenen Ton des Videogeräts versuchen
+1117|Federn und Übergänge ausschalten
+1118|Typ
+1119|UI-Korrektur · nicht geprüft
+1120|Ultra
+1121|Nicht verfügbar
+1122|Gerade nicht verfügbar
+1123|Rückgängig
+1124|Letzte Anpassung rückgängig machen
+1125|Deinstallieren…
+1126|Unbekannt
+1127|Unbekannte Konfiguration
+1128|Unbekanntes Frame-Generierungs-Backend
+1129|Unbenutzt
+1130|Aktualisieren oder als Spielprofil speichern
+1131|Wird aktualisiert
+1132|Hochskalierungs-Algorithmus
+1133|Leistungsmodell verwenden
+1134|Benutzerdaten
+1135|Nutzer in Festlandchina
+1136|VB-Audio-Website
+1137|VB-CABLE ist bereits installiert
+1138|VFG automatische Regelung
+1139|VFG-Qualität
+1140|VSync
+1141|Wert außerhalb des Bereichs
+1142|Variable Bildwiederholrate
+1143|Variable Bildwiederholrate · aktiv
+1144|Version
+1145|Dynamik
+1146|Video
+1147|Video-Codec
+1148|Video-Eingabegerät
+1149|Ansicht
+1150|Lizenz anzeigen
+1151|Nur ansehen
+1152|Update ansehen
+1153|Ansicht
+1154|Seite besuchen
+1155|Lebendig
+1156|Sprachverständlichkeit
+1157|Lautstärke
+1158|Auf Keyframe warten
+1159|Warte auf Messwerte
+1160|Warte auf Signal
+1161|Wartet auf Export
+1162|Wartet auf Ausgabe
+1163|Wartet auf Ausgabe im Prozess
+1164|Aufwecken
+1165|Aufwecken abgebrochen
+1166|WeChat Pay
+1167|Schwach
+1168|Web
+1169|Weiß
+1170|Weißes Leuchten
+1171|Ganzes Gesicht
+1172|Fenster
+1173|Fenster oder Bildschirm
+1174|Fenstergröße beim Start
+1175|Auslastung der Windows-GPU-Engine (
+1176|Windows HDR
+1177|Windows-Archivprogramm nicht gefunden
+1178|Im Bereich
+1179|VB-CABLE Setup läuft…
+1180|X ist die Grenze
+1181|Xbox-Streaming
+1182|Xbox-Streaming…
+1183|Gelb
+1184|Ja
+1185|Keine Bewegung
+1186|z. B. Abends zocken
+1187|Gyro
+1188|nur Live-Vorschau
+1189|meine
+1190|kein Gyro
+1191|kein Tastenkürzel festgelegt
+1192|im Knotenmodus noch nicht verfügbar
+1193|nicht genug Ressourcen
+1194|nicht für HDR-Verarbeitung verwendet
+1195|nicht mit automatischer NR-Größe verwendet
+1196|scRGB float
+1197|☕ Spendier mir einen Kaffee · 5 US$
+1198|=
+1199|=
+1200|=
+1201|=
+1202|=
+1203|ANR FG · Apex Compute · experimentell
+1204|ANR-Paket (*.zip nvngx_dlssg.dll);;Alle Dateien (*)
+1205|ANR ist installiert (%1 Dateien). Starte Glide neu und wähle ANR als Methode der Frame-Generierung
+1206|ANR-Frame-Generierung stammt von Apex Compute und unterstützt Grafikkarten ab der GTX-16-Serie. Sie darf nicht mit Glide ausgeliefert werden: Lade das anr-fg-Paket von Apex’ GitHub herunter und wähle es hier aus
+1207|ANR-Frame-Generierung ist Apex Neural Rendering von Apex Compute
+1208|ANR-Frame-Generierung, von Apex Compute
+1209|Die Grundlage von Glide, von Likely7
+1210|ANR herunterladen
+1211|Aus Download installieren…
+1212|Installiere zuerst ANR von Apex unter Einstellungen → Komponenten und Lizenzen
+1213|Installiert. ANR-Frame-Generierung stammt von Apex Compute; wähle sie im Profi-Modus als Methode der Frame-Generierung
+1214|Temporärer Ordner konnte nicht erstellt werden
+1215|ANR-Dateien konnten nicht nach %1 kopiert werden
+1216|ANR-Paket konnte nicht entpackt werden: %1
+1217|Aktualisieren…
+1218|Nicht installiert
+1219|Herunterladen und installieren
+1220|Diese Datei enthält keine nvngx_dlssg.dll von ANR. Wähle das anr-fg-Paket von Apex
+1221|Wähle das von Apex Compute heruntergeladene ANR-Paket
+1222|Ein Spiel mit %1 FPS läuft mit %2 FPS (%3× Frame-Generierung)
+1223|%1 läuft. Es klinkt sich in Oberfläche und Video ein, was Glide einfrieren kann. Starte Glide neu, um kompatibles Rendern zu aktivieren: Die Oberfläche wird dann per Software gezeichnet und %1 betrifft nur das Video. Jetzt neu starten? Wiedergabe oder Streaming wird beendet.
+1224|1% low nur %1 FPS, nicht stabil genug
+1225|Empfohlene Einstellungen für Spiele wie GTA VI, mit scharfer Minikarte und HUD
+1226|Stelle die Switch 2 im Dock auf 60 Hz. Spiele haben kein HDCP und werden direkt aufgenommen.
+1227|Wähle auf der Xbox 60 Hz unter Einstellungen → Allgemein → TV- und Anzeigeoptionen. Spiele haben kein HDCP und werden direkt aufgenommen.
+1228|Im Profi-Modus ist eine eigene Kurve gesetzt; Ziehen ersetzt sie
+1229|Helligkeit der Mitteltöne; Schwarz und Weiß bleiben gleich
+1230|Wähle Bildrate und Bild für Konsolenspiele. Alles andere findest du im Profi-Modus.
+1231|Spiele behalten die Bildrate der Konsole
+1232|Deine Konsole über eine Capture-Karte, von deinem PC auf 60 oder 120 FPS gebracht
+1233|Stelle die Konsole auf 60 Hz. Schalte auf der PlayStation HDCP unter Einstellungen → System → HDMI aus, sonst bleibt das Bild schwarz.
+1234|Stelle die Konsole auf 60 Hz und schalte HDCP aus, falls es die Option gibt, sonst kann das Bild schwarz bleiben.
+1235|5-Band-Equalizer, ±12 dB pro Band
+1236|Aktuelle Einstellungen als Preset speichern
+1237|Schließe zuerst deine Capture-Karte an und bring das Spielbild auf den Schirm, dann starte
+1238|Aus: nur Frame-Generierung. An: Jeder Frame läuft zusätzlich durch NVIDIAs neuronalen Renderer (DLSS 5 NR) für ein schärferes Bild, bei höherer GPU-Last
+1239|Weniger Warteschlange, geringere Eingabelatenz
+1240|„%1“ löschen
+1241|Story-Spiele und Filme: Das ganze Bild bekommt Frame-Generierung
+1242|Hebt Details und Kanten hervor (Textur)
+1243|Action · HUD in den unteren Ecken
+1244|Enthält die Bildrate des Spiels, die Ziel-Bildrate und die im Profi-Modus gezeichneten Bereiche für „Alle Effekte ausschließen“
+1245|Gleicht laute und leise Stellen aus, für späte Abende
+1246|Nur %1 FPS erreicht
+1247|Minikarte oder Kompass oben rechts
+1248|Tempo, Gang und Minikarte unten rechts
+1249|Testet jede Kombination an deinem echten Bild und wählt die beste
+1250|Testet jede Methode der Frame-Generierung, KI-Verbesserung und jeden Upscaler an deinem echten Bild und wählt die flüssigste Kombination mit der geringsten Latenz
+1251|Kopiere den Code, um ihn Freunden zu schicken oder auf Reddit / Discord zu posten, oder speichere ihn als Datei
+1252|Die meisten Konsolenspiele laufen mit 30 FPS; wähle 60 für Leistungsmodi
+1253|Gemessene PC-Latenz (vom Eintreffen des Capture-Bildes bis zur Übergabe an die Anzeige) und Bildrate; Capture-Karte, Anzeige und Spiel kommen noch hinzu
+1254|Klarere Dialoge und Voice-Chat, ohne tiefes Grollen
+1255|Shooter · HUD in allen vier Ecken
+1256|Minikarte unten links, Geld und Fahndungslevel oben rechts. Layout anhand der GTA-Reihe geschätzt; prüfe es beim Spielen
+1257|Runde oder eckige Minikarte unten links
+1258|Gesundheit unten links, Waffe und Munition unten rechts
+1259|„%1“ gespeichert (%2 HUD-Bereiche)
+1260|„%1“ gelöscht
+1261|Clip kopiert. Drücke in Discord Strg+V zum Einfügen
+1262|Kopiert. In jeden Chat oder Ordner einfügbar
+1263|„%1“ angewendet
+1264|„%1“ angewendet: %2 HUD-Bereiche geschützt. Feinschliff im Profi-Modus → Qualität → Alle Effekte ausschließen
+1265|„%1“ hinzugefügt
+1266|Vollbild gesperrt · Strg+L zum Entsperren, Esc zum Verlassen
+1267|Latenz %1 ms
+1268|Latenz = Zeit vom Eintreffen des Capture-Bildes im PC bis zur Übergabe an die Anzeige (nur der PC-Anteil, nicht Capture-Karte, Anzeige oder Spiel). Je näher das 1% low am Durchschnitt liegt, desto flüssiger.
+1269|Erhöht die Latenz zu stark (%1 ms)
+1270|Die Verarbeitungskette hat keine Farbstufe
+1271|Diese Methode der Frame-Generierung schafft bis zu %1×: Ein Spiel mit %2 FPS erreicht etwa %3 FPS
+1272|Die Aufnahme enthält bereits erzeugte Frames. Schalte die Frame-Generierung im Profi-Modus vor dem Export aus, damit keine Frames doppelt erzeugt werden.
+1273|Speichere diese Einstellungen für ein Spiel und wechsle mit einem Klick dorthin
+1274|Wiedergabeleiste ausgeblendet · Zeiger nach oben bewegen und auf das Auge im Dock klicken, um sie zurückzuholen
+1275|Frame-Generierung auf dem ganzen Bild
+1276|Das Ausgangsbild konnte nicht gemessen werden: %1
+1277|Vollere Tiefen und Höhen, leichte Kompression
+1278|Beste Kombination: %1. Angewendet.
+1279|Der VRAM-Verbrauch ist in dieser Sitzung im Vollbild ständig gestiegen. Nutze die Fensterwiedergabe; öffne die Quelle neu, um Vollbild erneut zu testen.
+1280|Diese Software ist kostenlos und quelloffen. Wenn sie dir hilft, kannst du →
+1281|%1 erkannt
+1282|RTSS-Overlay-Dienst erkannt
+1283|Der RTSS-Overlay-Dienst läuft. Starte Glide neu, um kompatibles Rendern zu aktivieren und das OSD nur auf dem Video zu zeigen. Jetzt neu starten? Wiedergabe oder Streaming wird beendet.
+1284|Empfohlene Einstellungen pro Spiel, mit scharfer Minikarte und HUD (diese Bereiche bekommen keine Frame-Generierung und keine Effekte)
+1285|Keine Kombination hat das Ziel stabil gehalten, deine Einstellungen bleiben. Versuche ein niedrigeres Ziel oder schalte andere Effekte aus und starte erneut
+1286|Wechsle während des Laufs nicht die Quelle; du kannst weiterspielen
+1287|Einstellungen wurden während der Messung geändert
+1288|Das Bild ist stehen geblieben. Die Optimierung wurde abgebrochen und deine Einstellungen wiederhergestellt
+1289|Hebt Schritte und Schüsse hervor, für kompetitive Spiele
+1290|Grüne Bereiche behalten das Konsolenbild unverändert, ohne Frame-Generierung, damit Text und Minikarte scharf bleiben
+1291|Bring das Spiel über deine Capture-Karte auf den Schirm und starte dann. Glide testet jede verfügbare Kombination an deinem echten Bild (je etwa 10 Sekunden, insgesamt 1 bis 2 Minuten), misst echte Bildrate, 1% low und Latenz und wählt die beste.
+1292|Rennspiel · Tacho unten rechts
+1293|Diese Karte hat noch niemand gemeldet; teile deine Ergebnisse auf GitHub
+1294|Das ist kein gültiger Glide-Preset-Code
+1295|Ein eingebautes Preset nutzt diesen Namen bereits
+1296|Dieser PC kann diese Kombination nicht ausführen
+1297|Capture-Karte hat %1% der Frames verworfen
+1298|. Aufnahmen behalten es ebenfalls. Dolby / DTS-Passthrough ist nicht betroffen
+1299|Erweiterte Kodierungseinstellungen
+1300|Ratensteuerung, Encoder-Preset, Keyframe-Intervall, Audio-Bitrate und Container, wie die Ausgabeeinstellungen von OBS. Aus verwendet die Standardeinstellungen
+1301|VBR: Bitrate folgt der Bildkomplexität (Standard). CBR: jede Sekunde dieselbe Bitrate, gut für Uploads. Konstante Qualität: feste Qualität, die Dateigröße folgt dem Bild
+1302|Konstante Qualität
+1303|Qualitätsstufe
+1304|1–51; niedriger ist bessere Qualität und eine größere Datei; Standard ist 22
+1305|Encoder-Preset
+1306|Weiter rechts ist bessere Qualität, aber mehr Arbeit für den GPU-Encoder; Standard ist 4. Senken, wenn Aufnahmen ruckeln
+1307|Keyframe-Intervall
+1308|Sekunden; kürzer ist leichter zu schneiden und zu spulen, mit etwas größeren Dateien; Standard ist 2
+1309|Audio-Bitrate
+1310|kbps pro Audiospur; Standard ist 192
+1311|MP4 läuft überall (Standard). MKV eignet sich für Schnittprogramme; Sofortwiederholungen werden immer als MP4 gespeichert
+1312|Standardeinstellungen wiederherstellen
+1313|Kann die GPU eine Kombination nicht nutzen, wechselt die Aufnahme auf die Standardeinstellungen und sagt Bescheid
+1314|Wiederherstellen
+1315|Die GPU unterstützt die gewählten erweiterten Kodierungseinstellungen nicht; Aufnahme mit den Standardeinstellungen
+zh:轻|Leicht
+zh:亮|Licht
+1316|G-SYNC oder FreeSync: Der Monitor aktualisiert, wenn ein neues Bild kommt, statt mit fester Frequenz; eine schwankende Bildrate reißt und ruckelt dann nicht
+1317|HUD an der falschen Stelle?
+1318|HUD-Schutz
+1319|HUD-Erkennung fehlgeschlagen
+1320|NVIDIA Image Scaling ist ein Open-Source-Filter zum Hochskalieren und Schärfen, der auf Grafikkarten jeder Marke läuft. Zu viel Schärfe erzeugt weiße Säume an Kanten
+1321|Konsole · %1 FPS
+1322|Vergleichsclip stoppen
+1323|Alle löschen
+1324|Ein Keyframe ist ein vollständiges Bild; die Bilder dazwischen speichern nur die Änderungen. Player und Schnittprogramme können nur an einem Keyframe mit dem Dekodieren beginnen
+1325|Weniger Bilder warten auf der Grafikkarte in der Schlange, sodass das Bild nach einem Tastendruck schneller reagiert. Nur NVIDIA-Grafikkarten
+1326|Erkenne das HUD auf deinem eigenen Spielbild oder ziehe die Rahmen von Hand
+1327|Ziehe auf dem Bild, um einen neuen Rahmen zu zeichnen (bis zu 4). Ziehe einen Rahmen, um ihn zu verschieben, und seine Ecken, um die Größe zu ändern
+1328|Vergleichsclip
+1329|Der Vergleichsclip enthält keine erzeugten Bilder, beide Hälften sind gleich. Prüfe, ob die Bildgenerierung läuft
+1330|Feste Teile wie Minikarte, Gesundheit und Munition behalten die Pixel der Konsole und werden nicht interpoliert, sie bleiben also scharf. Nach der automatischen Erkennung kannst du die Rahmen zum Korrigieren verschieben
+1331|HUD-Schutz ist aus; das ganze Bild wird interpoliert
+1332|Angewendet: %1 Bereiche behalten die Pixel der Konsole
+1333|Hilfe
+1334|Das aktuelle Bildformat unterstützt keine automatische HUD-Erkennung
+1335|Nimm ein 15-Sekunden-Video nebeneinander auf: links die eigene Bildrate der Konsole, rechts Glide
+1336|%1 HUD-Bereiche gefunden. Prüfe die grünen Rahmen, verschiebe sie bei Bedarf und klicke dann auf Anwenden
+1337|Das Bild konnte nicht gelesen werden; HUD-Erkennung beendet
+1338|Nicht genug Grafikspeicher für die HUD-Erkennung
+1339|Höchstens 4 Rahmen; lösche zuerst einen
+1340|Vergleichsclip mit %1 Sekunden wird aufgenommen: links die eigene Bildrate der Konsole, rechts Glide
+1341|Bild wird geholt…
+1342|Bild wird beobachtet %1 / %2
+1343|Das Bild wird etwa 5 Sekunden beobachtet. Dreh die Kamera oder lauf im Spiel herum
+1344|Die meisten Bilder pro Sekunde. Mit Bildgenerierung hält es die Ausgabe auf der Ziel-Bildrate, damit Bewegungen gleichmäßiger sind
+1345|Kein HUD gefunden. Ziehe auf dem Bild, um Rahmen von Hand zu zeichnen
+1346|Es kam kein Bild an. Prüfe, ob das Bild läuft und das Glide-Fenster nicht minimiert ist
+1347|Es läuft nichts, daher kann das HUD nicht erkannt werden
+1348|Kein Bild. Schließe eine Capture-Karte an und starte die Wiedergabe, um die Rahmen auf deinem eigenen Spielbild anzupassen
+1349|Rahmen hinzufügen
+1350|Wie viele neue Bilder das Spiel selbst pro Sekunde zeichnet. Die Konsole sendet immer ein 60-Hz-Signal, ein 30-FPS-Spiel zeigt also jedes Bild zweimal. Glide entscheidet damit, wie viele Bilder erzeugt werden
+1351|KI entfernt Blöcke und Rauschen der Capture-Karten-Kompression, damit Details klarer wirken. Unabhängig von der Bildgenerierung und einzeln schaltbar
+1352|Das Bild hat sich kaum bewegt, daher ließ sich das HUD nicht unterscheiden. Dreh die Kamera oder beweg dich im Spiel und versuche es erneut
+1353|Die Bitrate ist die Datenmenge pro Sekunde Video. Die Ratensteuerung legt fest, wie der Encoder sie verteilt: mehr Daten bedeuten bessere Qualität und eine größere Datei
+1354|Wie viel Aufwand der Encoder pro Bild betreibt. Langsamer komprimiert besser, dieselbe Dateigröße ergibt also höhere Qualität
+1355|Findet Minikarte und HUD automatisch und nimmt sie von der Bildgenerierung aus; die Rahmen lassen sich von Hand korrigieren
+1356|Automatisch erkennen
+1357|Bilder pro Sekunde nach der Bildgenerierung. Erzeugte Bilder kommen zwischen zwei echte Bilder und machen Bewegungen flüssiger; der Controller reagiert dadurch nicht schneller
+1358|Beobachtet das Bild einige Sekunden, um das feste HUD zu finden
+1359|Schalte zuerst die Bildgenerierung ein: Der Vergleichsclip stellt die eigene Bildrate der Konsole neben das erzeugte Bild
+1360|Schließe zuerst eine Capture-Karte an und starte die Wiedergabe
+1361|HUD-Bereiche anpassen
+1362|Dreh die Kamera oder lauf herum: Das HUD bleibt stehen, während sich der Rest bewegt
+1363|Neues Bild holen
+1364|Vorher/Nachher-Video, 15 Sekunden
+1365|GTA VI und mehr, HUD bleibt scharf
+1366|Design
+1367|Während der Aufnahme nicht verfügbar
+1368|Aufnahme läuft…
+1369|Testet jede Kombination, wählt die beste
+1370|Automatisch erkannt, von Hand anpassbar
+1371|Benötigt ein laufendes Bild
+1372|AMD FRC · Video-Zwischenbilder · 2X
+1373|NVIDIA G-SYNC einrichten
+1374|Kein Audioeingang
+1375|Reparieren
+1376|Musik für diesen Start stoppen
+1377|Anderer Desktop
+1378|Klicken oder beliebige Taste zum Überspringen
+1379|Startanimation
+1380|Beim Start verbinden
+1381|Startmusik
+1382|Nicht geprüft
+1383|Fenster und Vollbild nicht eingerichtet
+1384|Fenster und Vollbild erlaubt
+1385|Ausgewählt
+1386|Dieses Profil lässt sich nicht einzeln ändern
+1387|Original wiederherstellen
+1388|Sicherung passt nicht zum aktuellen Profil
+1389|Zeitlupenrate des Handys
+1390|Sicherung kann nicht gespeichert oder entfernt werden
+1391|Abenddämmerung
+1392|Bereichsrahmen zeigen
+1393|Treiberprofil nicht bestätigt
+1394|Lokales Mithören
+1395|Desktop %1
+1396|Desktop %1 · %2
+1397|Treiberprofil wird bearbeitet…
+1398|Gesamtverzögerung messen
+1399|Farbschema
+1400|Bilder dazwischen
+1401|Immer im Vordergrund
+1402|Klassisch
+1403|Vollbild beim Verbinden
+1404|Auswählen
+1405|Administratorrechte erforderlich
+1406|Audioeingang
+1407|Treiberprofil wird verwendet
+1408|Sunset-City-Logo
+1409|Streamschlüssel
+1410|Plattform
+1411|Server
+1412|Live gehen
+1413|Live
+1414|Stream beenden
+1415|Plattform hinzufügen
+1416|Spielton
+1417|Videobitrate
+1418|Eigener RTMP-Server
+1419|Streamschlüssel einfügen
+1420|Nicht gestartet
+1421|Verbindung fehlgeschlagen
+1422|Mikrofon
+1423|Layout
+1424|Nebeneinander
+1425|Aufnahme starten
+1426|Länge
+1427|Flüssige Bildausgabe

@@ -1,0 +1,53 @@
+name: Capture card report
+description: Tell us how Glide works with your capture card, so others know which cards are tested.
+title: "[Capture card] "
+labels: ["capture card"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks! Your report goes into the tested capture card list in the README and in the app.
+        Tip: run **Optimise for my PC** first and paste its result below.
+  - type: input
+    id: card
+    attributes:
+      label: Capture card
+      description: Brand and model, and the name Windows shows (Glide shows it under Quick setup).
+      placeholder: "Elgato 4K X (Windows: Game Capture 4K X)"
+    validations:
+      required: true
+  - type: dropdown
+    id: works
+    attributes:
+      label: Does it work?
+      options:
+        - "Yes, everything works"
+        - "Mostly (see notes)"
+        - "No"
+    validations:
+      required: true
+  - type: input
+    id: connection
+    attributes:
+      label: Connection and capture format
+      placeholder: "USB 3.2 Gen 2 on the motherboard, 4K60 NV12 / 1080p60 P010"
+  - type: input
+    id: console
+    attributes:
+      label: Console and game
+      placeholder: "PS5 Pro, GTA VI (30 FPS mode)"
+  - type: input
+    id: pc
+    attributes:
+      label: Graphics card and Glide version
+      placeholder: "RTX 4070, Glide 2.2.0"
+  - type: textarea
+    id: optimise
+    attributes:
+      label: Optimise for my PC result (optional)
+      description: The best combination and its frame rate, 1% low and latency.
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Anything that needed a setting change (HDCP, 60 Hz, format), or what went wrong.

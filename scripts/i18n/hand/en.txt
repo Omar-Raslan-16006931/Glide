@@ -1,0 +1,1428 @@
+0|  ·  FEC recovered 
+1|  ·  bitrate 
+2|  ·  decode 
+3|  ·  dropped 
+4|  ·  keyframe requests 
+5|  ·  queued 
+6|  ·  received 
+7|  ·  round trip 
+8|  ·  unrecovered 
+9| (added after NR 
+10| (max 4 layers)
+11| (max 6 layers)
+12| (not recommended)
+13| / 4 areas
+14| / decoded 
+15| ch
+16| fps  ·  dropped 
+17| fps  ·  packets 
+18| frames
+19| items
+20| layers in sequence
+21| ms (GPU, last-second average)
+22| ms (last second)
+23| ms / frame
+24| nodes · 
+25| share
+26| · bypass
+27| · bypassed
+28| · calibrating
+29| · current default
+30| · current file, about 
+31| · downmix
+32| · hue
+33| · max 4 layers)
+34| · node
+35| · off
+36| · paused
+37| · reset
+38| · restore
+39| · saturation
+40| · strength 
+41| · temporal 4x (experimental)
+42| · temporal T2x (experimental)
+43| · waiting 
+44| → Suggested: 
+45|(shared)
+46|(unnamed device)
+47|+  Add NR layer
+48|+  Add beauty layer
+49|, enter the sign-in code below:
+50|0 = follow the source
+51|0 = no highlight roll-off
+52|0 = no limit
+53|1 min
+54|10 min
+55|1080p · default
+56|15 s
+57|2 items
+58|2 min
+59|30 s
+60|4 items
+61|5 items
+62|5 min
+63|6 items
+64|8-digit pairing code
+65|; current: 
+66|AI enhancement
+67|AI picture enhancement
+68|AMD optical flow
+69|AMD performance
+70|About
+71|Accent color
+72|Account
+73|Account sign-in · experimental
+74|Accumulated flow · default
+75|Accumulated flow+
+76|Active
+77|Add
+78|Add an RTX Video HDR node first
+79|Add an anti-aliasing node first
+80|Add current file
+81|Add files
+82|Add files to playlist
+83|Add manually
+84|Add node
+85|Add or drop several videos
+86|Add someone's preset
+87|Add the files to export first
+88|Add to export queue
+89|Adjusting
+90|Adjustment method
+91|Administrator approval cancelled
+92|Advanced: precise parameters
+93|Align to source window
+94|Alipay
+95|All GPUs
+96|All skin
+97|Allow tearing
+98|Also compute on this GPU
+99|Also play sound on the host
+100|Always show
+101|Always the last step
+102|Analyzing…
+103|Anti-aliasing
+104|Anti-aliasing 2
+105|Anti-flicker level
+106|Appearance
+107|Applies when a video is opened
+108|Apply
+109|Apply preset…
+110|Apply settings and reconnect
+111|Area expansion
+112|Aspect ratio
+113|Audio
+114|Audio monitoring
+115|Audio offset
+116|Audio output not opened yet
+117|Audio settings
+118|Audio settings…
+119|Audio sync
+120|Audio tracks
+121|Audio/video sync
+122|Auto
+123|Auto (by load)
+124|Auto (discrete GPU)
+125|Auto estimate
+126|Auto mask · experimental
+127|Auto-align
+128|Auto-align by audio track
+129|Auto-aligning
+130|Auto-hide
+131|Auto-reconnect
+132|Auto-select on playback
+133|Automatic control amount
+134|Automatic deinterlacing
+135|Automatic display sync
+136|Automatic removal
+137|Automatic · 
+138|Automatically resume on startup
+139|Available
+140|Average 
+141|Back / forward 5 seconds
+142|Back to list
+143|Background bar
+144|Background gradient strength
+145|Balance
+146|Balanced
+147|Balanced brightness
+148|Basic controls
+149|Bass boost
+150|Beauty
+151|Beauty 2
+152|Beauty 3
+153|Beauty 4
+154|Beauty 5
+155|Beauty 6
+156|Beauty layer 
+157|Beauty presets
+158|Before enhancement
+159|Bilibili
+160|Bitrate
+161|Bitrate (Mbps)
+162|Bitstream first
+163|Black
+164|Black and white
+165|Blackmagic native capture
+166|Blacks
+167|Blending
+168|Blue
+169|Blue primary
+170|Bright
+171|Bright room
+172|Bright-room compensation
+173|Brightness
+174|Brightness balance
+175|Brightness change
+176|Brightness max
+177|Brightness min
+178|Budget 
+179|Buffering
+180|Built-in
+181|Buy the author a coffee
+182|CPU software
+183|Calibrate
+184|Calibrating…
+185|Can be saved
+186|Cancel
+187|Cancel image batch
+188|Cancelled · can start again
+189|Cannot detect
+190|Capture
+191|Capture card
+192|Capture card settings
+193|Capture card settings…
+194|Capture card · 
+195|Capture method
+196|Capture target
+197|Chain is valid
+198|Change tolerance
+199|Changes show here live.
+200|Change…
+201|Channels
+202|Check
+203|Check and select
+204|Check for updates
+205|Checking…
+206|Checking… playback continues
+207|Choose
+208|Choose a capture target first
+209|Choose a frame rate
+210|Choose a pixel format
+211|Choose a resolution
+212|Choose a resolution first
+213|Choose a save folder…
+214|Choose at least one item
+215|Choose export folder
+216|Choose images to process
+217|Choose screenshot folder
+218|Choose the recording folder
+219|Choose tracks
+220|Choose…
+221|Chosen device (not connected)
+222|Chroma protection
+223|Cinema
+224|Cinematic
+225|Cinematic · no HUD protection
+226|Circle 
+227|Clarity
+228|Clear
+229|Clear film memory
+230|Clear memory
+231|Clear waiting
+232|Click the picture
+233|Click to locate
+234|Close
+235|Close window
+236|Coarse
+237|Code copied
+238|Codec
+239|Collapse
+240|Color
+241|Color change
+242|Color grading
+243|Color preset exported
+244|Color presets
+245|Color settings
+246|Color settings copied
+247|Color · instance 
+248|Combine content and room
+249|Community groups
+250|Compare
+251|Compatible
+252|Completion sound
+253|Components and licenses
+254|Compression needed
+255|Confirm installation
+256|Confirm uninstall
+257|Connect
+258|Connect and start
+259|Connect to this input
+260|Connected
+261|Connecting
+262|Connecting to PS5…
+263|Console
+264|Container
+265|Content: dark and bright
+266|Content: flat older transfer
+267|Content: mostly dark
+268|Content: standard
+269|Content: strong highlights
+270|Continue export
+271|Continue last
+272|Contrast
+273|Controller
+274|Controller has no gyro
+275|Controller supports gyro
+276|Copy
+277|Copy as a new layer
+278|Copy code
+279|Copy color settings
+280|Copy file
+281|Copy node
+282|Copy this layer
+283|Copy · move · reset · delete
+284|Copy · reset · delete
+285|Copy, then attach to your report
+286|Correction mode
+287|Could not delete the preset
+288|Could not measure
+289|Could not open
+290|Could not open the browser
+291|Could not open the data folder
+292|Could not save
+293|Could not save the shortcut
+294|Could not save the sound setting
+295|Crop (pixels)
+296|Ctrl+Alt+Shift+S to hide
+297|Current offset
+298|Current playback settings
+299|Curve is off
+300|Curve, readings and guidance
+301|Curves
+302|Custom
+303|Custom EQ
+304|Custom cap
+305|Custom cap (FPS)
+306|Custom order
+307|Custom playback speed
+308|Custom resolution
+309|Custom…
+310|D3D12VA hardware
+311|DLSS Frame Generation
+312|DLSS model
+313|DLSS performance mode
+314|Damaged picture handling
+315|Dark and bright
+316|Dark room
+317|Darkening change
+318|Decode
+319|Default
+320|Default subtitle size
+321|Dehaze
+322|Delete
+323|Delete "
+324|Delete node
+325|Delete this game profile
+326|Delete this layer
+327|DengXian
+328|Detail protection
+329|Detection level
+330|Device
+331|Device buffers
+332|Device frame rate (FPS)
+333|Device not connected
+334|Device properties
+335|Diagnostics
+336|Diagnostics copied
+337|Did not actually generate frames
+338|Did not start
+339|Disabled
+340|Disconnect
+341|Disconnect capture
+342|Display
+343|Display memory cleared
+344|Display peak
+345|Display peak (nit)
+346|Display sync
+347|Display variable refresh active
+348|Distance from bottom
+349|Dolby / DTS bitstream
+350|Don't keep
+351|Don't monitor audio
+352|Don't wait
+353|Done
+354|Double super resolution
+355|Douyin
+356|Download —
+357|Draft not run
+358|Draw circle
+359|Draw rectangle
+360|Driver default
+361|Driver input
+362|Driver settings
+363|Drop to append to playlist
+364|Duplicate removal off
+365|Edge Aegis
+366|Edge Aegis (anti-jelly)
+367|Edge feather
+368|Edge softness
+369|Edge threshold
+370|Edit
+371|Effect chain
+372|Effects
+373|Embedded
+374|Embedded subtitles
+375|Empty
+376|Enable correction
+377|Enabled
+378|Enabled (HDR10)
+379|Encoded 
+380|Endpoint open
+381|Enhanced
+382|Enhanced (preview)
+383|Enhancement change
+384|Enhancement preset
+385|Enter a name first
+386|Error
+387|Estimated compensation 
+388|Every frame · 512 px
+389|Exclude all effects
+390|Expand
+391|Experimental
+392|Export
+393|Export 
+394|Export "
+395|Export color preset
+396|Export preset
+397|Export the current picture
+398|Exporting 
+399|Exposure (EV)
+400|External
+401|External subtitles
+402|F11 / Alt+Enter work too
+403|FG off
+404|Face confidence
+405|Face detection
+406|Faces only
+407|Failed to enable
+408|Failed · click to retry
+409|Feather (pixels)
+410|File
+411|Fill and crop
+412|Fill in when the PS5 asks
+413|Fill screen
+414|Fill the window
+415|Film memory cleared
+416|Fine
+417|Finished
+418|Fit
+419|Fit to window
+420|Fixed
+421|Flat older transfer
+422|Flip vertically
+423|Follow
+424|Follow buffer level
+425|Follow system
+426|Follow the author
+427|Follow the display
+428|Follow the enhancement preset
+429|Follow the system default
+430|Font
+431|Font size
+432|Footsteps
+433|Force PCM
+434|Force SDR preview
+435|Format and picture
+436|Frame Gen
+437|Frame generation method
+438|Frame generation motion source
+439|Frame generation paused
+440|Frame rate
+441|Frame rate and pacing
+442|Frame rate cap
+443|Frame sync · off by default
+444|Full
+445|Full presets
+446|Fuller bass, for action scenes
+447|Fullscreen
+448|Fullscreen unlocked
+449|GPU optical flow
+450|GPU priority
+451|GPU stages · 1 s average
+452|GPU usage
+453|GPU usage monitor
+454|Game
+455|Game frame rate
+456|Game frame rate · target
+457|Game mode
+458|Game mode: adjust picture
+459|Game name
+460|Game presets
+461|Game profile
+462|GamePP
+463|Games and programs · 
+464|Gamma
+465|Get Account ID
+466|Global
+467|Go
+468|Green
+469|Green primary
+470|Gyro
+471|HDMI capture device
+472|HDR brightness curve
+473|HDR metadata
+474|HDR output format
+475|Half resolution
+476|Hardware decoding
+477|Hardware decoding only
+478|Headroom 
+479|Hide playback bar
+480|High
+481|High bitrate
+482|High+Low
+483|High+Medium
+484|Highlight guidance
+485|Highlight protection
+486|Highlight start (nit)
+487|Highlights
+488|History rejection
+489|History weight
+490|Hold V to see the original
+491|Hold for original
+492|Hold to see the original
+493|Home
+494|Host
+495|Host 
+496|Host address
+497|Hosts
+498|How to turn on Smooth Motion
+499|Hue
+500|Hue centre
+501|Hue protection
+502|Hue range
+503|Image
+504|Image correction
+505|Image sample statistics
+506|Images (*.png *.jpg *.jpeg)
+507|Import
+508|Import .cube LUT
+509|Import .cube…
+510|Import .vpcolor…
+511|Import color preset
+512|Import folder
+513|Import folder into playlist
+514|Import preset
+515|In I
+516|Inactive: 
+517|Includes
+518|Input
+519|Input color (SDR / HDR)
+520|Input original
+521|Input range
+522|Input · optical flow
+523|Install Glide Virtual Speaker
+524|Installed
+525|Install…
+526|Instant replay
+527|Instant replay saved
+528|Instructions
+529|Intel XeSS · experimental
+530|Interface drawing
+531|Interface language
+532|Interface scale
+533|Internal processing resolution
+534|Invalid edit mode
+535|Invalid key
+536|Keep
+537|Keep all
+538|Keep picture
+539|LAN streaming
+540|LUT file
+541|LUT name is too long
+542|LUT strength
+543|Large
+544|Last
+545|Late P95
+546|Latency measuring
+547|Later
+548|Legacy format list
+549|Legacy format selection
+550|License
+551|Lift dark scenes
+552|Lift range (nit)
+553|Lift shadows
+554|Light
+555|Light green
+556|Light smoothing
+557|Lightness change
+558|Lightness retention
+559|Limited
+560|List
+561|List mode
+562|List presets
+563|Load budget
+564|Load external subtitles
+565|Load external subtitles…
+566|Load file…
+567|Load source
+568|Loaded
+569|Loading
+570|Local compression
+571|Local structure
+572|Local tone
+573|Lock the fullscreen control bar
+574|Log
+575|Log folder unavailable
+576|Low
+577|Low-frequency temporal rebuild
+578|Low-latency queue
+579|Luminance
+580|MP4 · MKV · images
+581|Magenta
+582|Magewell low-latency mode
+583|Main subtitle delay
+584|Main subtitles
+585|Main subtitles are off
+586|Manage
+587|Manage presets
+588|Manage presets in Pro mode…
+589|Manage presets…
+590|Manual
+591|Manual 1/2 · reuse 1 frame in 2
+592|Manual 1/3 · reuse 1 frame in 3
+593|Manual 1/4 · reuse 1 frame in 4
+594|Manual offset
+595|Many strong highlights
+596|Mastering peak (nit)
+597|Match monitor
+598|Max faces
+599|Maximize
+600|Measuring: 
+601|Medium
+602|Medium+Low
+603|Memory and automation
+604|Merge into input
+605|Method
+606|Microphone device
+607|Microphone on its own track
+608|Mid gray
+609|Mid-gray (nit)
+610|Midtones
+611|Minimal
+612|Minimal mode
+613|Minimize
+614|Minimum
+615|Mixer
+616|Mode
+617|Model parameters
+618|Model strength
+619|Modified: newest first
+620|Modified: oldest first
+621|Monitoring overlay compatibility
+622|More colour controls
+623|Mostly dark
+624|Motion estimation quality
+625|Move down
+626|Move up
+627|Multiplier
+628|Must stay below the maximum
+629|Mute
+630|My preset
+631|N/A
+632|NIS sharpening
+633|NR
+634|NR automatic inference reuse
+635|NR enhancement
+636|NR global protected areas
+637|NR is not running
+638|NR layer 
+639|NR layer 1
+640|NR layer 2
+641|NR layer 3
+642|NR layer 4
+643|NR motion source
+644|NR version
+645|NR → SR · all layers
+646|NVIDIA Low Latency
+647|NVIDIA Low Latency · On
+648|NVIDIA NR only
+649|NVIDIA in-game overlay
+650|Name
+651|Name A → Z
+652|Name Z → A
+653|Native
+654|Native pixels
+655|Natural
+656|Natural smoothing
+657|Negative = sound earlier
+658|Network
+659|Network buffer
+660|Neutral color protection
+661|New preset name
+662|Next item
+663|Night mode
+664|No
+665|No FG
+666|No LUT
+667|No NR layer added
+668|No cap
+669|No capture device detected
+670|No capture history yet
+671|No color node
+672|No color presets yet
+673|No compensation
+674|No controller detected
+675|No device selected
+676|No face detected
+677|No frame generation
+678|No frame generation (baseline)
+679|No function switched on
+680|No hard cap is set on the curve
+681|No matching formats
+682|No output
+683|No paired hosts yet
+684|No picture to save
+685|No shrink
+686|No source open
+687|No source to continue yet
+688|No subtitles on screen
+689|No target selected
+690|No timing for this node yet
+691|Node mode
+692|Node preset: 
+693|Node presets
+694|Nodes
+695|None
+696|Normal
+697|Not an 8-digit pairing code
+698|Not connected
+699|Not enabled
+700|Not loaded
+701|Not measured
+702|Not open
+703|Not paired
+704|Not playing
+705|Not reached
+706|Not run
+707|Not set
+708|Not signed in
+709|Not specified
+710|Not supported
+711|Not tested
+712|Not timed
+713|OBS Game Capture compatibility
+714|OK
+715|Off
+716|Offline
+717|Offset
+718|On
+719|On your phone or browser, open 
+720|On · 1 reused in every 
+721|On · automatic
+722|On · strength 
+723|Online
+724|Online · a game is running
+725|Only local files can be opened
+726|Open
+727|Open Windows recording settings
+728|Open a video or image
+729|Open file
+730|Open file / Export page
+731|Open file…
+732|Open folder
+733|Open game preset
+734|Open legacy format list
+735|Open media URL
+736|Open media URL…
+737|Open source page
+738|Open video
+739|Open world · minimap bottom left
+740|Open world · minimap top right
+741|Opening
+742|Opening the capture device…
+743|Opening timed out
+744|Optical flow
+745|Optical flow algorithm
+746|Optical flow · motion estimation
+747|Optimise for my PC
+748|Options
+749|Orange
+750|Original
+751|Original / enhanced comparison
+752|Original face restore
+753|Original only
+754|Original sound
+755|Other console
+756|Out O
+757|Outline
+758|Output
+759|Output 
+760|Output cap
+761|Output cap · currently inactive
+762|Output cap · follow display
+763|Output device
+764|Output device and downmix
+765|Output settings
+766|Output stabilizer · anti-flicker
+767|Output · audio
+768|Over budget
+769|Overall brightness
+770|Overall change strength
+771|Overall strength
+772|PC streaming
+773|PC streaming…
+774|PIN needed
+775|PS5 console
+776|PS5 controller control
+777|PS5 controller control connected
+778|PS5 controller control stopped
+779|PS5 pad
+780|PS5 streaming
+781|PS5 streaming…
+782|PSN account
+783|Page shown at startup
+784|Page switcher
+785|Pair
+786|Pair (first time)
+787|Pair and save
+788|Paired
+789|Pairing cancelled
+790|Pairing is needed before waking.
+791|Pairing settings
+792|Pair…
+793|Parametric curve
+794|Parametric darks
+795|Parametric highlights
+796|Parametric lights
+797|Parametric shadows
+798|Paste a PUSHFPS1: code
+799|Paste color settings
+800|Patreon home
+801|Patreon, WeChat and Alipay
+802|Pause export
+803|Paused
+804|Peak 
+805|Peak brightness (nit)
+806|Peak cap (nit)
+807|Performance
+808|Picture
+809|Picture & sound
+810|Picture from a capture card
+811|Picture style
+812|Pixel format
+813|Play / pause
+814|Play next when finished
+815|Playback
+816|Playback bar shown
+817|Playback failed
+818|Playback speed
+819|Playing
+820|Playlist
+821|Playlist · Import folder
+822|Point curve
+823|Positive values delay the audio
+824|Preparing: 
+825|Present
+826|Preset copied
+827|Preset deleted
+828|Preset name
+829|Preset renamed
+830|Preset: 
+831|Presets
+832|Presets and
+833|Press the new key…
+834|Preview
+835|Preview unavailable
+836|Previous item
+837|Pro mode
+838|Process images in a batch…
+839|Processing order
+840|Processing scale
+841|Processing time
+842|Processing · 
+843|Protect highlights
+844|Protect the HUD
+845|Punch
+846|Purple
+847|Glide Virtual Speaker
+848|Glide color preset (*.vpcolor)
+849|Glide game preset (*.pushfps)
+850|Glide green
+851|Glide preset (*.vpreset)
+852|Quality
+853|Queue 
+854|Quick presets
+855|Quick setup
+856|Quit game
+857|RTX 50 · NVIDIA original
+858|RTX Video SR · High bitrate
+859|RTX Video SR · Standard
+860|RTX Video SR · Streaming
+861|RTX Video Super Resolution
+862|RX 7000 · RedDuke (experimental)
+863|RX 9000 · lmxxf (experimental)
+864|Rate control
+865|Reading tracks…
+866|Realtime
+867|Received 
+868|Receiving frames
+869|Recent
+870|Recommend
+871|Reconnect
+872|Reconnecting
+873|Record
+874|Record audio
+875|Record microphone
+876|Recording bitrate
+877|Recording codec
+878|Recording folder
+879|Recording frame rate
+880|Recording saved
+881|Recovering
+882|Rectangle 
+883|Red
+884|Red primary
+885|Redo
+886|Reduce motion
+887|Reduce processing queue depth
+888|Reduce the first result to
+889|Reference base
+890|Refresh
+891|Refresh devices
+892|Refresh display state
+893|Release to go back
+894|Remember each film
+895|Remember last size
+896|Remember per display
+897|Remember playback position
+898|Remove duplicate frames
+899|Remove from playlist; keep file
+900|Remove pairing
+901|Remove startup default
+902|Rename · copy · delete
+903|Replay length
+904|Report
+905|Report a problem
+906|Requested
+907|Requested bitrate
+908|Requires AMD RX 7000 / 9000
+909|Requires AMD RX 9000
+910|Requires an NVIDIA GPU
+911|Reset
+912|Reset all
+913|Reset channel
+914|Reset equalizer
+915|Reset node
+916|Reset this page
+917|Reset this setting
+918|Reset to default
+919|Residual
+920|Resolution
+921|Resolution and frame rate
+922|Restart
+923|Restart required
+924|Restore area
+925|Restore strength
+926|Resumed
+927|Reuse mode
+928|Round trip 
+929|Running
+930|Runs after the original restore
+931|SDK internal
+932|SDK submit
+933|SDR display, not converted
+934|Sampling
+935|Saturation
+936|Saturation max
+937|Saturation min
+938|Save
+939|Save as
+940|Save as a game profile
+941|Save file
+942|Save game preset
+943|Save instant replay
+944|Save preset
+945|Save timed out
+946|Save to
+947|Saved
+948|Saved device (not connected)
+949|Saved host
+950|Saved host 
+951|Saving…
+952|Scan with WeChat or Alipay
+953|Scanning folders…
+954|Scheduling stepped down
+955|Scheduling wait P95
+956|Screen capture
+957|Screen capture…
+958|Screenshot
+959|Screenshot folder
+960|Search
+961|Search cancelled
+962|Search, e.g. 1920 60 NV12
+963|Second SR algorithm
+964|Second SR target
+965|Second SR tier
+966|Second-pass scale
+967|Secondary subtitles (bilingual)
+968|Secondary subtitles are off
+969|Select from source
+970|Select input
+971|Send to Discord
+972|Sending…
+973|Set as startup default
+974|Set by hand in Professional mode
+975|Settings
+976|Shadow brightness
+977|Shadow lift
+978|Shadow lift (0.01 EV)
+979|Shadow protection
+980|Shadow tint
+981|Shadows
+982|Shadows and highlights
+983|Share
+984|Share this preset
+985|Share to Discord
+986|Sharpness
+987|Shortcut B
+988|Shortcuts
+989|Show all available frame rates
+990|Show as SDR
+991|Show current file
+992|Show in folder
+993|Show latency on screen
+994|Show mask
+995|Show mouse pointer
+996|Show playback bar
+997|Show subtitles
+998|Shown above the main subtitles
+999|Shrink after SR to
+1000|Shrink long lines automatically
+1001|Sign in
+1002|Sign out
+1003|Sign-in PIN
+1004|Signal
+1005|Signed in
+1006|SimHei
+1007|SimSun
+1008|Size: largest first
+1009|Size: smallest first
+1010|Skin brightening
+1011|Skin only
+1012|Skin range · advanced
+1013|Skin smoothing
+1014|Skin value
+1015|Skin · unverified
+1016|Skipped source frames
+1017|Slider keyboard step
+1018|Slight
+1019|Small
+1020|Small elements in every corner
+1021|Smoothing amount
+1022|Smoothing area
+1023|Smoothing radius
+1024|Software
+1025|Software decoding
+1026|Sort
+1027|Sound profile
+1028|Source
+1029|Source code
+1030|Source color retention
+1031|Source size
+1032|Split
+1033|Split highlights
+1034|Split midtones
+1035|Split shadows
+1036|Stabilization strength
+1037|Standard
+1038|Standby
+1039|Start
+1040|Start / stop recording
+1041|Start capture
+1042|Start export 
+1043|Start streaming
+1044|Starting screen capture…
+1045|Startup & window
+1046|Startup buffer
+1047|Startup default
+1048|Startup default preset removed
+1049|Static accumulation
+1050|Stereo
+1051|Stereo downmix
+1052|Stopped
+1053|Streaming
+1054|Streaming (applies on reconnect)
+1055|Strength
+1056|Strength 
+1057|Stretch to fill
+1058|Strict frame generation pacing
+1059|Strong
+1060|Strong highlights
+1061|Style
+1062|Style · experimental
+1063|Submit
+1064|Submit rate
+1065|Subtitle settings
+1066|Subtitle settings…
+1067|Subtitle tracks
+1068|Subtitle's own font
+1069|Subtitles
+1070|Subtitles: off
+1071|Subtitles: on
+1072|Sunshine host
+1073|Super resolution
+1074|Super resolution motion source
+1075|Support the author
+1076|Switch back to list mode?
+1077|Switch to list mode
+1078|Switch to node mode
+1079|Switch to node mode?
+1080|System default microphone
+1081|Takes effect after restart
+1082|Target
+1083|Target frame rate
+1084|Target lines
+1085|Target size
+1086|Temperature (relative)
+1087|Temporal accumulation
+1088|Temporal anti-flicker
+1089|Temporal stability
+1090|Tested
+1091|Tested by Veyra's developer
+1092|Tested with Glide
+1093|Texture
+1094|Texture kept
+1095|The HUD areas were not applied
+1096|The PS5 asks for the sign-in PIN
+1097|The chain has no color node
+1098|The color preset does not exist
+1099|The effect chain is full
+1100|The file does not exist
+1101|The file no longer exists
+1102|The preset needs a name
+1103|The sign-in PIN must be digits.
+1104|The target is no longer valid
+1105|Thin
+1106|This PC's screen resolution
+1107|This is a subtitle preview.
+1108|This mode has no presets yet.
+1109|This source has no subtitles
+1110|Tier
+1111|Time
+1112|Tint
+1113|Toggle Minimal / Pro
+1114|Too few frames to measure
+1115|Tracking smoothing
+1116|Try the video device's own audio
+1117|Turn off springs and transitions
+1118|Type
+1119|UI correction · unverified
+1120|Ultra
+1121|Unavailable
+1122|Unavailable now
+1123|Undo
+1124|Undo last adjustment
+1125|Uninstall…
+1126|Unknown
+1127|Unknown configuration
+1128|Unknown frame generation backend
+1129|Unused
+1130|Update or save as a game profile
+1131|Updating
+1132|Upscaling algorithm
+1133|Use performance model
+1134|User data
+1135|Users in mainland China
+1136|VB-Audio website
+1137|VB-CABLE is already installed
+1138|VFG auto regulation
+1139|VFG quality
+1140|VSync
+1141|Value out of range
+1142|Variable refresh
+1143|Variable refresh · active
+1144|Version 
+1145|Vibrance
+1146|Video
+1147|Video codec
+1148|Video input device
+1149|View
+1150|View license
+1151|View only
+1152|View update
+1153|Viewing
+1154|Visit page
+1155|Vivid
+1156|Voice clarity
+1157|Volume
+1158|Wait for keyframe
+1159|Waiting for samples
+1160|Waiting for signal
+1161|Waiting to export
+1162|Waiting to present
+1163|Waiting to present in-process
+1164|Wake
+1165|Wake cancelled
+1166|WeChat Pay
+1167|Weak
+1168|Web
+1169|White
+1170|White glow
+1171|Whole face
+1172|Window
+1173|Window or display
+1174|Window size at startup
+1175|Windows GPU engine usage (
+1176|Windows HDR
+1177|Windows archive tool not found
+1178|Within range
+1179|Working with VB-CABLE Setup…
+1180|X is the cap
+1181|Xbox streaming
+1182|Xbox streaming…
+1183|Yellow
+1184|Yes
+1185|Zero motion
+1186|e.g. Night gaming
+1187|gyro
+1188|live preview only
+1189|mine
+1190|no gyro
+1191|no shortcut set
+1192|not available in node mode yet
+1193|not enough resources
+1194|not used for HDR processing
+1195|not used with automatic NR size
+1196|scRGB float
+1197|☕ Buy me a coffee · US$5
+1198|日本語
+1199|简
+1200|简体中文
+1201|繁
+1202|繁體中文
+1203|ANR FG · Apex Compute · experimental
+1204|ANR package (*.zip nvngx_dlssg.dll);;All files (*)
+1205|ANR is installed (%1 files). Restart Glide, then pick ANR as the frame generation method
+1206|ANR frame generation is made by Apex Compute and supports GTX 16 series and newer graphics cards. It can't ship with Glide: download the anr-fg package from Apex's GitHub, then choose it here
+1207|ANR frame generation is Apex Neural Rendering by Apex Compute
+1208|ANR frame generation, by Apex Compute
+1209|What Glide is built on, by Likely7
+1210|Download ANR
+1211|Install from download…
+1212|Install Apex's ANR first in Settings → Components & licenses
+1213|Installed. ANR frame generation is made by Apex Compute; pick it as the frame generation method in Professional mode
+1214|Couldn't create a temporary folder
+1215|Couldn't copy the ANR files to %1
+1216|Couldn't unpack the ANR package: %1
+1217|Update…
+1218|Not installed
+1219|Get and install
+1220|There's no ANR nvngx_dlssg.dll in this file. Choose Apex's anr-fg package
+1221|Choose the ANR package you downloaded from Apex Compute
+1222|A %1 FPS game will run at %2 FPS (%3× frame generation)
+1223|%1 is running. It hooks both the interface and the video, which can freeze Glide. Restart Glide to enable compatible rendering: the interface is then drawn in software and %1 only affects the video. Restart now? Current playback or streaming will stop.
+1224|1% low only %1 FPS, not steady enough
+1225|Recommended settings for games like GTA VI, with a sharp minimap and HUD
+1226|Put the Switch 2 in its dock at 60 Hz. Games have no HDCP, so they capture as is.
+1227|On Xbox, choose 60 Hz in Settings → General → TV & display options. Games have no HDCP, so they capture as is.
+1228|A custom curve is set in Professional mode; dragging replaces it
+1229|Midtone brightness; black and white stay put
+1230|Pick a frame rate and picture for console games. Everything else is in Professional mode.
+1231|Games keep the console's own frame rate
+1232|Your console through a capture card, boosted to 60 or 120 FPS by your PC
+1233|Set the console to 60 Hz output. On PlayStation, turn off HDCP in Settings → System → HDMI, or the capture picture stays black.
+1234|Set the console to 60 Hz and turn off HDCP if it has that option, or the capture picture may stay black.
+1235|5-band equalizer, ±12 dB per band
+1236|Save current settings as a preset
+1237|Connect your capture card and get the game picture on screen first, then start
+1238|Off: frame generation only. On: every frame also goes through NVIDIA's neural renderer (DLSS 5 NR) for a sharper picture, at a higher GPU cost
+1239|Less queuing, lower input latency
+1240|Delete “%1”
+1241|Story games and films: the whole picture gets frame generation
+1242|Brings out detail and edges (texture)
+1243|Action · HUD in the bottom corners
+1244|Includes the game frame rate, target frame rate and the “Exclude all effects” areas you drew in Professional mode
+1245|Evens out loud and quiet parts, for late nights
+1246|Reached only %1 FPS
+1247|Minimap or compass in the top right corner
+1248|Speed, gear and minimap in the bottom right corner
+1249|Tests every combination on your real picture and picks the best one
+1250|Tests each frame generation method, AI enhancement and upscaler on your real picture and picks the smoothest, lowest-latency combination
+1251|Copy the code to send to friends or post on Reddit / Discord, or save it as a file
+1252|Most console games run at 30 FPS; pick 60 for performance modes
+1253|Measured PC latency (capture card picture arriving to handing it to the display) and frame rate; the capture card, display and game add their own
+1254|Clearer dialogue and voice chat, without low rumble
+1255|Shooter · HUD in all four corners
+1256|Minimap bottom left, money and wanted level top right. Layout estimated from the GTA series; check it once you play
+1257|Round or square minimap in the bottom left corner
+1258|Health bottom left, weapon and ammo bottom right
+1259|Saved “%1” (%2 HUD areas)
+1260|Deleted “%1”
+1261|Clip copied. Press Ctrl+V in Discord to paste it
+1262|Copied. Paste it into any chat or folder
+1263|Applied “%1”
+1264|Applied “%1”: %2 HUD areas protected. Fine-tune them in Professional mode → Quality → Exclude all effects
+1265|Added “%1”
+1266|Fullscreen locked · Ctrl+L to unlock, Esc to leave fullscreen
+1267|Latency %1 ms
+1268|Latency = time from the capture card picture reaching the PC to it being handed to the display (the PC part only; not the capture card, display or game). The closer the 1% low is to the average, the smoother.
+1269|Adds too much latency (%1 ms)
+1270|The processing chain has no colour stage
+1271|This frame generation method goes up to %1×: a %2 FPS game reaches about %3 FPS
+1272|The recording already has generated frames. Turn frame generation off in Professional mode before exporting it, so frames are not generated twice.
+1273|Save these settings for a game, then switch to them in one click
+1274|Playback bar hidden · move the pointer to the top and click the eye in the dock to bring it back
+1275|Frame generation on the whole picture
+1276|Could not measure the baseline picture: %1
+1277|Fuller lows and highs, light compression
+1278|Best combination: %1. Applied.
+1279|VRAM kept growing in fullscreen during this session. Use windowed playback; reopen the source to test fullscreen again.
+1280|This software is free and open source. If it helps you, you can →
+1281|%1 detected
+1282|RTSS on-screen display service detected
+1283|The RTSS on-screen display service is running. Restart Glide to enable compatible rendering and show the OSD on the video only. Restart now? Current playback or streaming will stop.
+1284|Recommended settings per game, with a sharp minimap and HUD (those areas get no frame generation and no effects)
+1285|No frame generation combination held its target steadily, so your settings were kept. Try a lower target or turn other effects off, then run it again
+1286|Don't switch sources while it runs; you can keep playing
+1287|Settings changed during the measurement
+1288|The picture stopped. Optimising was cancelled and your settings restored
+1289|Brings out footsteps and gunfire, for competitive games
+1290|Green areas keep the console picture as it is, with no frame generation, so text and the minimap stay sharp
+1291|Get the game on screen through your capture card, then start. Glide tests every available combination on your real picture (about 10 seconds each, 1 to 2 minutes in all), measures the real frame rate, 1% low and latency, and picks the best one.
+1292|Racing · speedometer bottom right
+1293|Nobody has reported this card yet; share your results on GitHub
+1294|That isn't a valid Glide preset code
+1295|A built-in preset already uses this name
+1296|This PC can't run this combination
+1297|Capture card dropped %1% of frames
+1298|. Recordings keep it too. Dolby / DTS passthrough is not affected
+1299|Advanced encoding settings
+1300|Rate control, encoder preset, keyframe interval, audio bitrate and container, like OBS output settings. Off uses the standard settings
+1301|VBR: bitrate follows how busy the picture is (standard). CBR: the same bitrate every second, good for uploads. Constant quality: fixed quality, the file size follows the picture
+1302|Constant quality
+1303|Quality level
+1304|1–51; lower is better quality and a bigger file; standard is 22
+1305|Encoder preset
+1306|Further right is better quality but more work for the GPU encoder; standard is 4. Lower it if recordings stutter
+1307|Keyframe interval
+1308|Seconds; shorter is easier to edit and seek, with slightly bigger files; standard is 2
+1309|Audio bitrate
+1310|kbps per audio track; standard is 192
+1311|MP4 plays everywhere (standard). MKV suits editing software; instant replays are always saved as MP4
+1312|Restore standard settings
+1313|If the GPU can't use a combination, the recording switches to the standard settings and tells you
+1314|Restore
+1315|The GPU doesn't support the chosen advanced encoding settings; recording with the standard ones
+1316|G-SYNC or FreeSync: the monitor refreshes when a new frame arrives instead of at a fixed rate, so an uneven frame rate neither tears nor stutters
+1317|HUD in the wrong place?
+1318|HUD protection
+1319|HUD detection failed
+1320|NVIDIA Image Scaling is an open-source upscaling and sharpening filter that works on graphics cards of any brand. Too much sharpening draws white halos along edges
+1321|Console · %1 FPS
+1322|Stop comparison clip
+1323|Clear all
+1324|A keyframe is a complete picture; the frames in between only store what changed. Players and video editors can only start decoding at a keyframe
+1325|Fewer frames wait in line on the graphics card, so the picture reacts sooner after you press a button. NVIDIA graphics cards only
+1326|Detect the HUD on your own game picture, or drag the boxes by hand
+1327|Drag on the picture to draw a new box (up to 4). Drag a box to move it, drag its corners to resize it
+1328|Comparison clip
+1329|The comparison clip has no generated frames, so both halves are the same. Check that frame generation is running
+1330|Parts that stay put, such as the minimap, health and ammo, keep the console’s own pixels and are not interpolated, so they stay sharp. After automatic detection you can drag the boxes to correct them
+1331|HUD protection is off; the whole picture is interpolated
+1332|Applied: %1 areas keep the console’s own pixels
+1333|Help
+1334|The current picture format does not support automatic HUD detection
+1335|Record a 15-second side-by-side video: the console’s own frame rate on the left, Glide on the right
+1336|Found %1 HUD areas. Check the green boxes, drag them to correct them if needed, then click Apply
+1337|Could not read the picture; HUD detection stopped
+1338|Not enough video memory to detect the HUD
+1339|Up to 4 boxes; delete one first
+1340|Recording a %1-second comparison clip: the console’s own frame rate on the left, Glide on the right
+1341|Getting the picture…
+1342|Watching the picture %1 / %2
+1343|Watching the picture for about 5 seconds. Turn the camera or walk around in the game
+1344|The most frames shown per second. With frame generation it holds the output at the target frame rate, so motion is more even
+1345|No HUD found. You can drag on the picture to draw boxes by hand
+1346|No picture arrived. Check that the picture is playing and the Glide window is not minimised
+1347|Nothing is playing, so the HUD cannot be detected
+1348|No picture. Connect a capture card and start playing to adjust the boxes on your own game picture
+1349|Add box
+1350|How many new pictures the game itself draws per second. The console always sends a 60 Hz signal, so a 30 FPS game shows each picture twice. Glide uses this to decide how many frames to generate
+1351|AI removes the blocks and noise that capture card compression leaves, so details look clearer. Separate from frame generation and can be switched on its own
+1352|The picture hardly moved, so the HUD could not be told apart. Turn the camera or move in the game, then try again
+1353|Bitrate is how much data the video uses per second. Rate control decides how the encoder spends it: more data means better quality and a bigger file
+1354|How much effort the encoder spends on each frame. Slower compresses better, so the same file size gives higher quality
+1355|Finds the minimap and HUD automatically and keeps them out of frame generation; you can correct the boxes by hand
+1356|Detect automatically
+1357|Pictures shown per second after frame generation. Generated frames go between two real pictures to make motion smoother; the controller does not respond any faster
+1358|Watches the picture for a few seconds to find the HUD that stays put
+1359|Turn on frame generation first: the comparison clip puts the console’s own frame rate next to the generated picture
+1360|Connect a capture card and start playing first
+1361|Adjust HUD areas
+1362|Turn the camera or walk around: the HUD stays put while the rest moves
+1363|Get a new picture
+1364|A 15-second before/after video
+1365|GTA VI and more, HUD kept sharp
+1366|Theme
+1367|Not available while recording
+1368|Recording…
+1369|Tests every combination, keeps the best
+1370|Detected automatically, adjustable by hand
+1371|Needs a playing picture
+1372|AMD FRC · video frame interpolation · 2X
+1373|NVIDIA G-SYNC setup
+1374|No audio input
+1375|Repair
+1376|Stop music for this launch
+1377|Other desktop
+1378|Click or press any key to skip
+1379|Startup animation
+1380|Connect on start
+1381|Startup music
+1382|Not checked
+1383|Windowed and fullscreen not configured
+1384|Windowed and fullscreen allowed
+1385|Selected
+1386|This profile cannot be changed independently
+1387|Restore original
+1388|Backup does not match the current profile
+1389|Phone slow-motion rate
+1390|Cannot save or remove the backup
+1391|Dusk
+1392|Show region outlines
+1393|Driver profile not confirmed
+1394|Local audio monitoring
+1395|Desktop %1
+1396|Desktop %1 · %2
+1397|Processing driver profile…
+1398|Measure total delay
+1399|Color scheme
+1400|Frames between them
+1401|Always on top
+1402|Classic
+1403|Fullscreen on connect
+1404|Select
+1405|Administrator rights required
+1406|Audio input
+1407|Driver profile is in use
+1408|Sunset City logo
+1409|Stream key
+1410|Platform
+1411|Server
+1412|Go live
+1413|Live
+1414|Stop stream
+1415|Add platform
+1416|Game sound
+1417|Video bitrate
+1418|Custom RTMP
+1419|Paste stream key
+1420|Not started
+1421|Connection failed
+1422|Microphone
+1423|Layout
+1424|Side by side
+1425|Start recording
+1426|Length
+1427|Smooth frame pacing

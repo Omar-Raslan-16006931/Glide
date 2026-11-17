@@ -1,0 +1,39 @@
+Glide for OBS Studio
+======================
+
+What it does
+  Adds a "Glide" source to OBS Studio (28 or newer, Windows 10/11 x64). The source shows
+  Glide's output - your console picture after frame generation and AI enhancement - in any
+  scene, at the frame rate Glide produces. It can also start Glide for you.
+
+  Glide itself does the processing; it must be installed (Install-Glide.cmd from the
+  Glide download). This plugin brings its picture into OBS.
+
+Install
+  1. Close OBS Studio.
+  2. Double-click Install-Glide-OBS.cmd. No administrator rights needed.
+  3. Start OBS Studio. In a scene, click + under Sources and pick "Glide".
+
+Using it
+  - "Open Glide" (in the source's properties, or Tools > Open Glide) starts Glide with
+    OBS game capture support, or brings it to the front when it already runs.
+  - Capture method "Game capture" receives every generated frame (recommended). If the source
+    stays empty, choose "Window capture". If you start Glide yourself, turn on
+    Settings > Compatible > OBS Game Capture compatibility in Glide once and restart it.
+  - Sound: add an "Application Audio Capture" source and pick Glide.exe.
+  - Glide installed somewhere else: set "Glide.exe location" in the source's properties.
+
+Where it goes
+  %ProgramData%\obs-studio\plugins\pushfps-obs\pushfps-obs.dll for OBS Studio 33 and newer (the
+  plugin layout OBS 34 requires), plus a copy in bin\64bit for OBS Studio 28 to 32. OBS 33+ loads
+  the new one, so the Plugin Manager does not list Glide as Legacy.
+
+Uninstall
+  Close OBS Studio and run:  Install-Glide-OBS.cmd -Uninstall
+
+License
+  Glide for OBS is free software under the GNU GPL, version 3 or (at your option) any later
+  version, and comes with ABSOLUTELY NO WARRANTY. See LICENSE.txt and NOTICE.md in this folder.
+  Source code: https://github.com/DosukaSOL/PushFPS (folder obs-plugin, at the tag of this release).
+  Glide is a modified version of Veyra by Likely7: https://github.com/Likely7/Veyra-NRVideo
+  OBS Studio is by the OBS Project (GPL-2.0-or-later); this plugin only uses its public API.

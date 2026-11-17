@@ -1,0 +1,1430 @@
+0|·  FEC odzyskane
+1|·  przepływność
+2|·  dekodowanie
+3|·  utracone
+4|·  żądania klatki kluczowej
+5|·  w kolejce
+6|·  odebrane
+7|·  czas w obie strony
+8|·  nieodzyskane
+9|(dodane po NR
+10|(maks. 4 warstwy)
+11|(maks. 6 warstw)
+12|(niezalecane)
+13|/ 4 obszary
+14|/ zdekodowane
+15|kan.
+16|fps  ·  utracone
+17|fps  ·  pakiety
+18|klatek
+19|pozycji
+20|warstw po kolei
+21|ms (GPU, średnia z ostatniej sekundy)
+22|ms (ostatnia sekunda)
+23|ms / klatkę
+24|węzłów ·
+25|udział
+26|· pominięte
+27|· pominięte
+28|· kalibracja
+29|· obecny domyślny
+30|· bieżący plik, około
+31|· downmix
+32|· odcień
+33|· maks. 4 warstwy)
+34|· węzeł
+35|· wył.
+36|· wstrzymane
+37|· resetuj
+38|· przywróć
+39|· nasycenie
+40|· siła
+41|· czasowe 4x (eksperymentalne)
+42|· czasowe T2x (eksperymentalne)
+43|· czeka
+44|→ Propozycja:
+45|(udostępnione)
+46|(urządzenie bez nazwy)
+47|+  Dodaj warstwę NR
+48|+  Dodaj warstwę upiększania
+49|, wpisz poniżej kod logowania:
+50|0 = zgodnie ze źródłem
+51|0 = bez łagodzenia świateł
+52|0 = bez limitu
+53|1 min
+54|10 min
+55|1080p · domyślnie
+56|15 s
+57|2 pozycje
+58|2 min
+59|30 s
+60|4 pozycje
+61|5 pozycji
+62|5 min
+63|6 pozycji
+64|8-cyfrowy kod parowania
+65|; obecnie:
+66|Ulepszanie AI
+67|Ulepszanie obrazu AI
+68|Przepływ optyczny AMD
+69|Wydajność AMD
+70|O programie
+71|Kolor akcentu
+72|Konto
+73|Logowanie na konto · eksperymentalne
+74|Przepływ skumulowany · domyślny
+75|Przepływ skumulowany+
+76|Aktywne
+77|Dodaj
+78|Najpierw dodaj węzeł RTX Video HDR
+79|Najpierw dodaj węzeł wygładzania krawędzi
+80|Dodaj bieżący plik
+81|Dodaj pliki
+82|Dodaj pliki do playlisty
+83|Dodaj ręcznie
+84|Dodaj węzeł
+85|Dodaj lub upuść kilka filmów
+86|Dodaj czyjś preset
+87|Najpierw dodaj pliki do eksportu
+88|Dodaj do kolejki eksportu
+89|Dostosowywanie
+90|Metoda dostosowania
+91|Anulowano zgodę administratora
+92|Zaawansowane: dokładne parametry
+93|Wyrównaj do okna źródła
+94|Alipay
+95|Wszystkie GPU
+96|Cała skóra
+97|Zezwól na tearing
+98|Licz też na tym GPU
+99|Odtwarzaj dźwięk także na hoście
+100|Zawsze pokazuj
+101|Zawsze ostatni krok
+102|Analizowanie…
+103|Wygładzanie krawędzi
+104|Wygładzanie krawędzi 2
+105|Poziom redukcji migotania
+106|Wygląd
+107|Działa po otwarciu filmu
+108|Zastosuj
+109|Zastosuj preset…
+110|Zastosuj ustawienia i połącz ponownie
+111|Rozszerzenie obszaru
+112|Proporcje obrazu
+113|Dźwięk
+114|Odsłuch dźwięku
+115|Przesunięcie dźwięku
+116|Wyjście audio jeszcze nieotwarte
+117|Ustawienia dźwięku
+118|Ustawienia dźwięku…
+119|Synchronizacja dźwięku
+120|Ścieżki dźwiękowe
+121|Synchronizacja dźwięku i obrazu
+122|Auto
+123|Auto (wg obciążenia)
+124|Auto (osobne GPU)
+125|Oszacuj automatycznie
+126|Maska automatyczna · eksperymentalne
+127|Wyrównaj automatycznie
+128|Wyrównaj automatycznie wg ścieżki dźwiękowej
+129|Wyrównywanie
+130|Ukrywaj automatycznie
+131|Łącz ponownie automatycznie
+132|Wybieraj automatycznie przy odtwarzaniu
+133|Wielkość sterowania automatycznego
+134|Automatyczne usuwanie przeplotu
+135|Automatyczna synchronizacja ekranu
+136|Automatyczne usuwanie
+137|Automatycznie ·
+138|Wznawiaj automatycznie po uruchomieniu
+139|Dostępne
+140|Średnio
+141|5 sekund wstecz / do przodu
+142|Wróć do listy
+143|Pasek tła
+144|Siła gradientu tła
+145|Balans
+146|Zrównoważony
+147|Zrównoważona jasność
+148|Podstawowe sterowanie
+149|Wzmocnienie basu
+150|Upiększanie
+151|Upiększanie 2
+152|Upiększanie 3
+153|Upiększanie 4
+154|Upiększanie 5
+155|Upiększanie 6
+156|Warstwa upiększania
+157|Presety upiększania
+158|Przed ulepszeniem
+159|Bilibili
+160|Przepływność
+161|Przepływność (Mb/s)
+162|Najpierw bitstream
+163|Czarny
+164|Czarno-biały
+165|Natywne przechwytywanie Blackmagic
+166|Czernie
+167|Mieszanie
+168|Niebieski
+169|Niebieski kolor podstawowy
+170|Jasny
+171|Jasny pokój
+172|Kompensacja jasnego pokoju
+173|Jasność
+174|Balans jasności
+175|Zmiana jasności
+176|Jasność maks.
+177|Jasność min.
+178|Budżet
+179|Buforowanie
+180|Wbudowane
+181|Postaw autorowi kawę
+182|Oprogramowanie CPU
+183|Kalibruj
+184|Kalibrowanie…
+185|Można zapisać
+186|Anuluj
+187|Anuluj partię obrazów
+188|Anulowano · można zacząć od nowa
+189|Nie można wykryć
+190|Przechwytywanie
+191|Karta przechwytująca
+192|Ustawienia karty przechwytującej
+193|Ustawienia karty przechwytującej…
+194|Karta przechwytująca ·
+195|Metoda przechwytywania
+196|Cel przechwytywania
+197|Łańcuch jest poprawny
+198|Tolerancja zmian
+199|Zmiany widać tu od razu.
+200|Zmień…
+201|Kanały
+202|Sprawdź
+203|Sprawdź i wybierz
+204|Sprawdź aktualizacje
+205|Sprawdzanie…
+206|Sprawdzanie… odtwarzanie trwa
+207|Wybierz
+208|Najpierw wybierz cel przechwytywania
+209|Wybierz liczbę klatek
+210|Wybierz format pikseli
+211|Wybierz rozdzielczość
+212|Najpierw wybierz rozdzielczość
+213|Wybierz folder zapisu…
+214|Wybierz co najmniej jedną pozycję
+215|Wybierz folder eksportu
+216|Wybierz obrazy do przetworzenia
+217|Wybierz folder zrzutów ekranu
+218|Wybierz folder nagrań
+219|Wybierz ścieżki
+220|Wybierz…
+221|Wybrane urządzenie (niepodłączone)
+222|Ochrona chrominancji
+223|Kino
+224|Filmowy
+225|Filmowy · bez ochrony HUD
+226|Koło
+227|Klarowność
+228|Wyczyść
+229|Wyczyść pamięć filmu
+230|Wyczyść pamięć
+231|Wyczyść oczekujące
+232|Kliknij obraz
+233|Kliknij, aby znaleźć
+234|Zamknij
+235|Zamknij okno
+236|Zgrubnie
+237|Skopiowano kod
+238|Kodek
+239|Zwiń
+240|Kolor
+241|Zmiana koloru
+242|Korekcja kolorów
+243|Wyeksportowano preset kolorów
+244|Presety kolorów
+245|Ustawienia kolorów
+246|Skopiowano ustawienia kolorów
+247|Kolor · instancja
+248|Połącz treść i pokój
+249|Grupy społeczności
+250|Porównaj
+251|Zgodny
+252|Dźwięk po zakończeniu
+253|Składniki i licencje
+254|Wymagana kompresja
+255|Potwierdź instalację
+256|Potwierdź odinstalowanie
+257|Połącz
+258|Połącz i uruchom
+259|Połącz z tym wejściem
+260|Połączono
+261|Łączenie
+262|Łączenie z PS5…
+263|Konsola
+264|Kontener
+265|Treść: ciemna i jasna
+266|Treść: płaski stary transfer
+267|Treść: głównie ciemna
+268|Treść: standardowa
+269|Treść: mocne światła
+270|Kontynuuj eksport
+271|Kontynuuj ostatni
+272|Kontrast
+273|Kontroler
+274|Kontroler nie ma żyroskopu
+275|Kontroler obsługuje żyroskop
+276|Kopiuj
+277|Kopiuj jako nową warstwę
+278|Kopiuj kod
+279|Kopiuj ustawienia kolorów
+280|Kopiuj plik
+281|Kopiuj węzeł
+282|Kopiuj tę warstwę
+283|Kopiuj · przenieś · resetuj · usuń
+284|Kopiuj · resetuj · usuń
+285|Skopiuj i dołącz do zgłoszenia
+286|Tryb korekcji
+287|Nie udało się usunąć presetu
+288|Nie udało się zmierzyć
+289|Nie udało się otworzyć
+290|Nie udało się otworzyć przeglądarki
+291|Nie udało się otworzyć folderu danych
+292|Nie udało się zapisać
+293|Nie udało się zapisać skrótu
+294|Nie udało się zapisać ustawienia dźwięku
+295|Przycięcie (piksele)
+296|Ctrl+Alt+Shift+S, aby ukryć
+297|Bieżące przesunięcie
+298|Bieżące ustawienia odtwarzania
+299|Krzywa jest wyłączona
+300|Krzywa, odczyty i wskazówki
+301|Krzywe
+302|Własne
+303|Własny korektor
+304|Własny limit
+305|Własny limit (FPS)
+306|Własna kolejność
+307|Własna prędkość odtwarzania
+308|Własna rozdzielczość
+309|Własne…
+310|Sprzęt D3D12VA
+311|DLSS Frame Generation
+312|Model DLSS
+313|Tryb wydajności DLSS
+314|Obsługa uszkodzonego obrazu
+315|Ciemne i jasne
+316|Ciemny pokój
+317|Zmiana przy przyciemnianiu
+318|Dekodowanie
+319|Domyślne
+320|Domyślny rozmiar napisów
+321|Usuwanie zamglenia
+322|Usuń
+323|Usuń "
+324|Usuń węzeł
+325|Usuń ten profil gry
+326|Usuń tę warstwę
+327|DengXian
+328|Ochrona szczegółów
+329|Poziom wykrywania
+330|Urządzenie
+331|Bufory urządzenia
+332|Liczba klatek urządzenia (FPS)
+333|Urządzenie niepodłączone
+334|Właściwości urządzenia
+335|Diagnostyka
+336|Skopiowano diagnostykę
+337|Nie wygenerowało żadnych klatek
+338|Nie uruchomiono
+339|Wyłączone
+340|Rozłącz
+341|Rozłącz przechwytywanie
+342|Ekran
+343|Wyczyszczono pamięć ekranu
+344|Szczyt ekranu
+345|Szczyt ekranu (nit)
+346|Synchronizacja ekranu
+347|Zmienne odświeżanie ekranu aktywne
+348|Odległość od dołu
+349|Bitstream Dolby / DTS
+350|Nie zachowuj
+351|Bez odsłuchu dźwięku
+352|Nie czekaj
+353|Gotowe
+354|Podwójna superrozdzielczość
+355|Douyin
+356|Pobierz —
+357|Szkic nie został uruchomiony
+358|Rysuj koło
+359|Rysuj prostokąt
+360|Domyślne sterownika
+361|Wejście sterownika
+362|Ustawienia sterownika
+363|Upuść, aby dodać do playlisty
+364|Usuwanie duplikatów wyłączone
+365|Edge Aegis
+366|Edge Aegis (przeciw galaretce)
+367|Wtapianie krawędzi
+368|Miękkość krawędzi
+369|Próg krawędzi
+370|Edytuj
+371|Łańcuch efektów
+372|Efekty
+373|Osadzone
+374|Napisy osadzone
+375|Puste
+376|Włącz korekcję
+377|Włączone
+378|Włączone (HDR10)
+379|Zakodowane
+380|Punkt końcowy otwarty
+381|Ulepszony
+382|Ulepszony (podgląd)
+383|Zmiana ulepszenia
+384|Preset ulepszenia
+385|Najpierw wpisz nazwę
+386|Błąd
+387|Szacowana kompensacja
+388|Każda klatka · 512 px
+389|Wyklucz ze wszystkich efektów
+390|Rozwiń
+391|Eksperymentalne
+392|Eksportuj
+393|Eksportuj
+394|Eksportuj "
+395|Eksportuj preset kolorów
+396|Eksportuj preset
+397|Eksportuj bieżący obraz
+398|Eksportowanie
+399|Ekspozycja (EV)
+400|Zewnętrzne
+401|Napisy zewnętrzne
+402|F11 / Alt+Enter też działają
+403|FG wył.
+404|Pewność twarzy
+405|Wykrywanie twarzy
+406|Tylko twarze
+407|Nie udało się włączyć
+408|Błąd · kliknij, aby ponowić
+409|Wtapianie (piksele)
+410|Plik
+411|Wypełnij i przytnij
+412|Wpisz, gdy PS5 o to poprosi
+413|Wypełnij ekran
+414|Wypełnij okno
+415|Wyczyszczono pamięć filmu
+416|Dokładnie
+417|Zakończono
+418|Dopasuj
+419|Dopasuj do okna
+420|Stałe
+421|Płaski stary transfer
+422|Odwróć w pionie
+423|Zgodnie z
+424|Zgodnie z poziomem bufora
+425|Zgodnie z systemem
+426|Obserwuj autora
+427|Zgodnie z ekranem
+428|Zgodnie z presetem ulepszenia
+429|Zgodnie z ustawieniem systemu
+430|Czcionka
+431|Rozmiar czcionki
+432|Kroki
+433|Wymuś PCM
+434|Wymuś podgląd SDR
+435|Format i obraz
+436|Frame Gen
+437|Metoda generowania klatek
+438|Źródło ruchu generowania klatek
+439|Generowanie klatek wstrzymane
+440|Liczba klatek
+441|Liczba klatek i tempo
+442|Limit liczby klatek
+443|Synchronizacja klatek · domyślnie wył.
+444|Pełny
+445|Pełne presety
+446|Pełniejszy bas, do scen akcji
+447|Pełny ekran
+448|Pełny ekran odblokowany
+449|Przepływ optyczny GPU
+450|Priorytet GPU
+451|Etapy GPU · średnia z 1 s
+452|Użycie GPU
+453|Monitor użycia GPU
+454|Gra
+455|Liczba klatek gry
+456|Liczba klatek gry · cel
+457|Tryb gry
+458|Tryb gry: dostosuj obraz
+459|Nazwa gry
+460|Presety gier
+461|Profil gry
+462|GamePP
+463|Gry i programy ·
+464|Gamma
+465|Pobierz ID konta
+466|Globalne
+467|Przejdź
+468|Zielony
+469|Zielony kolor podstawowy
+470|Żyroskop
+471|Urządzenie przechwytujące HDMI
+472|Krzywa jasności HDR
+473|Metadane HDR
+474|Format wyjścia HDR
+475|Połowa rozdzielczości
+476|Dekodowanie sprzętowe
+477|Tylko dekodowanie sprzętowe
+478|Zapas
+479|Ukryj pasek odtwarzania
+480|Wysoki
+481|Wysoka przepływność
+482|Wysoki+Niski
+483|Wysoki+Średni
+484|Wskazówki dla świateł
+485|Ochrona świateł
+486|Początek świateł (nit)
+487|Światła
+488|Odrzucanie historii
+489|Waga historii
+490|Przytrzymaj V, aby zobaczyć oryginał
+491|Przytrzymaj dla oryginału
+492|Przytrzymaj, aby zobaczyć oryginał
+493|Start
+494|Host
+495|Host
+496|Adres hosta
+497|Hosty
+498|Jak włączyć Smooth Motion
+499|Odcień
+500|Środek odcienia
+501|Ochrona odcienia
+502|Zakres odcienia
+503|Obraz
+504|Korekcja obrazu
+505|Statystyki próbek obrazu
+506|Obrazy (*.png *.jpg *.jpeg)
+507|Importuj
+508|Importuj LUT .cube
+509|Importuj .cube…
+510|Importuj .vpcolor…
+511|Importuj preset kolorów
+512|Importuj folder
+513|Importuj folder do playlisty
+514|Importuj preset
+515|Wejście I
+516|Nieaktywne:
+517|Zawiera
+518|Wejście
+519|Kolor wejścia (SDR / HDR)
+520|Oryginał wejścia
+521|Zakres wejścia
+522|Wejście · przepływ optyczny
+523|Zainstaluj Glide Virtual Speaker
+524|Zainstalowano
+525|Zainstaluj…
+526|Natychmiastowa powtórka
+527|Zapisano natychmiastową powtórkę
+528|Instrukcje
+529|Intel XeSS · eksperymentalne
+530|Rysowanie interfejsu
+531|Język interfejsu
+532|Skala interfejsu
+533|Wewnętrzna rozdzielczość przetwarzania
+534|Nieprawidłowy tryb edycji
+535|Nieprawidłowy klawisz
+536|Zachowaj
+537|Zachowaj wszystko
+538|Zachowaj obraz
+539|Strumieniowanie w sieci LAN
+540|Plik LUT
+541|Nazwa LUT jest za długa
+542|Siła LUT
+543|Duży
+544|Ostatni
+545|Opóźnienie P95
+546|Pomiar opóźnienia
+547|Później
+548|Stara lista formatów
+549|Stary wybór formatu
+550|Licencja
+551|Rozjaśnij ciemne sceny
+552|Zakres rozjaśnienia (nit)
+553|Rozjaśnij cienie
+554|Jasny
+555|Jasnozielony
+556|Lekkie wygładzanie
+557|Zmiana jasności tonów
+558|Zachowanie jasności
+559|Ograniczony
+560|Lista
+561|Tryb listy
+562|Presety listy
+563|Budżet obciążenia
+564|Wczytaj napisy zewnętrzne
+565|Wczytaj napisy zewnętrzne…
+566|Wczytaj plik…
+567|Wczytaj źródło
+568|Wczytano
+569|Wczytywanie
+570|Kompresja lokalna
+571|Struktura lokalna
+572|Ton lokalny
+573|Zablokuj pasek sterowania na pełnym ekranie
+574|Dziennik
+575|Folder dziennika niedostępny
+576|Niski
+577|Rekonstrukcja czasowa niskich częstotliwości
+578|Kolejka o niskim opóźnieniu
+579|Luminancja
+580|MP4 · MKV · obrazy
+581|Magenta
+582|Tryb niskiego opóźnienia Magewell
+583|Opóźnienie głównych napisów
+584|Główne napisy
+585|Główne napisy są wyłączone
+586|Zarządzaj
+587|Zarządzaj presetami
+588|Zarządzaj presetami w trybie Pro…
+589|Zarządzaj presetami…
+590|Ręcznie
+591|Ręcznie 1/2 · użyj ponownie 1 z 2 klatek
+592|Ręcznie 1/3 · użyj ponownie 1 z 3 klatek
+593|Ręcznie 1/4 · użyj ponownie 1 z 4 klatek
+594|Przesunięcie ręczne
+595|Wiele mocnych świateł
+596|Szczyt masteringu (nit)
+597|Jak monitor
+598|Maks. twarzy
+599|Maksymalizuj
+600|Pomiar:
+601|Średni
+602|Średni+Niski
+603|Pamięć i automatyka
+604|Scal z wejściem
+605|Metoda
+606|Mikrofon
+607|Mikrofon na osobnej ścieżce
+608|Średnia szarość
+609|Średnia szarość (nit)
+610|Półtony
+611|Minimalny
+612|Tryb minimalny
+613|Minimalizuj
+614|Minimum
+615|Mikser
+616|Tryb
+617|Parametry modelu
+618|Siła modelu
+619|Zmienione: najnowsze najpierw
+620|Zmienione: najstarsze najpierw
+621|Zgodność z nakładkami monitorującymi
+622|Więcej ustawień koloru
+623|Głównie ciemne
+624|Jakość szacowania ruchu
+625|Przenieś w dół
+626|Przenieś w górę
+627|Mnożnik
+628|Musi być poniżej maksimum
+629|Wycisz
+630|Mój preset
+631|b.d.
+632|Wyostrzanie NIS
+633|NR
+634|Automatyczne ponowne użycie inferencji NR
+635|Ulepszenie NR
+636|Globalne obszary chronione NR
+637|NR nie działa
+638|Warstwa NR
+639|Warstwa NR 1
+640|Warstwa NR 2
+641|Warstwa NR 3
+642|Warstwa NR 4
+643|Źródło ruchu NR
+644|Wersja NR
+645|NR → SR · wszystkie warstwy
+646|NVIDIA Low Latency
+647|NVIDIA Low Latency · Wł.
+648|Tylko NVIDIA NR
+649|Nakładka NVIDIA w grze
+650|Nazwa
+651|Nazwa A → Z
+652|Nazwa Z → A
+653|Natywny
+654|Natywne piksele
+655|Naturalny
+656|Naturalne wygładzanie
+657|Ujemne = dźwięk wcześniej
+658|Sieć
+659|Bufor sieci
+660|Ochrona kolorów neutralnych
+661|Nazwa nowego presetu
+662|Następna pozycja
+663|Tryb nocny
+664|Nie
+665|Bez FG
+666|Bez LUT
+667|Nie dodano warstwy NR
+668|Bez limitu
+669|Nie wykryto urządzenia przechwytującego
+670|Brak historii przechwytywania
+671|Brak węzła koloru
+672|Brak presetów kolorów
+673|Bez kompensacji
+674|Nie wykryto kontrolera
+675|Nie wybrano urządzenia
+676|Nie wykryto twarzy
+677|Bez generowania klatek
+678|Bez generowania klatek (punkt odniesienia)
+679|Żadna funkcja nie jest włączona
+680|Na krzywej nie ma sztywnego limitu
+681|Brak pasujących formatów
+682|Brak wyjścia
+683|Brak sparowanych hostów
+684|Brak obrazu do zapisania
+685|Bez zmniejszania
+686|Nie otwarto źródła
+687|Brak źródła do kontynuowania
+688|Brak napisów na ekranie
+689|Nie wybrano celu
+690|Brak pomiaru czasu dla tego węzła
+691|Tryb węzłów
+692|Preset węzłów:
+693|Presety węzłów
+694|Węzły
+695|Brak
+696|Normalny
+697|To nie jest 8-cyfrowy kod parowania
+698|Niepołączono
+699|Nie włączono
+700|Nie wczytano
+701|Nie zmierzono
+702|Nie otwarto
+703|Nie sparowano
+704|Nie odtwarza
+705|Nie osiągnięto
+706|Nie uruchomiono
+707|Nie ustawiono
+708|Nie zalogowano
+709|Nie określono
+710|Nieobsługiwane
+711|Nie testowano
+712|Bez pomiaru
+713|Zgodność z przechwytywaniem gry OBS
+714|OK
+715|Wył.
+716|Offline
+717|Przesunięcie
+718|Wł.
+719|Na telefonie lub w przeglądarce otwórz
+720|Wł. · 1 użyta ponownie co
+721|Wł. · automatycznie
+722|Wł. · siła
+723|Online
+724|Online · gra jest uruchomiona
+725|Można otwierać tylko pliki lokalne
+726|Otwórz
+727|Otwórz ustawienia nagrywania Windows
+728|Otwórz film lub obraz
+729|Otwórz plik
+730|Otwórz plik / stronę eksportu
+731|Otwórz plik…
+732|Otwórz folder
+733|Otwórz preset gry
+734|Otwórz starą listę formatów
+735|Otwórz adres URL multimediów
+736|Otwórz adres URL multimediów…
+737|Otwórz stronę kodu źródłowego
+738|Otwórz film
+739|Otwarty świat · minimapa w lewym dolnym rogu
+740|Otwarty świat · minimapa w prawym górnym rogu
+741|Otwieranie
+742|Otwieranie urządzenia przechwytującego…
+743|Przekroczono czas otwierania
+744|Przepływ optyczny
+745|Algorytm przepływu optycznego
+746|Przepływ optyczny · szacowanie ruchu
+747|Optymalizuj pod mój PC
+748|Opcje
+749|Pomarańczowy
+750|Oryginał
+751|Porównanie oryginał / ulepszony
+752|Przywracanie oryginalnej twarzy
+753|Tylko oryginał
+754|Oryginalny dźwięk
+755|Inna konsola
+756|Wyjście O
+757|Obrys
+758|Wyjście
+759|Wyjście
+760|Limit wyjścia
+761|Limit wyjścia · obecnie nieaktywny
+762|Limit wyjścia · zgodnie z ekranem
+763|Urządzenie wyjściowe
+764|Urządzenie wyjściowe i downmix
+765|Ustawienia wyjścia
+766|Stabilizator wyjścia · redukcja migotania
+767|Wyjście · dźwięk
+768|Ponad budżet
+769|Ogólna jasność
+770|Ogólna siła zmian
+771|Ogólna siła
+772|Strumieniowanie z PC
+773|Strumieniowanie z PC…
+774|Wymagany PIN
+775|Konsola PS5
+776|Sterowanie kontrolerem PS5
+777|Sterowanie kontrolerem PS5 połączone
+778|Sterowanie kontrolerem PS5 zatrzymane
+779|Kontroler PS5
+780|Strumieniowanie PS5
+781|Strumieniowanie PS5…
+782|Konto PSN
+783|Strona przy uruchomieniu
+784|Przełącznik stron
+785|Paruj
+786|Paruj (pierwszy raz)
+787|Paruj i zapisz
+788|Sparowano
+789|Anulowano parowanie
+790|Przed wybudzeniem trzeba sparować.
+791|Ustawienia parowania
+792|Paruj…
+793|Krzywa parametryczna
+794|Ciemne parametryczne
+795|Światła parametryczne
+796|Jasne parametryczne
+797|Cienie parametryczne
+798|Wklej kod PUSHFPS1:
+799|Wklej ustawienia kolorów
+800|Strona Patreon
+801|Patreon, WeChat i Alipay
+802|Wstrzymaj eksport
+803|Wstrzymano
+804|Szczyt
+805|Jasność szczytowa (nit)
+806|Limit szczytu (nit)
+807|Wydajność
+808|Obraz
+809|Obraz i dźwięk
+810|Obraz z karty przechwytującej
+811|Styl obrazu
+812|Format pikseli
+813|Odtwórz / wstrzymaj
+814|Odtwórz następny po zakończeniu
+815|Odtwarzanie
+816|Pasek odtwarzania widoczny
+817|Odtwarzanie nie powiodło się
+818|Prędkość odtwarzania
+819|Odtwarzanie
+820|Playlista
+821|Playlista · Importuj folder
+822|Krzywa punktowa
+823|Wartości dodatnie opóźniają dźwięk
+824|Przygotowanie:
+825|Prezentacja
+826|Skopiowano preset
+827|Usunięto preset
+828|Nazwa presetu
+829|Zmieniono nazwę presetu
+830|Preset:
+831|Presety
+832|Presety i
+833|Naciśnij nowy klawisz…
+834|Podgląd
+835|Podgląd niedostępny
+836|Poprzednia pozycja
+837|Tryb Pro
+838|Przetwarzaj obrazy wsadowo…
+839|Kolejność przetwarzania
+840|Skala przetwarzania
+841|Czas przetwarzania
+842|Przetwarzanie ·
+843|Chroń światła
+844|Chroń HUD
+845|Wyrazistość
+846|Fioletowy
+847|Glide Virtual Speaker
+848|Preset kolorów Glide (*.vpcolor)
+849|Preset gry Glide (*.pushfps)
+850|Zieleń Glide
+851|Preset Glide (*.vpreset)
+852|Jakość
+853|Kolejka
+854|Szybkie presety
+855|Szybka konfiguracja
+856|Zamknij grę
+857|RTX 50 · oryginał NVIDIA
+858|RTX Video SR · Wysoka przepływność
+859|RTX Video SR · Standard
+860|RTX Video SR · Strumieniowanie
+861|RTX Video Super Resolution
+862|RX 7000 · RedDuke (eksperymentalne)
+863|RX 9000 · lmxxf (eksperymentalne)
+864|Sterowanie przepływnością
+865|Odczytywanie ścieżek…
+866|Czas rzeczywisty
+867|Odebrane
+868|Odbieranie klatek
+869|Ostatnie
+870|Zalecane
+871|Połącz ponownie
+872|Ponowne łączenie
+873|Nagrywaj
+874|Nagrywaj dźwięk
+875|Nagrywaj mikrofon
+876|Przepływność nagrania
+877|Kodek nagrania
+878|Folder nagrań
+879|Liczba klatek nagrania
+880|Zapisano nagranie
+881|Odzyskiwanie
+882|Prostokąt
+883|Czerwony
+884|Czerwony kolor podstawowy
+885|Ponów
+886|Ogranicz ruch
+887|Zmniejsz głębokość kolejki przetwarzania
+888|Zmniejsz pierwszy wynik do
+889|Baza odniesienia
+890|Odśwież
+891|Odśwież urządzenia
+892|Odśwież stan ekranu
+893|Puść, aby wrócić
+894|Zapamiętaj każdy film
+895|Zapamiętaj ostatni rozmiar
+896|Zapamiętaj dla każdego ekranu
+897|Zapamiętaj pozycję odtwarzania
+898|Usuń zduplikowane klatki
+899|Usuń z playlisty; zachowaj plik
+900|Usuń parowanie
+901|Usuń domyślny przy uruchomieniu
+902|Zmień nazwę · kopiuj · usuń
+903|Długość powtórki
+904|Zgłoś
+905|Zgłoś problem
+906|Żądane
+907|Żądana przepływność
+908|Wymaga AMD RX 7000 / 9000
+909|Wymaga AMD RX 9000
+910|Wymaga GPU NVIDIA
+911|Resetuj
+912|Resetuj wszystko
+913|Resetuj kanał
+914|Resetuj korektor
+915|Resetuj węzeł
+916|Resetuj tę stronę
+917|Resetuj to ustawienie
+918|Przywróć domyślne
+919|Pozostałość
+920|Rozdzielczość
+921|Rozdzielczość i liczba klatek
+922|Uruchom ponownie
+923|Wymagane ponowne uruchomienie
+924|Obszar przywracania
+925|Siła przywracania
+926|Wznowiono
+927|Tryb ponownego użycia
+928|Czas w obie strony
+929|Działa
+930|Działa po przywróceniu oryginału
+931|Wewnętrzne SDK
+932|Przekazanie do SDK
+933|Ekran SDR, bez konwersji
+934|Próbkowanie
+935|Nasycenie
+936|Nasycenie maks.
+937|Nasycenie min.
+938|Zapisz
+939|Zapisz jako
+940|Zapisz jako profil gry
+941|Zapisz plik
+942|Zapisz preset gry
+943|Zapisz natychmiastową powtórkę
+944|Zapisz preset
+945|Przekroczono czas zapisu
+946|Zapisz w
+947|Zapisano
+948|Zapisane urządzenie (niepodłączone)
+949|Zapisany host
+950|Zapisany host
+951|Zapisywanie…
+952|Zeskanuj w WeChat lub Alipay
+953|Przeszukiwanie folderów…
+954|Obniżono harmonogram
+955|Oczekiwanie harmonogramu P95
+956|Przechwytywanie ekranu
+957|Przechwytywanie ekranu…
+958|Zrzut ekranu
+959|Folder zrzutów ekranu
+960|Szukaj
+961|Anulowano wyszukiwanie
+962|Szukaj, np. 1920 60 NV12
+963|Drugi algorytm SR
+964|Drugi cel SR
+965|Drugi poziom SR
+966|Skala drugiego przebiegu
+967|Napisy dodatkowe (dwujęzyczne)
+968|Napisy dodatkowe są wyłączone
+969|Wybierz ze źródła
+970|Wybierz wejście
+971|Wyślij na Discorda
+972|Wysyłanie…
+973|Ustaw jako domyślny przy uruchomieniu
+974|Ustaw ręcznie w trybie Profesjonalnym
+975|Ustawienia
+976|Jasność cieni
+977|Rozjaśnienie cieni
+978|Rozjaśnienie cieni (0,01 EV)
+979|Ochrona cieni
+980|Zabarwienie cieni
+981|Cienie
+982|Cienie i światła
+983|Udostępnij
+984|Udostępnij ten preset
+985|Udostępnij na Discordzie
+986|Ostrość
+987|Skrót B
+988|Skróty
+989|Pokaż wszystkie dostępne liczby klatek
+990|Pokaż jako SDR
+991|Pokaż bieżący plik
+992|Pokaż w folderze
+993|Pokazuj opóźnienie na ekranie
+994|Pokaż maskę
+995|Pokaż wskaźnik myszy
+996|Pokaż pasek odtwarzania
+997|Pokaż napisy
+998|Wyświetlane nad głównymi napisami
+999|Po SR zmniejsz do
+1000|Automatycznie zmniejszaj długie wiersze
+1001|Zaloguj
+1002|Wyloguj
+1003|PIN logowania
+1004|Sygnał
+1005|Zalogowano
+1006|SimHei
+1007|SimSun
+1008|Rozmiar: największe najpierw
+1009|Rozmiar: najmniejsze najpierw
+1010|Rozjaśnianie skóry
+1011|Tylko skóra
+1012|Zakres skóry · zaawansowane
+1013|Wygładzanie skóry
+1014|Wartość skóry
+1015|Skóra · niezweryfikowane
+1016|Pominięte klatki źródła
+1017|Krok klawiatury dla suwaków
+1018|Lekki
+1019|Mały
+1020|Małe elementy w każdym rogu
+1021|Siła wygładzania
+1022|Obszar wygładzania
+1023|Promień wygładzania
+1024|Programowe
+1025|Dekodowanie programowe
+1026|Sortuj
+1027|Profil dźwięku
+1028|Źródło
+1029|Kod źródłowy
+1030|Zachowanie koloru źródła
+1031|Rozmiar źródła
+1032|Podział
+1033|Podział świateł
+1034|Podział półtonów
+1035|Podział cieni
+1036|Siła stabilizacji
+1037|Standardowy
+1038|Czuwanie
+1039|Start
+1040|Rozpocznij / zatrzymaj nagrywanie
+1041|Rozpocznij przechwytywanie
+1042|Rozpocznij eksport
+1043|Rozpocznij strumieniowanie
+1044|Uruchamianie przechwytywania ekranu…
+1045|Uruchamianie i okno
+1046|Bufor startowy
+1047|Domyślny przy uruchomieniu
+1048|Usunięto domyślny preset przy uruchomieniu
+1049|Akumulacja statyczna
+1050|Stereo
+1051|Downmix stereo
+1052|Zatrzymano
+1053|Strumieniowanie
+1054|Strumieniowanie (działa po ponownym połączeniu)
+1055|Siła
+1056|Siła
+1057|Rozciągnij, aby wypełnić
+1058|Ścisłe tempo generowania klatek
+1059|Mocny
+1060|Mocne światła
+1061|Styl
+1062|Styl · eksperymentalne
+1063|Wyślij
+1064|Tempo przekazywania
+1065|Ustawienia napisów
+1066|Ustawienia napisów…
+1067|Ścieżki napisów
+1068|Własna czcionka napisów
+1069|Napisy
+1070|Napisy: wył.
+1071|Napisy: wł.
+1072|Host Sunshine
+1073|Superrozdzielczość
+1074|Źródło ruchu superrozdzielczości
+1075|Wesprzyj autora
+1076|Wrócić do trybu listy?
+1077|Przełącz na tryb listy
+1078|Przełącz na tryb węzłów
+1079|Przełączyć na tryb węzłów?
+1080|Domyślny mikrofon systemu
+1081|Działa po ponownym uruchomieniu
+1082|Cel
+1083|Docelowa liczba klatek
+1084|Docelowe wiersze
+1085|Docelowy rozmiar
+1086|Temperatura (względna)
+1087|Akumulacja czasowa
+1088|Czasowa redukcja migotania
+1089|Stabilność czasowa
+1090|Przetestowana
+1091|Przetestowana przez twórcę Veyry
+1092|Przetestowana z Glide
+1093|Tekstura
+1094|Tekstura zachowana
+1095|Nie zastosowano obszarów HUD
+1096|PS5 prosi o PIN logowania
+1097|Łańcuch nie ma węzła koloru
+1098|Preset kolorów nie istnieje
+1099|Łańcuch efektów jest pełny
+1100|Plik nie istnieje
+1101|Plik już nie istnieje
+1102|Preset musi mieć nazwę
+1103|PIN logowania może zawierać tylko cyfry.
+1104|Cel nie jest już prawidłowy
+1105|Cienki
+1106|Rozdzielczość ekranu tego PC
+1107|To jest podgląd napisów.
+1108|Ten tryb nie ma jeszcze presetów.
+1109|To źródło nie ma napisów
+1110|Poziom
+1111|Czas
+1112|Zabarwienie
+1113|Przełącz Minimalny / Pro
+1114|Za mało klatek do pomiaru
+1115|Wygładzanie śledzenia
+1116|Spróbuj dźwięku samego urządzenia wideo
+1117|Wyłącz sprężyste animacje i przejścia
+1118|Typ
+1119|Korekta interfejsu · niezweryfikowane
+1120|Ultra
+1121|Niedostępne
+1122|Teraz niedostępne
+1123|Cofnij
+1124|Cofnij ostatnią zmianę
+1125|Odinstaluj…
+1126|Nieznane
+1127|Nieznana konfiguracja
+1128|Nieznany backend generowania klatek
+1129|Nieużywane
+1130|Zaktualizuj lub zapisz jako profil gry
+1131|Aktualizowanie
+1132|Algorytm skalowania
+1133|Użyj modelu wydajnościowego
+1134|Dane użytkownika
+1135|Użytkownicy w Chinach kontynentalnych
+1136|Strona VB-Audio
+1137|VB-CABLE jest już zainstalowany
+1138|Automatyczna regulacja VFG
+1139|Jakość VFG
+1140|VSync
+1141|Wartość poza zakresem
+1142|Zmienne odświeżanie
+1143|Zmienne odświeżanie · aktywne
+1144|Wersja
+1145|Jaskrawość
+1146|Wideo
+1147|Kodek wideo
+1148|Urządzenie wejścia wideo
+1149|Widok
+1150|Zobacz licencję
+1151|Tylko podgląd
+1152|Zobacz aktualizację
+1153|Oglądanie
+1154|Odwiedź stronę
+1155|Żywy
+1156|Wyrazistość głosu
+1157|Głośność
+1158|Czekaj na klatkę kluczową
+1159|Czekanie na próbki
+1160|Czekanie na sygnał
+1161|Czeka na eksport
+1162|Czeka na prezentację
+1163|Czeka na prezentację w procesie
+1164|Wybudź
+1165|Anulowano wybudzanie
+1166|WeChat Pay
+1167|Słaby
+1168|Sieć
+1169|Biały
+1170|Biała poświata
+1171|Cała twarz
+1172|Okno
+1173|Okno lub ekran
+1174|Rozmiar okna przy uruchomieniu
+1175|Użycie silnika GPU Windows (
+1176|HDR systemu Windows
+1177|Nie znaleziono narzędzia archiwów Windows
+1178|W zakresie
+1179|Trwa VB-CABLE Setup…
+1180|X to limit
+1181|Strumieniowanie Xbox
+1182|Strumieniowanie Xbox…
+1183|Żółty
+1184|Tak
+1185|Brak ruchu
+1186|np. Granie wieczorem
+1187|żyroskop
+1188|tylko podgląd na żywo
+1189|moje
+1190|bez żyroskopu
+1191|nie ustawiono skrótu
+1192|jeszcze niedostępne w trybie węzłów
+1193|za mało zasobów
+1194|nieużywane do przetwarzania HDR
+1195|nieużywane przy automatycznym rozmiarze NR
+1196|scRGB float
+1197|☕ Postaw mi kawę · 5 USD
+1198|=
+1199|=
+1200|=
+1201|=
+1202|=
+1203|ANR FG · Apex Compute · eksperymentalne
+1204|Pakiet ANR (*.zip nvngx_dlssg.dll);;Wszystkie pliki (*)
+1205|ANR zainstalowano (%1 plików). Uruchom ponownie Glide i wybierz ANR jako metodę generowania klatek
+1206|Generowanie klatek ANR tworzy Apex Compute; działa na kartach GTX serii 16 i nowszych. Nie może być dołączone do Glide: pobierz pakiet anr-fg z GitHuba Apex i wybierz go tutaj
+1207|Generowanie klatek ANR to Apex Neural Rendering od Apex Compute
+1208|Generowanie klatek ANR, autor: Apex Compute
+1209|Podstawa Glide, autor: Likely7
+1210|Pobierz ANR
+1211|Zainstaluj z pobranego pliku…
+1212|Najpierw zainstaluj ANR od Apex w Ustawienia → Składniki i licencje
+1213|Zainstalowano. Generowanie klatek ANR tworzy Apex Compute; wybierz je jako metodę generowania klatek w trybie Profesjonalnym
+1214|Nie udało się utworzyć folderu tymczasowego
+1215|Nie udało się skopiować plików ANR do %1
+1216|Nie udało się rozpakować pakietu ANR: %1
+1217|Aktualizuj…
+1218|Nie zainstalowano
+1219|Pobierz i zainstaluj
+1220|Ten plik nie zawiera nvngx_dlssg.dll od ANR. Wybierz pakiet anr-fg od Apex
+1221|Wybierz pakiet ANR pobrany od Apex Compute
+1222|Gra działająca w %1 FPS będzie działać w %2 FPS (generowanie klatek %3×)
+1223|Działa %1. Podłącza się do interfejsu i do wideo, co może zawiesić Glide. Uruchom ponownie Glide, aby włączyć zgodne rysowanie: interfejs będzie rysowany programowo, a %1 obejmie tylko wideo. Uruchomić ponownie teraz? Odtwarzanie lub strumieniowanie zostanie przerwane.
+1224|1% low tylko %1 FPS, za mało stabilnie
+1225|Zalecane ustawienia dla gier takich jak GTA VI, z ostrą minimapą i HUD
+1226|Postaw Switch 2 w stacji dokującej z 60 Hz. Gry nie mają HDCP, więc są przechwytywane bez zmian.
+1227|Na Xboksie wybierz 60 Hz w Ustawienia → Ogólne → Opcje telewizora i wyświetlania. Gry nie mają HDCP, więc są przechwytywane bez zmian.
+1228|W trybie Profesjonalnym ustawiono własną krzywą; przeciągnięcie ją zastąpi
+1229|Jasność półtonów; czerń i biel się nie zmieniają
+1230|Wybierz liczbę klatek i obraz dla gier konsolowych. Wszystko inne jest w trybie Profesjonalnym.
+1231|Gry zachowują liczbę klatek konsoli
+1232|Twoja konsola przez kartę przechwytującą, podbita przez PC do 60 lub 120 FPS
+1233|Ustaw konsolę na 60 Hz. Na PlayStation wyłącz HDCP w Ustawienia → System → HDMI, inaczej obraz pozostanie czarny.
+1234|Ustaw konsolę na 60 Hz i wyłącz HDCP, jeśli jest taka opcja, inaczej obraz może pozostać czarny.
+1235|5-pasmowy korektor, ±12 dB na pasmo
+1236|Zapisz bieżące ustawienia jako preset
+1237|Najpierw podłącz kartę przechwytującą i wyświetl obraz gry, potem zacznij
+1238|Wył.: tylko generowanie klatek. Wł.: każda klatka przechodzi też przez neuronowy renderer NVIDIA (DLSS 5 NR) dla ostrzejszego obrazu, kosztem większego obciążenia GPU
+1239|Mniej kolejkowania, mniejsze opóźnienie sterowania
+1240|Usuń „%1”
+1241|Gry fabularne i filmy: cały obraz dostaje generowanie klatek
+1242|Wydobywa szczegóły i krawędzie (tekstura)
+1243|Akcja · HUD w dolnych rogach
+1244|Zawiera liczbę klatek gry, docelową liczbę klatek i obszary „Wyklucz ze wszystkich efektów” narysowane w trybie Profesjonalnym
+1245|Wyrównuje głośne i ciche fragmenty, na późne wieczory
+1246|Osiągnięto tylko %1 FPS
+1247|Minimapa lub kompas w prawym górnym rogu
+1248|Prędkość, bieg i minimapa w prawym dolnym rogu
+1249|Testuje każdą kombinację na Twoim prawdziwym obrazie i wybiera najlepszą
+1250|Testuje każdą metodę generowania klatek, ulepszanie AI i skalowanie na Twoim prawdziwym obrazie i wybiera najpłynniejszą kombinację z najmniejszym opóźnieniem
+1251|Skopiuj kod, aby wysłać go znajomym lub wrzucić na Reddit / Discord, albo zapisz go jako plik
+1252|Większość gier konsolowych działa w 30 FPS; wybierz 60 dla trybów wydajności
+1253|Zmierzone opóźnienie PC (od dotarcia obrazu z karty przechwytującej do przekazania go na ekran) i liczba klatek; karta przechwytująca, ekran i gra dodają własne
+1254|Wyraźniejsze dialogi i czat głosowy, bez niskiego dudnienia
+1255|Strzelanka · HUD we wszystkich czterech rogach
+1256|Minimapa w lewym dolnym rogu, pieniądze i poziom poszukiwania w prawym górnym. Układ oszacowany na podstawie serii GTA; sprawdź go podczas gry
+1257|Okrągła lub kwadratowa minimapa w lewym dolnym rogu
+1258|Zdrowie w lewym dolnym rogu, broń i amunicja w prawym dolnym
+1259|Zapisano „%1” (obszary HUD: %2)
+1260|Usunięto „%1”
+1261|Skopiowano klip. Naciśnij Ctrl+V w Discordzie, aby go wkleić
+1262|Skopiowano. Wklej do dowolnego czatu lub folderu
+1263|Zastosowano „%1”
+1264|Zastosowano „%1”: chronione obszary HUD: %2. Dopracuj je w trybie Profesjonalnym → Jakość → Wyklucz ze wszystkich efektów
+1265|Dodano „%1”
+1266|Pełny ekran zablokowany · Ctrl+L, aby odblokować, Esc, aby wyjść
+1267|Opóźnienie %1 ms
+1268|Opóźnienie = czas od dotarcia obrazu z karty przechwytującej do PC do przekazania go na ekran (tylko część PC; bez karty, ekranu i gry). Im bliżej średniej jest 1% low, tym płynniej.
+1269|Dodaje za duże opóźnienie (%1 ms)
+1270|Łańcuch przetwarzania nie ma etapu koloru
+1271|Ta metoda generowania klatek daje do %1×: gra w %2 FPS osiąga około %3 FPS
+1272|Nagranie ma już wygenerowane klatki. Przed eksportem wyłącz generowanie klatek w trybie Profesjonalnym, aby nie generować ich dwa razy.
+1273|Zapisz te ustawienia dla gry i przełączaj się na nie jednym kliknięciem
+1274|Pasek odtwarzania ukryty · przesuń wskaźnik na górę i kliknij oko w doku, aby go przywrócić
+1275|Generowanie klatek na całym obrazie
+1276|Nie udało się zmierzyć obrazu odniesienia: %1
+1277|Pełniejsze niskie i wysokie tony, lekka kompresja
+1278|Najlepsza kombinacja: %1. Zastosowano.
+1279|W tej sesji użycie VRAM na pełnym ekranie stale rosło. Odtwarzaj w oknie; otwórz źródło ponownie, aby znów sprawdzić pełny ekran.
+1280|To oprogramowanie jest darmowe i otwarte. Jeśli Ci pomaga, możesz →
+1281|Wykryto %1
+1282|Wykryto usługę nakładki RTSS
+1283|Usługa nakładki RTSS działa. Uruchom ponownie Glide, aby włączyć zgodne rysowanie i pokazywać OSD tylko na wideo. Uruchomić ponownie teraz? Odtwarzanie lub strumieniowanie zostanie przerwane.
+1284|Zalecane ustawienia dla każdej gry, z ostrą minimapą i HUD (te obszary nie dostają generowania klatek ani efektów)
+1285|Żadna kombinacja nie utrzymała celu stabilnie, więc Twoje ustawienia zostały zachowane. Spróbuj niższego celu lub wyłącz inne efekty i uruchom ponownie
+1286|Nie zmieniaj źródła w trakcie; możesz dalej grać
+1287|Ustawienia zmieniły się w trakcie pomiaru
+1288|Obraz się zatrzymał. Optymalizację anulowano i przywrócono Twoje ustawienia
+1289|Wydobywa kroki i strzały, do gier rywalizacyjnych
+1290|Zielone obszary zachowują obraz konsoli bez zmian, bez generowania klatek, więc tekst i minimapa pozostają ostre
+1291|Wyświetl grę przez kartę przechwytującą i zacznij. Glide testuje każdą dostępną kombinację na Twoim prawdziwym obrazie (około 10 sekund każda, łącznie 1–2 minuty), mierzy prawdziwą liczbę klatek, 1% low i opóźnienie, i wybiera najlepszą.
+1292|Wyścigi · prędkościomierz w prawym dolnym rogu
+1293|Nikt jeszcze nie zgłosił tej karty; podziel się wynikami na GitHubie
+1294|To nie jest prawidłowy kod presetu Glide
+1295|Wbudowany preset już używa tej nazwy
+1296|Ten PC nie obsłuży tej kombinacji
+1297|Karta przechwytująca utraciła %1% klatek
+1298|. Nagrania też to zachowują. Przekazywanie Dolby / DTS nie jest objęte
+1299|Zaawansowane ustawienia kodowania
+1300|Sterowanie przepływnością, preset kodera, odstęp klatek kluczowych, przepływność dźwięku i kontener, jak ustawienia wyjścia w OBS. Wyłączone używa ustawień standardowych
+1301|VBR: przepływność zależy od złożoności obrazu (standard). CBR: ta sama przepływność co sekundę, dobra do wysyłania. Stała jakość: jakość stała, rozmiar pliku zależy od obrazu
+1302|Stała jakość
+1303|Poziom jakości
+1304|1–51; niżej to lepsza jakość i większy plik; standard to 22
+1305|Preset kodera
+1306|Dalej w prawo to lepsza jakość, ale większe obciążenie kodera GPU; standard to 4. Obniż, jeśli nagrania się zacinają
+1307|Odstęp klatek kluczowych
+1308|Sekundy; krótszy ułatwia edycję i przewijanie, pliki są nieco większe; standard to 2
+1309|Przepływność dźwięku
+1310|kbps na ścieżkę dźwiękową; standard to 192
+1311|MP4 działa wszędzie (standard). MKV pasuje do programów do edycji; natychmiastowe powtórki zawsze zapisują się jako MP4
+1312|Przywróć ustawienia standardowe
+1313|Jeśli GPU nie obsłuży kombinacji, nagranie przełączy się na ustawienia standardowe i da znać
+1314|Przywróć
+1315|GPU nie obsługuje wybranych zaawansowanych ustawień kodowania; nagrywanie z ustawieniami standardowymi
+zh:轻|Lekki
+zh:亮|Światło
+1316|G-SYNC lub FreeSync: monitor odświeża obraz, gdy przychodzi nowa klatka, a nie ze stałą częstotliwością, więc nierówna liczba klatek nie rwie ani nie przycina
+1317|HUD w złym miejscu?
+1318|Ochrona HUD
+1319|Wykrywanie HUD nie powiodło się
+1320|NVIDIA Image Scaling to otwartoźródłowy filtr skalowania i wyostrzania działający na kartach graficznych każdej marki. Zbyt duże wyostrzenie daje białe obwódki na krawędziach
+1321|Konsola · %1 FPS
+1322|Zatrzymaj klip porównawczy
+1323|Wyczyść wszystko
+1324|Klatka kluczowa to pełny obraz; klatki pomiędzy zapisują tylko zmiany. Odtwarzacze i edytory wideo mogą zacząć dekodowanie tylko od klatki kluczowej
+1325|Mniej klatek czeka w kolejce na karcie graficznej, więc obraz reaguje szybciej po naciśnięciu przycisku. Tylko karty NVIDIA
+1326|Wykryj HUD na obrazie własnej gry albo przeciągnij ramki ręcznie
+1327|Przeciągnij po obrazie, aby narysować nową ramkę (maks. 4). Przeciągnij ramkę, aby ją przesunąć, a jej rogi, aby zmienić rozmiar
+1328|Klip porównawczy
+1329|Klip porównawczy nie ma wygenerowanych klatek, więc obie połowy są takie same. Sprawdź, czy generowanie klatek działa
+1330|Nieruchome elementy, takie jak minimapa, zdrowie i amunicja, zachowują piksele konsoli i nie są interpolowane, więc pozostają ostre. Po automatycznym wykryciu możesz przeciągnąć ramki, aby je poprawić
+1331|Ochrona HUD wyłączona; interpolowany jest cały obraz
+1332|Zastosowano: %1 obszary zachowują piksele konsoli
+1333|Pomoc
+1334|Bieżący format obrazu nie obsługuje automatycznego wykrywania HUD
+1335|Nagraj 15-sekundowe wideo obok siebie: po lewej oryginalna liczba klatek konsoli, po prawej Glide
+1336|Znaleziono obszary HUD: %1. Sprawdź zielone ramki, w razie potrzeby przeciągnij je, a potem kliknij Zastosuj
+1337|Nie można odczytać obrazu; wykrywanie HUD zatrzymane
+1338|Za mało pamięci wideo, aby wykryć HUD
+1339|Maksymalnie 4 ramki; najpierw usuń jedną
+1340|Nagrywanie klipu porównawczego (%1 s): po lewej oryginalna liczba klatek konsoli, po prawej Glide
+1341|Pobieranie obrazu…
+1342|Obserwowanie obrazu %1 / %2
+1343|Obserwuję obraz przez około 5 sekund. Obróć kamerę albo chodź w grze
+1344|Największa liczba klatek wyświetlanych na sekundę. Przy generowaniu klatek utrzymuje wyjście na docelowej liczbie klatek, więc ruch jest równiejszy
+1345|Nie znaleziono HUD. Możesz przeciągnąć po obrazie, aby narysować ramki ręcznie
+1346|Nie dotarł żaden obraz. Sprawdź, czy obraz jest odtwarzany, a okno Glide nie jest zminimalizowane
+1347|Nic nie jest odtwarzane, więc nie można wykryć HUD
+1348|Brak obrazu. Podłącz kartę przechwytującą i zacznij odtwarzanie, aby dopasować ramki na obrazie własnej gry
+1349|Dodaj ramkę
+1350|Ile nowych obrazów sama gra rysuje na sekundę. Konsola zawsze wysyła sygnał 60 Hz, więc gra w 30 FPS pokazuje każdy obraz dwa razy. Glide na tej podstawie decyduje, ile klatek wygenerować
+1351|AI usuwa bloki i szum pozostawione przez kompresję karty przechwytującej, więc szczegóły są wyraźniejsze. Niezależne od generowania klatek, można je włączać osobno
+1352|Obraz prawie się nie ruszał, więc nie dało się odróżnić HUD. Obróć kamerę lub porusz się w grze i spróbuj ponownie
+1353|Bitrate to ilość danych na sekundę wideo. Sterowanie bitrate decyduje, jak koder ją rozdziela: więcej danych to lepsza jakość i większy plik
+1354|Ile wysiłku koder wkłada w każdą klatkę. Wolniej znaczy lepsza kompresja, więc ten sam rozmiar pliku daje wyższą jakość
+1355|Automatycznie znajduje minimapę i HUD i wyłącza je z generowania klatek; ramki można poprawić ręcznie
+1356|Wykryj automatycznie
+1357|Obrazy wyświetlane na sekundę po wygenerowaniu klatek. Wygenerowane klatki trafiają między dwa prawdziwe obrazy, aby ruch był płynniejszy; kontroler nie reaguje przez to szybciej
+1358|Obserwuje obraz przez kilka sekund, aby znaleźć nieruchomy HUD
+1359|Najpierw włącz generowanie klatek: klip porównawczy zestawia oryginalną liczbę klatek konsoli z wygenerowanym obrazem
+1360|Najpierw podłącz kartę przechwytującą i zacznij odtwarzanie
+1361|Dostosuj obszary HUD
+1362|Obróć kamerę albo chodź: HUD stoi w miejscu, a reszta się porusza
+1363|Pobierz nowy obraz
+1364|Wideo przed/po, 15 s
+1365|GTA VI i inne, HUD pozostaje ostry
+1366|Motyw
+1367|Niedostępne podczas nagrywania
+1368|Nagrywanie…
+1369|Testuje każdą kombinację, wybiera najlepszą
+1370|Wykrywanie automatyczne, ręczna korekta
+1371|Wymaga odtwarzanego obrazu
+1372|AMD FRC · interpolacja klatek wideo · 2X
+1373|Konfiguracja NVIDIA G-SYNC
+1374|Brak wejścia audio
+1375|Napraw
+1376|Zatrzymaj muzykę w tym uruchomieniu
+1377|Inny pulpit
+1378|Kliknij lub naciśnij klawisz, aby pominąć
+1379|Animacja startowa
+1380|Połącz przy starcie
+1381|Muzyka startowa
+1382|Nie sprawdzono
+1383|Okno i pełny ekran nieskonfigurowane
+1384|Okno i pełny ekran dozwolone
+1385|Zaznaczony
+1386|Tego profilu nie można zmienić osobno
+1387|Przywróć oryginał
+1388|Kopia nie pasuje do bieżącego profilu
+1389|Zwolnione tempo telefonu
+1390|Nie można zapisać ani usunąć kopii
+1391|Zmierzch
+1392|Pokaż obrysy obszarów
+1393|Profil sterownika niepotwierdzony
+1394|Lokalny odsłuch dźwięku
+1395|Pulpit %1
+1396|Pulpit %1 · %2
+1397|Przetwarzanie profilu sterownika…
+1398|Zmierz całkowite opóźnienie
+1399|Schemat kolorów
+1400|Klatki różnicy
+1401|Zawsze na wierzchu
+1402|Klasyczny
+1403|Pełny ekran po połączeniu
+1404|Zaznacz
+1405|Wymagane uprawnienia administratora
+1406|Wejście audio
+1407|Profil sterownika jest używany
+1408|Logo Sunset City
+1409|Klucz transmisji
+1410|Platforma
+1411|Serwer
+1412|Rozpocznij transmisję
+1413|Na żywo
+1414|Zakończ transmisję
+1415|Dodaj platformę
+1416|Dźwięk gry
+1417|Bitrate wideo
+1418|Własny RTMP
+1419|Wklej klucz transmisji
+1420|Nie rozpoczęto
+1421|Połączenie nieudane
+1422|Mikrofon
+1423|Układ
+1424|Obok siebie
+1425|Rozpocznij nagrywanie
+1426|Długość
+1427|Płynne tempo klatek

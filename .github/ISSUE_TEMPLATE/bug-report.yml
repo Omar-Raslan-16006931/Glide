@@ -1,0 +1,47 @@
+name: Bug report
+description: Something in Glide does not work as it should.
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting! The fastest way: in Glide open **Settings → Report a problem**. It copies the version,
+        graphics card, source format and recent log lines. Read it before pasting: it never contains stream keys, and
+        you can remove anything you don't want to share.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+      placeholder: "With frame generation on, the picture freezes for a second every few minutes. I expected smooth playback."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect the capture card
+        2. Quick setup: GTA VI preset, 120 FPS
+        3. Start a comparison clip
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Glide version
+      description: Shown under Settings → About.
+      placeholder: "3.0.0"
+    validations:
+      required: true
+  - type: input
+    id: setup
+    attributes:
+      label: Console, capture card or streaming source, graphics card
+      placeholder: "PS5 Pro, Elgato 4K X, RTX 5090"
+  - type: textarea
+    id: report
+    attributes:
+      label: Report a problem output (optional)
+      description: Paste what Settings → Report a problem copied.
+      render: text

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=PushFPS
+GenericName=Console frame generation
+Comment=Your console through a capture card, boosted to 60 or 120 FPS
+Exec=PushFPS
+Icon=pushfps
+Categories=Game;AudioVideo;Video;
+Terminal=false

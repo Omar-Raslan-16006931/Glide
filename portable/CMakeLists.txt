@@ -1,0 +1,22 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
+# Glide for Linux and macOS. Built on its own (cmake -S portable), separate from the Windows build in
+# the repository root, which stays Veyra's D3D12 engine.
+cmake_minimum_required(VERSION 3.21)
+project(pushfps_portable VERSION 0.1.0 LANGUAGES CXX)
+if(APPLE)
+  enable_language(OBJCXX)
+endif()
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
+  set(CMAKE_BUILD_TYPE Release)
+endif()
+option(PUSHFPS_PORTABLE_TESTS "Build the core tests" ON)
+option(PUSHFPS_PORTABLE_APP "Build the Qt application (needs Qt 6.5+ with Quick, Multimedia, ShaderTools)" ON)
+if(PUSHFPS_PORTABLE_TESTS)
+  enable_testing()
+endif()
+add_subdirectory(core)
+if(PUSHFPS_PORTABLE_APP)
+  add_subdirectory(app)
+endif()

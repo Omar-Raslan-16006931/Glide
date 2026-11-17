@@ -1,0 +1,43 @@
+# Machine translation of the interface into the extra languages (scripts/i18n/machine_translate.py),
+# with Argos Translate (offline, open source). Fills only missing entries, then pushes the merged
+# catalog to the i18n-mt branch for review; nothing here changes the build.
+name: translate
+on:
+  workflow_dispatch:
+  # A branch run starts when the translator itself changes (or this file is touched).
+  push:
+    paths: ['.github/workflows/translate.yml', 'scripts/i18n/machine_translate.py', 'scripts/i18n/hand/**']
+permissions:
+  contents: write
+jobs:
+  language:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        lang: [nl, de, es, fr, it, pt-BR, tr, ar, pl, ru]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - run: pip install argostranslate==1.9.6
+      - run: python scripts/i18n/machine_translate.py i18n/catalog.json ${{ matrix.lang }} ${{ matrix.lang }}.json
+      - uses: actions/upload-artifact@v4
+        with: { name: 'mt-${{ matrix.lang }}', path: '${{ matrix.lang }}.json' }
+  merge:
+    needs: language
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { path: mt, pattern: 'mt-*', merge-multiple: true }
+      - run: |
+          python scripts/i18n/merge_translations.py i18n/catalog.json mt/*.json
+          python -B scripts/i18n/apply_hand_translations.py
+      - name: Push to the i18n-mt branch
+        env: { GH_TOKEN: '${{ github.token }}' }
+        run: |
+          mkdir out && cp i18n/catalog.json out/ && cd out
+          git init -q -b i18n-mt && git add catalog.json
+          git -c user.name=github-actions -c user.email=github-actions@users.noreply.github.com commit -q -m "machine translations"
+          git push -q --force "https://x-access-token:$GH_TOKEN@github.com/$GITHUB_REPOSITORY.git" i18n-mt
