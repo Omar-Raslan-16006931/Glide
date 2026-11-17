@@ -13,8 +13,9 @@ Item {
     Item { id: host; anchors.fill: parent; property string dialog: ""; function close() { dialog = "" } }
     PushHudDialog { id: hud; dialogHost: host; timeoutEnabled: false }
     PushQuickSetup { id: quick; width: 560; y: 700 }
-    PushWordmark { id: mark; x: 10; y: 10; name: "Glide" }
+    PushWordmark { id: mark; x: 10; y: 10; name: "PushFPS" }
     PushWordmark { id: otherMark; x: 10; y: 60; name: "Veyra" }
+    PushWordmark { id: mark2; x: 10; y: 110; name: "Glide" }
     ColumnLayout {
         y: 100; width: 420
         VRow { id: helpRow; label: "Frame rate"; help: "What it does"; VSwitch {} }
@@ -228,6 +229,7 @@ Item {
             verify(mark.text.indexOf(String(Theme.brandGreen)) > 0 && mark.text.indexOf("FPS") > 0, mark.text)
             compare(otherMark.head, "Veyra")
             compare(otherMark.text, "Veyra", "a name without FPS is one colour")
+            compare(mark2.text, "Glide", "Glide is one colour")
         }
     }
 }
