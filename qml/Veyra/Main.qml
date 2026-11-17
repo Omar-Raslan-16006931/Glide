@@ -43,7 +43,17 @@ Window {
     property real nodeVideoHeight: 330
     // Every navigation goes through here: "专业" means the node page while the
     // node configuration is active, so the dock never drops into the list UI.
-    function goPageTarget(p) { return p === "pro" && veyra.nodeMode === 1 ? "node" : p }
+    function goPageTarget(p) {
+        // Glide simple mode: only the simple home and the picture. The heavy pages
+        // come back once the user picks "所有设置" (pref pushSimpleHome = false).
+        if (simpleMode) {
+            if (p === "home") return p
+            return veyra.hasSource || p === "play" ? "play" : "home"
+        }
+        if (p === "play") return "min"
+        return p === "pro" && veyra.nodeMode === 1 ? "node" : p
+    }
+    readonly property bool simpleMode: veyra.preferences.pushSimpleHome !== false
     function goPage(p) { page = goPageTarget(p) }
     // 设置 → 赞助作者, from the home page's coffee line.
     function showSponsor() {
@@ -257,6 +267,9 @@ Window {
         case "watch":
             // Glide video playback mode: the picture beside its controls.
             return watchPage.videoViewport
+        case "play":
+            // Glide simple mode: the picture beside the simple panel.
+            return playPage.videoViewport
         default:
             return { x: 0, y: 0, width: 0, height: 0 }
         }
@@ -322,6 +335,14 @@ Window {
             onVideoViewportChanged: if (root.page === "watch" && !root.fullscreen) videoHost.syncRect()
             onRequestPage: p => root.goPage(p)
         }
+        PushPlayPage {
+            id: playPage
+            pageId: "play"
+            home: pages
+            onVideoViewportChanged: if (root.page === "play" && !root.fullscreen) videoHost.syncRect()
+            onRequestPage: p => root.goPage(p)
+            onRequestFullscreen: root.toggleFullscreen()
+        }
         StudioPage {
             id: studioPage
             pageId: "live"
@@ -337,12 +358,12 @@ Window {
         id: dialogs
         anchors.fill: parent
         // The dialogs open the source through the bridge; show the picture.
-        onStartCapture: if (root.page === "home") root.goPage("min")
-        onStartPs5: if (root.page === "home") root.goPage("min")
-        onStartMoonlight: if (root.page === "home") root.goPage("min")
-        onStartXbox: if (root.page === "home") root.goPage("min")
+        onStartCapture: if (root.page === "home") root.goPage(root.simpleMode ? "play" : "min")
+        onStartPs5: if (root.page === "home") root.goPage(root.simpleMode ? "play" : "min")
+        onStartMoonlight: if (root.page === "home") root.goPage(root.simpleMode ? "play" : "min")
+        onStartXbox: if (root.page === "home") root.goPage(root.simpleMode ? "play" : "min")
         onStartScreen: {
-            if (root.page === "home") root.goPage("min")
+            if (root.page === "home") root.goPage(root.simpleMode ? "play" : "min")
             if (veyra.screenOptions.passthrough === true) root.enterGameFullscreen()
         }
     }
@@ -353,6 +374,7 @@ Window {
         anchors.horizontalCenter: parent.horizontalCenter
         // The node page is the professional mode's node view.
         currentPage: root.page === "node" ? "pro" : root.page
+        simpleMode: root.simpleMode
         maximized: root.maximized || root.fullscreen
         pinned: root.test.dockPinned === true || veyra.preferences.dockPinned === true
         locked: root.fullLocked
@@ -440,6 +462,7 @@ Window {
     function switchPageInstantly(p) { instantPage = true; page = p; instantPage = false }
     function toggleQuickPanel() {
         if (quickPanel) { closeQuickPanel(); return }
+        if (simpleMode) return
         const target = veyra.nodeMode === 1 ? "node" : "pro"
         if (page !== target) {
             if (page !== "pro" && page !== "node") quickReturnPage = page
@@ -785,7 +808,7 @@ Window {
     Shortcut { sequence: veyra.shortcuts.replay; autoRepeat: false; onActivated: veyra.saveReplay("shortcut") }
     Shortcut {
         sequence: veyra.shortcuts.toggleMode
-        enabled: dialogs.dialog === ""
+        enabled: dialogs.dialog === "" && !root.simpleMode
         onActivated: root.goPage(root.page === "min" ? "pro" : "min")
     }
     Shortcut { sequences: ["F11", "Alt+Return", "Alt+Enter"]; onActivated: root.toggleFullscreen() }
@@ -1083,6 +1106,10 @@ Window {
         // override a test passes on the command line.
         if (veyra.initialPage.length > 0)
             root.page = veyra.initialPage === "pro" && veyra.nodeMode === 1 ? "node" : veyra.initialPage
+        // Simple mode never reopens on a heavy page left over from a session,
+        // unless --page asked for it (screenshots, install test, restarts).
+        if (root.simpleMode && root.test.pageForced !== true && root.page !== "home") root.page = "home"
+        else if (!root.simpleMode && root.page === "play") root.page = "min"
         if (root.test.tab === "tuning") homePage.showTuning()
         else if (root.test.tab !== undefined && root.page === "set") settingsPage.section = root.test.tab  // Glide: settings section for screenshots
         else if (root.test.tab !== undefined) proPage.tab = root.test.tab
@@ -1119,7 +1146,7 @@ Window {
     readonly property string pushLiveKind: veyra.sourceKind
     onPushLiveKindChanged: {
         const live = ["capture", "ps5", "moonlight", "xbox"].indexOf(pushLiveKind) >= 0
-        if (live && veyra.preferences.pushAutoFullscreen === true && !root.fullscreen && Object.keys(root.test).length === 0) {
+        if (live && !root.simpleMode && veyra.preferences.pushAutoFullscreen === true && !root.fullscreen && Object.keys(root.test).length === 0) {
             veyra.logUi("ui-fullscreen", "automatic for " + pushLiveKind)
             Qt.callLater(root.toggleFullscreen)
         }

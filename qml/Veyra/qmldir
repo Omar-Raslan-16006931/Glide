@@ -84,6 +84,7 @@ SavePresetDialog 1.0 SavePresetDialog.qml
 ManagePresetsDialog 1.0 ManagePresetsDialog.qml
 PushQuickSetup 1.0 PushQuickSetup.qml
 PushSimpleHome 1.0 PushSimpleHome.qml
+PushPlayPage 1.0 PushPlayPage.qml
 PushSoundProfile 1.0 PushSoundProfile.qml
 PushPicture 1.0 PushPicture.qml
 PushRecordingSaved 1.0 PushRecordingSaved.qml

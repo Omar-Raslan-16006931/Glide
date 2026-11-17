@@ -814,6 +814,7 @@ static int runApplication(int argc, char** argv, QString& restartProgram, QStrin
         const bool hasValue = i + 1 < args.size();
         if (a == QLatin1String("--page") && hasValue) {
             bridge.setInitialPage(args.at(++i));
+            testOptions.insert(QStringLiteral("pageForced"), true);  // Glide: keeps simple mode off this page
         } else if (a == QLatin1String("--tab") && hasValue) {
             testOptions.insert(QStringLiteral("tab"), args.at(++i));
         } else if (a == QLatin1String("--dialog") && hasValue) {

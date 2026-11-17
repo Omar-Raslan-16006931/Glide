@@ -276,7 +276,7 @@ bool QmlPlayerBridge::setPreference(const QString& key, const QVariant& value) {
                                    // Glide: on-screen latency readout, fullscreen on connect, window on top.
                                    "pushLatencyOverlay", "pushAutoFullscreen", "pushAlwaysOnTop", "pushSunset",
                                    // Glide plug and play: pick the capture format and the card's own sound automatically; simple home.
-                                   "pushAutoCaptureFormat", "pushSimpleHome", "pushSimpleLowLag",
+                                   "pushAutoCaptureFormat", "pushSimpleHome", "pushSimpleLowLag", "pushSimpleFgOff",
                                    // Glide: smooth frame pacing (quick setup); set once by the 2.9.7 default.
                                    "pushSmoothPacing",
                                    // Glide going live: sound and microphone in the stream.
@@ -443,6 +443,13 @@ bool QmlPlayerBridge::setPreference(const QString& key, const QVariant& value) {
         const QString v = value.toString();
         static const QStringList sizes{"1280x800", "1600x1000", "1920x1200", "last"};
         if (!sizes.contains(v)) return false;
+        stored = v;
+    } else if (key == QLatin1String("pushSimpleDelay") || key == QLatin1String("pushSimpleSource")) {
+        // Glide simple mode: the play page's delay choice and the home's source.
+        const QString v = value.toString();
+        static const QStringList delays{"low", "balanced", "smooth"};
+        static const QStringList sources{"card", "ps5", "pc", "xbox", "screen"};
+        if (!(key == QLatin1String("pushSimpleDelay") ? delays : sources).contains(v)) return false;
         stored = v;
     } else if (key == QLatin1String("pushOptimizeGoal")) {
         // Glide "Optimise for my PC" goal (PushOptimizeDialog.qml).

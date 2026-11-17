@@ -40,7 +40,12 @@ Item {
     readonly property real barY: bar.y
 
     // --- page definitions (order and tooltips from core.js) ---------------
-    readonly property var items: [
+    // Glide simple mode: home and the picture only (Main.qml simpleMode).
+    property bool simpleMode: false
+    readonly property var items: simpleMode ? [
+        { id: "home",  icon: "home", tip: qsTr("首页") },
+        { id: "play",  icon: "tv", tip: qsTr("画面") }
+    ] : [
         { id: "min",   icon: "tv", tip: qsTr("极简") },
         { id: "pro",   icon: "sliders", tip: qsTr("专业模式") },
         { id: "live",  icon: "cast", tip: qsTr("直播模式") },

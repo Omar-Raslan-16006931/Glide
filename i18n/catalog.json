@@ -1123,23 +1123,6 @@
    "ru": "%1 · Никаких преднамеренных кадровых промахов пока не наблюдается"
   },
   {
-   "zh": "%1 · 屏幕",
-   "src": "qml/PushSimpleHome.qml",
-   "zh-TW": "%1 · 螢幕",
-   "en": "%1 · screen",
-   "ja": "%1 · 画面",
-   "nl": "%1 · scherm",
-   "de": "%1 · Bildschirm",
-   "es": "%1 · pantalla",
-   "fr": "%1 · écran",
-   "it": "%1 · schermo",
-   "pt-BR": "%1 · tela",
-   "tr": "%1 · ekran",
-   "ar": "%1 · الشاشة",
-   "pl": "%1 · ekran",
-   "ru": "%1 · экран"
-  },
-  {
    "zh": "%1 · 屏幕 %2 Hz",
    "src": "src/ui/bridge/Status.cpp",
    "zh-TW": "%1 · 螢幕 %2 Hz",
@@ -6121,6 +6104,23 @@
    "ru": "PS5 Настройки → Сеть → Статус подключения; если он не найден, введите IP вручную"
   },
   {
+   "zh": "PS5 远程游玩，不需要采集卡。第一次会让你配对",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "PS5 遠端遊玩，不需要擷取卡。第一次會讓你配對",
+   "en": "PS5 Remote Play, no capture card needed. You pair it the first time",
+   "ja": "PS5 リモートプレイ。キャプチャーカード不要。初回はペアリングします",
+   "nl": "PS5 Remote Play, geen capturekaart nodig. De eerste keer koppel je hem",
+   "de": "PS5 Remote Play, keine Capture-Karte nötig. Beim ersten Mal koppelst du sie",
+   "es": "PS5 Remote Play, sin capturadora. La primera vez se empareja",
+   "fr": "PS5 Remote Play, sans carte de capture. Il faut l'appairer la première fois",
+   "it": "PS5 Riproduzione remota, senza scheda di acquisizione. La prima volta va associata",
+   "pt-BR": "PS5 Remote Play, sem placa de captura. Na primeira vez você pareia",
+   "tr": "PS5 Uzaktan Oynatma, yakalama kartı gerekmez. İlk seferde eşleştirirsin",
+   "ar": "التشغيل عن بُعد لـ PS5 دون بطاقة التقاط. ستقرن الجهاز في المرة الأولى",
+   "pl": "PS5 Remote Play, bez karty przechwytującej. Za pierwszym razem sparujesz konsolę",
+   "ru": "PS5 Remote Play без карты захвата. В первый раз нужно выполнить сопряжение"
+  },
+  {
    "zh": "PS5 连接失败，请查看诊断",
    "src": "src/engine/EngineController.cpp",
    "zh-TW": "PS5 連接失敗，請查看診斷",
@@ -7394,6 +7394,23 @@
    "ar": "على Xbox اختر 60 Hz من الإعدادات ← عام ← خيارات التلفاز والعرض. الألعاب بلا HDCP، لذا تُلتقط كما هي.",
    "pl": "Na Xboksie wybierz 60 Hz w Ustawienia → Ogólne → Opcje telewizora i wyświetlania. Gry nie mają HDCP, więc są przechwytywane bez zmian.",
    "ru": "На Xbox выберите 60 Гц в Настройки → Общие → Параметры телевизора и дисплея. У игр нет HDCP, поэтому они захватываются как есть."
+  },
+  {
+   "zh": "Xbox 远程游玩，不需要采集卡",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "Xbox 遠端遊玩，不需要擷取卡",
+   "en": "Xbox Remote Play, no capture card needed",
+   "ja": "Xbox リモートプレイ。キャプチャーカード不要",
+   "nl": "Xbox Remote Play, geen capturekaart nodig",
+   "de": "Xbox Remote Play, keine Capture-Karte nötig",
+   "es": "Xbox Remote Play, sin capturadora",
+   "fr": "Xbox Remote Play, sans carte de capture",
+   "it": "Xbox Riproduzione remota, senza scheda di acquisizione",
+   "pt-BR": "Xbox Remote Play, sem placa de captura",
+   "tr": "Xbox Uzaktan Oynatma, yakalama kartı gerekmez",
+   "ar": "التشغيل عن بُعد لـ Xbox دون بطاقة التقاط",
+   "pl": "Xbox Remote Play, bez karty przechwytującej",
+   "ru": "Xbox Remote Play без карты захвата"
   },
   {
    "zh": "Xbox 连接失败：",
@@ -9538,23 +9555,6 @@
    "ru": "Хост "
   },
   {
-   "zh": "主机 %1",
-   "src": "qml/PushSimpleHome.qml",
-   "zh-TW": "主機 %1",
-   "en": "Console %1",
-   "ja": "本体 %1",
-   "nl": "Console %1",
-   "de": "Konsole %1",
-   "es": "Consola %1",
-   "fr": "Console %1",
-   "it": "Console %1",
-   "pt-BR": "Console %1",
-   "tr": "Konsol %1",
-   "ar": "الجهاز %1",
-   "pl": "Konsola %1",
-   "ru": "Приставка %1"
-  },
-  {
    "zh": "主机上有游戏在运行。断开串流不会结束它；选它并开始即可继续。",
    "src": "qml/PcSourceDialog.qml",
    "zh-TW": "主機上有遊戲在執行。斷開串流不會結束它；選它並開始即可繼續。",
@@ -9876,6 +9876,23 @@
    "ar": "الضمادات في هذا الحجم، البرمجيات الخارقة تعمل بعد وصول المجرى",
    "pl": "Host koduje w tym rozmiarze; super rozdzielczość i ulepszenie aplikacji po przybyciu strumienia",
    "ru": "Хост кодирует при таком размере; суперразрешение и улучшение приложения выполняются после прибытия потока."
+  },
+  {
+   "zh": "主机接采集卡，插上 USB 就能用",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "主機接擷取卡，插上 USB 就能用",
+   "en": "Console into a capture card: plug in the USB and go",
+   "ja": "本体をキャプチャーカードに接続。USB を挿すだけ",
+   "nl": "Console via een capturekaart: USB erin en klaar",
+   "de": "Konsole an der Capture-Karte: USB einstecken, fertig",
+   "es": "Consola en la capturadora: conecta el USB y listo",
+   "fr": "Console sur une carte de capture : branchez l'USB et c'est parti",
+   "it": "Console sulla scheda di acquisizione: collega l'USB e via",
+   "pt-BR": "Console na placa de captura: ligue o USB e pronto",
+   "tr": "Konsol yakalama kartına bağlı: USB'yi tak, hazır",
+   "ar": "الجهاز متصل ببطاقة التقاط: صِل USB وابدأ",
+   "pl": "Konsola przez kartę przechwytującą: podłącz USB i gotowe",
+   "ru": "Консоль через карту захвата: подключите USB, и всё"
   },
   {
    "zh": "主机搜索发生错误（{}），详情见日志；可手填 IP。",
@@ -10745,6 +10762,23 @@
    "ru": "Убрать из плейлиста; файл оставить"
   },
   {
+   "zh": "从另一台装了 Sunshine 的电脑串流",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "從另一台裝了 Sunshine 的電腦串流",
+   "en": "Stream from another PC running Sunshine",
+   "ja": "Sunshine を入れた別の PC からストリーミング",
+   "nl": "Stream vanaf een andere pc met Sunshine",
+   "de": "Von einem anderen PC mit Sunshine streamen",
+   "es": "Transmite desde otro PC con Sunshine",
+   "fr": "Streamez depuis un autre PC avec Sunshine",
+   "it": "Trasmetti da un altro PC con Sunshine",
+   "pt-BR": "Transmita de outro PC com Sunshine",
+   "tr": "Sunshine çalışan başka bir PC'den yayın al",
+   "ar": "البث من حاسوب آخر يعمل عليه Sunshine",
+   "pl": "Strumieniuj z innego komputera z Sunshine",
+   "ru": "Трансляция с другого ПК с Sunshine"
+  },
+  {
    "zh": "代码已复制",
    "src": "qml/PushGamePresetsDialog.qml",
    "zh-TW": "代碼已複製",
@@ -10966,23 +11000,6 @@
    "ru": "Низкая задержка: сначала NR, затем SR"
   },
   {
-   "zh": "低延迟模式",
-   "src": "qml/PushSimpleHome.qml",
-   "zh-TW": "低延遲模式",
-   "en": "Low lag mode",
-   "ja": "低遅延モード",
-   "nl": "Lage-vertragingsmodus",
-   "de": "Low-Lag-Modus",
-   "es": "Modo de baja latencia",
-   "fr": "Mode faible latence",
-   "it": "Modalità bassa latenza",
-   "pt-BR": "Modo baixa latência",
-   "tr": "Düşük gecikme modu",
-   "ar": "وضع التأخير المنخفض",
-   "pl": "Tryb niskich opóźnień",
-   "ru": "Режим низкой задержки"
-  },
-  {
    "zh": "低延迟采集中",
    "src": "src/source/MagewellCapture.cpp",
    "zh-TW": "低延遲擷取中",
@@ -11085,6 +11102,23 @@
    "ru": "Порядок низкой задержки, только предварительный просмотр, все слои синхронизированы"
   },
   {
+   "zh": "低延迟，同时不撕裂（推荐）",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "低延遲，同時不撕裂（推薦）",
+   "en": "Low delay without tearing (recommended)",
+   "ja": "低遅延でティアリングなし（推奨）",
+   "nl": "Weinig vertraging zonder tearing (aanbevolen)",
+   "de": "Geringe Verzögerung ohne Tearing (empfohlen)",
+   "es": "Poco retraso y sin tearing (recomendado)",
+   "fr": "Faible délai sans déchirement (recommandé)",
+   "it": "Basso ritardo senza tearing (consigliato)",
+   "pt-BR": "Pouco atraso e sem tearing (recomendado)",
+   "tr": "Yırtılma olmadan düşük gecikme (önerilir)",
+   "ar": "تأخير منخفض دون تمزق في الصورة (موصى به)",
+   "pl": "Małe opóźnienie bez rozrywania (zalecane)",
+   "ru": "Низкая задержка без разрывов (рекомендуется)"
+  },
+  {
    "zh": "低音增强",
    "src": "qml/PushSoundProfile.qml",
    "zh-TW": "低音增強",
@@ -11154,7 +11188,7 @@
   },
   {
    "zh": "你的显卡最高约 %1 FPS，会尽量接近",
-   "src": "qml/PushSimpleHome.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "你的顯示卡最高約 %1 FPS，會盡量接近",
    "en": "Your graphics card tops out around %1 FPS here; it gets as close as it can",
    "ja": "この GPU ではおよそ %1 FPS が上限です。できるだけ近づけます",
@@ -11816,6 +11850,23 @@
    "ru": "Исправить"
   },
   {
+   "zh": "修复卡顿",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "修復卡頓",
+   "en": "Fix stutter",
+   "ja": "カクつきを修正",
+   "nl": "Haperingen oplossen",
+   "de": "Ruckler beheben",
+   "es": "Corregir tirones",
+   "fr": "Corriger les saccades",
+   "it": "Correggi gli scatti",
+   "pt-BR": "Corrigir travadas",
+   "tr": "Takılmayı düzelt",
+   "ar": "إصلاح التقطع",
+   "pl": "Usuń przycięcia",
+   "ru": "Убрать подёргивания"
+  },
+  {
    "zh": "修复忽快忽慢的出帧（如 17/50 毫秒交替），让 30 FPS 游戏动起来更顺",
    "src": "qml/PushQuickSetup.qml",
    "zh-TW": "修復忽快忽慢的出幀（如 17/50 毫秒交替），讓 30 FPS 遊戲動起來更順",
@@ -11987,7 +12038,7 @@
   },
   {
    "zh": "停止",
-   "src": "qml/WatchPage.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "停止",
    "en": "Stop",
    "ja": "停止",
@@ -12429,7 +12480,7 @@
   },
   {
    "zh": "全屏",
-   "src": "qml/SettingsPage.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "全螢幕",
    "en": "Fullscreen",
    "ja": "全画面",
@@ -13585,6 +13636,23 @@
    "ru": "Подготовка: "
   },
   {
+   "zh": "准星、血条和文字不再抖动",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "準星、血條和文字不再抖動",
+   "en": "Crosshairs, health bars and text stay steady",
+   "ja": "照準、HP バー、文字が揺れなくなります",
+   "nl": "Vizier, levensbalken en tekst blijven stil",
+   "de": "Fadenkreuz, Lebensbalken und Text bleiben ruhig",
+   "es": "Mira, barras de vida y texto se quedan quietos",
+   "fr": "Viseur, barres de vie et texte restent stables",
+   "it": "Mirino, barre della vita e testo restano fermi",
+   "pt-BR": "Mira, barras de vida e texto ficam estáveis",
+   "tr": "Nişangah, can çubukları ve yazılar titremez",
+   "ar": "يبقى التصويب وأشرطة الصحة والنص ثابتة",
+   "pl": "Celownik, paski zdrowia i tekst się nie trzęsą",
+   "ru": "Прицел, полоски здоровья и текст не дрожат"
+  },
+  {
    "zh": "减少 NR 明暗改动；1 为保留原图亮度",
    "src": "qml/NrLayerEditor.qml",
    "zh-TW": "減少 NR 明暗改動；1 為保留原圖亮度",
@@ -13787,6 +13855,23 @@
    "ar": "منقسم",
    "pl": "Podział",
    "ru": "Раздельно"
+  },
+  {
+   "zh": "分屏对比",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "分屏對比",
+   "en": "Live split",
+   "ja": "分割比較",
+   "nl": "Gesplitst beeld",
+   "de": "Geteiltes Bild",
+   "es": "Pantalla dividida",
+   "fr": "Écran partagé",
+   "it": "Schermo diviso",
+   "pt-BR": "Tela dividida",
+   "tr": "Bölünmüş ekran",
+   "ar": "شاشة مقسّمة",
+   "pl": "Podzielony ekran",
+   "ru": "Разделённый экран"
   },
   {
    "zh": "分析中…",
@@ -14620,6 +14705,23 @@
    "ar": "تحديث الأجهزة",
    "pl": "Odśwież urządzenia",
    "ru": "Обновить устройства"
+  },
+  {
+   "zh": "前后对比",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "前後對比",
+   "en": "Before / after",
+   "ja": "ビフォー / アフター",
+   "nl": "Voor / na",
+   "de": "Vorher / nachher",
+   "es": "Antes / después",
+   "fr": "Avant / après",
+   "it": "Prima / dopo",
+   "pt-BR": "Antes / depois",
+   "tr": "Önce / sonra",
+   "ar": "قبل / بعد",
+   "pl": "Przed / po",
+   "ru": "До / после"
   },
   {
    "zh": "前往",
@@ -17612,6 +17714,23 @@
    "ar": "العودة إلى وضع القائمة، إعادة الإطارات السابقة للقائمة والمفترسات.",
    "pl": "Wróć do trybu listy, przywracając poprzednie ustawienia i ustawienia listy.",
    "ru": "Вернитесь в режим списка, восстановив предыдущие настройки и предустановки списка."
+  },
+  {
+   "zh": "回到画面",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "回到畫面",
+   "en": "Back to game",
+   "ja": "画面に戻る",
+   "nl": "Terug naar game",
+   "de": "Zurück zum Spiel",
+   "es": "Volver al juego",
+   "fr": "Retour au jeu",
+   "it": "Torna al gioco",
+   "pt-BR": "Voltar ao jogo",
+   "tr": "Oyuna dön",
+   "ar": "العودة إلى اللعبة",
+   "pl": "Wróć do gry",
+   "ru": "Вернуться к игре"
   },
   {
    "zh": "回放 %1",
@@ -22272,6 +22391,23 @@
    "ru": "Локальная структура"
   },
   {
+   "zh": "屏幕",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "螢幕",
+   "en": "Screen",
+   "ja": "画面",
+   "nl": "Scherm",
+   "de": "Bildschirm",
+   "es": "Pantalla",
+   "fr": "Écran",
+   "it": "Schermo",
+   "pt-BR": "Tela",
+   "tr": "Ekran",
+   "ar": "الشاشة",
+   "pl": "Ekran",
+   "ru": "Экран"
+  },
+  {
    "zh": "屏幕 %1 Hz 最多显示约 %2X",
    "src": "src/ui/bridge/Status.cpp",
    "zh-TW": "螢幕 %1 Hz 最多顯示約 %2X",
@@ -22661,6 +22797,23 @@
    "ar": "الصحة أسفل اليسار، والسلاح والذخيرة أسفل اليمين",
    "pl": "Zdrowie w lewym dolnym rogu, broń i amunicja w prawym dolnym",
    "ru": "Здоровье внизу слева, оружие и патроны внизу справа"
+  },
+  {
+   "zh": "左边原画，右边 Glide。在画面上拖动分割线。对比时补帧暂停",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "左邊原畫，右邊 Glide。在畫面上拖動分割線。對比時補幀暫停",
+   "en": "Original on the left, Glide on the right. Drag the line on the picture. Frame generation pauses while it shows",
+   "ja": "左が元の映像、右が Glide。映像上で境界線をドラッグ。比較中はフレーム生成が止まります",
+   "nl": "Links het origineel, rechts Glide. Sleep de lijn over het beeld. Framegeneratie pauzeert zolang het aan staat",
+   "de": "Links das Original, rechts Glide. Ziehe die Linie im Bild. Die Frame-Generierung pausiert solange",
+   "es": "Original a la izquierda, Glide a la derecha. Arrastra la línea sobre la imagen. La generación de fotogramas se pausa mientras tanto",
+   "fr": "Original à gauche, Glide à droite. Faites glisser la ligne sur l'image. La génération d'images est en pause pendant ce temps",
+   "it": "Originale a sinistra, Glide a destra. Trascina la linea sull'immagine. La generazione dei fotogrammi si ferma nel frattempo",
+   "pt-BR": "Original à esquerda, Glide à direita. Arraste a linha na imagem. A geração de quadros pausa enquanto isso",
+   "tr": "Solda orijinal, sağda Glide. Görüntüdeki çizgiyi sürükle. Bu sırada kare üretimi durur",
+   "ar": "الأصل على اليسار وGlide على اليمين. اسحب الخط على الصورة. يتوقف توليد الإطارات أثناء ذلك",
+   "pl": "Oryginał po lewej, Glide po prawej. Przeciągnij linię na obrazie. Generowanie klatek jest wtedy wstrzymane",
+   "ru": "Слева оригинал, справа Glide. Перетащите линию на изображении. Генерация кадров в это время приостановлена"
   },
   {
    "zh": "已从上次位置 %1 继续",
@@ -25060,6 +25213,23 @@
    "ru": "Отступ снизу"
   },
   {
+   "zh": "延迟",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "延遲",
+   "en": "Delay",
+   "ja": "遅延",
+   "nl": "Vertraging",
+   "de": "Verzögerung",
+   "es": "Retraso",
+   "fr": "Délai",
+   "it": "Ritardo",
+   "pt-BR": "Atraso",
+   "tr": "Gecikme",
+   "ar": "التأخير",
+   "pl": "Opóźnienie",
+   "ru": "Задержка"
+  },
+  {
    "zh": "延迟 %1 ms",
    "src": "qml/PushLatencyBadge.qml",
    "zh-TW": "延遲 %1 ms",
@@ -26826,6 +26996,23 @@
    "ar": "سجل في %1",
    "pl": "Zapis w %1 s",
    "ru": "Запись в %1 с"
+  },
+  {
+   "zh": "录制 10 秒对比视频",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "錄製 10 秒對比影片",
+   "en": "Record a 10 s comparison clip",
+   "ja": "10 秒の比較動画を録画",
+   "nl": "Neem een vergelijkingsclip van 10 s op",
+   "de": "10-s-Vergleichsclip aufnehmen",
+   "es": "Grabar un clip comparativo de 10 s",
+   "fr": "Enregistrer un clip comparatif de 10 s",
+   "it": "Registra una clip di confronto di 10 s",
+   "pt-BR": "Gravar um clipe comparativo de 10 s",
+   "tr": "10 sn'lik karşılaştırma klibi kaydet",
+   "ar": "سجّل مقطع مقارنة مدته 10 ثوانٍ",
+   "pl": "Nagraj 10-sekundowy klip porównawczy",
+   "ru": "Записать 10-секундный ролик сравнения"
   },
   {
    "zh": "录制 未开始",
@@ -28987,6 +29174,23 @@
    "ru": "Возвращает часть текстуры кожи, чтобы избежать пластикового вида"
   },
   {
+   "zh": "把不均匀的游戏帧排整齐",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "把不均勻的遊戲幀排整齊",
+   "en": "Evens out game frames that arrive unevenly",
+   "ja": "不揃いなゲームのフレームを均等に並べます",
+   "nl": "Zet ongelijk binnenkomende gameframes recht",
+   "de": "Gleicht ungleichmäßig ankommende Spielbilder aus",
+   "es": "Iguala los fotogramas del juego que llegan desiguales",
+   "fr": "Régularise les images du jeu qui arrivent inégalement",
+   "it": "Uniforma i fotogrammi del gioco che arrivano irregolari",
+   "pt-BR": "Iguala os quadros do jogo que chegam irregulares",
+   "tr": "Düzensiz gelen oyun karelerini eşitler",
+   "ar": "يُنظّم إطارات اللعبة التي تصل بشكل غير منتظم",
+   "pl": "Wyrównuje nierówno przychodzące klatki gry",
+   "ru": "Выравнивает неравномерно приходящие кадры игры"
+  },
+  {
    "zh": "把出帧不均匀的锁帧游戏重新对齐到均匀的时间，每帧最多晚一次刷新。需要开启自动去重",
    "src": "qml/ProPage.qml",
    "zh-TW": "把出幀不均勻的鎖幀遊戲重新對齊到均勻的時間，每幀最多晚一次刷新。需要開啟自動去重",
@@ -30417,7 +30621,7 @@
   },
   {
    "zh": "放大到屏幕分辨率",
-   "src": "qml/WatchPage.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "放大到螢幕解析度",
    "en": "Upscales to your screen resolution",
    "ja": "画面の解像度まで拡大",
@@ -33884,6 +34088,23 @@
    "ru": "Кривая ограничивает содержание-свет намеков. SDR ввод не отправляет по умолчанию, если не введен вручную."
   },
   {
+   "zh": "更多",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "更多",
+   "en": "Extras",
+   "ja": "その他",
+   "nl": "Extra",
+   "de": "Extras",
+   "es": "Extras",
+   "fr": "Extras",
+   "it": "Extra",
+   "pt-BR": "Extras",
+   "tr": "Ekstralar",
+   "ar": "إضافات",
+   "pl": "Dodatki",
+   "ru": "Дополнительно"
+  },
+  {
    "zh": "更多调色选项",
    "src": "qml/PushPicture.qml",
    "zh-TW": "更多調色選項",
@@ -34018,6 +34239,23 @@
    "ar": "جهير أعمق لمشاهد الحركة",
    "pl": "Pełniejszy bas, do scen akcji",
    "ru": "Более плотный бас, для экшен-сцен"
+  },
+  {
+   "zh": "最低",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "最低",
+   "en": "Lowest",
+   "ja": "最小",
+   "nl": "Laagst",
+   "de": "Minimal",
+   "es": "Mínimo",
+   "fr": "Minimal",
+   "it": "Minimo",
+   "pt-BR": "Mínimo",
+   "tr": "En düşük",
+   "ar": "الأدنى",
+   "pl": "Najniższe",
+   "ru": "Минимум"
   },
   {
    "zh": "最低延迟",
@@ -34290,6 +34528,23 @@
    "ar": "The frame rate of the slowest 1% of submit intervals in the last 10 s, computed the same way as overlays such as RTSS",
    "pl": "Wskaźnik ramki najwolniejszego 1% przedziałów w ostatnich 10 s, obliczony w ten sam sposób co nakłady, takie jak RTSS",
    "ru": "Частота кадров самого медленного 1% интервалов представления за последние 10 с, вычисляется так же, как и наложения, такие как RTSS"
+  },
+  {
+   "zh": "最顺滑",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "最順滑",
+   "en": "Smoothest",
+   "ja": "最も滑らか",
+   "nl": "Vloeiendst",
+   "de": "Am flüssigsten",
+   "es": "Más fluido",
+   "fr": "Le plus fluide",
+   "it": "Più fluido",
+   "pt-BR": "Mais fluido",
+   "tr": "En akıcı",
+   "ar": "الأكثر سلاسة",
+   "pl": "Najpłynniej",
+   "ru": "Плавнее всего"
   },
   {
    "zh": "有效目标 %1 fps",
@@ -36757,6 +37012,23 @@
    "ru": "Идёт запись…"
   },
   {
+   "zh": "正在录制对比视频…",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "正在錄製對比影片…",
+   "en": "Recording the comparison clip…",
+   "ja": "比較動画を録画中…",
+   "nl": "Vergelijkingsclip wordt opgenomen…",
+   "de": "Vergleichsclip wird aufgenommen…",
+   "es": "Grabando el clip comparativo…",
+   "fr": "Enregistrement du clip comparatif…",
+   "it": "Registrazione della clip di confronto…",
+   "pt-BR": "Gravando o clipe comparativo…",
+   "tr": "Karşılaştırma klibi kaydediliyor…",
+   "ar": "جارٍ تسجيل مقطع المقارنة…",
+   "pl": "Nagrywanie klipu porównawczego…",
+   "ru": "Запись ролика сравнения…"
+  },
+  {
    "zh": "正在恢复",
    "src": "src/ui/bridge/Preferences.cpp",
    "zh-TW": "正在恢復",
@@ -37455,7 +37727,7 @@
   },
   {
    "zh": "正在连接…",
-   "src": "qml/PushSimpleHome.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "正在連接…",
    "en": "Connecting…",
    "ja": "接続中…",
@@ -39426,6 +39698,23 @@
    "ru": "Меняет множитель, когда частота кадров игры колеблется, удерживая вывод близко к цели"
   },
   {
+   "zh": "游戏本身",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "遊戲本身",
+   "en": "Game runs at",
+   "ja": "ゲーム本来",
+   "nl": "Game draait op",
+   "de": "Spiel läuft mit",
+   "es": "El juego va a",
+   "fr": "Le jeu tourne à",
+   "it": "Il gioco va a",
+   "pt-BR": "O jogo roda a",
+   "tr": "Oyun hızı",
+   "ar": "سرعة اللعبة",
+   "pl": "Gra działa w",
+   "ru": "Игра идёт в"
+  },
+  {
    "zh": "游戏模式",
    "src": "qml/ScreenSourceDialog.qml",
    "zh-TW": "遊戲模式",
@@ -40429,23 +40718,6 @@
    "ru": "Кинематографичный · без защиты HUD"
   },
   {
-   "zh": "电脑生成 %1",
-   "src": "qml/PushSimpleHome.qml",
-   "zh-TW": "電腦生成 %1",
-   "en": "Your PC adds %1",
-   "ja": "PC が追加 %1",
-   "nl": "Je pc voegt %1 toe",
-   "de": "Dein PC ergänzt %1",
-   "es": "Tu PC añade %1",
-   "fr": "Ton PC ajoute %1",
-   "it": "Il PC aggiunge %1",
-   "pt-BR": "Seu PC adiciona %1",
-   "tr": "PC'n ekliyor %1",
-   "ar": "يضيف حاسوبك %1",
-   "pl": "Twój PC dodaje %1",
-   "ru": "ПК добавляет %1"
-  },
-  {
    "zh": "画圆形",
    "src": "qml/MaskEditor.qml",
    "zh-TW": "畫圓形",
@@ -40512,6 +40784,23 @@
    "ar": "الصورة",
    "pl": "Obraz",
    "ru": "Изображение"
+  },
+  {
+   "zh": "画面一好就显示，延迟最低，可能有轻微撕裂",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "畫面一好就顯示，延遲最低，可能有輕微撕裂",
+   "en": "Each frame shows as soon as it is ready: lowest delay, maybe slight tearing",
+   "ja": "フレームができ次第表示。遅延は最小、軽いティアリングが出ることも",
+   "nl": "Elk frame verschijnt zodra het klaar is: minste vertraging, misschien wat tearing",
+   "de": "Jedes Bild erscheint sofort: geringste Verzögerung, eventuell leichtes Tearing",
+   "es": "Cada fotograma sale en cuanto está listo: mínimo retraso, quizá algo de tearing",
+   "fr": "Chaque image s'affiche dès qu'elle est prête : délai minimal, léger déchirement possible",
+   "it": "Ogni fotogramma appare appena pronto: ritardo minimo, forse un po' di tearing",
+   "pt-BR": "Cada quadro aparece assim que fica pronto: menor atraso, talvez um leve tearing",
+   "tr": "Her kare hazır olur olmaz gösterilir: en düşük gecikme, hafif yırtılma olabilir",
+   "ar": "يظهر كل إطار فور جاهزيته: أقل تأخير، وقد يحدث تمزق طفيف",
+   "pl": "Każda klatka pojawia się od razu: najmniejsze opóźnienie, możliwe lekkie rozrywanie",
+   "ru": "Каждый кадр выводится сразу: минимальная задержка, возможны лёгкие разрывы"
   },
   {
    "zh": "画面上下翻转",
@@ -40767,6 +41056,23 @@
    "ar": "إحصاءات عينات الصورة",
    "pl": "Statystyki próbek obrazu",
    "ru": "Статистика выборок изображения"
+  },
+  {
+   "zh": "画面更清晰",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "畫面更清晰",
+   "en": "Sharper picture",
+   "ja": "より鮮明に",
+   "nl": "Scherper beeld",
+   "de": "Schärferes Bild",
+   "es": "Imagen más nítida",
+   "fr": "Image plus nette",
+   "it": "Immagine più nitida",
+   "pt-BR": "Imagem mais nítida",
+   "tr": "Daha net görüntü",
+   "ar": "صورة أوضح",
+   "pl": "Ostrzejszy obraz",
+   "ru": "Чётче картинка"
   },
   {
    "zh": "画面比例",
@@ -41399,7 +41705,7 @@
   },
   {
    "zh": "目标帧率",
-   "src": "qml/PushQuickSetup.qml",
+   "src": "qml/PushPlayPage.qml",
    "zh-TW": "目標影格率",
    "en": "Target frame rate",
    "ja": "目標フレームレート",
@@ -42656,6 +42962,23 @@
    "ru": "Показывает каждый кадр при обновлении экрана и ограничивает вывод частотой обновления, поэтому каждый сгенерированный кадр отображается, а игра выглядит так же плавно, как запись. На экране с G-SYNC/FreeSync запрашивается переменная частота, что почти не добавляет задержки"
   },
   {
+   "zh": "等屏幕刷新再显示，最顺滑，延迟稍高",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "等螢幕刷新再顯示，最順滑，延遲稍高",
+   "en": "Waits for the screen's refresh: smoothest, a little more delay",
+   "ja": "画面のリフレッシュを待って表示。最も滑らかで遅延はやや増えます",
+   "nl": "Wacht op de verversing van het scherm: vloeiendst, iets meer vertraging",
+   "de": "Wartet auf die Bildwiederholung: am flüssigsten, etwas mehr Verzögerung",
+   "es": "Espera al refresco de la pantalla: lo más fluido, algo más de retraso",
+   "fr": "Attend le rafraîchissement de l'écran : le plus fluide, un peu plus de délai",
+   "it": "Aspetta l'aggiornamento dello schermo: più fluido, un po' più di ritardo",
+   "pt-BR": "Espera a atualização da tela: mais fluido, um pouco mais de atraso",
+   "tr": "Ekran yenilemesini bekler: en akıcı, biraz daha fazla gecikme",
+   "ar": "ينتظر تحديث الشاشة: الأكثر سلاسة مع تأخير أعلى قليلًا",
+   "pl": "Czeka na odświeżenie ekranu: najpłynniej, trochę większe opóźnienie",
+   "ru": "Ждёт обновления экрана: плавнее всего, задержка чуть выше"
+  },
+  {
    "zh": "等待 PS5 登录 PIN 超时，请重新连接。",
    "src": "src/source/RemotePlaySessionSource.cpp",
    "zh-TW": "等待 PS5 登入 PIN 超時，請重新連接。",
@@ -42756,6 +43079,23 @@
    "ar": "في انتظار العينات",
    "pl": "Czekanie na próbki",
    "ru": "Ожидание выборок"
+  },
+  {
+   "zh": "等待画面…",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "等待畫面…",
+   "en": "Waiting for the picture…",
+   "ja": "映像を待っています…",
+   "nl": "Wachten op beeld…",
+   "de": "Warte auf das Bild…",
+   "es": "Esperando la imagen…",
+   "fr": "En attente de l'image…",
+   "it": "In attesa dell'immagine…",
+   "pt-BR": "Aguardando a imagem…",
+   "tr": "Görüntü bekleniyor…",
+   "ar": "بانتظار الصورة…",
+   "pl": "Czekam na obraz…",
+   "ru": "Ожидание изображения…"
   },
   {
    "zh": "等待输出纹理释放超时",
@@ -46855,6 +47195,23 @@
    "ru": "Способ генерации кадров"
   },
   {
+   "zh": "补帧方法",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "補幀方法",
+   "en": "Method",
+   "ja": "フレーム生成方式",
+   "nl": "Methode",
+   "de": "Methode",
+   "es": "Método",
+   "fr": "Méthode",
+   "it": "Metodo",
+   "pt-BR": "Método",
+   "tr": "Yöntem",
+   "ar": "الطريقة",
+   "pl": "Metoda",
+   "ru": "Метод"
+  },
+  {
    "zh": "补帧暂停",
    "src": "src/ui/bridge/Status.cpp",
    "zh-TW": "補幀暫停",
@@ -47397,6 +47754,23 @@
    "ar": "جهاز دخل الفيديو",
    "pl": "Urządzenie wejścia wideo",
    "ru": "Устройство видеовхода"
+  },
+  {
+   "zh": "视频里能看到补出来的帧，可直接分享",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "影片裡能看到補出來的幀，可直接分享",
+   "en": "The clip shows the generated frames and is ready to share",
+   "ja": "生成されたフレームが動画に映り、そのまま共有できます",
+   "nl": "De clip toont de gegenereerde frames en is klaar om te delen",
+   "de": "Der Clip zeigt die erzeugten Bilder und ist bereit zum Teilen",
+   "es": "El clip muestra los fotogramas generados y está listo para compartir",
+   "fr": "Le clip montre les images générées et peut être partagé tel quel",
+   "it": "La clip mostra i fotogrammi generati ed è pronta da condividere",
+   "pt-BR": "O clipe mostra os quadros gerados e está pronto para compartilhar",
+   "tr": "Klip üretilen kareleri gösterir ve paylaşmaya hazırdır",
+   "ar": "يُظهر المقطع الإطارات المولّدة وهو جاهز للمشاركة",
+   "pl": "Klip pokazuje wygenerowane klatki i jest gotowy do udostępnienia",
+   "ru": "Ролик показывает созданные кадры, им можно сразу поделиться"
   },
   {
    "zh": "视频队列或呈现失败；GPU 未报告设备移除，请查看诊断",
@@ -51921,6 +52295,23 @@
    "ru": "Но это не то же самое, что PC. Нажмите Pair и введите PIN-код, который отображается на веб-странице хоста Sunshine."
   },
   {
+   "zh": "这台电脑上的游戏窗口或整个屏幕",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "這台電腦上的遊戲視窗或整個螢幕",
+   "en": "A game window or the whole screen on this PC",
+   "ja": "この PC のゲームウィンドウまたは画面全体",
+   "nl": "Een gamevenster of het hele scherm op deze pc",
+   "de": "Ein Spielfenster oder der ganze Bildschirm dieses PCs",
+   "es": "Una ventana de juego o toda la pantalla de este PC",
+   "fr": "Une fenêtre de jeu ou tout l'écran de ce PC",
+   "it": "Una finestra di gioco o l'intero schermo di questo PC",
+   "pt-BR": "Uma janela de jogo ou a tela inteira deste PC",
+   "tr": "Bu PC'deki bir oyun penceresi veya tüm ekran",
+   "ar": "نافذة لعبة أو الشاشة كاملة على هذا الحاسوب",
+   "pl": "Okno gry lub cały ekran tego komputera",
+   "ru": "Окно игры или весь экран этого ПК"
+  },
+  {
    "zh": "这台电脑不支持此组合",
    "src": "qml/PushOptimizeDialog.qml",
    "zh-TW": "這台電腦不支援此組合",
@@ -52752,6 +53143,23 @@
    "ar": "اختيار ملف",
    "pl": "Wybierz plik",
    "ru": "Выбрать файл"
+  },
+  {
+   "zh": "选择画面来源",
+   "src": "qml/PushSimpleHome.qml",
+   "zh-TW": "選擇畫面來源",
+   "en": "Choose your source",
+   "ja": "映像ソースを選択",
+   "nl": "Kies je bron",
+   "de": "Quelle wählen",
+   "es": "Elige la fuente",
+   "fr": "Choisissez la source",
+   "it": "Scegli la sorgente",
+   "pt-BR": "Escolha a fonte",
+   "tr": "Kaynağını seç",
+   "ar": "اختر المصدر",
+   "pl": "Wybierz źródło",
+   "ru": "Выберите источник"
   },
   {
    "zh": "选择要处理的图片",
@@ -54282,6 +54690,23 @@
    "ar": "الكثير من الأكواد في السلسلة",
    "pl": "Zbyt wiele węzłów w łańcuchu",
    "ru": "Слишком много узлов в цепи"
+  },
+  {
+   "zh": "锁定 HUD",
+   "src": "qml/PushPlayPage.qml",
+   "zh-TW": "鎖定 HUD",
+   "en": "Lock HUD",
+   "ja": "HUD を固定",
+   "nl": "HUD vastzetten",
+   "de": "HUD fixieren",
+   "es": "Fijar HUD",
+   "fr": "Verrouiller le HUD",
+   "it": "Blocca HUD",
+   "pt-BR": "Travar HUD",
+   "tr": "HUD'u sabitle",
+   "ar": "تثبيت HUD",
+   "pl": "Zablokuj HUD",
+   "ru": "Закрепить HUD"
   },
   {
    "zh": "锁定全屏控制条",
