@@ -77,7 +77,7 @@ Install
 
   Windows may warn that the file comes from the internet or an unknown publisher (Glide is not code
   signed). Choose "More info" and "Run anyway" if you downloaded this zip from
-  https://github.com/DosukaSOL/PushFPS/releases .
+  https://github.com/Omar-Raslan-16006931/Glide/releases .
 
 Uninstall
   Run Install-Glide.cmd -Uninstall from a command prompt in this folder,
@@ -91,7 +91,7 @@ License
   Glide is free software under the GNU GPL-3.0 and comes with ABSOLUTELY NO WARRANTY. It is a modified
   version of Veyra by Likely7 (https://github.com/Likely7/Veyra-NRVideo). The license, the modification
   notice and third-party notices are in Glide-files (LICENSE, NOTICE.md, THIRD_PARTY_NOTICES.md).
-  Source code of this release: https://github.com/DosukaSOL/PushFPS/tree/$sourceRef
+  Source code of this release: https://github.com/Omar-Raslan-16006931/Glide/tree/$sourceRef
 "@ | Set-Content -Path (Join-Path $stage 'READ ME FIRST.txt') -Encoding UTF8
 
 $zip = Join-Path $OutDir "$name.zip"
