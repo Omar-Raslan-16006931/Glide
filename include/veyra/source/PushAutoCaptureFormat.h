@@ -16,11 +16,11 @@ namespace veyra::source {
 //   5. the driver's current mode, then list order.
 // Unsupported modes are never picked. Returns null for an empty or fully unsupported list.
 inline int pushAutoFpsClass(double fps) {
-    auto near = [fps](double rate) { return std::abs(fps - rate) <= rate * 0.0015; };
-    if (near(60)) return 0;
-    if (near(120)) return 1;
-    if (near(50)) return 2;
-    if (near(30)) return 3;
+    auto isRate = [fps](double rate) { return std::abs(fps - rate) <= rate * 0.0015; };
+    if (isRate(60)) return 0;
+    if (isRate(120)) return 1;
+    if (isRate(50)) return 2;
+    if (isRate(30)) return 3;
     return 4;
 }
 inline int pushAutoHeightClass(unsigned height) {
